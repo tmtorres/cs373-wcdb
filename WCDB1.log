@@ -1,0 +1,415 @@
+commit e96b9cf269a7a6f4d4d830210ecadb80cc699165
+Merge: c092fa6 64d032a
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sat Jul 13 21:23:26 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	crisix/settings.py
+
+commit c092fa6e7c3c8c6c275e5982ad367599810d4ebc
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sat Jul 13 21:21:21 2013 -0500
+
+    Unit Testing Complete
+
+commit 64d032ab39fd8cc7b5567bd0a69c1791f703236a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 20:43:45 2013 -0500
+
+    Fixed HTML.
+
+commit 628b3f1895f5b169685d6f66cbd77eb2b2dbd8ef
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Jul 13 18:15:12 2013 -0500
+
+    implement manage page
+
+commit 1de9d7b54ad5db27f6558976c9d24f91b892a16d
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sat Jul 13 15:47:25 2013 -0500
+
+    Completed and validated import/export
+
+commit 6a2d427525bada00bf72ee7aa193371c67797154
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 06:57:14 2013 -0500
+
+    Run "python env.py" for virtualenv.
+
+commit 1a1d727f07a8ac0bf72a2269745d9507cb4d0248
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 06:28:47 2013 -0500
+
+    Using symmlink for virtual environment.
+
+commit 8b737bcbc6cbf48b9fe9725132905a3de7fbfb88
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 04:48:44 2013 -0500
+
+    Import works. Now password protected.
+
+commit 9697ab2a577365a29552ff196e8e724fe1de192c
+Merge: 036df0d 6eb474b
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 03:33:59 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 036df0d57a68965c79e53da23235a7329272eed5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 03:33:05 2013 -0500
+
+    Added files that were not being tracked.
+
+commit 6eb474b07b9ee4c8700f6348d28cc51b7ee3c511
+Merge: 44d737e 4d66fb5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 02:25:29 2013 -0500
+
+    Resolved conflicts.
+    
+    Conflicts:
+    	crisix/database/views.py
+    	crisix/settings.py
+    	crisix/urls.py
+    	html/HTML/index.html
+
+commit 44d737ec5016dbbfb0943c5550769d74c57b6f36
+Merge: 026d6ef e109201
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 13 02:06:48 2013 -0500
+
+    Merge fix & site deployment.
+    
+    Conflicts:
+    	crisix/database/views.py
+
+commit 4d66fb59125214577a4329daa41636154b4e19c6
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 21:14:37 2013 -0500
+
+    Update views.py
+
+commit 0ef5f72c007e7ccbaeffd0d21cb7d6c1a515515a
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 21:13:32 2013 -0500
+
+    Update index.html
+
+commit 6a77c3affd0033f268178f4f4ade74067a6fb078
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 21:12:27 2013 -0500
+
+    Update index.html
+
+commit ad20554ce6291da7be39fa46a39b081cb0532203
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 21:08:46 2013 -0500
+
+    Update views.py
+
+commit a2b245c5678e4f473ad05ed4ffcf772202a2c189
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 21:07:48 2013 -0500
+
+    Update index.html
+
+commit 2bddcfa05c51289558591e7b43b9f1f1bf456f2d
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:56:06 2013 -0500
+
+    Update settings.py
+
+commit cf75fd15a8d5a26c4fdadd4879063f2d49775309
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:52:46 2013 -0500
+
+    Update settings.py
+
+commit fbc96ae1a3d599b587d47b19f8012be81ed56b1f
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:49:02 2013 -0500
+
+    Update settings.py
+
+commit 8fa275262b1441397e5c861f19718c7a02f344db
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:45:45 2013 -0500
+
+    Update settings.py
+
+commit 6a6386182263d24cb0871c9bcf11f509ca5940f5
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:42:29 2013 -0500
+
+    Update settings.py
+
+commit 46aa34e64a71f5c76581bf532683667182c78eed
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:39:03 2013 -0500
+
+    Update urls.py
+
+commit e10920119909ac5aca1a46a9f9b385f23ca8138b
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:38:31 2013 -0500
+
+    Update urls.py
+
+commit 026d6ef26a10766aada8f7cee1fce6f7c6b3b90f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 12 20:37:19 2013 -0500
+
+    Last known good figuration that worked.
+
+commit 6dd6e8e1f16d7adac8e10f7a9cd3ddca92b0d585
+Merge: c819445 5e9672c
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 20:37:08 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+
+commit 5e9672cadbf8cb441351108cd65b95412518ae38
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:37:07 2013 -0500
+
+    Update settings.py
+
+commit c819445344e45d887adc261920a1297f08c4b879
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 20:37:01 2013 -0500
+
+    Updated Import; added export.
+
+commit 171863e3dbcf671148df0457f7a3b53a2ae4a3df
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:34:06 2013 -0500
+
+    Update urls.py
+
+commit 82cdbb566190ac542b419b9bf389d9c81c4a0a86
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:28:12 2013 -0500
+
+    Update settings.py
+
+commit 5e53f4e8955aeb57561134a8c733f3889b8109a8
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:16:11 2013 -0500
+
+    Update settings.py
+    
+    file path update
+
+commit 63c9349ab35e1d3fc21a65028380cf7dc410cff7
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:14:50 2013 -0500
+
+    Update urls.py
+    
+    file path update
+
+commit 7c8c0f17ec132a799c5ed2c2ae1e191765fcfc17
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:12:22 2013 -0500
+
+    Update settings.py
+
+commit a7a8a53079105b8133e363a4ab674a14b63ef039
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:10:47 2013 -0500
+
+    Update settings.py
+
+commit a80014c63b2e9624c1b7bd4bdd249f58efc06f64
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 20:04:07 2013 -0500
+
+    Update views.py
+
+commit 34a0c04516c803914fb5e90db083ee82b4db98af
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:53:53 2013 -0500
+
+    Update urls.py
+    
+    utilizing upload functions
+
+commit 65c750971906981e77d4d117e88aed0d22e02c78
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:52:35 2013 -0500
+
+    Update views.py
+
+commit a5a296c9c26f7b85392ea3ea544ecdb129ecafd5
+Merge: 7889870 52a1032
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 19:25:53 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 52a10325e7df3fdea06a9dcdce292e5571a0acd8
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:25:43 2013 -0500
+
+    Update settings.py
+
+commit 7889870c8cedde570320b5e3452144bd6151b704
+Merge: bab4303 3bcb64c
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 19:25:37 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 3bcb64c9f7fadef9582d860b18e9aee6b01c0a35
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:24:55 2013 -0500
+
+    Update settings.py
+
+commit bab4303693f4c52e6023525ccdbdb3133b87e077
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 19:23:19 2013 -0500
+
+    unit test skeleton
+
+commit 6e9b4e74cf4271e64cd41a49b6b1961381cb84fa
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:19:47 2013 -0500
+
+    Update urls.py
+
+commit 2a95225eb6a9f40b2a72b451b5b18cea9b1780a6
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:16:16 2013 -0500
+
+    Update settings.py
+
+commit 6cc2c14ad4416bc72ff7876ab6a79f019c5b6b22
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 19:13:57 2013 -0500
+
+    Update settings.py
+    
+    Updated file paths
+
+commit 7fd2bf625dc66f2ea00db9f0de982204d41a6545
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 18:48:06 2013 -0500
+
+    Update settings.py
+    
+    Added URL templates
+
+commit a71e7346904f81f03e04300db07c63a944ba38bd
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Fri Jul 12 18:42:51 2013 -0500
+
+    Update urls.py
+
+commit 5b151293e6ab221982f16449d3469a16a4252482
+Merge: e9072a6 017bbbf
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Fri Jul 12 18:33:34 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit e9072a670282f9c029c23163178ae606d3360641
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Fri Jul 12 18:31:28 2013 -0500
+
+    html files committed
+
+commit 017bbbf60de934b9248f70e85eccdadecb3085e1
+Merge: a6e3b10 6eee00a
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 18:30:16 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit a6e3b100cb06d2d4fe40c948290bda2e0734bc1f
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 18:28:12 2013 -0500
+
+    FINAL XML DRAFTgit add .! :)
+
+commit 6eee00a2f82684cea809cc6d1ade160368a912fb
+Merge: ab0b8ab 4ef4187
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 17:07:47 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+
+commit ab0b8ab2176d9548bde4d178090f7f6ecfe3f43e
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 17:07:31 2013 -0500
+
+    Updated XML
+
+commit 4ef418747c7960263613a3240fe652ba72a94ea9
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 12 17:04:35 2013 -0500
+
+    Solved some issues.
+
+commit 805b44af4dffb33cb759c94d5f3d2477a91a50df
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 16:51:02 2013 -0500
+
+    Modified Views.py
+
+commit 20afa9e7c18492bcf7deede12bcb6cee7b9b5b6d
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Fri Jul 12 16:48:06 2013 -0500
+
+    Import modified; Export created.
+
+commit d01a5ef1e3a00712b207749380f5e588c3f20ae7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 12 16:29:47 2013 -0500
+
+    Fixed import.
+
+commit 7d3633a1b252d30f2b5cf5825470f7f488719d07
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Fri Jul 12 15:08:40 2013 -0500
+
+    unit testing skeleton
+
+commit ad31e941ffccf6e50e60a7ba43ef71a7e136235a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 12 14:35:42 2013 -0500
+
+    Fixed tracked files.
+
+commit f3d74594a19072e3d52150810b9aeaedad5ca026
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 12 14:26:57 2013 -0500
+
+    Website is up again.
+
+commit fc1251e1761ec1bad45e5e7fb0bfb6ceeed64746
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 11 16:14:17 2013 -0500
+
+    Changed config files.
+
+commit e1b67de20118cae241c2bd5909bc70a539ea1d0c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 11 15:36:05 2013 -0500
+
+    Done.
+
+commit 6506b4248419d7e775887ed2161a3ff0040ee307
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 11 15:32:14 2013 -0500
+
+    Removed unecessary files.
+
+commit 57feaecf7642b408077bc56cbfb0820b808f4e6e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 11 15:12:22 2013 -0500
+
+    This should be the final change to dir structure.
