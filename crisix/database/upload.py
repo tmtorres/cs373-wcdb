@@ -40,15 +40,15 @@ def criHandler(node):
         if attr.tag == 'Time':
             c.time = attr.text
         if attr.tag == 'Locations':
-            c.location += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in c.location]).split('\n'))
+            c.location += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.location])
         if attr.tag == 'HumanImpact':
-            c.himpact += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in c.himpact]).split('\n'))
+            c.himpact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.himpact])
         if attr.tag == 'EconomicImpact':
-            c.eimpact += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in c.eimpact]).split('\n'))
+            c.eimpact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.eimpact])
         if attr.tag == 'ResourcesNeeded':
-            c.resources += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in c.resources]).split('\n'))
+            c.resources += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.resources])
         if attr.tag == 'WaysToHelp':
-            c.help += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in c.help]).split('\n'))
+            c.help += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
         if attr.tag == 'Common':
             comHandler(attr, c)
     c.save()
@@ -68,9 +68,9 @@ def orgHandler(node):
         if attr.tag == 'Location':
             o.location = attr.text
         if attr.tag == 'History':
-            o.history += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in o.history]).split('\n'))
+            o.history += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.history])
         if attr.tag == 'ContactInfo':
-            o.contact += ''.join(''.join([tostring(li).strip() for li in attr if tostring(li).strip() not in o.contact]).split('\n'))
+            o.contact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.contact])
         if attr.tag == 'Common':
             comHandler(attr, o)
     o.save()
@@ -97,6 +97,7 @@ def insertElem(query, attr):
     try:
         WebElement.objects.get(**query)
     except WebElement.DoesNotExist:
+        attr.update(query)
         w = WebElement(**attr)
         w.save()
 
@@ -104,21 +105,21 @@ def comHandler(node, e):
     for attr in node:
         if attr.tag == 'Citations':
             for elem in attr:
-                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'CITE', 'href' : elem.attrib.get('href'), 'text' : elem.text})
+                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'CITE', 'text' : elem.text})
         if attr.tag == 'ExternalLinks':
             for elem in attr:
-                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'href' : elem.attrib.get('href'), 'text' : elem.text})
+                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
         if attr.tag == 'Images':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'embed' : elem.attrib.get('embed'), 'text' : elem.text})
+                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'embed' : elem.attrib.get('embed'), 'text' : elem.text})
+                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
         if attr.tag == 'Maps':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'embed' : elem.attrib.get('embed'), 'text' : elem.text})
+                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
         if attr.tag == 'Feeds':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'embed' : elem.attrib.get('embed'), 'text' : elem.text})
+                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})
         if attr.tag == 'Summary':
             e.summary = attr.text
