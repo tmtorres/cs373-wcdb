@@ -1,111 +1,122 @@
 {% extends "base.html" %}
 {% block sidebar %}
-                  <li class="nav-header">Date</li>
-                  <li>{{ c.date }}</li>
-                  {% if c.time %}
-                  <li class="nav-header">Time</li>
-                  <li>{{ c.time }}</li>
-                  {% endif %}
-                  {% if c.kind %}
-                  <li class="nav-header">Kind</li>
-                  <li>{{ c.kind }}</li>
-                  {% endif %}
-                  {% if c.location %}
-                  <li class="nav-header">Locations</li>
-                  <li>{{ c.location|safe }}</li>
-                  {% endif %}
-                <li class="nav-header">Related People</li>
-                {% for p in related_people %}
-                    <li><a href="../../people/{{ p.id }}">{{ p.name }}</a></li>
-                {% endfor %}
-              <li class="nav-header">Related Organizations</li>
-                {% for o in related_orgs %}
-                    <li><a href="../../organizations/{{ o.id }}">{{ o.name }}</a></li>
-                    {% endfor %}
-                    {% endblock %}
-                    {% block body %}
-        <div class="span9">
-            <div class="row-fluid">
-                <h1 class="main-focus">{{ c.name }}</h1><br>
-                    <div class="row-fluid">
-                    <div class="span5">
-                        <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ maps.pop.embed }}"></iframe>
-                            </div> <!--/span4-->					
-                        <div class= "span7">
-                            <h3>Summary</h3>
-                            <p>{{ c.summary }}</p>
-                        </div>	<!--/span6-->
-                        </div><!--end row-->
-                    </div><!--/end row-->
-                <style type="text/css">
-                    img
-                    {
-                    max-height:180px;
-                    }
-                </style>
-            <div class="row-fluid">
-                <table border="0" width="100%">
-                    <tr>
-                        <th align="left"><h3>Videos<h3></th>
-                        <th align="left"><h3>Photos<h3></th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table border="0" >
-                                {% for w in videos %}
-                                <td>
-                                    <iframe class="youtube-player" type="text/html" 
-                                        height="180" width="auto" src="{{ w.embed }}"
-                                    frameborder="0" allowFullScreen></iframe>
-                                </td>
-                                {% endfor %}
-                            </table>
-                        </td>
-                        <td>
-                            <table border="0">
-                                {% for w in images %}
-                                <td>
-                                    <a href=""><img src="{{ w.embed }}"></a>
-                                </td>
-                                {% endfor %}
-                            </table>
-                        </td>
-                    </tr>
-                </table>
+<li class="nav-header">Date</li>
+<li>{{ c.date }}</li>
+{% if c.time %}
+<li class="nav-header">Time</li>
+<li>{{ c.time }}</li>
+{% endif %}
+{% if c.kind %}
+<li class="nav-header">Kind</li>
+<li>{{ c.kind }}</li>
+{% endif %}
+{% if c.location %}
+<li class="nav-header">Locations</li>
+<li>{{ c.location|safe }}</li>
+{% endif %}
+<li class="nav-header">Related People</li>
+{% for p in related_people %}
+<li><a href="../../people/{{ p.id }}">{{ p.name }}</a></li>
+{% endfor %}
+<li class="nav-header">Related Organizations</li>
+{% for o in related_orgs %}
+<li><a href="../../organizations/{{ o.id }}">{{ o.name }}</a></li>
+{% endfor %}
+{% endblock %}
+{% block body %}
+<div class="span9">
+    <div class="row-fluid">
+        <h1 class="main-focus">{{ c.name }}</h1>
+        <br>
+        <div class="row-fluid">
+            <div class="span5">
+                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ maps.pop.embed }}"></iframe>
             </div>
-            <div class="row-fluid">
-                <h3>Human Impact</h3>
-                <ul style="margin-left:0px; list-style: none;">
-                            <p>{{ c.himpact|safe }}</p>
-                        </ul>
-
-
+            <!--/span4-->
+            <div class= "span7">
+                <h3>Summary</h3>
+                <p>{{ c.summary }}</p>
             </div>
-
-                    <div class="row-fluid">
-                <ul style="margin-left:0px; list-style: none;">
-                                <h3>Economic Impact</h3>
-                                <p>{{ c.eimpact|safe }}</p>		   	
-                </ul>
-                    </div> <!--/row--> 
-
-                    <div class="row-fluid">
-                <ul style="margin-left:0px; list-style: none;">
-                        <h3>Resources Needed</h3>
-                        <p>{{ c.resources|safe }}</p>
-                    </ul>
-                <ul style="margin-left:0px; list-style: none;">
-                            <h3>Ways to Help</h3>
-                        <p>{{ c.help|safe }}</p>
-                    </ul>
-                        </div><!-- end/row-->   
-                        <div class="row-fluid">
-                        <h3>Citations</h3>
-                {% for w in citations %}
-                <p><a href="{{ w.href }}">{{ w.text }}</a></p>
-                {% endfor %}
-                </div><!--/row-->
-
-        </div><!--/span9-->
-
-        {% endblock %}
+            <!--/span6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--/end row-->
+    <style type="text/css">
+        img
+        {
+        max-height:180px;
+        }
+    </style>
+    <div class="row-fluid">
+        <table border="0" width="100%">
+            <tr>
+                <th align="left">
+                    <h3>
+                    Videos
+                    <h3>
+                </th>
+                <th align="left">
+                    <h3>
+                    Photos
+                    <h3>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" >
+                        {% for w in videos %}
+                        <td>
+                            <iframe class="youtube-player" type="text/html"
+                                height="180" width="auto" src="{{ w.embed }}"
+                                frameborder="0" allowFullScreen></iframe>
+                        </td>
+                        {% endfor %}
+                    </table>
+                </td>
+                <td>
+                    <table border="0">
+                        {% for w in images %}
+                        <td>
+                            <a href=""><img src="{{ w.embed }}"></a>
+                        </td>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row-fluid">
+        <h3>Human Impact</h3>
+        <ul style="margin-left:0px; list-style: none;">
+            <p>{{ c.himpact|safe }}</p>
+        </ul>
+    </div>
+    <div class="row-fluid">
+        <ul style="margin-left:0px; list-style: none;">
+            <h3>Economic Impact</h3>
+            <p>{{ c.eimpact|safe }}</p>
+        </ul>
+    </div>
+    <!--/row-->
+    <div class="row-fluid">
+        <ul style="margin-left:0px; list-style: none;">
+            <h3>Resources Needed</h3>
+            <p>{{ c.resources|safe }}</p>
+        </ul>
+        <ul style="margin-left:0px; list-style: none;">
+            <h3>Ways to Help</h3>
+            <p>{{ c.help|safe }}</p>
+        </ul>
+    </div>
+    <!-- end/row-->
+    <div class="row-fluid">
+        <h3>Citations</h3>
+        {% for w in citations %}
+        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
+        {% endfor %}
+    </div>
+    <!--/row-->
+</div>
+<!--/span9-->
+{% endblock %}
