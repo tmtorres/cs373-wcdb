@@ -114,10 +114,12 @@ def comHandler(node, e):
                 insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
+                if 'youtube' in elem.embed:
+                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
         if attr.tag == 'Maps':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
+                if 'google' in elem.embed:
+                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
         if attr.tag == 'Feeds':
             for elem in attr:
                 insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})
