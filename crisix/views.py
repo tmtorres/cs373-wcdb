@@ -28,8 +28,8 @@ def crises(request, id):
     c = Crisis.objects.get(id='CRI_'+str(id).upper())
     return render(request, 'crisis.html', {
         'c' : c, 
-        'related_people' : [{'id': str(p.id).lstrip('PER_').lower(), 'name': p.name} for p in c.people.all()],
-        'related_orgs' : [{'id': str(o.id).lstrip('ORG_').lower(), 'name': o.name} for o in c.organizations.all()],
+        'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
+        'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
