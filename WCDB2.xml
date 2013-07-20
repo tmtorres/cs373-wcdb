@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<!-- World Crises XML using schema (WCDB1.xsd) -->
+<!-- World Crises XML using schema (WCDB2.xsd) -->
 
 <WorldCrises>
     <!-- Crisis elements -->
@@ -23,10 +23,10 @@
             <li>6 among the 28 were school personnel.</li> 
             <li>1 among the 28 was the perpetrator mother.</li>
             <li>The 28th death was the suicide of the perpetrator.</li>
-            <li>2 others were injured</li>
+            <li>2 others were injured.</li>
         </HumanImpact>
         <EconomicImpact>
-            <li>The shares of gun manufactures have decreased significantly (http://www.cnbc.com/id/100325110).  The number of gun and ammunition purchases rose over 180% the day after the shooting due to fear of harsher gun laws (http://www.investopedia.com/financial-edge/0113/sandy-hooks-consequences-for-the-gun-industry.aspx).  The school has been closed and a $57 million proposal has been made to demolish and rebuild the school.</li>
+            <li>The shares of gun manufactures have decreased significantly. The number of gun and ammunition purchases rose over 180% the day after the shooting due to fear of harsher gun laws.  The school has been closed and a $57 million proposal has been made to demolish and rebuild the school.</li>
         </EconomicImpact>
         <ResourcesNeeded>
             <li>Connecticut State Police received the first call at 9:41 am and with Newtown police they quickly mobilized local police dog, SWAP, a bomb squad, and a state helicopter.</li>
@@ -44,22 +44,21 @@
                 <!-- Put text with optional hyperlinks here -->
                 <li href="http://www.cnn.com/interactive/2012/12/us/sandy-hook-timeline/index.html">"Sandy Hook shooting: What happened?". CNN.</li>
                 <li href="http://www.cnbc.com/id/100325110">"The Sandy Hook Effect: Gun Sales Rise as Stocks Fall". CNBC.</li>
-                <li href="http://www.ctphilanthropy.org/s_ccp/sec.asp?CID=20750&amp;DID=59912&amp;morel=true">Connecticut Council for Philanthropy</li>
+                <li href="http://www.investopedia.com/financial-edge/0113/sandy-hooks-consequences-for-the-gun-industry.aspx">"Sandy Hook's Consequences For The Gun Industry". Investopedia US.</li>
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
-                <li href="http://en.wikipedia.org/wiki/Newtown_shooting">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Newtown_shooting">"Sandy Hook Elementary School shooting". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg" />
+                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg">Shooting victims: Sandy Hook Elementary School</li>
             </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
-                <li embed="//www.youtube.com/embed/RVHufEjU9VU" />
+                <li embed="//www.youtube.com/embed/RVHufEjU9VU" text="President Barack Obama makes a Statement on the Shooting."/>
             </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
@@ -70,7 +69,6 @@
                 <!-- Put feed URL here and embed on your site in your own cool way-->
                 <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
             </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
               Adam Lanza is believed to have shot his mother, Nancy Lanza, in the head at her home in Newtown, Connecticut, around 9 a.m. on December 14, 2012, before taking her car and driving approximately five miles to the Sandy Hook Elementary School, where he shot and killed 20 students between the ages of 5 and 10, as well as six adult workers. According to reports, most of the shooting occurred in two of the school's first-grade classrooms; 14 students in one classroom, and six in the other, were murdered. Only two of the victims who were shot by Lanza—both teachers—survived the attack. According to police, after firing between 50 to 100 shots, Lanza then turned the gun on himself, fatally shooting himself in the head as responders began arriving on scene, around 9:50 a.m.
@@ -115,11 +113,11 @@
             <Citations>
                 <!-- Put text with optional hyperlinks here -->
                 <li href="http://www.nytimes.com/2009/05/08/world/asia/08china.html?_r=0">"China Reports Student Toll for Quake". New York Times.</li>
-                <li href="http://www.bloomberg.com/apps/news?pid=newsarchive&amp;sid=aZhtsxh8IlB4&amp;refer=home"> "50,000 troops deployed". Bloomberg L.P.</li>
+                <li href="http://www.bloomberg.com/apps/news?pid=newsarchive&amp;sid=aZhtsxh8IlB4&amp;refer=home">"50,000 troops deployed". Bloomberg L.P.</li>
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
-                <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">"2008 Sichuan Earthquake". Wikipedia.</li>
             </ExternalLinks>
             
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
@@ -182,7 +180,7 @@
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
-                <li href="en.wikipedia.org/wiki/Libyan_civil_war">Wikipedia</li>
+                <li href="en.wikipedia.org/wiki/Libyan_civil_war">"Libyan Civil War". Wikipedia.</li>
             </ExternalLinks>
             
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
@@ -245,7 +243,7 @@
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
-                <li href="http://en.wikipedia.org/wiki/Northern_Mali_conflict_%282012%E2%80%93present%29">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Northern_Mali_conflict">"Northern Mali conflict". Wikipedia.</li>
             </ExternalLinks>
             
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
@@ -306,7 +304,8 @@
                 <li href="http://www.bbc.co.uk/news/business-22750491">Fall of Turkish stock market</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://www.reuters.com/article/2013/06/24/us-germany-turkey-merkel-idUSBRE95N11420130624">Germany calls on Turkey to remove hurdles to EU accession</li><li href="http://uk.reuters.com/article/2013/07/03/turkey-court-taksim-idUKL5N0F93C120130703">Turkish court blocks disputed park project</li>
+                <li href="http://www.reuters.com/article/2013/06/24/us-germany-turkey-merkel-idUSBRE95N11420130624">Germany calls on Turkey to remove hurdles to EU accession</li>
+                <li href="http://uk.reuters.com/article/2013/07/03/turkey-court-taksim-idUKL5N0F93C120130703">Turkish court blocks disputed park project</li>
             </ExternalLinks>
         </Common>
     </Crisis>
@@ -322,7 +321,7 @@
         <Date>1900-01-01</Date>
         <Time>18:00:00</Time>
         <Locations>
-            <li>Worldwide </li>
+            <li>Worldwide</li>
         </Locations>
         <HumanImpact>
             <li>25,000,000 deaths</li>
