@@ -727,11 +727,7 @@
         </Organizations>
         <Kind>Leader of Al-Qaeda</Kind>
         <Location>Middle East</Location>
-        <Common>
-            <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Osama_bin_Laden"> Osama Bin Laden Wikipedia</li>
-            </ExternalLinks>
-        <Common>
+        <Common/>
     </Person>
 
     <Person ID="PER_JOSHAZ" Name="Joseph Hazelwood">
