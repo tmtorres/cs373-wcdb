@@ -92,6 +92,7 @@ def getCommon(node, entity):
             child = ET.SubElement(elem, 'li')
             child.set('href', v.href)
             child.text = v.text
+
     w = entity.elements.filter(ctype='LINK')
     if len(w) > 0:
         elem = ET.SubElement(attr, 'ExternalLinks')
@@ -111,6 +112,14 @@ def getCommon(node, entity):
     w = entity.elements.filter(ctype='VID')
     if len(w) > 0:
         elem = ET.SubElement(attr, 'Videos')
+        for v in w:
+            child = ET.SubElement(elem, 'li')
+            child.set('embed', v.embed)
+            child.text = v.text
+
+    w = entity.elements.filter(ctype='MAP')
+    if len(w) > 0:
+        elem = ET.SubElement(attr, 'Maps')
         for v in w:
             child = ET.SubElement(elem, 'li')
             child.set('embed', v.embed)
