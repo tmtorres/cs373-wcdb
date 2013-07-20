@@ -116,7 +116,11 @@
         <ul style="margin-left:0px; list-style: none;">
             <h3>Ways to Help</h3>
             {% for h in help %}
+            {% if h.href %}
             <p><a href="{{ h.href }}">{{ h.text }}</a></p>
+            {% else %}
+            <p>{{ h.text }}</p>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
