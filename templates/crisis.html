@@ -2,27 +2,33 @@
 {% block sidebar %}
 <li class="nav-header">Date</li>
 <li>{{ c.date }}</li>
+
 {% if c.time %}
 <li class="nav-header">Time</li>
 <li>{{ c.time }}</li>
 {% endif %}
+
 {% if c.kind %}
 <li class="nav-header">Kind</li>
 <li>{{ c.kind }}</li>
 {% endif %}
+
 {% if c.location %}
 <li class="nav-header">Locations</li>
-<li>{{ c.location|safe }}</li>
+<li>{{ c.location|safe }}</li> <!--Don't use 'safe' for people or organizations. Only locations are Crises are stored as list items.-->
 {% endif %}
+
 <li class="nav-header">Related People</li>
 {% for p in related_people %}
 <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
+
 <li class="nav-header">Related Organizations</li>
 {% for o in related_orgs %}
 <li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
 {% endfor %}
 {% endblock %}
+
 {% block body %}
 <div class="span9">
     <div class="row-fluid">
