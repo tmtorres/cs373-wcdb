@@ -8,6 +8,9 @@ class Entity(models.Model):
     kind = models.TextField(blank=True, null=True)
     location = models.TextField(blank=True, default='')
     summary = models.TextField(blank=True, null=True)
+    created = models.DateField(auto_now_add=True)
+    def __lt__(self, rhs):
+        return self.created < rhs.created
     def __unicode__(self):
         return u'%s%s%s%s%s%s' % (
             self.id + '\n', 

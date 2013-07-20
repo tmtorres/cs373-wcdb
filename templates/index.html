@@ -1,26 +1,8 @@
 {% extends "base.html" %}
 {% block sidebar %}
-<li class="nav-header">Date</li>
-<li>{{ c.date }}</li>
-{% if c.time %}
-<li class="nav-header">Time</li>
-<li>{{ c.time }}</li>
-{% endif %}
-{% if c.kind %}
-<li class="nav-header">Kind</li>
-<li>{{ c.kind }}</li>
-{% endif %}
-{% if c.location %}
-<li class="nav-header">Locations</li>
-<li>{{ c.location|safe }}</li>
-{% endif %}
-<li class="nav-header">Related People</li>
-{% for p in related_people %}
-<li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
-{% endfor %}
-<li class="nav-header">Related Organizations</li>
-{% for o in related_orgs %}
-<li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
+<li class="nav-header">New Entries</li>
+{% for v in recent %}
+<li><!--<a href="../../people/{{ p.id }}">-->{{ v.name }}<!--</a>--></li>
 {% endfor %}
 {% endblock %}
 {% block body %}
