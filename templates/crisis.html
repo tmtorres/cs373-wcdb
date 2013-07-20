@@ -15,7 +15,7 @@
 
 {% if c.location %}
 <li class="nav-header">Locations</li>
-<li>{{ c.location|safe }}</li> <!--Don't use 'safe' for people or organizations. Only locations are Crises are stored as list items.-->
+<li>{{ c.location|safe }}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
 <li class="nav-header">Related People</li>
@@ -32,6 +32,7 @@
 {% block body %}
 <div class="span9">
     <div class="row-fluid">
+        <div class="hero-unit">
         <h1 class="main-focus">{{ c.name }}</h1>
         <br>
         <div class="row-fluid">
@@ -42,9 +43,8 @@
             </div>
             <!--/span4-->
             <div class= "span7">
-                <div class="hero-unit">
-                <h3>Summary</h3>
                 <p>{{ c.summary }}</p>
+                </div>
             </div>
             <!--/span6-->
         </div>
