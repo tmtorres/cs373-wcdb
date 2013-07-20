@@ -8,9 +8,10 @@ def index(request):
     return redirect('crisix/')
 
 def home(request):
-    recent = list(Entity.objects.all()).sort()
-    print recent
-    return render(request, 'index.html', { 'recent' : recent })
+    crises = [{'id': str(c.id).lower()[4:], 'name': c.name} for c in Crisis.objects.all()]
+    organizations = [{'id': str(o.id).lower()[4:], 'name': o.name} for o in Organization.objects.all()]
+    people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]
+    return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
 def display(request, etype = ''):
     return HttpResponse(etype + ' list page.')
@@ -23,7 +24,6 @@ def organizations(request, id):
 
 def crises(request, id):
     c = Crisis.objects.get(id='CRI_'+str(id).upper())
-    #return HttpResponse(c.name)
     return render(request, 'crisis.html', {
         'c' : c, 
         'related_people' : [{'id': str(p.id).lstrip('PER_').lower(), 'name': p.name} for p in c.people.all()],

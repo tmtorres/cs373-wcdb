@@ -8,9 +8,11 @@ class Entity(models.Model):
     kind = models.TextField(blank=True, null=True)
     location = models.TextField(blank=True, default='')
     summary = models.TextField(blank=True, null=True)
-    created = models.DateField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
+
     def __lt__(self, rhs):
-        return self.created < rhs.created
+        return self.created > rhs.created
+
     def __unicode__(self):
         return u'%s%s%s%s%s%s' % (
             self.id + '\n', 
@@ -30,6 +32,7 @@ class Crisis(Entity):
     help = models.TextField(blank=True, default='')
     organizations = models.ManyToManyField('Organization', related_name='crises')
     people = models.ManyToManyField('Person', related_name='crises')
+
     def __unicode__(self):
         return u'%s%s%s%s%s%s%s%s%s' % (
             super(Crisis, self).__unicode__(),
@@ -47,6 +50,7 @@ class Organization(Entity):
     history = models.TextField(blank=True, default='')
     contact = models.TextField(blank=True, default='')
     people = models.ManyToManyField('Person', related_name='organizations')
+
     def __unicode__(self):
         return u'%s%s%s%s%s' % (
             super(Organization, self).__unicode__(),
