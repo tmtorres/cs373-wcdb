@@ -727,7 +727,11 @@
         </Organizations>
         <Kind>Leader of Al-Qaeda</Kind>
         <Location>Middle East</Location>
-        <Common/>
+        <Common>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Osama_bin_Laden"> Osama Bin Laden Wikipedia</li>
+            </ExternalLinks>
+        <Common>
     </Person>
 
     <Person ID="PER_JOSHAZ" Name="Joseph Hazelwood">
@@ -804,12 +808,13 @@
             <li>Phone: (+91) 1-800-DONTKNOW</li>
             <li>General enquiries: info@sichuan-quake-relief.org</li>
             <li>Volunteer: volunteer@sichuan-quake-relief.org</li>
-            <li>Address:</li>
-            <li>c/o The Bookworm (LaoShuChong)</li>
-            <li>Renmin Nan Road, Section 4,#28</li>
-            <li>YuJie East Street, No2-7</li>
-            <li>Sichuan Province</li>
-            <li>Chengdu, China 610041</li>
+            <li>Address:
+                c/o The Bookworm (LaoShuChong)
+                Renmin Nan Road, Section 4,#28
+                YuJie East Street, No2-7
+                Sichuan Province
+                Chengdu, China 610041
+            </li>
             <li>Fax: +86 (0)28 8552-1997</li>
         </ContactInfo>
         <!-- See Crisis element above for examples of everything under <Common> -->
