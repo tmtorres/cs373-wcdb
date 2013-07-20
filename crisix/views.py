@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from database.models import *
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from xml.etree.ElementTree import fromstring
+from xml.etree.ElementTree import ElementTree, Element
 
 def index(request):
     return redirect('crisix/')
@@ -29,6 +31,7 @@ def crises(request, id):
         'related_people' : [{'id': str(p.id).lstrip('PER_').lower(), 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lstrip('ORG_').lower(), 'name': o.name} for o in c.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
+        'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
         'images' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='IMG')],
         'videos' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='VID')],
