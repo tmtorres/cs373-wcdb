@@ -15,14 +15,14 @@ MANAGERS = ADMINS
 
 ENGINE = 'sqlite3' if 'test' in sys.argv else 'mysql'
 
-d = dict([s.split(' = ') for s in open('/u/z/users/cs373/' + os.getcwd().split('/')[4] + '/.zinfo').read().split('\n')[:3]])
+ZINFO = dict([s.split(' = ') for s in open('/u/z/users/cs373/' + os.getcwd().split('/')[4] + '/.zinfo').read().split('\n')[:3]])
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.' + ENGINE, # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': d['database'],                      # Or path to database file if using sqlite3.
-        'USER': d['user'],                      # Not used with sqlite3.
-        'PASSWORD': d['password'],                  # Not used with sqlite3.
+        'NAME': ZINFO['database'],                      # Or path to database file if using sqlite3.
+        'USER': ZINFO['user'],                      # Not used with sqlite3.
+        'PASSWORD': ZINFO['password'],                  # Not used with sqlite3.
         'HOST': 'z',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
