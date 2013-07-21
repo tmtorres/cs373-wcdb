@@ -230,6 +230,9 @@
             <li>Canada sent one Royal Canadian Air Force C-17 cargo plane to Mali.</li>
             <li>Canada announced on Jan. 29, 2013, that it would provide  another $13 million in aid to Mali. The funding appears to be for humanitarian relief alone, including $3 million for food and nutrition through the UN World Food Program, $2.5 million for health care and medical supplies, and $1 million for hygiene and sanitation promotion through World Vision Canada.</li>
         </ResourcesNeeded>
+        <WaysToHelp>
+            <li href="">Insert txt here</li>
+        </WaysToHelp>
         <Common>
             <Citations>
                 <!-- Put text with optional hyperlinks here -->
@@ -241,26 +244,24 @@
                 <!-- Put text with compulsory hyperlinks here -->
                 <li href="http://en.wikipedia.org/wiki/Northern_Mali_conflict">"Northern Mali conflict". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://cdn.theatlantic.com/static/infocus/mali012513/s_m17_59913469.jpg">A woman who fled northern Mali looks out from a tent at a camp for internally displaced person</li>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Northern_Mali_conflict.svg/350px-Northern_Mali_conflict.svg.png" text="Map showing the fullest extent of rebel-held territory (January 2013) before it was re-taken by Malian and French forces" />
+                <li embed="http://cdn.theatlantic.com/static/infocus/mali012513/s_m17_59913469.jpg" text="A woman who fled northern Mali looks out from a tent at a camp for internally displaced person" />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/GKgHE7C_HRc" text="France fighter jets pound rebels in northern Mali"/>
+            </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;oe=utf-8&amp;q=mali+africa+google+maps&amp;ie=UTF8&amp;hq=&amp;hnear=Mali&amp;gl=us&amp;t=m&amp;z=5&amp;ll=17.570692,-3.996166&amp;output=embed" />
                 <!--https://maps.google.com/maps?client=ubuntu&channel=fs&q=northern+mali+conflict+google+maps&oe=utf-8&ie=UTF-8&ei=LafcUdniEouK9gTe-oHoDg&ved=0CAoQ_AUoAg -->
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
-                On January 16th, 2012, several insurgent groups began fighting a campaign against the Malian government for independence or greater autonomy for northern Mali, an area known as Azawad. The National Movement for the Liberation of Azawad (MNLA), an organization fighting to make Azawad an independent homeland for the Tuareg people, had taken control of the region by April 2012. On March 22nd, 2012, President Amadou Toumani Touré was ousted in a coup d'état over his handling of the crisis. After the rebels took control and suspended the constitution of Mali, he government of Mali asked for foreign military help to re-take the north. On January 11th, 2013, the French military began operations against the Islamists while otherAfrican Union states were deployed shortly after. By February 8th, the Islamist-held territory had been re-taken by the Malian military, with help from the international coalition. Mali's government and the Tuareg rebel group, MNLA, signed a peace deal that called for Malian security forces and civilian officials to return to Kidal before a July 28 presidential election. It also called for the rebels to be disarmed. The July 28 election is meant to restore democracy in Mali.
+                On January 16th, 2012, several insurgent groups began fighting a campaign against the Malian government for independence or greater autonomy for northern Mali, an area known as Azawad. The National Movement for the Liberation of Azawad (MNLA), an organization fighting to make Azawad an independent homeland for the Tuareg people, had taken control of the region by April 2012. On March 22nd, 2012, President Amadou Toumani Touré was ousted in a coup d'état over his handling of the crisis. After the rebels took control and suspended the constitution of Mali, he government of Mali asked for foreign military help to re-take the north. On January 11th, 2013, the French military began operations against the Islamists while other African Union states were deployed shortly after. By February 8th, the Islamist-held territory had been re-taken by the Malian military, with help from the international coalition. Mali's government and the Tuareg rebel group, MNLA, signed a peace deal that called for Malian security forces and civilian officials to return to Kidal before a July 28 presidential election. It also called for the rebels to be disarmed. The July 28 election is meant to restore democracy in Mali.
             </Summary>
         </Common>
     </Crisis>
@@ -778,9 +779,6 @@
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
-            <Feeds>
-                <li embed="https://twitter.com/UnitedWay" />
-            </Feeds>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -823,9 +821,6 @@
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
-            <Feeds>
-                <li embed="https://twitter.com/SichuanRelief" />
-            </Feeds>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
@@ -857,9 +852,6 @@
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
             </Images>
-            <Feeds>
-                <li embed="https://twitter.com/NTC_of_Libya" />
-            </Feeds>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
             </Summary>
@@ -890,9 +882,6 @@
             <Images>
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
             </Images>
-            <Feeds>
-                <li embed="https://twitter.com/_AfricanUnion"/>
-            </Feeds>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
             </Summary>
@@ -950,9 +939,6 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">Wikipedia</li>
             </ExternalLinks>
-            <Feeds>
-                <li embed="https://twitter.com/CDCgov"/>
-            </Feeds>
         </Common>
     </Organization>
 
@@ -975,9 +961,6 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">United States Geological Survey Wiki</li>
             </ExternalLinks>
-            <Feeds>
-                 <li embed="https://twitter.com/USGS"/>
-            </Feeds>
         </Common>
     </Organization>
 
@@ -1010,9 +993,6 @@
             <Maps>
                 <li embed="http://media.web.britannica.com/eb-media/67/64667-004-7F7A1490.gif" text="Location of WHO Headquarters"/>
             </Maps>
-            <Feeds>
-                <li embed="https://twitter.com/WHO"/>
-            </Feeds>
         </Common>
     </Organization>
 
@@ -1035,9 +1015,6 @@
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
-            <Feeds>
-                <li embed="https://twitter.com/UN"/>
-            </Feeds>
         </Common>
     </Organization>
 
@@ -1066,9 +1043,6 @@
                 <li embed="http://www.exxonmobil.com.tr/Corporate/Newsroom/Publications/XOMGlobalCap/images/intro1.jpg" text="ExxonMobil corporate pic"/>
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
-            <Feeds>
-                <li embed="https://twitter.com/exxonmobil"/>
-            </Feeds>
         </Common>
     </Organization>
 </WorldCrises>
