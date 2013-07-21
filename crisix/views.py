@@ -33,7 +33,18 @@ def people(request, id):
         })
 
 def organizations(request, id):
-    return HttpResponse('Organization page.')
+    o = Organization.objects.get(id='ORG_' + str(id).upper())
+    return render(request, 'organization.html', {
+        'o' : o,
+        'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in o.crises.all()],
+        'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in o.people.all()],
+        'citations' : [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='CITE')],
+        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in o.elements.filter(ctype='FEED')],
+        'maps' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='MAP')],
+        'images' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='IMG')],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='VID')],
+        'external': [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='LINK')],
+        })
 
 def crises(request, id):
     c = Crisis.objects.get(id='CRI_' + str(id).upper())

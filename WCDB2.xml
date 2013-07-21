@@ -778,6 +778,9 @@
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/UnitedWay" />
+            </Feeds>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -820,6 +823,9 @@
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/SichuanRelief" />
+            </Feeds>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
@@ -851,6 +857,9 @@
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/NTC_of_Libya" />
+            </Feeds>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
             </Summary>
@@ -881,6 +890,9 @@
             <Images>
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/_AfricanUnion"/>
+            </Feeds>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
             </Summary>
@@ -938,6 +950,9 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">Wikipedia</li>
             </ExternalLinks>
+            <Feeds>
+                <li embed="https://twitter.com/CDCgov"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -960,6 +975,9 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">United States Geological Survey Wiki</li>
             </ExternalLinks>
+            <Feeds>
+                 <li embed="https://twitter.com/USGS"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -992,6 +1010,9 @@
             <Maps>
                 <li embed="http://media.web.britannica.com/eb-media/67/64667-004-7F7A1490.gif" text="Location of WHO Headquarters"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/WHO"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1014,6 +1035,9 @@
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
+            <Feeds>
+                <li embed="https://twitter.com/UN"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1042,6 +1066,9 @@
                 <li embed="http://www.exxonmobil.com.tr/Corporate/Newsroom/Publications/XOMGlobalCap/images/intro1.jpg" text="ExxonMobil corporate pic"/>
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/exxonmobil"/>
+            </Feeds>
         </Common>
     </Organization>
 </WorldCrises>
