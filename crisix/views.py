@@ -19,7 +19,16 @@ def display(request, etype = ''):
     return HttpResponse(etype + ' list page.')
 
 def people(request, id):
-    return HttpResponse('Person page with id = ' + str(id).lower() + '.')
+    p = Person.objects.get(id='PER_' + str(id).upper())
+    return render(request, 'person.html', {
+        'p' : p,
+        'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in p.crises.all()],
+        'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in p.organizations.all()],
+        'citations' : [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='CITE')],
+        'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
+        'images' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='IMG')],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='VID')],
+        })
 
 def organizations(request, id):
     return HttpResponse('Organization page.')
