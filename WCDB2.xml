@@ -53,7 +53,7 @@
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg">Shooting victims: Sandy Hook Elementary School</li>
+                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg" text="Shooting victims: Sandy Hook Elementary School" />
             </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
@@ -65,10 +65,6 @@
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=m&amp;source=embed&amp;oe=UTF8&amp;msa=0&amp;msid=213845869214841596682.0004d0d7915820d13990e&amp;ll=41.414362,-73.253222&amp;spn=0.01001,0.05083&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
             <!-- Optional summary field for extra random data -->
             <Summary>
               Adam Lanza is believed to have shot his mother, Nancy Lanza, in the head at her home in Newtown, Connecticut, around 9 a.m. on December 14, 2012, before taking her car and driving approximately five miles to the Sandy Hook Elementary School, where he shot and killed 20 students between the ages of 5 and 10, as well as six adult workers. According to reports, most of the shooting occurred in two of the school's first-grade classrooms; 14 students in one classroom, and six in the other, were murdered. Only two of the victims who were shot by Lanza—both teachers—survived the attack. According to police, after firing between 50 to 100 shots, Lanza then turned the gun on himself, fatally shooting himself in the head as responders began arriving on scene, around 9:50 a.m.
@@ -88,7 +84,7 @@
         <Time>14:28:01</Time>
         <Locations>
             <li>Wenchuan County, Sichuan</li>
-            <li> Sichuan Province</li>
+            <li>Sichuan Province</li>
         </Locations>
         <HumanImpact>
             <li>It killed 69,195 people.</li>
@@ -119,22 +115,22 @@
                 <!-- Put text with compulsory hyperlinks here -->
                 <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">"2008 Sichuan Earthquake". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" />
+                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" text="Sichuan Earthquake Impact Map" />
+                <li embed="http://www.spark-of-inspiration.com/images/Sichuan_Earthquake.jpg" text="Sichuan Earthquake"/>
+                <li embed="http://media-1.web.britannica.com/eb-media/64/117264-004-4F6187D9.jpg" text="Rescue workers searching for survivors" />
+                <li embed="http://i.telegraph.co.uk/multimedia/archive/01112/earthquake-damage-_1112578c.jpg" text="Millions still homeless a year after Sichuan earthquake" />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/78h-BpSkk1w" text="15 May 2008 - China Sichuan Quake - BBC Report"/>
+            </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;oe=UTF8&amp;msa=0&amp;msid=206935958482646980562.00044d19b32c5c9a07f6b&amp;ll=31.028366,103.470526&amp;spn=0.014132,0.206852&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
                 A deadly earthquake that measured at 8.0 Ms and 7.9 Mw, occured at 02:28 PM China Standard Time on Monday, May 12, 2008 in Sichuan province, killing 69,195 people, 374,643 injured, 18,392 missing, and 4.8 million people homeless.
@@ -171,33 +167,33 @@
             <li>On 25 February, the International Committee of the Red Cross launched an emergency appeal for US$6.4 million to meet the emergency needs of people affected by the violent unrest</li>
             <li>In March, the Swedish government donated medical supplies and other humanitarian aid and the UN World Food Programme provided food. Turkey sent a hospital ship to Misrata and a Turkish cargo ship brought 141 tons of humanitarian aid.</li>
         </ResourcesNeeded>
+        <WaysToHelp>
+            <li href="https://twitter.com/huffpostimpact">Follow Huffington Post IMPACT on Twitter</li>
+        </WaysToHelp>
         <Common>
             <Citations>
                 <!-- Put text with optional hyperlinks here -->
-                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8335934/Libya-protests-140-massacred-as-Gaddafi-sends-in-snipers-to-crush-dissent.html">  "Libya protests: 140 'massacred' as Gaddafi sends in snipers to crush dissent". The Daily Telegraph (UK).</li>
+                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8335934/Libya-protests-140-massacred-as-Gaddafi-sends-in-snipers-to-crush-dissent.html">"Libya protests: 140 'massacred' as Gaddafi sends in snipers to crush dissent". The Daily Telegraph (UK).</li>
                 <li href="http://www.icrc.org/eng/resources/documents/news-release/2011/libya-news-2011-02-25.htm"> "Libya: ICRC Launches Emergency Appeal as Humanitarian Situation Deteriorates". International Committee of the Red Cross.</li>
-
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
                 <li href="en.wikipedia.org/wiki/Libyan_civil_war">"Libyan Civil War". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" />
+                <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" text="Libyans celebrate news of Gadhafi's death." />
+                <li embed="http://images.politico.com/global/news/110220_libya_protests_ap_328.jpg" text="Protesters have seized control of some military bases and tanks. | AP Photo." />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/p3GN1fxA-B0" text="Visual diary shows Libyan soldier at war"/>
+            </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.co.uk/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=200809166078445189642.00049f7a79747b94b2b24&amp;t=m&amp;ll=31.515851,13.320786&amp;spn=24.023962,39.334073&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
                 The 2011 Libyan civil war war an armed conflict in the North African state of Libya, fought between forces loyal to Colonel Muammar Gaddafi and those seeking to oust his government. The war was preceded by protests in Benghazi beginning on Tuesday, 15 February 2011, which led to clashes with security forces that fired on the crowd. The protests escalated into a rebellion that spread across the country. This concluded with the forces opposing Gaddafi establishing an interim governing body, the National Transitional Council, which received diplomatic recognition as sole governing authority for Libya by 105 countries, the United Nations, European Union, Arab League, and African Union.
@@ -375,7 +371,7 @@
             <li>As of March 2012, donations to areas affected by the disaster totaled ¥520 billion and 930,000 people have assisted in disaster recovery efforts.</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li>Following the 2011 T?hoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan. The magnitude of the earthquake was estimated at 9.0.</li>
+            <li>Following the 2011 Tohoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan. The magnitude of the earthquake was estimated at 9.0.</li>
         </WaysToHelp>
         <Common/>
     </Crisis>
@@ -461,6 +457,7 @@
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml&amp;sll=40.111689,-95.712891&amp;sspn=41.414553,93.076172&amp;ie=UTF8&amp;z=11" text="Satellite Images of Haiti, Post-Earthquake"/>
+                <!-- <li embed="http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml" text="Google Earth KML Layer of Haiti, Post-Earthquake"/> -->
                 <li embed="http://www.bing.com/maps/?v=2&amp;cp=18.54956927907911~-72.32450745999813&amp;lvl=17&amp;sty=h&amp;where1=Port%20au%20Prince%20International%2C%20Haiti#Y3A9MTguNTQ5NTY5fi03Mi4zMjQ1MDcmbHZsPTE3JnN0eT1oJnE9UG9ydCUyNTIwYXUlMjUyMFByaW5jZSUyNTIwSW50ZXJuYXRpb25hbCUyNTJDJTI1MjB" text="Port au Prince International, Haiti"/>
                 <li embed="http://www.bing.com/maps/?form=MPSRCH&amp;cp=18.542811~-72.33903&amp;lvl=18&amp;style=a&amp;app=50328~#Y3A9MTguNTQyODExfi03Mi4zMzkwMzAmbHZsPTE4JnN0eT1h" text="Haiti Earthquake Bing Maps app (req. Silverlight)"/>
             </Maps>
@@ -571,6 +568,7 @@
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
             </Images>
+<<<<<<< HEAD
             <Videos>
                 <li embed="//www.youtube.com/embed/ItsOJUpK-cY" text="ABC News: Why Did Adam Lanza Snap?"/>
             </Videos>
@@ -580,6 +578,8 @@
             <Summary>
                 Adam Lanza was the perpetrator of the 2012 Sandy Elementary School shooting in Newtown, Connecticut, USA. Lanza lived in Sandy Hook, 5 miles from the school with his mother. He attended Western Connecticut State University in 2008 and 2009. Students and teachers who knew him in high school described Lanza as "intelligent, but nervous and fidgety". He avoided attracting attention and was uncomfortable socializing. He is not known to have had any close friends in school. According to a law enforcement official, Lanza was reported to have been diagnosed with Asperger Syndrome. Lanza's brother told law enforcement that Adam was believed to have a personality disorder and was "somewhat autistic". On December 14, 2012, Lanza killed his mother and 26 others at the school.
             </Summary>
+=======
+>>>>>>> 93fcdebb6656a627b22e3dc3deae679aa927dacf
         </Common>
     </Person>
 
@@ -590,8 +590,8 @@
         <Organizations>
             <Org ID="ORG_SNQKRF" />
         </Organizations>
-        <Kind>President of the People's Republic of China</Kind>
-        <Location>Beijing,China</Location>
+        <Kind>President</Kind>
+        <Location>Communist Party of China</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
@@ -609,12 +609,15 @@
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
             </Videos>
+<<<<<<< HEAD
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
             </Maps>
             <Summary>
                 Hu Jintao was the 6th President of the People's Republic of China from 2003-2013. Hu has been involved in the Communist party bureaucracy for most of his adult life, notably as Party secretary for Guizhou province and the Tibet Autonomous Region, and then later First secretary of the Party Central Secretariat and Vice-President under former leader Jiang Zemin. Hu is the first leader of the Communist Party without any significant revolutionary credentials.
             </Summary>
+=======
+>>>>>>> 93fcdebb6656a627b22e3dc3deae679aa927dacf
         </Common>
     </Person>
 
@@ -642,9 +645,6 @@
 
                 <li embed="//www.youtube.com/embed/sGm492qVEzA"> Warning: Graphic Video! </li>
             </Videos>
-            <Maps>
-                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bab+al-Azizia&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Bab+al-Azizia&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Bab al-Azizia, Tripoli, Libya"/>
-            </Maps>
         </Common>
     </Person>
 
@@ -668,12 +668,15 @@
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" text="Former Malian President Amadou Toumani Touré" />
             </Images>
+<<<<<<< HEAD
             <Videos>
                 <li embed="//www.youtube.com/embed/5ecQtecInJs" text="Toure Speaks After 2012 Coup"/>
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bamako&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=&amp;hnear=Bamako,+Mali&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed" text="Bamako, Mali"/>
             </Maps>
+=======
+>>>>>>> 93fcdebb6656a627b22e3dc3deae679aa927dacf
             <Summary>
                 Prince Amadou Toumani Touré was forced into exile and resignation on March 22, 2012 via coup d’état for his handling of the Northern Mali conflict. A group of rebel soldiers calling themselves the National Committee for the Restoration of Democracy and State took power and suspended Mali’s constitution.
             </Summary>
@@ -689,6 +692,7 @@
         </Organizations>
         <Kind>25th Prime Minister</Kind>
         <Location>Turkey</Location>
+<<<<<<< HEAD
         <Common>
             <Citations>
                 <li href="http://www.akparti.org.tr/english/yonetim/genel-baskan">Turkey's Justice and Development Party</li>
@@ -709,6 +713,9 @@
                 Recep Tayyip Erdogan is the 25th and current Prime Minister of Turkey, in office since 2003. He served as Mayor of Istanbul from 1994 to 1998 and established the Justice and Development Party (AKP) in 2001. From its first year, the AKP became the largest publicly supported political movement in Turkey. May and June 2013 saw protests against what large sections of the Turkish public perceive as a growing authoritarianism of Erdogan and his government and his policies.
             </Summary>
         </Common>
+=======
+        <Common/>
+>>>>>>> 93fcdebb6656a627b22e3dc3deae679aa927dacf
     </Person>
 
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
@@ -769,11 +776,14 @@
 
             </Videos>
             <Maps>
-                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;aq=2&amp;oq=1600+Penn&amp;sll=38.898999,-77.036605&amp;sspn=0.007373,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" text="The White House, Washington, D.C."/>
+                <li embed="https://maps.google.com/maps?q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;hl=en&amp;sll=30.307761,-97.753401&amp;sspn=0.732698,0.95993&amp;oq=1600+pen&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=16" text="The White House"/>
             </Maps>
+<<<<<<< HEAD
             <Summary>
                 Barack Obama is the 44th President of the United States and former U.S. Senator from Illinois. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he was president of the Harvard Law Review. He defeated Republican nominee John McCain in the general election becoming the first African American elected to the presidency. Nine months later, Obama was named the 2009 Nobel Peace Prize laureate. He was re-elected president in November 2012, defeating Republican Mitt Romney, and was sworn in for a second term on January 20, 2013.
             </Summary>
+=======
+>>>>>>> 93fcdebb6656a627b22e3dc3deae679aa927dacf
         </Common>
     </Person>
 
@@ -842,6 +852,9 @@
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/UnitedWay" />
+            </Feeds>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -884,6 +897,9 @@
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/SichuanRelief" />
+            </Feeds>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
@@ -915,6 +931,9 @@
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/NTC_of_Libya" />
+            </Feeds>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
             </Summary>
@@ -945,6 +964,9 @@
             <Images>
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/_AfricanUnion"/>
+            </Feeds>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
             </Summary>
@@ -1002,6 +1024,9 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">Wikipedia</li>
             </ExternalLinks>
+            <Feeds>
+                <li embed="https://twitter.com/CDCgov"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1024,6 +1049,9 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">United States Geological Survey Wiki</li>
             </ExternalLinks>
+            <Feeds>
+                 <li embed="https://twitter.com/USGS"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1056,6 +1084,9 @@
             <Maps>
                 <li embed="http://media.web.britannica.com/eb-media/67/64667-004-7F7A1490.gif" text="Location of WHO Headquarters"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/WHO"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1078,6 +1109,9 @@
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
+            <Feeds>
+                <li embed="https://twitter.com/UN"/>
+            </Feeds>
         </Common>
     </Organization>
 
@@ -1106,6 +1140,9 @@
                 <li embed="http://www.exxonmobil.com.tr/Corporate/Newsroom/Publications/XOMGlobalCap/images/intro1.jpg" text="ExxonMobil corporate pic"/>
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/exxonmobil"/>
+            </Feeds>
         </Common>
     </Organization>
 </WorldCrises>

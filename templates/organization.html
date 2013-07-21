@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block sidebar %}
 
-{% if p.kind %}
+{% if o.kind %}
 <li class="nav-header">Kind</li>
-<li>{{ p.kind }}</li>
+<li>{{ o.kind }}</li>
 {% endif %}
 
-{% if p.location %}
+{% if o.location %}
 <li class="nav-header">Location</li>
-<li>{{ p.location}}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
+<li>{{ o.location}}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
 <li class="nav-header">Related Crises</li>
@@ -16,9 +16,9 @@
 <li><a href="{% url crisix.views.crises c.id %}">{{ c.name }}</a></li>
 {% endfor %}
 
-<li class="nav-header">Related Organizations</li>
-{% for o in related_orgs %}
-<li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
+<li class="nav-header">Related People</li>
+{% for p in related_people %}
+<li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
 {% endblock %}
 
@@ -33,7 +33,7 @@
 <div class="span9">
     <div class="row-fluid">
         <div class="hero-unit">
-        <h1 class="main-focus">{{ p.name }}</h1>
+        <h1 class="main-focus">{{ o.name }}</h1>
         <br>
         <div class="row-fluid">
             <div class="span5">
@@ -43,7 +43,7 @@
             </div>
             <!--/span4-->
             <div class= "span7">
-                <p>{{ p.summary }}</p>
+                <p>{{ o.summary }}</p>
                 </div>
             </div>
             <!--/span6-->
