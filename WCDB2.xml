@@ -729,6 +729,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;aq=2&amp;oq=1600+Penn&amp;sll=38.898999,-77.036605&amp;sspn=0.007373,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" text="The White House, Washington, D.C."/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/BarackObama"/>
+            </Feeds>
         </Common>
     </Person>
 
