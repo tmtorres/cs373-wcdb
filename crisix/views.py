@@ -25,7 +25,7 @@ def organizations(request, id):
     return HttpResponse('Organization page.')
 
 def crises(request, id):
-    c = Crisis.objects.get(id='CRI_'+str(id).upper())
+    c = Crisis.objects.get(id='CRI_' + str(id).upper())
     return render(request, 'crisis.html', {
         'c' : c, 
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
