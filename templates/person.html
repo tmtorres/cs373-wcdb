@@ -47,18 +47,40 @@
                 </div>
             </div>
             <!--/span6-->
-        </div>
-        <!--end row-->
-    </div>
-    <!--/end row-->
+        </div><!--end hero-->
+    </div><!--/end row-->
     <style type="text/css">
         img
         {
         max-height:180px;
         }
     </style>
-    <div class="row-fluid">
-        <table border="0" width="100%">
+    <div class="row-fluid test-border-row">
+        <div class ="span6">
+            <h3>Videos</h3>
+            <div class="video-content">
+                {% for w in videos %}
+                    <iframe class="youtube-player" type="text/html"
+                        height="180" width="auto" src="{{ w.embed }}"
+                        frameborder="0" allowFullScreen></iframe>
+                {% endfor %}                
+            </div><!--end video-content-->
+
+
+        </div> <!--end span4-->
+
+        <div class ="span6">
+            <h3>Photos</h3>
+            <div class="photo-content">
+                {% for w in images %}
+                    <a href=""><img src="{{ w.embed }}"></a>
+                {% endfor %}
+                &nbsp
+            </div><!--end photo-content-->
+
+        </div> <!--end span4-->
+
+ <!--   <table border="0" width="100%">
             <tr>
                 <th align="left">
                     <h3>
@@ -93,8 +115,8 @@
                     </table>
                 </td>
             </tr>
-        </table>
-    </div>
+        </table> -->
+    </div><!-- end row-fluid-->
     <!--/row-->
     <div class="row-fluid">
         <h3>External Links</h3>
@@ -109,6 +131,5 @@
         <p><a href="{{ w.href }}">{{ w.text }}</a></p>
         {% endfor %}
     </div>
-</div>
-<!--/span9-->
+</div><!--/span9-->
 {% endblock %}
