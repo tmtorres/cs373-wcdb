@@ -461,7 +461,6 @@
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml&amp;sll=40.111689,-95.712891&amp;sspn=41.414553,93.076172&amp;ie=UTF8&amp;z=11" text="Satellite Images of Haiti, Post-Earthquake"/>
-                <li embed="http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml" text="Google Earth KML Layer of Haiti, Post-Earthquake"/>
                 <li embed="http://www.bing.com/maps/?v=2&amp;cp=18.54956927907911~-72.32450745999813&amp;lvl=17&amp;sty=h&amp;where1=Port%20au%20Prince%20International%2C%20Haiti#Y3A9MTguNTQ5NTY5fi03Mi4zMjQ1MDcmbHZsPTE3JnN0eT1oJnE9UG9ydCUyNTIwYXUlMjUyMFByaW5jZSUyNTIwSW50ZXJuYXRpb25hbCUyNTJDJTI1MjB" text="Port au Prince International, Haiti"/>
                 <li embed="http://www.bing.com/maps/?form=MPSRCH&amp;cp=18.542811~-72.33903&amp;lvl=18&amp;style=a&amp;app=50328~#Y3A9MTguNTQyODExfi03Mi4zMzkwMzAmbHZsPTE4JnN0eT1h" text="Haiti Earthquake Bing Maps app (req. Silverlight)"/>
             </Maps>
@@ -572,6 +571,9 @@
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
             </Images>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
+            </Maps>
         </Common>
     </Person>
 
@@ -582,8 +584,8 @@
         <Organizations>
             <Org ID="ORG_SNQKRF" />
         </Organizations>
-        <Kind>President</Kind>
-        <Location>Communist Party of China</Location>
+        <Kind>President of the People's Republic of China</Kind>
+        <Location>Beijing,China</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <ExternalLinks>
@@ -594,6 +596,9 @@
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
+            </Maps>
         </Common>
     </Person>
 
@@ -617,6 +622,9 @@
 
                 <li embed="//www.youtube.com/embed/sGm492qVEzA"> Warning: Graphic Video! </li>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bab+al-Azizia&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Bab+al-Azizia&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Bab al-Azizia, Tripoli, Libya"/>
+            </Maps>
         </Common>
     </Person>
 
@@ -637,6 +645,9 @@
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" />
             </Images>
+            <Maps>
+                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bamako&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=&amp;hnear=Bamako,+Mali&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed" text="Bamako, Mali"/>
+            </Maps>
             <Summary>
                 Prince Amadou Toumani Touré was forced into exile and resignation on March 22, 2012 via coup d’état for his handling of the Northern Mali conflict. A group of rebel soldiers calling themselves the National Committee for the Restoration of Democracy and State took power and suspended Mali’s constitution.
             </Summary>
@@ -652,7 +663,11 @@
         </Organizations>
         <Kind>25th Prime Minister</Kind>
         <Location>Turkey</Location>
-        <Common/>
+        <Common>
+            <Maps>
+                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Başbakanlık Konutu, Ankara, Turkey"/>
+            </Maps>
+        </Common>
     </Person>
 
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
@@ -712,7 +727,7 @@
                 <li embed="http://www.youtube.com/user/BarackObamadotcom" text="President Obama's youtube channel"/>
             </Videos>
             <Maps>
-                <li embed="https://maps.google.com/maps?q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;hl=en&amp;sll=30.307761,-97.753401&amp;sspn=0.732698,0.95993&amp;oq=1600+pen&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=16" text="The White House"/>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;aq=2&amp;oq=1600+Penn&amp;sll=38.898999,-77.036605&amp;sspn=0.007373,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" text="The White House, Washington, D.C."/>
             </Maps>
             <Feeds>
                 <li embed="https://twitter.com/BarackObama"/>
