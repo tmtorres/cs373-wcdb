@@ -53,7 +53,7 @@
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg">Shooting victims: Sandy Hook Elementary School</li>
+                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg" text="Shooting victims: Sandy Hook Elementary School" />
             </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
@@ -65,10 +65,6 @@
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=m&amp;source=embed&amp;oe=UTF8&amp;msa=0&amp;msid=213845869214841596682.0004d0d7915820d13990e&amp;ll=41.414362,-73.253222&amp;spn=0.01001,0.05083&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
             <!-- Optional summary field for extra random data -->
             <Summary>
               Adam Lanza is believed to have shot his mother, Nancy Lanza, in the head at her home in Newtown, Connecticut, around 9 a.m. on December 14, 2012, before taking her car and driving approximately five miles to the Sandy Hook Elementary School, where he shot and killed 20 students between the ages of 5 and 10, as well as six adult workers. According to reports, most of the shooting occurred in two of the school's first-grade classrooms; 14 students in one classroom, and six in the other, were murdered. Only two of the victims who were shot by Lanza—both teachers—survived the attack. According to police, after firing between 50 to 100 shots, Lanza then turned the gun on himself, fatally shooting himself in the head as responders began arriving on scene, around 9:50 a.m.
@@ -88,7 +84,7 @@
         <Time>14:28:01</Time>
         <Locations>
             <li>Wenchuan County, Sichuan</li>
-            <li> Sichuan Province</li>
+            <li>Sichuan Province</li>
         </Locations>
         <HumanImpact>
             <li>It killed 69,195 people.</li>
@@ -119,22 +115,22 @@
                 <!-- Put text with compulsory hyperlinks here -->
                 <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">"2008 Sichuan Earthquake". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" />
+                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" text="Sichuan Earthquake Impact Map" />
+                <li embed="http://www.spark-of-inspiration.com/images/Sichuan_Earthquake.jpg" text="Sichuan Earthquake"/>
+                <li embed="http://media-1.web.britannica.com/eb-media/64/117264-004-4F6187D9.jpg" text="Rescue workers searching for survivors" />
+                <li embed="http://i.telegraph.co.uk/multimedia/archive/01112/earthquake-damage-_1112578c.jpg" text="Millions still homeless a year after Sichuan earthquake" />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/78h-BpSkk1w" text="15 May 2008 - China Sichuan Quake - BBC Report"/>
+            </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;oe=UTF8&amp;msa=0&amp;msid=206935958482646980562.00044d19b32c5c9a07f6b&amp;ll=31.028366,103.470526&amp;spn=0.014132,0.206852&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
                 A deadly earthquake that measured at 8.0 Ms and 7.9 Mw, occured at 02:28 PM China Standard Time on Monday, May 12, 2008 in Sichuan province, killing 69,195 people, 374,643 injured, 18,392 missing, and 4.8 million people homeless.
@@ -375,7 +371,7 @@
             <li>As of March 2012, donations to areas affected by the disaster totaled ¥520 billion and 930,000 people have assisted in disaster recovery efforts.</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li>Following the 2011 T?hoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan. The magnitude of the earthquake was estimated at 9.0.</li>
+            <li>Following the 2011 Tohoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan. The magnitude of the earthquake was estimated at 9.0.</li>
         </WaysToHelp>
         <Common/>
     </Crisis>
@@ -461,7 +457,7 @@
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml&amp;sll=40.111689,-95.712891&amp;sspn=41.414553,93.076172&amp;ie=UTF8&amp;z=11" text="Satellite Images of Haiti, Post-Earthquake"/>
-                <li embed="http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml" text="Google Earth KML Layer of Haiti, Post-Earthquake"/>
+                <!-- <li embed="http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml" text="Google Earth KML Layer of Haiti, Post-Earthquake"/> -->
                 <li embed="http://www.bing.com/maps/?v=2&amp;cp=18.54956927907911~-72.32450745999813&amp;lvl=17&amp;sty=h&amp;where1=Port%20au%20Prince%20International%2C%20Haiti#Y3A9MTguNTQ5NTY5fi03Mi4zMjQ1MDcmbHZsPTE3JnN0eT1oJnE9UG9ydCUyNTIwYXUlMjUyMFByaW5jZSUyNTIwSW50ZXJuYXRpb25hbCUyNTJDJTI1MjB" text="Port au Prince International, Haiti"/>
                 <li embed="http://www.bing.com/maps/?form=MPSRCH&amp;cp=18.542811~-72.33903&amp;lvl=18&amp;style=a&amp;app=50328~#Y3A9MTguNTQyODExfi03Mi4zMzkwMzAmbHZsPTE4JnN0eT1h" text="Haiti Earthquake Bing Maps app (req. Silverlight)"/>
             </Maps>
