@@ -95,17 +95,17 @@
             </tr>
         </table>
     </div>
-    <!-- end/row-->
-    <div class="row-fluid">
-        <h3>Citations</h3>
-        {% for w in citations %}
-        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
-        {% endfor %}
-    </div>
     <!--/row-->
     <div class="row-fluid">
         <h3>External Links</h3>
         {% for w in external %}
+        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
+        {% endfor %}
+    </div>
+    <!-- end/row-->
+    <div class="row-fluid">
+        <h3>Citations</h3>
+        {% for w in citations %}
         <p><a href="{{ w.href }}">{{ w.text }}</a></p>
         {% endfor %}
     </div>
