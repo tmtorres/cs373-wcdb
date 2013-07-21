@@ -571,9 +571,15 @@
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/ItsOJUpK-cY" text="ABC News: Why Did Adam Lanza Snap?"/>
+            </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
             </Maps>
+            <Summary>
+                Adam Lanza was the perpetrator of the 2012 Sandy Elementary School shooting in Newtown, Connecticut, USA. Lanza lived in Sandy Hook, 5 miles from the school with his mother. He attended Western Connecticut State University in 2008 and 2009. Students and teachers who knew him in high school described Lanza as "intelligent, but nervous and fidgety". He avoided attracting attention and was uncomfortable socializing. He is not known to have had any close friends in school. According to a law enforcement official, Lanza was reported to have been diagnosed with Asperger Syndrome. Lanza's brother told law enforcement that Adam was believed to have a personality disorder and was "somewhat autistic". On December 14, 2012, Lanza killed his mother and 26 others at the school.
+            </Summary>
         </Common>
     </Person>
 
@@ -588,9 +594,16 @@
         <Location>Beijing,China</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
+            <Citations>
+                <li href="http://english.peopledaily.com.cn/data/people/hujintao.shtml">People's Daily</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Hu_Jintao">Wikipedia</li>
             </ExternalLinks>
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/5/59/Hu_Jintao_Cannes2011.jpg" text="Chinese President Hu Jintao" />
+            </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
@@ -599,6 +612,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
             </Maps>
+            <Summary>
+                Hu Jintao was the 6th President of the People's Republic of China from 2003-2013. Hu has been involved in the Communist party bureaucracy for most of his adult life, notably as Party secretary for Guizhou province and the Tibet Autonomous Region, and then later First secretary of the Party Central Secretariat and Vice-President under former leader Jiang Zemin. Hu is the first leader of the Communist Party without any significant revolutionary credentials.
+            </Summary>
         </Common>
     </Person>
 
@@ -616,6 +632,10 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">Wikipedia</li>
             </ExternalLinks>
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/3/36/Muammar_al-Gaddafi_at_the_AU_summit.jpg" text="Former Libyan Leader Muammar Gaddafi" />
+            </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
@@ -639,12 +659,18 @@
         <Location>Mali</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
+            <Citations>
+                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">NY Times: Toure resigns after coup </li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">Wikipedia</li>
             </ExternalLinks>
             <Images>
-                <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" />
+                <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" text="Former Malian President Amadou Toumani Touré" />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/5ecQtecInJs" text="Toure Speaks After 2012 Coup"/>
+            </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bamako&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=&amp;hnear=Bamako,+Mali&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed" text="Bamako, Mali"/>
             </Maps>
@@ -664,9 +690,24 @@
         <Kind>25th Prime Minister</Kind>
         <Location>Turkey</Location>
         <Common>
+            <Citations>
+                <li href="http://www.akparti.org.tr/english/yonetim/genel-baskan">Turkey's Justice and Development Party</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Wikipedia</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/b/b8/Tayyip_Erdo%C4%9Fan.JPG" text="Turkish Prime Minister Recep Tayyip Erdogan" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/Ael3SSICrLA" text="Erdogan Rejects 'dictator' Label"/>
+            </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Başbakanlık Konutu, Ankara, Turkey"/>
             </Maps>
+            <Summary>
+                Recep Tayyip Erdogan is the 25th and current Prime Minister of Turkey, in office since 2003. He served as Mayor of Istanbul from 1994 to 1998 and established the Justice and Development Party (AKP) in 2001. From its first year, the AKP became the largest publicly supported political movement in Turkey. May and June 2013 saw protests against what large sections of the Turkish public perceive as a growing authoritarianism of Erdogan and his government and his policies.
+            </Summary>
         </Common>
     </Person>
 
@@ -723,15 +764,16 @@
                 <li embed="http://disinfo.s3.amazonaws.com/wp-content/uploads/2010/02/JointSessionCongress.jpg" text="United States Congress joint session"/>
             </Images>
             <Videos>
-                <li embed="http://commons.wikimedia.org/wiki/Obama_Administration_weekly_video_addresses" text="President Obama's first weekly video address"/>
-                <li embed="http://www.youtube.com/user/BarackObamadotcom" text="President Obama's youtube channel"/>
+                <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
+                <li embed="//www.youtube.com/embed/zncqb-n3zMo" text="Barack Obama's second inaugural address (2013)"/>
+
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;aq=2&amp;oq=1600+Penn&amp;sll=38.898999,-77.036605&amp;sspn=0.007373,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" text="The White House, Washington, D.C."/>
             </Maps>
-            <Feeds>
-                <li embed="https://twitter.com/BarackObama"/>
-            </Feeds>
+            <Summary>
+                Barack Obama is the 44th President of the United States and former U.S. Senator from Illinois. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he was president of the Harvard Law Review. He defeated Republican nominee John McCain in the general election becoming the first African American elected to the presidency. Nine months later, Obama was named the 2009 Nobel Peace Prize laureate. He was re-elected president in November 2012, defeating Republican Mitt Romney, and was sworn in for a second term on January 20, 2013.
+            </Summary>
         </Common>
     </Person>
 
