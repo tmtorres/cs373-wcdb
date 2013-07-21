@@ -5,6 +5,8 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from xml.etree.ElementTree import fromstring
 from xml.etree.ElementTree import ElementTree, Element
+from PIL import Image
+import glob, os
 
 def index(request):
     return redirect('crisix/')
