@@ -167,33 +167,33 @@
             <li>On 25 February, the International Committee of the Red Cross launched an emergency appeal for US$6.4 million to meet the emergency needs of people affected by the violent unrest</li>
             <li>In March, the Swedish government donated medical supplies and other humanitarian aid and the UN World Food Programme provided food. Turkey sent a hospital ship to Misrata and a Turkish cargo ship brought 141 tons of humanitarian aid.</li>
         </ResourcesNeeded>
+        <WaysToHelp>
+            <li href="https://twitter.com/huffpostimpact">Follow Huffington Post IMPACT on Twitter</li>
+        </WaysToHelp>
         <Common>
             <Citations>
                 <!-- Put text with optional hyperlinks here -->
-                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8335934/Libya-protests-140-massacred-as-Gaddafi-sends-in-snipers-to-crush-dissent.html">  "Libya protests: 140 'massacred' as Gaddafi sends in snipers to crush dissent". The Daily Telegraph (UK).</li>
+                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8335934/Libya-protests-140-massacred-as-Gaddafi-sends-in-snipers-to-crush-dissent.html">"Libya protests: 140 'massacred' as Gaddafi sends in snipers to crush dissent". The Daily Telegraph (UK).</li>
                 <li href="http://www.icrc.org/eng/resources/documents/news-release/2011/libya-news-2011-02-25.htm"> "Libya: ICRC Launches Emergency Appeal as Humanitarian Situation Deteriorates". International Committee of the Red Cross.</li>
-
             </Citations>
             <ExternalLinks>
                 <!-- Put text with compulsory hyperlinks here -->
                 <li href="en.wikipedia.org/wiki/Libyan_civil_war">"Libyan Civil War". Wikipedia.</li>
             </ExternalLinks>
-            
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" />
+                <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" text="Libyans celebrate news of Gadhafi's death." />
+                <li embed="http://images.politico.com/global/news/110220_libya_protests_ap_328.jpg" text="Protesters have seized control of some military bases and tanks. | AP Photo." />
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/p3GN1fxA-B0" text="Visual diary shows Libyan soldier at war"/>
+            </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
                 <li embed="https://maps.google.co.uk/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=200809166078445189642.00049f7a79747b94b2b24&amp;t=m&amp;ll=31.515851,13.320786&amp;spn=24.023962,39.334073&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <!-- Put feed URL here and embed on your site in your own cool way-->
-                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
-            </Feeds>
-
             <!-- Optional summary field for extra random data -->
             <Summary>
                 The 2011 Libyan civil war war an armed conflict in the North African state of Libya, fought between forces loyal to Colonel Muammar Gaddafi and those seeking to oust his government. The war was preceded by protests in Benghazi beginning on Tuesday, 15 February 2011, which led to clashes with security forces that fired on the crowd. The protests escalated into a rebellion that spread across the country. This concluded with the forces opposing Gaddafi establishing an interim governing body, the National Transitional Council, which received diplomatic recognition as sole governing authority for Libya by 105 countries, the United Nations, European Union, Arab League, and African Union.
@@ -457,10 +457,7 @@
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml&amp;sll=40.111689,-95.712891&amp;sspn=41.414553,93.076172&amp;ie=UTF8&amp;z=11" text="Satellite Images of Haiti, Post-Earthquake"/>
-<<<<<<< HEAD
                 <!-- <li embed="http://mw1.google.com/mw-earth-vectordb/haiti/Haiti-Earthquake-nl.kml" text="Google Earth KML Layer of Haiti, Post-Earthquake"/> -->
-=======
->>>>>>> 8f0e3d44e39043378a3bba41d9f3c4d8495320b0
                 <li embed="http://www.bing.com/maps/?v=2&amp;cp=18.54956927907911~-72.32450745999813&amp;lvl=17&amp;sty=h&amp;where1=Port%20au%20Prince%20International%2C%20Haiti#Y3A9MTguNTQ5NTY5fi03Mi4zMjQ1MDcmbHZsPTE3JnN0eT1oJnE9UG9ydCUyNTIwYXUlMjUyMFByaW5jZSUyNTIwSW50ZXJuYXRpb25hbCUyNTJDJTI1MjB" text="Port au Prince International, Haiti"/>
                 <li embed="http://www.bing.com/maps/?form=MPSRCH&amp;cp=18.542811~-72.33903&amp;lvl=18&amp;style=a&amp;app=50328~#Y3A9MTguNTQyODExfi03Mi4zMzkwMzAmbHZsPTE4JnN0eT1h" text="Haiti Earthquake Bing Maps app (req. Silverlight)"/>
             </Maps>
@@ -571,9 +568,6 @@
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
             </Images>
-            <Maps>
-                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
-            </Maps>
         </Common>
     </Person>
 
@@ -584,8 +578,8 @@
         <Organizations>
             <Org ID="ORG_SNQKRF" />
         </Organizations>
-        <Kind>President of the People's Republic of China</Kind>
-        <Location>Beijing,China</Location>
+        <Kind>President</Kind>
+        <Location>Communist Party of China</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <ExternalLinks>
@@ -596,9 +590,6 @@
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
             </Videos>
-            <Maps>
-                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
-            </Maps>
         </Common>
     </Person>
 
@@ -622,9 +613,6 @@
 
                 <li embed="//www.youtube.com/embed/sGm492qVEzA"> Warning: Graphic Video! </li>
             </Videos>
-            <Maps>
-                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bab+al-Azizia&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Bab+al-Azizia&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Bab al-Azizia, Tripoli, Libya"/>
-            </Maps>
         </Common>
     </Person>
 
@@ -645,9 +633,6 @@
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" />
             </Images>
-            <Maps>
-                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bamako&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=&amp;hnear=Bamako,+Mali&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed" text="Bamako, Mali"/>
-            </Maps>
             <Summary>
                 Prince Amadou Toumani Touré was forced into exile and resignation on March 22, 2012 via coup d’état for his handling of the Northern Mali conflict. A group of rebel soldiers calling themselves the National Committee for the Restoration of Democracy and State took power and suspended Mali’s constitution.
             </Summary>
@@ -663,11 +648,7 @@
         </Organizations>
         <Kind>25th Prime Minister</Kind>
         <Location>Turkey</Location>
-        <Common>
-            <Maps>
-                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Başbakanlık Konutu, Ankara, Turkey"/>
-            </Maps>
-        </Common>
+        <Common/>
     </Person>
 
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
@@ -727,11 +708,8 @@
                 <li embed="http://www.youtube.com/user/BarackObamadotcom" text="President Obama's youtube channel"/>
             </Videos>
             <Maps>
-                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;aq=2&amp;oq=1600+Penn&amp;sll=38.898999,-77.036605&amp;sspn=0.007373,0.016512&amp;ie=UTF8&amp;hq=&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" text="The White House, Washington, D.C."/>
+                <li embed="https://maps.google.com/maps?q=1600+Pennsylvania+Avenue+Northwest,+Washington,+DC&amp;hl=en&amp;sll=30.307761,-97.753401&amp;sspn=0.732698,0.95993&amp;oq=1600+pen&amp;hnear=1600+Pennsylvania+Ave+NW,+Washington,+District+of+Columbia+20500&amp;t=m&amp;z=16" text="The White House"/>
             </Maps>
-            <Feeds>
-                <li embed="https://twitter.com/BarackObama"/>
-            </Feeds>
         </Common>
     </Person>
 
