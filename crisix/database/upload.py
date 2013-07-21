@@ -85,9 +85,9 @@ def perHandler(node):
         if attr.tag == 'Organizations':
             for elem in attr:
                 p.organizations.add(getEntity(Organization, elem.attrib.get('ID')))
-        if attr.tag == 'Kind' and p.kind is None:
+        if attr.tag == 'Kind':
             p.kind = attr.text
-        if attr.tag == 'Location' and p.location is None:
+        if attr.tag == 'Location':
             p.location = attr.text
         if attr.tag == 'Common':
             comHandler(attr, p)

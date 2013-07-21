@@ -5,7 +5,7 @@ from django.core.files.base import ContentFile
 from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -20,7 +20,7 @@ from models import *
 cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the database management index.")
+    return render(request, 'utility.html')
 
 def download(request):
     '''
