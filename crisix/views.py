@@ -27,8 +27,8 @@ def people(request, id):
         'citations' : [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='CITE')],
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in p.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
-        'images' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='IMG')],
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='VID')],
+        'images' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='IMG'))[:3]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='VID'))[:2]],
         'external': [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='LINK')],
         })
 
@@ -41,8 +41,8 @@ def organizations(request, id):
         'citations' : [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='CITE')],
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in o.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='MAP')],
-        'images' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='IMG')],
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='VID')],
+        'images' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='IMG'))[:3]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='VID'))[:2]],
         'external': [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='LINK')],
         })
 
@@ -55,7 +55,7 @@ def crises(request, id):
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
-        'images' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='IMG')],
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='VID')],
+        'images' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='IMG'))[:3]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='VID'))[:2]],
         'external': [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='LINK')],
         })
