@@ -28,6 +28,7 @@ def people(request, id):
         'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
         'images' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='IMG')],
         'videos' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='VID')],
+        'external': [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='LINK')],
         })
 
 def organizations(request, id):
@@ -44,4 +45,5 @@ def crises(request, id):
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
         'images' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='IMG')],
         'videos' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='VID')],
+        'external': [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='LINK')],
         })
