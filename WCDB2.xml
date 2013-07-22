@@ -337,8 +337,7 @@
             <Org ID="ORG_CDCPRE"/>
         </Organizations>
         <Kind>Epidemic</Kind>
-        <Date>1900-01-01</Date>
-        <Time>18:00:00</Time>
+        <Date>1981-01-01</Date>
         <Locations>
             <li>Worldwide</li>
         </Locations>
@@ -362,13 +361,17 @@
             <li>Circumcision in Sub-Saharan Africa "reduces the acquisition of HIV by heterosexual men by between 38% and 66% over 24 months". Based on these studies, the World Health Organization and UNAIDS both recommended male circumcision as a method of preventing female-to-male HIV transmission in 2007. Whether it protects against male-to-female transmission is disputed and whether it is of benefit in developed countries and among men who have sex with men is undetermined. Some experts fear that a lower perception of vulnerability among circumcised men may cause more sexual risk-taking behavior, thus negating its preventive effects.</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li>The Ryan White HIV/AIDS Program, Federal Funding</li>
-            <li>AIDS Education and Training Centers (AETC), Minority AIDS Initiative (MAI), Federal Testing Programs</li>
-            <li>There is currently no cure or effective HIV vaccine. Treatment consists of high active antiretroviral therapy (HAART) which slows progression of the disease and as of 2010 more than 6.6 million people were taking them in low and middle income countries. Treatment also includes preventive and active treatment of opportunistic infections.</li>
-            <li>Programs encouraging sexual abstinence do not appear to affect subsequent HIV risk. Evidence for a benefit from peer education is equally poor. Comprehensive sexual education provided at school may decrease high risk behavior. A substantial minority of young people continues to engage in high-risk practices despite knowing about HIV/AIDS, underestimating their own risk of becoming infected with HIV. It is not known whether treating other sexually transmitted infections is effective in preventing HIV.</li>
+            <li href="http://hab.hrsa.gov/">Ryan White HIV/AIDS Program, Federal Funding</li>
+            <li href="http://www.aidsetc.org/">AIDS Education and Training Centers (AETC)</li>
+            <li href="https://minorityhealth.hhs.gov/templates/browse.aspx?lvl=2&amp;lvlid=36">Minority AIDS Initiative (MAI)</li>
+            <li href="http://www.aids.gov/federal-resources/hiv-aids-programs/testing/">Federal Testing Programs</li>
+            <li href="http://magicjohnson.org/">Magic Johnson Foundation</li>
+            <li>There is currently no cure or effective HIV vaccine. However, treatment includes preventive and active treatment of opportunistic infections.</li>
+            <li>Programs encouraging sexual abstinence do not appear to affect subsequent HIV risk. Evidence for a benefit from peer education is equally poor. Comprehensive sexual education provided at school may decrease high risk behavior. A substantial minority of young people continues to engage in high-risk practices despite knowing about HIV/AIDS, underestimating their own risk of becoming infected with HIV.</li>
         </WaysToHelp>
         <Common>
             <Citations>
+                <li href="http://www.nejm.org/doi/full/10.1056/NEJM200106073442306">"AIDS &#45; The First 20 Years". The New England Journal of Medicine.</li>
                 <li href="http://www.nejm.org/doi/full/10.1056/NEJM200106073442306">"AIDS &#45; The First 20 Years". The New England Journal of Medicine.</li>
                 <li href="http://perspectivesinmedicine.cshlp.org/content/1/1/a006841">"Origins of HIV and the AIDS Pandemic". Cold Spring Harbor Laboratory Press.</li>
             </Citations>
@@ -377,10 +380,10 @@
                 <li href="http://en.wikipedia.org/wiki/Economic_impact_of_HIV/AIDS">"Economic impact of HIV/AIDS". Wikipedia.</li>
             </ExternalLinks>
             <Images>
-                <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-1b.jpg />" />
+                <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-1b.jpg" />
                 <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-aids-2.jpg" />
                 <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-aids-3.jpg" />
-                <li embed="http://upload.wikimedia.org/wikipedia/commons/6/64/Red_Ribbon.svg" text="The red ribbon is a symbol for solidarity with HIV-positive people and those living with AIDS." />
+                <li embed="http://media.nbcwashington.com/images/654*491/AIDS-ribbon2.jpg" text="The red ribbon is a symbol for solidarity with HIV-positive people and those living with AIDS." />
                 <li embed="http://jnvkannur.nic.in/AIDS-pic3.gif" text="Anatomy of the AIDS Virus" />
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/6/68/People_living_with_HIV_AIDS_world_map.PNG" text="People living with HIV/AIDS world map" />
                 <li embed="http://myplace.frontier.com/~dffix/medmicro/pix/aids_map.gif" />
@@ -392,7 +395,7 @@
                 <li embed="//www.youtube.com/embed/GLreHYWsk3s" text="Treating HIV (HIV #4)" />
             </Videos>
             <Summary>
-                Human immunodeficiency virus infection / acquired immunodeficiency syndrome (HIV/AIDS) is a disease of the human immune system caused by infection with human immunodeficiency virus (HIV). Genetic research indicates that HIV originated in west-central Africa during the early twentieth century. During the initial infection, a person may experience a brief period of influenza-like illness. This is typically followed by a prolonged period without symptoms. As the illness progresses, it interferes more and more with the immune system, making the person much more likely to get infections, including opportunistic infections and tumors that do not usually affect people who have working immune systems.
+                Human immunodeficiency virus infection / acquired immunodeficiency syndrome (HIV/AIDS) is a disease of the human immune system caused by infection with human immunodeficiency virus (HIV). Genetic research indicates that HIV originated in west-central Africa during the early twentieth century, although it was first recognized by the Centers for Disease Control and Prevention (CDC) in 1981 and its cause—HIV infection—was identified in the early part of the decade. During the initial infection, a person may experience a brief period of influenza-like illness. This is typically followed by a prolonged period without symptoms. As the illness progresses, it interferes more and more with the immune system, making the person much more likely to get infections, including opportunistic infections and tumors that do not usually affect people who have working immune systems.
                 HIV is transmitted primarily via unprotected sexual intercourse (including anal and even oral sex), contaminated blood transfusions, hypodermic needles, and from mother to child during pregnancy, delivery, or breastfeeding. Some bodily fluids, such as saliva and tears, do not transmit HIV. Prevention of HIV infection, primarily through safe sex and needle-exchange programs, is a key strategy to control the spread of the disease. There is no cure or vaccine; however, antiretroviral treatment can slow the course of the disease and may lead to a near-normal life expectancy. While antiretroviral treatment reduces the risk of death and complications from the disease, these medications are expensive and may be associated with side effects.
             </Summary>
         </Common>
@@ -405,7 +408,7 @@
         <Organizations>
             <Org ID="ORG_USGEOS"/>
         </Organizations>
-        <Kind>Natural Disaster</Kind>
+        <Kind>Megathrust Earthquake</Kind>
         <Date>2011-03-11</Date>
         <Time>20:46:00</Time>
         <Locations>
@@ -413,17 +416,49 @@
         </Locations>
         <HumanImpact>
             <li>On 12 September 2012, a Japanese National Police Agency report confirmed 15,883 deaths, 6,145 injured, and 2,671 people missing across twenty prefectures, as well as 129,225 buildings totally collapsed, with a further 254,204 buildings 'half collapsed', and another 691,766 buildings partially damaged.</li>
+            <li>The earthquake and tsunami also caused extensive and severe structural damage in north-eastern Japan, including heavy damage to roads and railways as well as fires in many areas, and a dam collapse.</li>
+            <li>Nuclear incidents including radiation releases.</li>
         </HumanImpact>
         <EconomicImpact>
-            <li>Early estimates placed insured losses from the earthquake alone at US$14.5 to $34.6 billion.The World Bank's estimated economic cost was US$235 billion, making it the costliest natural disaster in world history. By 12 April 2011 the Japanese government estimated that the cost of just the direct material damage could exceed ¥25 trillion ($300 billion).</li>
+            <li>Early estimates placed insured losses from the earthquake alone at US$14.5 to $34.6 billion. The World Bank's estimated economic cost was US$235 billion, making it the costliest natural disaster in world history. By April 12th, 2011 the Japanese government estimated that the cost of just the direct material damage could exceed ¥25 trillion ($300 billion).</li>
         </EconomicImpact>
         <ResourcesNeeded>
             <li>As of March 2012, donations to areas affected by the disaster totaled ¥520 billion and 930,000 people have assisted in disaster recovery efforts.</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li>Following the 2011 Tohoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan. The magnitude of the earthquake was estimated at 9.0.</li>
+            <li>The Bank of Japan offered ¥15 trillion (US$183 billion) to the banking system on March 14th in an effort to normalize market conditions.</li>
+            <li>Following the 2011 Tohoku earthquake and tsunami, Japan received messages of condolence and offers of assistance from a range of international leaders. According to Japan's foreign ministry, 116 countries and 28 international organizations had offered assistance to Japan.</li>
         </WaysToHelp>
-        <Common/>
+        <Common>
+            <Citations>
+                <li href="http://www.npa.go.jp/archive/keibi/biki/higaijokyo_e.pdf">"Damage Situation and Police Countermeasures... 10 June, 2013". National Police Agency of Japan.</li>
+                <li href="http://www.bbc.co.uk/news/business-12756379">"Japan quake: Infrastructure damage will delay recovery". BBC News.</li>
+                <li href="http://edition.cnn.com/2011/WORLD/asiapcf/03/13/japan.quake/index.html?iref=NS1">"Anxiety in Japan grows as death toll steadily climbs". CNN.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami">"2011 Tohoku earthquake and tsunami". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/2/2a/SH-60B_helicopter_flies_over_Sendai.jpg" text="An aerial view of damage in the Sendai region with black smoke coming from the Nippon Oil Sendai oil refinery" />
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Tsunami_map_Tohoku2011.svg/2000px-Tsunami_map_Tohoku2011.svg.png" text="Peak tsunami wave height summits, color-coded with red representing most severe" />
+                <li embed="http://atquake.files.wordpress.com/2011/03/esp-japan-tsunami-031111.jpg" />
+                <li embed="http://www.thetruthaboutcars.com/wp-content/uploads/2011/07/tsunami-japan-1.jpg" />
+                <li embed="http://lifeasahuman.com/files/2011/03/japan-tsunami-ap110311113416.jpg" />
+            </Images>
+            <Videos>
+                <li embed="" />
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
+            </Maps>
+            <Summary>
+                The 2011 Tohoku earthquake, was a magnitude 9.0 (Mw) undersea megathrust earthquake off the coast of Japan with the epicentre approximately 70 kilometres (43 mi) east of the Oshika Peninsula of Tohoku and the hypocenter at an underwater depth of approximately 30 km (19 mi). It was the most powerful known earthquake ever to have hit Japan, and the fifth most powerful earthquake in the world since modern record-keeping began in 1900. The earthquake triggered powerful tsunami waves that reached heights of up to 40.5 metres (133 ft) in Miyako in Tohoku's Iwate Prefecture, and which, in the Sendai area, travelled up to 10 km (6 mi) inland. The earthquake moved Honshu (the main island of Japan) 2.4 m (8 ft) east and shifted the Earth on its axis by estimates of between 10 cm (4 in) and 25 cm (10 in).
+
+                Japanese Prime Minister Naoto Kan said, "In the 65 years after the end of World War II, this is the toughest and the most difficult crisis for Japan." Around 4.4 million households in northeastern Japan were left without electricity and 1.5 million without water.
+
+                The tsunami caused nuclear accidents, primarily the level 7 meltdowns at three reactors in the Fukushima Daiichi Nuclear Power Plant complex, and the associated evacuation zones affecting hundreds of thousands of residents. Many electrical generators were taken down, and at least three nuclear reactors suffered explosions due to hydrogen gas that had built up within their outer containment buildings after cooling system failure. Residents within a 20 km (12 mi) radius of the Fukushima Daiichi Nuclear Power Plant and a 10 km (6.2 mi) radius of the Fukushima Daini Nuclear Power Plant were evacuated. In addition, the U.S. recommended that its citizens evacuate up to 80 km (50 mi) of the plant.
+            </Summary>
+        </Common>
     </Crisis>
 
     <Crisis ID="CRI_HAIEAR" Name="2010 Haiti Earthquake">
@@ -456,16 +491,16 @@
             <li>Immediately following the earthquake, Real Medicine Foundation began providing medical staffing, in-kind medical supplies and strategic coordination to help meet the surging needs of the health crisis on the ground. Working in close partnership with other relief organizations, Real Medicine organized deployments of volunteer medical specialists to meet the needs of partner hospitals and clinics at the Haiti–Dominican Republic border and in Port-au-Prince, provided direct funding, medical supplies and pharmaceuticals to local health facilities and partner hospitals, provided advisory services and coordination to local health facilities, including physical therapy support, and coordinated mobile health outreaches, field clinics and food supplies to outlying villages overlooked in the relief effort.</li>
         </WaysToHelp>
         <Common>
-            <Citations>
-                <li href="http://en.wikipedia.org/wiki/2010_Haiti_Earthquake">Haiti Earthquake Wiki</li>
-            </Citations>
-            <ExternalLinks>
-                <li href="http://haitiearthquake.web.unc.edu/economic-impact-of-the-earthquake/">Haiti Earthquake article</li>
+            <Citations>  
                 <li href="http://www.rdp.sg/film/haiti/">Haiti Earthquake 2010 (HD Documentary Short)</li>
                 <li href="http://insidedisaster.com/haiti/">Inside Disaster interactive website</li>
                 <li href="http://www.nj.com/news/index.ssf/2010/04/haitis_ambassador_to_us_says_e.html">Raymond Joseph article on NJ.com</li>
                 <li href="http://www.telegraph.co.uk/news/worldnews/centralamericaandthecaribbean/haiti/7022556/Haiti-earthquake-Wyclef-Jean-calls-for-evacuation-of-Port-au-Prince.html">Wyclef Jean calls for evacuation</li>
                 <li href="http://www.canada.com/news/Hard+power+needed+Haiti+Harper/2572453/story.html">Stephen Harper article</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://haitiearthquake.web.unc.edu/economic-impact-of-the-earthquake/">"Economic Impact of the Earthquake". University of North Carolina.</li>
+                <li href="http://en.wikipedia.org/wiki/2010_Haiti_Earthquake">Haiti Earthquake Wiki</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/7/79/UNDP-HTI-10-201.jpg.jpg" text="Haiti Earthquake rubble cleanup"/>
@@ -511,6 +546,12 @@
                 <li embed="http://www.bing.com/maps/?v=2&amp;cp=18.54956927907911~-72.32450745999813&amp;lvl=17&amp;sty=h&amp;where1=Port%20au%20Prince%20International%2C%20Haiti#Y3A9MTguNTQ5NTY5fi03Mi4zMjQ1MDcmbHZsPTE3JnN0eT1oJnE9UG9ydCUyNTIwYXUlMjUyMFByaW5jZSUyNTIwSW50ZXJuYXRpb25hbCUyNTJDJTI1MjB" text="Port au Prince International, Haiti"/>
                 <li embed="http://www.bing.com/maps/?form=MPSRCH&amp;cp=18.542811~-72.33903&amp;lvl=18&amp;style=a&amp;app=50328~#Y3A9MTguNTQyODExfi03Mi4zMzkwMzAmbHZsPTE4JnN0eT1h" text="Haiti Earthquake Bing Maps app (req. Silverlight)"/>
             </Maps>
+           <!--  <Feeds>
+                <li embed="" />
+            </Feeds>
+            <Summary>
+                Txt here.
+            </Summary> -->
         </Common>
     </Crisis>
 
@@ -539,7 +580,29 @@
         <WaysToHelp>
             <li>In the past 10 years, Tuesday's Children has provided emotional support to 3,000 children affected by terrorism.  We will never forget and VOICES of September 11 is part of the reason why. By providing information, support services and annual commemorative events for 9/11 families, rescue workers and survivors, the organization continues to commemorate the essence of that tragic day. VOICES also works to promote public policy reform on prevention, preparedness and response to terrorism. The organization named for fallen firefighter Michael Lynch, aims to empower children who lost relatives on September 11 by giving them educational grants to pursue higher education. In the last 10 years, the foundation has doled out 96 college scholarships, totaling more than $2.3 million (http://www.huffingtonpost.com/2011/09/11/911-charities-how-you-can_n_957338.html).</li>
         </WaysToHelp>
-        <Common/>
+        <Common>
+          <!--   <Citations>
+                <li href="">"Txt here". Source here.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="">"". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="" />
+            </Images>
+            <Videos>
+                <li embed="" />
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
+            </Maps>
+            <Feeds>
+                <li embed="" />
+            </Feeds>
+            <Summary>
+                Txt here.
+            </Summary> -->
+        </Common>
     </Crisis>
 
     <Crisis ID="CRI_EXXVAL" Name="Exxon Valdez Oil Spill ">
@@ -593,6 +656,15 @@
                 <li embed="http://www.youtube.com/watch?v=MbjC9SMKClE" text="The Exxon Valdez Disaster: 20 Years Later"/>
                 <li embed="http://www.youtube.com/watch?v=qS2FbvfnNDw" text="Hindsight and Foresight: 20 Years After the Exxon Valdez Spill"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
+            </Maps>
+           <!--  <Feeds>
+                <li embed="" />
+            </Feeds>
+            <Summary>
+                Txt here.
+            </Summary> -->
         </Common>
     </Crisis>
     
