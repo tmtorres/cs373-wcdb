@@ -73,7 +73,7 @@
             <h3>Photos</h3>
             <div class="photo-content">
                 {% for w in images %}
-                    <a href="{{ w.href }}"><img src="{{ STATIC_URL }}/{{ w.embed }}"></a>
+                    <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.file }}"></a>
                 {% endfor %}
             </div><!--end photo-content-->
 
