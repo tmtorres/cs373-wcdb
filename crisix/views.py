@@ -6,6 +6,7 @@ from django.template import RequestContext
 from xml.etree.ElementTree import fromstring
 from xml.etree.ElementTree import ElementTree, Element
 from django.conf import settings
+from django.core.files import File
 from PIL import Image
 import glob, os
 
@@ -26,7 +27,7 @@ def thumbnail(e):
 
     for t in thumbs:
         t['href'] = t['embed']
-        t['embed'] = 'thumbs/' + str(t['embed']).split('/')[-1].split('.')[0] + '.thumbnail'
+        t['embed'] = 'thumbs/' + str(t['embed']).split('/')[-1] + '.thumbnail'
         if not os.path.exists(settings.STATIC_ROOT + '/' + t['embed']):
             os.system('wget -P ' + settings.STATIC_ROOT + '/thumbs ' + str(t['href']))
 
@@ -34,11 +35,11 @@ def thumbnail(e):
         file, ext = os.path.splitext(infile)
         im = Image.open(infile)
         th = im.crop((0, 0, 180, 180))
-        th.save(file + ".thumbnail", "PNG")
+        th.save(file + ext + ".thumbnail", 'PNG')
         os.remove(infile)
 
     return thumbs
-        
+
 def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
     return render(request, 'person.html', {
