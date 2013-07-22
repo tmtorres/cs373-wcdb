@@ -231,7 +231,7 @@
             <li>Canada announced on Jan. 29, 2013, that it would provide  another $13 million in aid to Mali. The funding appears to be for humanitarian relief alone, including $3 million for food and nutrition through the UN World Food Program, $2.5 million for health care and medical supplies, and $1 million for hygiene and sanitation promotion through World Vision Canada.</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li href="">Insert txt here</li>
+            <li href="http://www.plan-uk.org/news/news-and-features/urgent-support-for-children-in-northern-mali/">Urgent support for children in northern Mali</li>
         </WaysToHelp>
         <Common>
             <Citations>
@@ -248,6 +248,7 @@
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Northern_Mali_conflict.svg/350px-Northern_Mali_conflict.svg.png" text="Map showing the fullest extent of rebel-held territory (January 2013) before it was re-taken by Malian and French forces" />
+                <li embed="http://static.guim.co.uk/sys-images/Education/Pix/pictures/2013/2/14/1360855805620/Malian-soldiers-arrive-in-008.jpg" text="Malian soldiers arrive in the recently liberated town of Douentza. French troops have moved to wrap up the first phase of a military operation to wrest northern Mali from rebel hands. Photograph: Joe Penney/Reuters" />
                 <li embed="http://cdn.theatlantic.com/static/infocus/mali012513/s_m17_59913469.jpg" text="A woman who fled northern Mali looks out from a tent at a camp for internally displaced person" />
             </Images>
             <Videos>
@@ -280,30 +281,51 @@
             <li>Turkey</li>
         </Locations>
         <HumanImpact>
-            <li>7 people died</li>
-            <li>9 people missing</li>
-            <li>More than 100,000 protesters at times</li>
-            <li>7822 injuries</li>
+            <li>7 people died.</li>
+            <li>9 people missing.</li>
+            <li>More than 100,000 protesters at times.</li>
+            <li>7822 injuries.</li>
         </HumanImpact>
         <EconomicImpact>
-            <li>Istanbul's stock exchange experienced a loss of 10.5%, the biggest one-day loss in a decade</li>
-            <li>Delay of EU accession talks</li>
-            <li>Cancellation of the planned construction, in Taksim area, that sparked the protests</li>
+            <li>Istanbul's stock exchange experienced a loss of 10.5%, the biggest one-day loss in a decade.</li>
+            <li>Delay of EU accession talks.</li>
+            <li>Cancellation of the planned construction, in Taksim area, that sparked the protests.</li>
         </EconomicImpact>
         <ResourcesNeeded>
-            <li>Not applicable</li>
+            <li>Not Applicable</li>
         </ResourcesNeeded>
         <WaysToHelp>
-            <li>None</li>
+            <li href="https://twitter.com/OccupyGezi">#OccupyGezi to save Istanbul park</li>
         </WaysToHelp>
         <Common>
             <Citations>
-                <li href="http://www.bbc.co.uk/news/business-22750491">Fall of Turkish stock market</li>
+                <li href="http://www.bbc.co.uk/news/business-22750491">"Turkish stock market falls 10.5% as demonstrations escalate". BBC.</li>
+                <li href="http://www.reuters.com/article/2013/06/24/us-germany-turkey-merkel-idUSBRE95N11420130624">"Germany's Merkel calls on Turkey to remove hurdles to EU accession". Reuters.</li>
+                <li href="http://uk.reuters.com/article/2013/07/03/turkey-court-taksim-idUKL5N0F93C120130703">"Turkish court blocks disputed park project". Reuters.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://www.reuters.com/article/2013/06/24/us-germany-turkey-merkel-idUSBRE95N11420130624">Germany calls on Turkey to remove hurdles to EU accession</li>
-                <li href="http://uk.reuters.com/article/2013/07/03/turkey-court-taksim-idUKL5N0F93C120130703">Turkish court blocks disputed park project</li>
+                <li href="https://en.wikipedia.org/wiki/2013_protests_in_Turkey">"2013 protests in Turkey." Wikipedia.</li>
             </ExternalLinks>
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="https://upload.wikimedia.org/wikipedia/commons/d/d2/%C4%B0stanbul_-_Taksim_Gezi_Park%C4%B1_-_Mart_2013_-_r6.JPG" text="Taksim Gezi Park" />
+                <li embed="https://upload.wikimedia.org/wikipedia/commons/a/a1/2013_Taksim_Gezi_Park_protests_%2815th_June%29.jpg" text="Taksim Gezi Park protests on June 15th, 2013" />
+                <li embed="http://www.theblaze.com/wp-content/uploads/2013/06/Turkey-protests1-620x362.jpeg" text="Protestors clash with riot police between Taksim and Besiktas in Istanbul, on June 1, 2013, during a demonstration against the demolition of the park. AP." />
+                <li embed="http://photographyblog.dallasnews.com/files/2013/06/Turkey_Protest.jpg" text="A man sleeps inside a destroyed car after clashes at the Taskim square in Istanbul, Sunday, June 2, 2013. AP." />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/W8b1YyP4_8c" text="'Most violent in years': Istanbul protests spread across Turkey"/>
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
+                <!--https://maps.google.com/maps?client=ubuntu&channel=fs&q=northern+mali+conflict+google+maps&oe=utf-8&ie=UTF-8&ei=LafcUdniEouK9gTe-oHoDg&ved=0CAoQ_AUoAg -->
+            </Maps>
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+                Protests in Turkey started on May 28th, 2013 to initially contest the plans of replacing Taksim Gezi Park with a shopping mall and possible residence. The protests developed into riots when a group occupying the park was attacked by police with no mercy. The subjects of the protests have since broadened beyond the development of Taksim Gezi Park, covering issues such as freedom of assembly and freedom of expression, as well as more broadly defending the secularism of Turkey. The protests also spread to other cities in Turkey, and protests were seen in other countries with significant Turkish communities. On July 8th, Istanbul governor Hüseyin Avni Mutlu led a public reopening of the Gezi Park in front of all the media cameras. People called by the Taksim Solidarity group for a mass visit quickly filled it up. Within less than an hour of governor's leave, the park was cordoned by police and people forcefully evacuated, thus closing the park to the public again. This is still an ongoing event.
+            </Summary>
         </Common>
     </Crisis>
 
@@ -314,7 +336,7 @@
         <Organizations>
             <Org ID="ORG_CDCPRE"/>
         </Organizations>
-        <Kind>Epidemic </Kind>
+        <Kind>Epidemic</Kind>
         <Date>1900-01-01</Date>
         <Time>18:00:00</Time>
         <Locations>
@@ -704,7 +726,6 @@
                 Recep Tayyip Erdogan is the 25th and current Prime Minister of Turkey, in office since 2003. He served as Mayor of Istanbul from 1994 to 1998 and established the Justice and Development Party (AKP) in 2001. From its first year, the AKP became the largest publicly supported political movement in Turkey. May and June 2013 saw protests against what large sections of the Turkish public perceive as a growing authoritarianism of Erdogan and his government and his policies.
             </Summary>
         </Common>
-        <Common/>
     </Person>
 
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
@@ -974,6 +995,9 @@
             <Images>
                 <li embed="http://25.media.tumblr.com/19e6fef221cb39926b9f0399eac6913c/tumblr_mnyuelETRW1ste7qoo1_1280.jpg" text="Twitter role with Turkey Protests"/>
             </Images>
+            <Feeds>
+                <li embed="https://twitter.com/OccupyGezi" />
+            </Feeds>
         </Common>
     </Organization>
 
