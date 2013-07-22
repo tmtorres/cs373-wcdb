@@ -29,7 +29,7 @@ def display(request, etype = ''):
 def thumbnail(e):
     r = iter(xrange(0, 3))
     imgs = [i for i in e.elements.filter(ctype='IMG') if str(i.embed).split('/')[-1].split('.')[-1].upper() in ('JPG', 'JPEG', 'PNG', 'GIF')][:3]
-    thumbs = [{'embed': w.embed, 'text': w.text, 'file': str(w.entity.id).lower() + str(r.next())} for w in imgs]
+    thumbs = [{'embed': w.embed, 'text': w.text, 'file': str(w.entity.id).lower() + str(r.next()) + '.thumbnail'} for w in imgs]
     for t in thumbs:
         tmp = os.path.join(settings.THUMB_ROOT, t['file'])
         if not os.path.exists(tmp):

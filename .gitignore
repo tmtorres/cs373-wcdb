@@ -17,4 +17,4 @@ lib
 local
 build
 activate.sh
-media/thumbs/*
+*.thumbnail
