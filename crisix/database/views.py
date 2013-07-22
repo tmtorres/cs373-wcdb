@@ -1,4 +1,4 @@
-import sys, os
+import sys, glob, os
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -50,6 +50,9 @@ def validate(file):
         return HttpResponse(errstr)
     finally:
         os.remove(file)
+        for f in glob.glob(settings.STATIC_ROOT + '/thumbs/*'):
+            os.remove(f)
+
     c = '\n'.join([str(e) for e in Crisis.objects.all()])
     o = '\n'.join([str(e) for e in Organization.objects.all()])
     p = '\n'.join([str(e) for e in Person.objects.all()])
