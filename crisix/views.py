@@ -28,14 +28,16 @@ def display(request, etype = ''):
 
 def thumbnail(e):
     r = iter(xrange(0, 3))
-    thumbs = [{'embed': w.embed, 'text': w.text, 'file': str(w.entity.id).lower() + str(r.next())} for w in list(e.elements.filter(ctype='IMG'))[:3]]
+    imgs = [i for i in e.elements.filter(ctype='IMG') if str(i.embed).split('/')[-1].split('.')[-1].upper() in ('JPG', 'JPEG', 'PNG', 'GIF')][:3]
+    thumbs = [{'embed': w.embed, 'text': w.text, 'file': str(w.entity.id).lower() + str(r.next()) + '.thumbnail'} for w in imgs]
     for t in thumbs:
         tmp = os.path.join(settings.THUMB_ROOT, t['file'])
-        urlretrieve(t['embed'], tmp)
-        im = Image.open(tmp)
-        im.thumbnail((180, im.size[1]) if im.size[0] < im.size[1] else (im.size[0], 180))
-        th = im.crop((0, 0, 180, 180))
-        th.save(tmp, 'PNG')
+        if not os.path.exists(tmp):
+            urlretrieve(t['embed'], tmp)
+            im = Image.open(tmp)
+            im.thumbnail((180, im.size[1]) if im.size[0] < im.size[1] else (im.size[0], 180))
+            th = im.crop((0, 0, 180, 180))
+            th.save(tmp, 'PNG')
     return thumbs
 
 def people(request, id):
