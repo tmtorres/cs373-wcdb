@@ -87,7 +87,7 @@
                     <table border="0">
                         {% for w in images %}
                         <td>
-                            <a href=""><img src="{{ w.embed }}"></a>
+                            <a href="{{ w.href }}"><img src="{{ STATIC_URL }}/{{ w.embed }}"></a>
                         </td>
                         {% endfor %}
                     </table>
