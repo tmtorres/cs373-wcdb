@@ -24,6 +24,7 @@ def getEntity(etype, eid):
     return e
 
 def criHandler(node):
+    assert node is not None
     c = getEntity(Crisis, node.attrib.get('ID'))
     c.name = node.attrib.get('Name')
     for attr in node:
@@ -51,9 +52,11 @@ def criHandler(node):
             c.help += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
         if attr.tag == 'Common':
             comHandler(attr, c)
+    assert c is not None
     c.save()
 
 def orgHandler(node):
+    assert node is not None
     o = getEntity(Organization, node.attrib.get('ID'))
     o.name = node.attrib.get('Name')
     for attr in node:
@@ -73,9 +76,11 @@ def orgHandler(node):
             o.contact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.contact])
         if attr.tag == 'Common':
             comHandler(attr, o)
+    assert o is not None
     o.save()
 
 def perHandler(node):
+    assert node is not None
     p = getEntity(Person, node.attrib.get('ID'))
     p.name = node.attrib.get('Name')
     for attr in node:
@@ -91,6 +96,7 @@ def perHandler(node):
             p.location = attr.text
         if attr.tag == 'Common':
             comHandler(attr, p)
+    assert p is not None
     p.save()
 
 def insertElem(query, attr):
@@ -102,6 +108,8 @@ def insertElem(query, attr):
         w.save()
 
 def comHandler(node, e):
+    assert node is not None
+    assert e is not None
     for attr in node:
         if attr.tag == 'Citations':
             for elem in attr:
