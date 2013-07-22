@@ -5,7 +5,7 @@ from django.core.files.base import ContentFile
 from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response, render
+from django.shortcuts import render_to_response, render, redirect
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -56,8 +56,9 @@ def validate(file):
     c = '\n'.join([str(e) for e in Crisis.objects.all()])
     o = '\n'.join([str(e) for e in Organization.objects.all()])
     p = '\n'.join([str(e) for e in Person.objects.all()])
-    return HttpResponse(c + o + p, mimetype="text/plain")
-    #return HttpResponse('Success!')
+    #return HttpResponse(c + o + p, mimetype="text/plain")
+    return HttpResponse('Success!')
+    #return redirect('index', head='Success!')
 
 @lockdown()
 def upload(request):

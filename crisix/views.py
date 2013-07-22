@@ -24,13 +24,11 @@ def display(request, etype = ''):
 
 def thumbnail(e):
     thumbs = [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='IMG'))[:3]]
-
     for t in thumbs:
         t['href'] = t['embed']
         t['embed'] = 'thumbs/' + str(t['embed']).split('/')[-1] + '.thumbnail'
         if not os.path.exists(settings.STATIC_ROOT + '/' + t['embed']):
             os.system('wget -P ' + settings.STATIC_ROOT + '/thumbs ' + str(t['href']))
-
     for infile in [f for f in glob.glob(settings.STATIC_ROOT + '/thumbs/*') if '.thumbnail' not in f]:
         file, ext = os.path.splitext(infile)
         im = Image.open(infile)
@@ -38,7 +36,6 @@ def thumbnail(e):
         th = im.crop((0, 0, 180, 180))
         th.save(file + ext + ".thumbnail", 'PNG')
         os.remove(infile)
-
     return thumbs
 
 def people(request, id):
