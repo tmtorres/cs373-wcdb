@@ -55,8 +55,7 @@ def validate(file):
     o = '\n'.join([str(e) for e in Organization.objects.all()])
     p = '\n'.join([str(e) for e in Person.objects.all()])
     #return HttpResponse(c + o + p, mimetype="text/plain")
-    return HttpResponse('Success!')
-    #return redirect('index', head='Success!')
+    return redirect('utility')
 
 @lockdown()
 def upload(request):
