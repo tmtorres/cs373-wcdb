@@ -34,6 +34,8 @@ def thumbnail(e):
     for infile in [f for f in glob.glob(settings.STATIC_ROOT + '/thumbs/*') if '.thumbnail' not in f]:
         file, ext = os.path.splitext(infile)
         im = Image.open(infile)
+        size = (180, im.size[1]) if im.size[0] < im.size[1] else (im.size[0], 180)
+        im.thumbnail(size)
         th = im.crop((0, 0, 180, 180))
         th.save(file + ext + ".thumbnail", 'PNG')
         os.remove(infile)
