@@ -329,7 +329,7 @@
         </Common>
     </Crisis>
 
-    <Crisis ID="CRI_AIDSHI" Name="AIDS/HIV">
+    <Crisis ID="CRI_AIDSHI" Name="HIV/AIDS">
         <People>
             <Person ID="PER_MAGICJ"/>
         </People>
@@ -343,16 +343,15 @@
             <li>Worldwide</li>
         </Locations>
         <HumanImpact>
-            <li>25,000,000 deaths</li>
-            <li>Genetic research indicates that HIV originated in west-central Africa during the early twentieth century. AIDS was first recognized by the Centers for Disease Control and Prevention (CDC) in 1981 and its cause—HIV infection—was identified in the early part of the decade. Since its discovery, AIDS has caused nearly 30 million deaths (as of 2009). As of 2010, approximately 34 million people are living with HIV globally. AIDS is considered a pandemic—a disease outbreak which is present over a large area and is actively spreading.</li>
-            <li>HIV/AIDS has had a great impact on society, both as an illness and as a source of discrimination. The disease also has significant economic impacts. There are many misconceptions about HIV/AIDS such as the belief that it can be transmitted by casual non-sexual contact. The disease has also become subject to many controversies involving religion.</li>
+            <li>Since its discovery, AIDS has caused nearly 30 million deaths (as of 2009). As of 2010, approximately 34 million people are living with HIV globally.</li>
+            <li>AIDS is considered a pandemic—a disease outbreak which is present over a large area and is actively spreading.</li>
+            <li>HIV/AIDS has had a great impact on society, both as an illness and as a source of discrimination.</li>
             <li>AIDS stigma exists around the world in a variety of ways, including ostracism, rejection, discrimination and avoidance of HIV infected people; compulsory HIV testing without prior consent or protection of confidentiality; violence against HIV infected individuals or people who are perceived to be infected with HIV and the quarantine of HIV infected individuals. Stigma-related violence or the fear of violence prevents many people from seeking HIV testing, returning for their results, or securing treatment, possibly turning what could be a manageable chronic illness into a death sentence and perpetuating the spread of HIV.</li>
         </HumanImpact>
         <EconomicImpact>
-            <li>Economic research helps to estimate the effects of HIV/AIDS on the African economy and the cost effectiveness of prevention and treatment programmes</li>
-            <li>Economic theory predicts that HIV/AIDS reduces labour supply and productivity, reduces exports, and increases imports</li>
-            <li>The pandemic has already reduced average national economic growth rates by 2-4% a year across Africa</li>
-            <li>Prevention and treatment programmes and economic measures such as targeted training in skills needed in key industries will limit the economic effects of HIV/AIDS</li>
+            <li>Economic theory predicts that HIV/AIDS reduces labour supply and productivity, reduces exports, and increases imports.</li>
+            <li>The pandemic has already reduced average national economic growth rates by 2-4% a year across Africa.</li>
+            <li>Prevention and treatment programmes and economic measures such as targeted training in skills needed in key industries will limit the economic effects of HIV/AIDS.</li>
             <li>HIV/AIDS affects the economics of both individuals and countries. The gross domestic product of the most affected countries has decreased due to the lack of human capital. Without proper nutrition, health care and medicine, large numbers of people die from AIDS-related complications. They will not only be unable to work, but will also require significant medical care. It is estimated that as of 2007 there were 12 million AIDS orphans.</li>
             <li>By affecting mainly young adults, AIDS reduces the taxable population, in turn reducing the resources available for public expenditures such as education and health services not related to AIDS resulting in increasing pressure for the state's finances and slower growth of the economy. This causes a slower growth of the tax base, an effect that is reinforced if there are growing expenditures on treating the sick, training (to replace sick workers), sick pay and caring for AIDS orphans. This is especially true if the sharp increase in adult mortality shifts the responsibility and blame from the family to the government in caring for these orphans.</li>
             <li>At the household level, AIDS causes both loss of income and increased spending on healthcare. A study in Côte d'Ivoire showed that households with an HIV/AIDS patient, spent twice as much on medical expenses as other households. This additional expenditure also leaves less income to spend on education and other personal or family investment.</li>
@@ -368,7 +367,35 @@
             <li>There is currently no cure or effective HIV vaccine. Treatment consists of high active antiretroviral therapy (HAART) which slows progression of the disease and as of 2010 more than 6.6 million people were taking them in low and middle income countries. Treatment also includes preventive and active treatment of opportunistic infections.</li>
             <li>Programs encouraging sexual abstinence do not appear to affect subsequent HIV risk. Evidence for a benefit from peer education is equally poor. Comprehensive sexual education provided at school may decrease high risk behavior. A substantial minority of young people continues to engage in high-risk practices despite knowing about HIV/AIDS, underestimating their own risk of becoming infected with HIV. It is not known whether treating other sexually transmitted infections is effective in preventing HIV.</li>
         </WaysToHelp>
-        <Common/>
+        <Common>
+            <Citations>
+                <li href="http://www.nejm.org/doi/full/10.1056/NEJM200106073442306">"AIDS — The First 20 Years". The New England Journal of Medicine.</li>
+                <li href="http://perspectivesinmedicine.cshlp.org/content/1/1/a006841">"Origins of HIV and the AIDS Pandemic". Cold Spring Harbor Laboratory Press.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/HIV/AIDS">"HIV/AIDS". Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Economic_impact_of_HIV/AIDS">"Economic impact of HIV/AIDS". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-1b.jpg />" />
+                <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-aids-2.jpg" />
+                <li embed="http://aids.gov/images/aids-infographics/what-is-hiv-aids-3.jpg" />
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/6/64/Red_Ribbon.svg" text="The red ribbon is a symbol for solidarity with HIV-positive people and those living with AIDS." />
+                <li embed="http://jnvkannur.nic.in/AIDS-pic3.gif" text="Anatomy of the AIDS Virus" />
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/6/68/People_living_with_HIV_AIDS_world_map.PNG" text="People living with HIV/AIDS world map" />
+                <li embed="http://myplace.frontier.com/~dffix/medmicro/pix/aids_map.gif" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/P91nIGt1axs" text="Understanding HIV and AIDS (HIV #1)" />
+                <li embed="//www.youtube.com/embed/68I7JlVhuhY" text="When HIV Becomes AIDS (HIV #2)" />
+                <li embed="//www.youtube.com/embed/0GK6Vg008Mk" text="Testing for HIV (HIV #3)" />
+                <li embed="//www.youtube.com/embed/GLreHYWsk3s" text="Treating HIV (HIV #4)" />
+            </Videos>
+            <Summary>
+                Human immunodeficiency virus infection / acquired immunodeficiency syndrome (HIV/AIDS) is a disease of the human immune system caused by infection with human immunodeficiency virus (HIV). Genetic research indicates that HIV originated in west-central Africa during the early twentieth century. During the initial infection, a person may experience a brief period of influenza-like illness. This is typically followed by a prolonged period without symptoms. As the illness progresses, it interferes more and more with the immune system, making the person much more likely to get infections, including opportunistic infections and tumors that do not usually affect people who have working immune systems.
+                HIV is transmitted primarily via unprotected sexual intercourse (including anal and even oral sex), contaminated blood transfusions, hypodermic needles, and from mother to child during pregnancy, delivery, or breastfeeding. Some bodily fluids, such as saliva and tears, do not transmit HIV. Prevention of HIV infection, primarily through safe sex and needle-exchange programs, is a key strategy to control the spread of the disease. There is no cure or vaccine; however, antiretroviral treatment can slow the course of the disease and may lead to a near-normal life expectancy. While antiretroviral treatment reduces the risk of death and complications from the disease, these medications are expensive and may be associated with side effects.
+            </Summary>
+        </Common>
     </Crisis>
 
     <Crisis ID="CRI_TOHOQU" Name="2011 Tohoku Earthquake and Tsunami">
@@ -1013,14 +1040,21 @@
         <History>
             <li>The Communicable Diseases Center was founded July 1, 1946 as the successor to the World War II Malaria Control in War Areas program of Office of National Defense Malaria Control Activities.</li>
             <li>It became the National Communicable Disease Center (NCDC) effective July 1, 1967. The organization was renamed the Center for Disease Control (CDC) on June 24, 1970, and Centers for Disease Control effective October 14, 1980. An act of the United States Congress appended the words "and Prevention" to the name effective October 27, 1992. However, Congress directed that the initialism CDC be retained because of its name recognition. CDC now operates under the Department of Health and Human Services umbrella.</li>
+            <li>The Centers for Disease Control and Prevention first recognized HIV/AIDS in 1981.</li>
         </History>
         <ContactInfo>
             <li>www.cdc.gov/contact</li>
         </ContactInfo>
         <Common>
+            <Citations>
+                <li href="http://web.archive.org/web/20050204141148/http://www.cdc.gov/HIV/pubs/facts/transmission.htm">"HIV and Its Transmission". CDC.</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">Wikipedia</li>
             </ExternalLinks>
+            <Feeds>
+                <li embed="https://twitter.com/CDC_HIVAIDS" />
+            </Feeds>
         </Common>
     </Organization>
 
