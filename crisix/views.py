@@ -8,7 +8,11 @@ from xml.etree.ElementTree import ElementTree, Element
 from django.conf import settings
 from django.core.files import File
 from PIL import Image
+from urllib import urlretrieve
 import glob, os
+
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 
 def index(request):
     return redirect('crisix/')
@@ -23,19 +27,15 @@ def display(request, etype = ''):
     return HttpResponse(etype + ' list page.')
 
 def thumbnail(e):
-    thumbs = [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='IMG'))[:3]]
+    r = iter(xrange(0, 3))
+    thumbs = [{'embed': w.embed, 'text': w.text, 'file': str(w.entity.id).lower() + str(r.next())} for w in list(e.elements.filter(ctype='IMG'))[:3]]
     for t in thumbs:
-        t['href'] = t['embed']
-        t['embed'] = 'thumbs/' + str(t['embed']).split('/')[-1] + '.thumbnail'
-        if not os.path.exists(settings.STATIC_ROOT + '/' + t['embed']):
-            os.system('wget -P ' + settings.STATIC_ROOT + '/thumbs ' + str(t['href']))
-    for infile in [f for f in glob.glob(settings.STATIC_ROOT + '/thumbs/*') if '.thumbnail' not in f]:
-        file, ext = os.path.splitext(infile)
-        im = Image.open(infile)
+        tmp = os.path.join(settings.THUMB_ROOT, t['file'])
+        urlretrieve(t['embed'], tmp)
+        im = Image.open(tmp)
         im.thumbnail((180, im.size[1]) if im.size[0] < im.size[1] else (im.size[0], 180))
         th = im.crop((0, 0, 180, 180))
-        th.save(file + ext + ".thumbnail", 'PNG')
-        os.remove(infile)
+        th.save(tmp, 'PNG')
     return thumbs
 
 def people(request, id):

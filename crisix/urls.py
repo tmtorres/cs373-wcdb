@@ -26,6 +26,6 @@ urlpatterns = patterns('',
     url(r'^crisix/(?P<etype>organizations)/', 'crisix.views.display'),
     url(r'^crisix/utility/', include('database.urls')),
     url(r'^crisix/', 'crisix.views.home'),
-    #url(r'^crisix/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_DOC_ROOT}),
-    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_DOC_ROOT}),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
