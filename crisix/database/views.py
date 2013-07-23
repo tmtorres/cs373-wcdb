@@ -8,6 +8,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
 
+from django.test.simple import DjangoTestSuiteRunner
+
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
 
@@ -17,6 +19,7 @@ from minixsv import pyxsval
 from upload import *
 from download import *
 from models import *
+import subprocess
 
 from django.test import Client
 
@@ -25,13 +28,12 @@ cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
 
+def test(request):
+    process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
+    process.wait()
+    return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
+
 def download(request):
-    '''
-        The download module acts as the export facility by taking the information from the Django models and
-        creating a valid XML from the retrieved information. The download function takes in a request from the
-        web site. This request is for the export to be performed. The function begins by creating an Element
-        Tree and then by first constructing the crises XML portions first, then the people and organizations.
-    '''
     root = ET.Element('WorldCrises')
     getCrises(root)
     getPeople(root)
@@ -48,7 +50,6 @@ def validate(request, file):
         elemTree = elementTreeWrapper.getTree()
         root = elemTree.getroot()
         insert(root)
-
     except:
         return render(request, 'utility.html', {'view': 'failure'})
     finally:

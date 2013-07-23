@@ -719,10 +719,10 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
-                <li href="http://www.biography.com/people/adam-lanza-21068899">Adam Lanza biography</li>
+                <li href="http://www.biography.com/people/adam-lanza-21068899">"Adam Lanza biography". A+E Television Networks, LLC.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Adam_lanza#Perpetrator">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Adam_lanza#Perpetrator">"Sandy Hook Elementary School shooting". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
@@ -752,18 +752,16 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
-                <li href="http://english.peopledaily.com.cn/data/people/hujintao.shtml">People's Daily</li>
+                <li href="http://english.peopledaily.com.cn/data/people/hujintao.shtml">"Hu Jintao". People's Daily.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Hu_Jintao">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Hu_Jintao">"Hu Jintao". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/5/59/Hu_Jintao_Cannes2011.jpg" text="Chinese President Hu Jintao" />
             </Images>
             <Videos>
-                <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
-                <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
             </Videos>
             <Maps>
@@ -787,12 +785,19 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
 	    <Citations>
+<<<<<<< HEAD
 		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">Biography.com</li>
 		<li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8344034/Libya-civil-war-breaks-out-as-Gaddafi-mounts-rearguard-fight.html">Gaddafi Mounts Rearguard Fight</li>
 	    </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Death_of_Muammar_Gaddafi">Death of Gaddafo Wikipedia</li>
                 <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">Gaddafi Wikipedia</li>
+=======
+		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
+	    </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">"Muammar Gaddafi". Wikipedia.</li>
+>>>>>>> 6f092659d59f25ccde837c18d755f95b58b06c07
             </ExternalLinks>
             <Images>
                 <li embed="http://www.biography.com/imported/images/Biography/Images/Profiles/Q/Muammar-al-Qaddafi-39014-1-402.jpg" />
@@ -800,14 +805,18 @@
                 <li embed="http://www.timeslive.co.za/incoming/2011/07/02/gaddafi.jpg/ALTERNATES/crop_630x400/Gaddafi.jpg" />
             </Images>
 	    <Videos>
+<<<<<<< HEAD
                <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>	
                <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>	
+=======
+                <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>		
+>>>>>>> 6f092659d59f25ccde837c18d755f95b58b06c07
 	    </Videos>
 	    <Maps>
 		<li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
 	    </Maps>
             <Summary>
-		Muammar Muhammad Abu Minyar al-Gaddafi, or Colonel Gaddafi, was an Libyan politician who de facto ruled Lybya for 42 years. In 1969 he conducted a coup against King Idris and that led to the formation of the Libyan Arab Republic. He died on 20 October 2011 during the Battle of Sirte, and was found hiding in a culvert west of Sirte and captured by National Transitional Council forces. He was killed shortly afterwards. 
+                Muammar Muhammad Abu Minyar al-Gaddafi, or Colonel Gaddafi, was an Libyan politician who de facto ruled Lybya for 42 years. In 1969 he conducted a coup against King Idris and that led to the formation of the Libyan Arab Republic. He died on 20 October 2011 during the Battle of Sirte, and was found hiding in a culvert west of Sirte and captured by National Transitional Council forces. He was killed shortly afterwards. 
             </Summary>
         </Common>
     </Person>
@@ -824,12 +833,19 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
+<<<<<<< HEAD
                 <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">NY Times: Toure resigns after coup </li>
                 <li href="http://www.aljazeera.com/news/africa/2012/03/20123229824215677.html">Aljazeera Profile: Amadou Touré</li>
             </Citations>
             <ExternalLinks>
                 <li href="http://news.bbc.co.uk/2/shared/spl/hi/picture_gallery/05/africa_mali_president/html/2.stm">Photo Journal of Amadou Touré</li>
                 <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">Amadou Touré's Wikipedia</li>
+=======
+                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">"Mali’s President, Ousted in Coup, Steps Down". The New York Times.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">"Amadou Toumani Tour%C3%A9". Wikipedia.</li>
+>>>>>>> 6f092659d59f25ccde837c18d755f95b58b06c07
             </ExternalLinks>
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" text="Former Malian President Amadou Toumani Touré" />
@@ -918,10 +934,13 @@
                 <li embed="https://twitter.com/MagicJohnson" />
             </Feeds>
             <Summary>
-		Earvin "Magic" Johnson, Jr. is a former NBA player of the Los Angeles Lakers.  He is one of the most decorated point guard to play the game with 5 NBA Championships, 3 MVP awards, and an induction into the NBA Hall of Fame. On November 7, 1991 Magic announced his retirement due to him testing positive for HIV.  After the announcement, he created the Magic Johnson Foundation to help combat HIV and provide other charitable causes.  Magic has been a 20+ year survivor of HIV and continues to do amazing things through his foundation.
+                Earvin "Magic" Johnson, Jr. is a former NBA player of the Los Angeles Lakers.  He is one of the most decorated point guard to play the game with 5 NBA Championships, 3 MVP awards, and an induction into the NBA Hall of Fame. On November 7, 1991 Magic announced his retirement due to him testing positive for HIV.  After the announcement, he created the Magic Johnson Foundation to help combat HIV and provide other charitable causes.  Magic has been a 20+ year survivor of HIV and continues to do amazing things through his foundation.
             </Summary>
         </Common>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f092659d59f25ccde837c18d755f95b58b06c07
     </Person>
 
     <Person ID="PER_NAOKAN" Name="Naoto Kan">
@@ -958,7 +977,7 @@
                 <li embed="https://twitter.com/NaotoKan" />
             </Feeds>
             <Summary>
-		Naoto Kan is a Japanese politician who was the former leader of the Democratic Party of Japan. (BETTER SUMMARY COMING -Dalton) 
+                Naoto Kan is a Japanese politician who was the former leader of the Democratic Party of Japan. (BETTER SUMMARY COMING -Dalton) (Damn right...there better be a better summary coming. - Jonathan lol)
             </Summary>
         </Common>
     </Person>
@@ -1035,7 +1054,7 @@
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=34%C2%B010%E2%80%B209.51%E2%80%B3N+73%C2%B014%E2%80%B232.78%E2%80%B3E&amp;aq=&amp;sll=35.464026,140.104523&amp;sspn=1.126331,2.024231&amp;ie=UTF8&amp;ll=34.169308,73.242439&amp;spn=0.008939,0.015814&amp;t=m&amp;z=14&amp;iwloc=6545032258397794998&amp;output=embed" text="Osama Bin Laden's Compound"/>
             </Maps>
             <Summary>
-		Osama Bin Laden was the founder of al-Qaeda, the Sunni Islamist group responsible for the September 11 attacks against the United States.  After these attacks, Osama was a prime target in War on Terror.  On May 2, 2011, bin Laden was shot and killed inside a private residential compound in Abbottabad, Pakistan by the United States Special Ops under the command of Barack Obama.
+                Osama Bin Laden was the founder of al-Qaeda, the Sunni Islamist group responsible for the September 11 attacks against the United States.  After these attacks, Osama was a prime target in War on Terror.  On May 2, 2011, bin Laden was shot and killed inside a private residential compound in Abbottabad, Pakistan by the United States Special Ops under the command of Barack Obama.
             </Summary>
         </Common>
     </Person>
@@ -1069,13 +1088,16 @@
             <Videos>
                 <li embed="//www.youtube.com/embed/gFkZ8zd4684" text="Exxon Valdez Story - Why Things Went So Wrong"/>
             </Videos>
-	    <Summary>
-		Joseph Hazelwood was the captain of the Exxon Valdez, an oil tanker that spilled more than 257,000 barrels of oil off the Alaskan coastline.  Before the spill, Hazelwood was sleeping in his cabin and left the third mate in charge.  Hazelwood was supposedly heavily drinking that night, but his trial never convicted him as being intoxicated during the spill.  After his trial, Hazelwood's license was suspended for 9 months, fined $50,000, and sentenced to 1,000 hours of community service.
+            <Summary>
+                Joseph Hazelwood was the captain of the Exxon Valdez, an oil tanker that spilled more than 257,000 barrels of oil off the Alaskan coastline.  Before the spill, Hazelwood was sleeping in his cabin and left the third mate in charge.  Hazelwood was supposedly heavily drinking that night, but his trial never convicted him as being intoxicated during the spill.  After his trial, Hazelwood's license was suspended for 9 months, fined $50,000, and sentenced to 1,000 hours of community service.
             </Summary>
         </Common>
     </Person>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f092659d59f25ccde837c18d755f95b58b06c07
     <!-- Organization elements -->
     <Organization ID="ORG_UNDWAY" Name="United Way">
         <Crises>
