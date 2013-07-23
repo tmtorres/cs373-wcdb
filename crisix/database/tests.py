@@ -5,6 +5,7 @@ when you run "manage.py test".
 Replace this with more appropriate tests for your application.
 """
 
+import os, sys
 from django.test import TestCase
 from models import *
 from upload import *
@@ -17,32 +18,22 @@ from xml.etree.ElementTree import ElementTree
 
 class TestUpload(TestCase):
     def test_insert_1(self):
-        root = fromstring(''.join([
-                          '<WorldCrises>',
-                          '<Crisis ID="CRI_SHESSG" Name="Sandy Hook Elementary School Shooting">',
-                          '<Kind>Spree Shooting</Kind>',
-                          '<Date>2012-12-14</Date>',
-                          '<Time>09:35:00</Time>',
-                          '<Locations><li>Newtown, Connecticut</li></Locations>',
-                          '</Crisis>'
-                          '</WorldCrises>',
-        ]))
+        root = fromstring(open('TestCrisis.xml').read())
         insert(root)
-        c = Crisis.objects.get(id='CRI_SHESSG')
+        c = None
+
+        try:
+            c = Crisis.objects.get(id='CRI_SHESSG')
+        except Crisis.DoesNotExist:
+            self.assertTrue(False)
+        self.assertTrue(c is not None)
         self.assertEqual(str(c.kind), 'Spree Shooting')
         self.assertEqual(str(c.date), '2012-12-14')
         self.assertEqual(str(c.time), '09:35:00')
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
 
     def test_insert_2(self):
-        root = fromstring(''.join([
-                          '<WorldCrises>',
-                          '<Person ID="PER_ADMLNZ" Name="Adam Lanza">',
-                          '<Kind>Murderer</Kind>',
-                          '<Location>Newtown, Connecticut</Location>',
-                          '</Person>'
-                          '</WorldCrises>',
-        ]))
+        root = fromstring()
         insert(root)
         c = Person.objects.get(id='PER_ADMLNZ')
         self.assertEqual(str(c.kind), 'Murderer')
