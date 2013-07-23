@@ -53,12 +53,6 @@ def validate(request, file):
         return render(request, 'utility.html', {'view': 'failure'})
     finally:
         os.remove(file)
-
-    '''
-    c = '\n'.join([str(e) for e in Crisis.objects.all()])
-    o = '\n'.join([str(e) for e in Organization.objects.all()])
-    p = '\n'.join([str(e) for e in Person.objects.all()])
-    '''
     return render(request, 'utility.html', {'view': 'success'})
 
 @lockdown()
@@ -72,5 +66,4 @@ def upload(request):
             assert False
     else:
         form = UploadFileForm()
-
-    return render_to_response('import.html', {'form': form,})
+    return render(request, 'utility.html', {'view': 'form', 'form': form,})
