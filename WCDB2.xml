@@ -1119,6 +1119,12 @@
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/YCT9cZNh0MQ" text="United Way Campaign" />
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Way-Western+Ct,+West+Street,+Danbury,+CT&amp;aq=0&amp;oq=united+way+western+c&amp;sll=42.352582,-71.047726&amp;sspn=0.118487,0.124454&amp;ie=UTF8&amp;hq=United+Way-Western+Ct,&amp;hnear=West+St,+Danbury,+Connecticut+06810&amp;ll=41.391889,-73.45814&amp;spn=0.015035,0.015557&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2348952424447283674&amp;output=embed" />
+            </Maps>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -1163,11 +1169,10 @@
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
             <Videos>
-            	<li embed="http://www.youtube.com/watch?v=nR3DPKzBrwo" text="SQR 2008 Report"/>
+            	<li embed="www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;ll=30.572312,104.06662&amp;spn=0.375999,0.453873&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=11"/>
-            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;ll=30.572312,104.06662&amp;spn=0.375999,0.453873&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=11" />
+            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/>          	
             </Maps>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
@@ -1203,10 +1208,10 @@
                 <li embed="http://www1.pictures.zimbio.com/gi/President+Obama+Meets+President+National+Transitional+STm2i_EQWMMl.jpg"/>
             </Images>
             <Videos>
-            	<li embed="http://player.ooyala.com/player.js?height=315&amp;embedCode=5kYXJ2Mjpwc8xp_Y87Xh0q50Xs9IczPl&amp;video_pcode=RvbGU6Z74XE_a3bj4QwRGByhq9h2&amp;deepLinkEmbedCode=5kYXJ2Mjpwc8xp_Y87Xh0q50Xs9IczPl&amp;width=560" text="Footage during the NTC seizure of Gaddafi's hometown Sirte"/>
+            	<li embed="//www.youtube.com/embed/gIVZlSk1qbI"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?source=s_q&amp;f=q&amp;hl=en&amp;geocode=&amp;q=benghazi,+libya&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Benghazi,+Banghazi,+Libya&amp;ll=32.122273,20.07082&amp;spn=0.023625,0.034332&amp;z=14&amp;vpsrc=0&amp;oi=map_misc&amp;ct=api_logo"/>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;aq=0&amp;oq=national+transitional+counc&amp;sll=41.391894,-73.45813&amp;sspn=0.015035,0.015557&amp;ie=UTF8&amp;hq=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;ll=32.862133,13.197563&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" />
             </Maps>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
@@ -1239,10 +1244,10 @@
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
             </Images>
             <Videos>
-            	<li embed="http://www.aljazeera.com/news/africa/2013/01/201312763627716824.html" text="African Union &amp; Mali"/>
+            	<li embed="//www.youtube.com/embed/G5Sn7PrXDoA" text="African Union on Mali" />
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=Addis+Ababa,+Ethiopia&amp;hl=en&amp;ll=9.022762,38.746719&amp;spn=0.215651,0.226936&amp;sll=9.000066,38.7414&amp;sspn=0.053916,0.056734&amp;oq=addis+ababa+ethiopia&amp;hnear=Addis+Ababa,+Ethiopia&amp;t=m&amp;z=12" />
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Addis+Ababa,+Ethiopia&amp;aq=0&amp;oq=addis+ababa&amp;sll=32.862142,13.19767&amp;sspn=0.134675,0.124454&amp;ie=UTF8&amp;hq=&amp;hnear=Addis+Ababa,+Ethiopia&amp;ll=9.022736,38.746799&amp;spn=0.158348,0.124454&amp;t=m&amp;z=13&amp;output=embed" />
             </Maps>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
@@ -1278,6 +1283,12 @@
             <Images>
                 <li embed="http://25.media.tumblr.com/19e6fef221cb39926b9f0399eac6913c/tumblr_mnyuelETRW1ste7qoo1_1280.jpg" text="Twitter role with Turkey Protests"/>
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/J0xbjIE8cPM" text="How to Use Twitter" />
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=9.022762,38.746719&amp;sspn=0.158348,0.124454&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;ll=37.776618,-122.417112&amp;spn=0.017639,0.032015&amp;output=embed" />
+            </Maps>
             <Feeds>
                 <li embed="https://twitter.com/OccupyGezi" />
             </Feeds>
@@ -1312,10 +1323,10 @@
             	<li embed="http://childrenshospital.org/clinicalservices/Site1899/Images/CDC.jpg"/>
             </Images>
             <Videos>
-            	<li embed="http://www.youtube.com/watch?v=I_o_wkr7N8A&amp;feature=c4-overview-vl&amp;list=PL87B964CE4CF0A98C" text="CDC &amp; HIV/AIDS"/>
+            	<li embed="//www.youtube.com/embed/I_o_wkr7N8A?list=PL87B964CE4CF0A98C" text="CDC &amp; HIV/AIDS"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=CDC+georgia&amp;hl=en&amp;ll=33.817948,-83.990479&amp;spn=1.45126,1.815491&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;hq=CDC&amp;hnear=Georgia&amp;t=m&amp;fll=33.817948,-83.990479&amp;fspn=1.45126,1.815491&amp;z=9&amp;iwloc=A"/>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;aq=0&amp;oq=center+for+disease+control+and+&amp;sll=37.776618,-122.417112&amp;sspn=0.063364,0.062227&amp;ie=UTF8&amp;hq=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;ll=33.798494,-84.327162&amp;spn=0.006295,0.006747&amp;t=m&amp;output=embed" />
             </Maps>
             <Feeds>
                 <li embed="https://twitter.com/CDC_HIVAIDS" />
@@ -1348,10 +1359,11 @@
             <Images>
             	<li embed="http://t1.gstatic.com/images?q=tbn:ANd9GcQHml8QNmzoQdgj6I20DW-LyyrSp61-ZTrpDlnRiZm6o_7mOytg"/>
             </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/sMzK_aySff0" text="USGS Earthquakes" />
+            </Videos>
             <Maps>
-
-            	<li embed="https://maps.google.com/maps?q=united+states+geological+survey+virginia&amp;hl=en&amp;ll=39.245017,-77.365723&amp;spn=2.705567,3.630981&amp;sll=30.344979,-97.675923&amp;sspn=0.188439,0.226936&amp;hq=united+states+geological+survey&amp;hnear=Virginia&amp;t=m&amp;z=8&amp;iwloc=A"/>
-            	<li embed="https://maps.google.com/maps?q=united+states+geological+survey+virginia&amp;hl=en&amp;ll=39.245017,-77.365723&amp;spn=2.705567,3.630981&amp;sll=30.344979,-97.675923&amp;sspn=0.188439,0.226936&amp;hq=united+states+geological+survey&amp;hnear=Virginia&amp;t=m&amp;z=8&amp;iwloc=A" />
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;aq=2&amp;oq=US+Geological+Survey&amp;sll=33.929527,-84.263227&amp;sspn=0.066516,0.062227&amp;ie=UTF8&amp;hq=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;ll=38.947187,-77.367639&amp;spn=0.017356,0.032015&amp;t=m&amp;output=embed" />            
             </Maps>
         </Common>
     </Organization>
@@ -1381,10 +1393,10 @@
                 <li embed="http://www.examiner.com/images/blog/EXID22920/images/World_Health_Organization(1).jpg"/>
             </Images>
             <Videos>
-                <li embed="http://www.youtube.com/watch?feature=player_profilepage&amp;v=QCljON3Pa4E" text="WHO Promotional Video"/>
+                <li embed="//www.youtube.com/embed/QCljON3Pa4E" text="WHO Promotional Video"/>
             </Videos>
             <Maps>
-                <li embed="http://media.web.britannica.com/eb-media/67/64667-004-7F7A1490.gif" text="Location of WHO Headquarters"/>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=World+Health+Organization+(WHO),+Avenue+Appia,+Geneva,+Switzerland&amp;aq=0&amp;oq=world+health+organization&amp;sll=38.947127,-77.367439&amp;sspn=0.249388,0.248909&amp;ie=UTF8&amp;hq=World+Health+Organization+(WHO),&amp;hnear=Avenue+Appia,+Gen%C3%A8ve,+Switzerland&amp;ll=46.232728,6.134357&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" text="Location of WHO Headquarters"/>
             </Maps>
         </Common>
     </Organization>
@@ -1413,14 +1425,14 @@
             	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg" />
             </Images>
             <Videos>
-            	<li embed="http://www.youtube.com/watch?v=gTB-LDWoETA" text="Obama at UN Security Council"/>
+            	<li embed="//www.youtube.com/embed/gTB-LDWoETA" text="Obama at UN Security Council"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=United+Nations+Security+Council,+New+York,+NY,+United+States&amp;hl=en&amp;ll=40.750118,-73.968887&amp;spn=0.23434,0.248909&amp;sll=30.145154,-97.834892&amp;sspn=1.069976,0.995636&amp;oq=UN+security+council&amp;hq=United+Nations+Security+Council,+New+York,+NY,+United+States&amp;radius=15000&amp;t=m&amp;z=12" />
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Nations+Security+Council,+New+York,+NY&amp;aq=0&amp;oq=UN+security&amp;sll=46.232815,6.134491&amp;sspn=0.221812,0.248909&amp;ie=UTF8&amp;hq=United+Nations+Security+Council,+New+York,+NY&amp;hnear=&amp;radius=15000&amp;ll=40.749911,-73.974858&amp;spn=0.071946,0.071946&amp;t=m&amp;output=embed" />
             </Maps>
         </Common>
     </Organization>
-
+        
     <Organization ID="ORG_EXXSHI" Name="Exxon Shipping Company">
         <Crises>
             <Crisis ID="CRI_EXXVAL"/>
@@ -1447,10 +1459,10 @@
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
             <Videos>
-            	<li embed="http://www.youtube.com/watch?v=dODJ85R5-r4"/>
+            	<li embed="//www.youtube.com/embed/dODJ85R5-r4"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=exxon+irving+texas&amp;hl=en&amp;ll=32.884777,-96.957779&amp;spn=0.183365,0.226936&amp;client=safari&amp;oe=UTF-8&amp;hq=exxon&amp;hnear=Irving,+Dallas,+Texas&amp;t=m&amp;z=12&amp;iwloc=A"/>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Exxon+Mobil+Corporation,+Las+Colinas+Boulevard,+Irving,+TX&amp;aq=1&amp;oq=exxon+mobil+irving+tx&amp;sll=40.749858,-73.974724&amp;sspn=0.242924,0.248909&amp;ie=UTF8&amp;hq=Exxon+Mobil+Corporation,&amp;hnear=Las+Colinas+Blvd,+Irving,+Texas&amp;ll=32.889861,-96.950211&amp;spn=0.067304,0.062227&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2295103862368292286&amp;output=embed" />
             </Maps>
         </Common>
     </Organization>
