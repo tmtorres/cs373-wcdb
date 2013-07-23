@@ -9,9 +9,19 @@
 {% block body %}
         <div class="span9">
           <div class="hero-unit">
-            <h1>Utilities</h1>
-            <br><br>
-            <p>Welcome to the database management page.</p>
+            {% if view == 'index' %}
+                <h1>Utilities</h1>
+                <br><br>
+                <p>Welcome to the database management page.</p>
+            {% else %}{% if view == 'success' %}
+                <h1>Success!</h1>
+                <br><br>
+                <p>The data has been successfully imported.</p>
+            {% else %}{% if view == 'failure' %}
+                <h1>Oops..!</h1>
+                <br><br>
+                <p>Sorry, an unknown error occurred.</p>
+            {% endif %}{% endif %}{% endif %}
           </div>
         </div><!--/span-->
 {% endblock %}
