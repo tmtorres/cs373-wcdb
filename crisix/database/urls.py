@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^$', 'database.views.index', name='utility'),
+    url(r'^$', 'database.views.utility', name='utility'),
     url(r'^import/$', 'database.views.upload'),
     url(r'^export/$', 'database.views.download'),
 )

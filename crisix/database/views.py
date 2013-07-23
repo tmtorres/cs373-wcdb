@@ -6,6 +6,7 @@ from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
+from django.core.urlresolvers import reverse
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -17,10 +18,12 @@ from upload import *
 from download import *
 from models import *
 
+from django.test import Client
+
 cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
 
-def index(request):
-    return render(request, 'utility.html')
+def utility(request):
+    return render(request, 'utility.html', {'view': 'index'})
 
 def download(request):
     '''
@@ -38,7 +41,7 @@ def download(request):
     minidom.parseString(tostring(root)).writexml(response, indent="    ")
     return response
 
-def validate(file):
+def validate(request, file):
     try:
         elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile='/u/tmtorres/CS373/cs373-wcdb/WCDB1.xsd.xml',
                              xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
@@ -46,16 +49,11 @@ def validate(file):
         root = elemTree.getroot()
         insert(root)
 
-    except pyxsval.XsvalError, errstr:
-        return HttpResponse(errstr)
+    except:
+        return render(request, 'utility.html', {'view': 'failure'})
     finally:
         os.remove(file)
-
-    c = '\n'.join([str(e) for e in Crisis.objects.all()])
-    o = '\n'.join([str(e) for e in Organization.objects.all()])
-    p = '\n'.join([str(e) for e in Person.objects.all()])
-    #return HttpResponse(c + o + p, mimetype="text/plain")
-    return redirect('utility')
+    return render(request, 'utility.html', {'view': 'success'})
 
 @lockdown()
 def upload(request):
@@ -63,10 +61,9 @@ def upload(request):
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/test.xml', ContentFile(request.FILES['file'].read())))
-            return validate(tmp)
+            return validate(request, tmp)
         else:
             assert False
     else:
         form = UploadFileForm()
-
-    return render_to_response('import.html', {'form': form,})
+    return render(request, 'utility.html', {'view': 'form', 'form': form,})
