@@ -41,10 +41,13 @@ def capture(child):
         if out != '':
             yield out
 
-def test(request):
+def results(request):
     cmd = ['python', 'manage.py', 'test', 'database']
     child = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return HttpResponse((str(c) for c in capture(child)))
+
+def test(request):
+    return render(request, 'utility.html', {'view': 'test'})
 
 def download(request):
     root = ET.Element('WorldCrises')
