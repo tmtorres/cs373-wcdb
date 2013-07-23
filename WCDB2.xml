@@ -322,6 +322,9 @@
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
                 <!--https://maps.google.com/maps?client=ubuntu&channel=fs&q=northern+mali+conflict+google+maps&oe=utf-8&ie=UTF-8&ei=LafcUdniEouK9gTe-oHoDg&ved=0CAoQ_AUoAg -->
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/OccupyGezi" />
+            </Feeds>
             <!-- Optional summary field for extra random data -->
             <Summary>
                 Protests in Turkey started on May 28th, 2013 to initially contest the plans of replacing Taksim Gezi Park with a shopping mall and possible residence. The protests developed into riots when a group occupying the park was attacked by police with no mercy. The subjects of the protests have since broadened beyond the development of Taksim Gezi Park, covering issues such as freedom of assembly and freedom of expression, as well as more broadly defending the secularism of Turkey. The protests also spread to other cities in Turkey, and protests were seen in other countries with significant Turkish communities. On July 8th, Istanbul governor Hüseyin Avni Mutlu led a public reopening of the Gezi Park in front of all the media cameras. People called by the Taksim Solidarity group for a mass visit quickly filled it up. Within less than an hour of governor's leave, the park was cordoned by police and people forcefully evacuated, thus closing the park to the public again. This is still an ongoing event.
@@ -1116,6 +1119,9 @@
             <Citations>
                 <li href="http://www.unitedway.org/">United Way Worldwide</li>
             </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/UnitedWay">United Way Facebook</li>
+            </ExternalLinks>
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
@@ -1165,11 +1171,14 @@
             <Citations>
                 <li href="http://sichuan-quake-relief.org/">Sichuan Quake Relief</li>
             </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/pages/Sichuan-Quake-Relief/195505027139931">SQR Facebook</li>
+            </ExternalLinks>
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
             <Videos>
-            	<li embed="www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
+            	<li embed="//www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
             </Videos>
             <Maps>
             	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/>          	
@@ -1195,6 +1204,9 @@
             <li>On March 10th, 2011, France became the first country to recognise the council as Libya's only legitimate government.</li>
             <li>In a ceremony on August 8th, 2012, the NTC formally transferred power to the General National Congress. Jalil stepped down as chairman, passing the position to the GNC's oldest member, Mohammed Ali Salim. The NTC was then dissolved, while the GNC members took their oath of office, led by Salim.</li>
         </History>
+        <ContactInfo>
+            <li> Organization is no longer active. </li>
+        </ContactInfo>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
@@ -1237,6 +1249,9 @@
         </ContactInfo>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
+            <Citations>
+            	<li href="http://reliefweb.int/report/mali/africa-readies-funds-military-mission-war-torn-mali">African Union Aids Mali</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/African_Union">Wikipedia</li>
             </ExternalLinks>
@@ -1289,9 +1304,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=9.022762,38.746719&amp;sspn=0.158348,0.124454&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;ll=37.776618,-122.417112&amp;spn=0.017639,0.032015&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <li embed="https://twitter.com/OccupyGezi" />
-            </Feeds>
+            <Summary>
+            	Twitter was founded as an online medium for microblogging and creating text-based messages in a social networking environment. Twitter headquarters are located in San Francisco, and additional corporate locations include New York City, Boston and San Antonio.
+            </Summary>
         </Common>
     </Organization>
 
@@ -1310,7 +1325,7 @@
             <li>The Centers for Disease Control and Prevention first recognized HIV/AIDS in 1981.</li>
         </History>
         <ContactInfo>
-            <li>www.cdc.gov/contact</li>
+            <li href="www.cdc.gov/contact">CDC Contact</li>
         </ContactInfo>
         <Common>
             <Citations>
@@ -1331,6 +1346,9 @@
             <Feeds>
                 <li embed="https://twitter.com/CDC_HIVAIDS" />
             </Feeds>
+            <Summary>
+            	The Centers for Disease Control and Prevention is a major national public health institution based in the United States. It is recognized by the Department of Health and Human Services as a federal agency, and aims to maintain public health by preventing disease, injury and disability. The CDC focuses on infectious and non-infectious diseases, and environmental health among many other things.
+            </Summary>
         </Common>
     </Organization>
 
@@ -1347,7 +1365,7 @@
             <li>Prompted by a report from the National Academy of Sciences, the USGS was created, by a last-minute amendment, to an act of Congress on March 3, 1879. It was charged with the "classification of the public lands, and examination of the geological structure, mineral resources, and products of the national domain". This task was driven by the need to inventory the vast lands added to the United States by the Louisiana Purchase in 1803 and the Mexican-American War in 1848. The legislation also provided that the Hayden, Powell, and Wheeler surveys be discontinued as of June 30, 1879.</li>
         </History>
         <ContactInfo>
-            <li>www.usgs.gov/ask/index.php</li>
+            <li href="www.usgs.gov/ask/index.php">USGS Contact</li>
         </ContactInfo>
         <Common>
             <Citations>
@@ -1357,7 +1375,7 @@
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">United States Geological Survey Wiki</li>
             </ExternalLinks>
             <Images>
-            	<li embed="http://t1.gstatic.com/images?q=tbn:ANd9GcQHml8QNmzoQdgj6I20DW-LyyrSp61-ZTrpDlnRiZm6o_7mOytg"/>
+            	<li embed="http://wxow.images.worldnow.com/images/20427163_BG1.jpg"/>
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/sMzK_aySff0" text="USGS Earthquakes" />
@@ -1365,6 +1383,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;aq=2&amp;oq=US+Geological+Survey&amp;sll=33.929527,-84.263227&amp;sspn=0.066516,0.062227&amp;ie=UTF8&amp;hq=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;ll=38.947187,-77.367639&amp;spn=0.017356,0.032015&amp;t=m&amp;output=embed" />            
             </Maps>
+            <Summary>
+            	The United States Geological Survey is a scientific agency under the government of the United States. The USGS has four major focuses in regards to science discipline: biology, geography, geology and hydrology. USGS is headquartered in Reston, Virginia and has other major offices in locations such as Lakewood, Colorado and Menio Park, California.
+            </Summary>
         </Common>
     </Organization>
 
@@ -1378,8 +1399,11 @@
         <Kind>Public Health</Kind>
         <Location>Geneva, Switzerland</Location>
         <History>
-            <li>The World Health Organization (WHO) is a specialized agency of the United Nations (UN) that is concerned with international public health. It was established on 7 April 1948, with headquarters in Geneva, Switzerland, and is a member of the United Nations Development Group. Its predecessor, the Health Organization, was an agency of the League of Nations.</li>
-            <li>The constitution of the World Health Organization had been signed by all 61 countries of the United Nations by 22 July 1946, with the first meeting of the World Health Assembly finishing on 24 July 1948. It incorporated the Office International d'Hygiène Publique and the League of Nations Health Organization. Since its creation, WHO has been responsible for playing a leading role in the eradication of smallpox. Its current priorities include communicable diseases, in particular, HIV/AIDS, malaria and tuberculosis; the mitigation of the effects of non-communicable diseases; sexual and reproductive health, development, and aging; nutrition, food security and healthy eating; occupational health; substance abuse; and drive the development of reporting, publications, and networking. WHO is responsible for the World Health Report, a leading international publication on health, the worldwide World Health Survey, and World Health Day (7th-April of every Year).</li></History><ContactInfo><li>http://www.who.int/about/contacthq/en/index.html</li>
+            <li> The World Health Organization was established on 7 April 1948. Its predecessor, the Health Organization, was an agency of the League of Nations.</li>
+            <li>The constitution of the World Health Organization had been signed by all 61 countries of the United Nations by 22 July 1946, with the first meeting of the World Health Assembly finishing on 24 July 1948. It incorporated the Office International d'Hygiène Publique and the League of Nations Health Organization. </li>
+        </History>
+        <ContactInfo>
+            <li href="http://www.who.int/about/contact_form/en/index.html">WHO Contact</li>
         </ContactInfo>
         <Common>
             <Citations>
@@ -1387,6 +1411,7 @@
             </Citations>
             <ExternalLinks>
                 <li href="http://www.who.int/en/">WHO Home Page</li>
+                <li href="https://www.facebook.com/WorldHealthOrganization">WHO Facebook</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_WHO.svg/800px-Flag_of_WHO.svg.png" text="WHO Flag"/>
@@ -1398,6 +1423,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=World+Health+Organization+(WHO),+Avenue+Appia,+Geneva,+Switzerland&amp;aq=0&amp;oq=world+health+organization&amp;sll=38.947127,-77.367439&amp;sspn=0.249388,0.248909&amp;ie=UTF8&amp;hq=World+Health+Organization+(WHO),&amp;hnear=Avenue+Appia,+Gen%C3%A8ve,+Switzerland&amp;ll=46.232728,6.134357&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" text="Location of WHO Headquarters"/>
             </Maps>
+            <Summary>
+            	The World Health Organization (WHO) is a specialized agency of the United Nations (UN) that is concerned with international public health. They are headquartered in Geneva, Switzerland, and is a member of the United Nations Development Group. Since its creation, WHO has been responsible for playing a leading role in the eradication of smallpox. Its current priorities include communicable diseases, in particular, HIV/AIDS, malaria and tuberculosis; the mitigation of the effects of non-communicable diseases; sexual and reproductive health, development, and aging; nutrition, food security and healthy eating; occupational health; substance abuse; and drive the development of reporting, publications, and networking. WHO is responsible for the World Health Report, a leading international publication on health, the worldwide World Health Survey, and World Health Day (7th-April of every Year).
+            </Summary>
         </Common>
     </Organization>
 
@@ -1414,12 +1442,15 @@
             <li>The Security Council held its first session on January 17th, 1946 at Church House, Westminster, London. Since its first meeting, the Council, which exists in continuous session, has travelled widely, holding meetings in many cities, such as Paris and Addis Ababa, as well as at its current permanent home at the United Nations Headquarters in New York City.</li>
         </History>
         <ContactInfo>
-            <li>http://www.un.org/en/sc/contact</li>
+            <li href="http://www.un.org/en/sc/contact">UNSC Contact Form</li>
         </ContactInfo>
         <Common>
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/pages/United-Nations-Security-Council/107569195932885">UNSC Facebook</li>
+            </ExternalLinks>
             <Images>
             	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg" />
             	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg" />
@@ -1430,6 +1461,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Nations+Security+Council,+New+York,+NY&amp;aq=0&amp;oq=UN+security&amp;sll=46.232815,6.134491&amp;sspn=0.221812,0.248909&amp;ie=UTF8&amp;hq=United+Nations+Security+Council,+New+York,+NY&amp;hnear=&amp;radius=15000&amp;ll=40.749911,-73.974858&amp;spn=0.071946,0.071946&amp;t=m&amp;output=embed" />
             </Maps>
+            <Summary>
+            	The United Nations Security Council (UNSC) is one of six organs of the U.N. Their main duties are to maintain international peace and security. Powers of the UNSC granted by the U.N. are the establishment of peacekeeping operations, establishment of international sanctions and military authorization.
+            </Summary>
         </Common>
     </Organization>
         
@@ -1440,18 +1474,21 @@
         <People>
             <Person ID="PER_JOSHAZ"/>
         </People>
-        <Kind>multinational oil and gas corporation</Kind>
+        <Kind>Multinational oil and gas corporation</Kind>
         <Location>Irving, Texas</Location>
         <History>
             <li>Exxon Mobil Corporation was formed in 1999 by the merger of two major oil companies, Exxon and Mobil. Both Exxon and Mobil were descendants of the John D. Rockefeller corporation, Standard Oil which was established in 1870. The reputation of Standard Oil in the public eye suffered badly after publication of Ida M. Tarbell's classic exposé The History of the Standard Oil Company in 1904, leading to a growing outcry for the government to take action against the company.</li>
         </History>
         <ContactInfo>
-            <li>http://www.exxonmobil.com/</li>
+            <li href="http://www.exxonmobil.com/">ExxonMobil Site</li>
         </ContactInfo>
         <Common>
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/Exxon_Shipping_Company">ExxonMobil Wiki page</li>
             </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/pages/ExxonMobil/312303928430">ExxonMobil Facebook</li>
+            </ExternalLinks>
             <Images>
                 <li embed="http://cdn2.shipspotting.com/photos/middle/8/8/1/976188.jpg" text="Exxon Valdez ship"/>
                 <li embed="http://static.ddmcdn.com/gif/blogs/6a00d8341bf67c53ef016769462b79970b-640wi.jpg" text="Exxon Valdez ship, back view"/>
@@ -1464,6 +1501,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Exxon+Mobil+Corporation,+Las+Colinas+Boulevard,+Irving,+TX&amp;aq=1&amp;oq=exxon+mobil+irving+tx&amp;sll=40.749858,-73.974724&amp;sspn=0.242924,0.248909&amp;ie=UTF8&amp;hq=Exxon+Mobil+Corporation,&amp;hnear=Las+Colinas+Blvd,+Irving,+Texas&amp;ll=32.889861,-96.950211&amp;spn=0.067304,0.062227&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2295103862368292286&amp;output=embed" />
             </Maps>
+            <Summary>
+            	ExxonMobil is a U.S. based oil and gas corporation with headquarters in Irving, Texas. It is the world's largers company in terms of revenue, and in addition, was recognized in 2013 as the world's largest publicly traded company in regards to market capitalization.
+            </Summary>
         </Common>
     </Organization>
 </WorldCrises>
