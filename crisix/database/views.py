@@ -32,11 +32,12 @@ def test(request):
     assert os.path.exists('TestWCDB2.out')
     return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
 '''
+
 newlines = ['\n', '\r\n', '\r']
-def capture(child):
+def capture(process):
     while True:
-        out = child.stderr.read(1)
-        if out == '' and child.poll() != None:
+        out = process.stderr.read(1)
+        if out == '' and process.poll() != None:
             break
         if out in newlines:
             yield '</br>'
@@ -44,9 +45,9 @@ def capture(child):
             yield out
 
 def results(request):
-    cmd = ['python', 'manage.py', 'test', 'database']
-    child = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    return HttpResponse((str(c) for c in capture(child)))
+    cmd = ['python', 'manage.py', 'test', 'database', '--noinput']
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return HttpResponse((str(c) for c in capture(process)))
 
 def test(request):
     return render(request, 'utility.html', {'view': 'test'})
