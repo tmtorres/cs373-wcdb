@@ -1375,6 +1375,7 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_WHO.svg/800px-Flag_of_WHO.svg.png" text="WHO Flag"/>
+                <li embed="http://www.examiner.com/images/blog/EXID22920/images/World_Health_Organization(1).jpg"/>
             </Images>
             <Videos>
                 <li embed="http://www.youtube.com/watch?feature=player_profilepage&amp;v=QCljON3Pa4E" text="WHO Promotional Video"/>
@@ -1404,6 +1405,16 @@
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
+            <Images>
+            	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg"/>
+            	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg/></li>"
+            </Images>
+            <Videos>
+            	<li embed="http://www.youtube.com/watch?v=gTB-LDWoETA" text="Obama at UN Security Council"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?q=United+Nations+Security+Council,+New+York,+NY,+United+States&hl=en&ll=40.750118,-73.968887&spn=0.23434,0.248909&sll=30.145154,-97.834892&sspn=1.069976,0.995636&oq=UN+security+council&hq=United+Nations+Security+Council,+New+York,+NY,+United+States&radius=15000&t=m&z=12"/>
+            </Maps>
         </Common>
     </Organization>
 
@@ -1432,6 +1443,9 @@
                 <li embed="http://www.exxonmobil.com.tr/Corporate/Newsroom/Publications/XOMGlobalCap/images/intro1.jpg" text="ExxonMobil corporate pic"/>
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
+            <Videos>
+            	<li embed="http://www.youtube.com/watch?v=dODJ85R5-r4"/>
+            </Videos>
             <Maps>
             	<li embed="https://maps.google.com/maps?q=exxon+irving+texas&hl=en&ll=32.884777,-96.957779&spn=0.183365,0.226936&client=safari&oe=UTF-8&hq=exxon&hnear=Irving,+Dallas,+Texas&t=m&z=12&iwloc=A"/>
             </Maps>
