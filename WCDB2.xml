@@ -696,9 +696,6 @@
             <Maps>
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=p&amp;oe=UTF8&amp;msa=0&amp;msid=218316811799567847406.0004898c12dd6c8d7df7e&amp;ll=16.123683,-37.798462&amp;spn=99.76913,218.600464&amp;iwloc=0004898cedc8b31e37b13&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <li embed="" />
-            </Feeds>
             <Summary>
                 The Exxon Valdez oil spill occurred in Prince William Sound, Alaska, on March 24, 1989, when Exxon Valdez, an oil tanker bound for Long Beach, California, struck Prince William Sound's Bligh Reef and spilled 260,000 to 750,000 barrels (41,000 to 119,000 cubic meters) of crude oil. It is considered to be one of the most devastating human-caused environmental disasters. The Valdez spill was the largest ever in US waters until the 2010 Deepwater Horizon oil spill, in terms of volume released. However, Prince William Sound's remote location, accessible only by helicopter, plane, or boat, made government and industry response efforts difficult and severely taxed existing plans for response. The region is a habitat for salmon, sea otters, seals and seabirds. The oil, originally extracted at the Prudhoe Bay oil field, eventually covered 1,300 miles (2,100 km) of coastline, and 11,000 square miles (28,000 squared km) of ocean. Exxon's CEO, Lawrence Rawl, shaped the company's response.
                 According to official reports, the ship was carrying approximately 55 million US gallons (210,000 cubic meters) of oil, of which about 10.1 to 11 million US gallons (240,000 to 260,000 bbl; 38,000 to 42,000 cubic meters) were spilled into the Prince William Sound. A figure of 11 million US gallons (260,000 bbl; 42,000 cubic meters) was a commonly accepted estimate of the spill's volume and has been used by the State of Alaska's Exxon Valdez Oil Spill Trustee Council, the National Oceanic and Atmospheric Administration and environmental groups such as Greenpeace and the Sierra Club. Some groups, such as Defenders of Wildlife, dispute the official estimates, maintaining that the volume of the spill, which was calculated by subtracting the volume of material removed from the vessel's tanks after the spill from the volume of the original cargo, has been underreported. Alternative calculations, based on the assumption that the official reports underestimated how much seawater had been forced into the damaged tanks, placed the total at 25 to 32 million US gallons (600,000 to 760,000 bbl; 95,000 to 120,000 cubic meters).
@@ -752,7 +749,6 @@
         </Organizations>
         <Kind>President</Kind>
         <Location>Communist Party of China</Location>
-        <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
                 <li href="http://english.peopledaily.com.cn/data/people/hujintao.shtml">"Hu Jintao". People's Daily.</li>
@@ -796,7 +792,6 @@
 	    </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Death_of_Muammar_Gaddafi">Death of Gaddafo Wikipedia</li>
-		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
                 <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">"Muammar Gaddafi". Wikipedia.</li>
             </ExternalLinks>
             <Images>
@@ -804,14 +799,14 @@
                 <li embed="http://www.dailyguideghana.com/wp-content/uploads/2011/10/muammar_gaddafi.jpg" />
                 <li embed="http://www.timeslive.co.za/incoming/2011/07/02/gaddafi.jpg/ALTERNATES/crop_630x400/Gaddafi.jpg" />
             </Images>
-	    <Videos>
-               <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>	
-               <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>	
-                <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>		
-	    </Videos>
-	    <Maps>
-		<li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
-	    </Maps>
+            <Videos>
+                <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>
+                <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>
+                <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
+            </Maps>
             <Summary>
                 Muammar Muhammad Abu Minyar al-Gaddafi, or Colonel Gaddafi, was an Libyan politician who de facto ruled Lybya for 42 years. In 1969 he conducted a coup against King Idris and that led to the formation of the Libyan Arab Republic. He died on 20 October 2011 during the Battle of Sirte, and was found hiding in a culvert west of Sirte and captured by National Transitional Council forces. He was killed shortly afterwards. 
             </Summary>
@@ -896,10 +891,6 @@
         </Common>
     </Person>
 
-
-
-
-
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
         <Crises>
             <Crisis ID="CRI_AIDSHI"/>
@@ -910,9 +901,9 @@
         <Kind>Basketball player</Kind>
         <Location>L.A.</Location>
         <Common>
-	    <Citations>
-		<li href="http://www.biography.com/people/magic-johnson-9356150">Magic Johnson Biography</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.biography.com/people/magic-johnson-9356150">Magic Johnson Biography</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://www.magicjohnson.org/">Magic Johnson Foundation</li>
                 <li href="http://www.basketball-reference.com/players/j/johnsma02.html">Magic Johnson Basketball Stats</li>
@@ -949,13 +940,13 @@
         <Kind>Prime Minister</Kind>
         <Location>Japan</Location>
         <Common>
-	    <Citations>
-		<li href="http://www.britannica.com/EBchecked/topic/1658252/Kan-Naoto">Brittanica Biography</li>
-		<li href="http://www.bbc.co.uk/news/10228471">BBC Profile: Naoto Kan</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.britannica.com/EBchecked/topic/1658252/Kan-Naoto">Brittanica Biography</li>
+                <li href="http://www.bbc.co.uk/news/10228471">BBC Profile: Naoto Kan</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Naoto_Kan">Naoto Kan Wikipedia</li>
-		<li href="http://www.forbes.com/profile/naoto-kan/">Forbes Profile: Naoto Kan</li>
+                <li href="http://www.forbes.com/profile/naoto-kan/">Forbes Profile: Naoto Kan</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://i.dailymail.co.uk/i/pix/2011/04/14/article-0-0B6F583C00000578-799_306x423.jpg" />
@@ -977,8 +968,6 @@
             </Summary>
         </Common>
     </Person>
-
-
 
     <Person ID="PER_BROBMA" Name="Barack Obama">
         <Crises>
@@ -1006,7 +995,6 @@
             <Videos>
                 <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
                 <li embed="//www.youtube.com/embed/zncqb-n3zMo" text="Barack Obama's second inaugural address (2013)"/>
-
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=cs&amp;ie=UTF8&amp;q=google+map+white+house&amp;fb=1&amp;gl=us&amp;hq=google+map+white+house&amp;hnear=google+map+white+house&amp;cid=0,0,8167675777476425407&amp;t=m&amp;ll=38.897683,-77.036497&amp;spn=0.006295,0.006295&amp;output=embed" text="The White House"/>
@@ -1027,15 +1015,14 @@
         <Kind>Leader of Al-Qaeda</Kind>
         <Location>Middle East</Location>
         <Common>
-	    <Citations>
-
-		<li href="http://www.biography.com/people/osama-bin-laden-37172">Osama's Biography at Biography.com</li>
-		<li href="http://www.pbs.org/wgbh/pages/frontline/shows/binladen/who/bio.html">PBS Biography about Osama</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.biography.com/people/osama-bin-laden-37172">Osama's Biography at Biography.com</li>
+                <li href="http://www.pbs.org/wgbh/pages/frontline/shows/binladen/who/bio.html">PBS Biography about Osama</li>
+            </Citations>
             <ExternalLinks>
-		<li href="http://en.wikipedia.org/wiki/Death_of_Osama_bin_Laden"> Death of Osama Wikipedia</li>
-		<li href="http://en.wikipedia.org/wiki/Osama_bin_Laden"> Osama Bin Laden Wikipedia</li>
-		<li href="http://www.imdb.com/title/tt1790885/"> Zero Dark Thirty: A movie based on the killing of Osama</li>
+                <li href="http://en.wikipedia.org/wiki/Death_of_Osama_bin_Laden"> Death of Osama Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/Osama_bin_Laden"> Osama Bin Laden Wikipedia</li>
+                <li href="http://www.imdb.com/title/tt1790885/"> Zero Dark Thirty: A movie based on the killing of Osama</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://a.abcnews.com/images/Blotter/gty_osama_bin_laden_jef_111209_wg.jpg" />
@@ -1055,7 +1042,6 @@
         </Common>
     </Person>
 
-
     <Person ID="PER_JOSHAZ" Name="Joseph Hazelwood">
         <Crises>
             <Crisis ID="CRI_EXXVAL"/>
@@ -1067,12 +1053,12 @@
         <Location>Alaska</Location>
         <Common>
             <Citations>
-		<li href="http://www.britannica.com/EBchecked/topic/862348/Amadou-Toumani-Toure">Britannica.com</li>		
-		<li href="http://library.thinkquest.org/10867/spill/people/hazelwood.shtml">Thinkquest.org</li>
+                <li href="http://www.britannica.com/EBchecked/topic/862348/Amadou-Toumani-Toure">Britannica.com</li>
+                <li href="http://library.thinkquest.org/10867/spill/people/hazelwood.shtml">Thinkquest.org</li>
             </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Joseph_Hazelwood">Joseph Hazelwood Wiki page</li>
-                <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">NYPost Article</li>  
+                <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">NYPost Article</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://www.akpresswomen.org/files/images/1243672059-hazelwood.jpg" text="Joseph Hazelwood Old"/>
@@ -1092,7 +1078,6 @@
         </Common>
     </Person>
 
-
     <!-- Organization elements -->
     <Organization ID="ORG_UNDWAY" Name="United Way">
         <Crises>
@@ -1111,7 +1096,6 @@
         <ContactInfo>
             <li href="http://apps.unitedway.org/contact/">Contact Form</li>
         </ContactInfo>
-        <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
                 <li href="http://www.unitedway.org/">United Way Worldwide</li>
@@ -1154,7 +1138,6 @@
             </li>
             <li>Fax: +86 (0)28 8552-1997</li>
         </ContactInfo>
-        <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
                 <li href="http://sichuan-quake-relief.org/">Sichuan Quake Relief</li>
@@ -1166,7 +1149,7 @@
             	<li embed="http://www.youtube.com/watch?v=nR3DPKzBrwo" text="SQR 2008 Report"/>
             </Videos>
             <Maps>
-            	<li embed="<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Chengdu,+Sichuan,+China&amp;aq=0&amp;oq=sichuan+province+chengdu&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=10&amp;ll=30.572269,104.066541&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Chengdu,+Sichuan,+China&amp;aq=0&amp;oq=sichuan+province+chengdu&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=10&amp;ll=30.572269,104.066541" style="color:#0000FF;text-align:left">View Larger Map</a></small>"/>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Chengdu,+Sichuan,+China&amp;aq=0&amp;oq=sichuan+province+chengdu&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=10&amp;ll=30.572269,104.066541&amp;output=embed"/>
             </Maps>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
