@@ -33,11 +33,12 @@
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
                 <br><br>
-                <p>The data has been successfully imported.</p>
+                <p>The data has been successfully imported into the database.</p>
             {% else %}{% if view == 'failure' %}
                 <h1>Oops..!</h1>
                 <br><br>
-                <p>Sorry, an unknown error occurred.</p>
+                <p>Sorry, the following error occurred:</p>
+                <p>{{errstr}}</p>
             {% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
           </div>
         </div><!--/span-->

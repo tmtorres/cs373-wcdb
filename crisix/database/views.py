@@ -9,6 +9,8 @@ from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
 from django.template.response import TemplateResponse
 
+from xml.etree.ElementTree import ParseError
+
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
 
@@ -66,8 +68,10 @@ def validate(request, file):
         elemTree = elementTreeWrapper.getTree()
         root = elemTree.getroot()
         insert(root)
-    except:
-        return render(request, 'utility.html', {'view': 'failure'})
+    except pyxsval.XsvalError, errstr:
+        return render(request, 'utility.html', {'view': 'failure', 'errstr': errstr})
+    except ParseError, e:
+        return render(request, 'utility.html', {'view': 'failure', 'errstr': 'Invalid token: line ' + str(e.position[0]) + ', column ' + str(e.position[1])})
     finally:
         os.remove(file)
     return render(request, 'utility.html', {'view': 'success'})
