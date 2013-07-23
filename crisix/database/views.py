@@ -8,8 +8,6 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
 
-from django.test.simple import DjangoTestSuiteRunner
-
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
 
@@ -21,16 +19,13 @@ from download import *
 from models import *
 import subprocess
 
-from django.test import Client
-
-cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
-
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
 
 def test(request):
     process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
     process.wait()
+    assert os.path.exists('TestWCDB2.out')
     return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
 
 def download(request):
