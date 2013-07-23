@@ -726,10 +726,13 @@
             </ExternalLinks>
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://www.mrconservative.com/files/2013/03/0219_adam-lanza2.jpg" />
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
+                <li embed="http://www.abc.net.au/reslib/201305/r1113059_13548909.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/ItsOJUpK-cY" text="ABC News: Why Did Adam Lanza Snap?"/>
+                <li embed="//www.youtube.com/embed/ddyiMd3tdwE" text="Chilling Details Emerge on Newtown School Shooter Adam Lanza "/>
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
@@ -760,9 +763,12 @@
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/5/59/Hu_Jintao_Cannes2011.jpg" text="Chinese President Hu Jintao" />
+                <li embed="http://politics.blogs.foxnews.com/sites/politics.blogs.foxnews.com/files/Obama%20Hu%20Jintao.jpg" text="Hu Jintao and Obama" />
+                <li embed="http://houston.china-consulate.org/eng/nv/W020080524158158759020.jpg" text="Hu Jintao tries to comfort an earthquake surviving pupil" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
+                <li embed="//www.youtube.com/embed/9auz-AAGyks" />
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
@@ -862,20 +868,28 @@
         <Location>Turkey</Location>
         <Common>
             <Citations>
+                <li href="http://www.britannica.com/EBchecked/topic/913988/Recep-Tayyip-Erdogan">Recep Tayyip Ergodan Brittanica</li>
                 <li href="http://www.akparti.org.tr/english/yonetim/genel-baskan">Turkey's Justice and Development Party</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Wikipedia</li>
+                <li href="http://www.news.com.au/world-news/turkey-protesters-defy-deadline-riot-police-fire-tear-gas/story-fndir2ev-1226664741434">Recep Tayyip Erdogan holds rally as riot police try to quell protest</li>
+                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Recep Tayyip Ergodan Wikipedia</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/b/b8/Tayyip_Erdo%C4%9Fan.JPG" text="Turkish Prime Minister Recep Tayyip Erdogan" />
+                <li embed="http://www.2013mersin.net//HLIC/b274db2d66e1173a46a5ed5b74721ad3.jpg" text="Recep Tayyip Erdogan" />
+                <li embed="http://galeri.uludagsozluk.com/41/recep-tayyip-erdo%C4%9Fan-%C4%B1n-muhte%C5%9Fem-karizmas%C4%B1_129465.jpg" text="Recep Tayyip Erdogan Hand on Heart" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/Ael3SSICrLA" text="Erdogan Rejects 'dictator' Label"/>
+                <li embed="//www.youtube.com/embed/zSwup4gy8wc" text="BBC News - Turkey clashes: Thousands rally as PM Erdogan returns "/>
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Başbakanlık Konutu, Ankara, Turkey"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/RT_Erdogan" />
+            </Feeds>
             <Summary>
                 Recep Tayyip Erdogan is the 25th and current Prime Minister of Turkey, in office since 2003. He served as Mayor of Istanbul from 1994 to 1998 and established the Justice and Development Party (AKP) in 2001. From its first year, the AKP became the largest publicly supported political movement in Turkey. May and June 2013 saw protests against what large sections of the Turkish public perceive as a growing authoritarianism of Erdogan and his government and his policies.
             </Summary>
@@ -897,7 +911,7 @@
         <Location>L.A.</Location>
         <Common>
 	    <Citations>
-		<li href="http://www.biography.com/people/magic-johnson-9356150">Biography.com</li>
+		<li href="http://www.biography.com/people/magic-johnson-9356150">Magic Johnson Biography</li>
 	    </Citations>
             <ExternalLinks>
                 <li href="http://www.magicjohnson.org/">Magic Johnson Foundation</li>
@@ -986,8 +1000,8 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg" text="President Barack Obama"/>
-                <li embed="http://upload.wikimedia.org/wikipedia/en/thumb/3/33/Ann_Dunham_with_father_and_children.jpg/220px-Ann_Dunham_with_father_and_children.jpg" text="Young Barack Obama with family"/>
-                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flickr_Obama_Springfield_01.jpg/220px-Flickr_Obama_Springfield_01.jpg" text="President Obama and First Lady at a rally"/>
+                <li embed="http://rogueoperator.files.wordpress.com/2012/03/obama-smiling-2-01-50576.jpg" text="Barack Obama"/>
+                <li embed="http://media.al.com/wire/photo/barack-obama-90a238b2071e197a.jpg" text="President Obama"/>
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
@@ -1061,20 +1075,23 @@
                 <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">NYPost Article</li>  
             </ExternalLinks>
             <Images>
-                <li embed="http://library.thinkquest.org/10867/spill/people/hazelwood.jpg" text="Joseph Hazelwood pic"/>
-                <li embed="http://cache.daylife.com/imageserve/071weEIcxP1ys/x500.jpg" text="pic of Joseph Hazelwood"/>
-                <li embed="http://www.nypost.com/rw/nypost/2010/05/31/news/photos_stories/cropped/joseph_hazelwood--300x300.jpg" text="old Joseph Hazelwood"/>
-                <li embed="http://cdn2.shipspotting.com/photos/middle/8/8/1/976188.jpg" text="Exxon Valdez ship"/>
-                <li embed="http://c.gcaptain.com/wp-content/uploads/2011/07/1302184844-49.jpg" text="Joseph Hazelwood wearing a cap"/>
+                <li embed="http://www.akpresswomen.org/files/images/1243672059-hazelwood.jpg" text="Joseph Hazelwood Old"/>
+                <li embed="http://einestages.spiegel.de/hund-images/2009/03/20/6/bffa111561aa81e0e8ad2b7d53703279_image_document_large_featured_borderless.jpg" text="Joseph Hazelwood Trial"/>
+                <li embed="http://www.nypost.com/rw/nypost/2010/05/31/news/photos_stories/cropped/joseph_hazelwood--300x300.jpg" text="Joseph Hazelwood Hat"/>
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/gFkZ8zd4684" text="Exxon Valdez Story - Why Things Went So Wrong"/>
+                <li embed="//www.youtube.com/embed/xLuLSNiDA5U" text="CBS News Special Report: Hazelwood Trial (1990)"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=60.83333%C2%B0N+146.86667%C2%B0W&amp;aq=&amp;sll=30.307761,-97.753401&amp;sspn=1.193878,2.024231&amp;ie=UTF8&amp;t=m&amp;z=12&amp;ll=60.83333,-146.86667&amp;output=embed" text="Coordinates of Oil Spill"/>
+            </Maps>
             <Summary>
                 Joseph Hazelwood was the captain of the Exxon Valdez, an oil tanker that spilled more than 257,000 barrels of oil off the Alaskan coastline.  Before the spill, Hazelwood was sleeping in his cabin and left the third mate in charge.  Hazelwood was supposedly heavily drinking that night, but his trial never convicted him as being intoxicated during the spill.  After his trial, Hazelwood's license was suspended for 9 months, fined $50,000, and sentenced to 1,000 hours of community service.
             </Summary>
         </Common>
     </Person>
+
 
     <!-- Organization elements -->
     <Organization ID="ORG_UNDWAY" Name="United Way">
