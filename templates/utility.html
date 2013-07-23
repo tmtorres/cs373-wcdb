@@ -19,10 +19,12 @@
                 <br><br>
                 <p>Welcome to the database management page.</p>
             {% else %}{% if view == 'form' %}
+                <h1>File Upload</h1></br>
                 <form enctype="multipart/form-data" action="" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" class="btn btn-primary" value="Submit" />
+                {{ form.file.errors }}
+                <p>{{ form.file }}</p>
+                <p><input type="submit" class="btn btn-primary" value="Submit" /></p>
                 </form>
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>

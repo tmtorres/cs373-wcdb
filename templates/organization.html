@@ -36,15 +36,11 @@
         <h1 class="main-focus">{{ o.name }}</h1>
         <br>
         <div class="row-fluid">
-            <div class="span5">
                 {% for m in maps %}
-                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{{ m.embed }}"></iframe>
+                <iframe width="300" height="300" frameborder="0" scrolling="no" src="{{ m.embed }}" style="float:left;margin:15px"></iframe>
                 {% endfor %}
-            </div>
-            <!--/span4--> 
-            <div class= "span7">
-                <p>{{ o.summary }}</p>
-                </div>
+            <!--/span4-->
+                {{ o.summary }}
             </div>
             <!--/span6-->
         </div>
