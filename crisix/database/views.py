@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
+from django.template.response import TemplateResponse
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -22,11 +23,28 @@ import subprocess
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
 
+'''
 def test(request):
     process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
     process.wait()
     assert os.path.exists('TestWCDB2.out')
     return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
+'''
+newlines = ['\n', '\r\n', '\r']
+def capture(child):
+    while True:
+        out = child.stderr.read(1)
+        if out == '' and child.poll() != None:
+            break
+        if out in newlines:
+            yield '</br>'
+        if out != '':
+            yield out
+
+def test(request):
+    cmd = ['python', 'manage.py', 'test', 'database']
+    child = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return HttpResponse((str(c) for c in capture(child)))
 
 def download(request):
     root = ET.Element('WorldCrises')
@@ -62,4 +80,5 @@ def upload(request):
             assert False
     else:
         form = UploadFileForm()
-    return render(request, 'utility.html', {'view': 'form', 'form': form,})
+    #return render(request, 'utility.html', {'view': 'form', 'form': form,})
+    return TemplateResponse(request, 'utility.html', {'view': 'form', 'form': form,})
