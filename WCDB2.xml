@@ -1133,6 +1133,7 @@
             <Person ID="PER_HUJNTO" />
         </People>
         <Kind>Non-profit, humanitarian Organization</Kind>
+        <Location>Chengdu, China</Location>
         <History>
             <li>Founded the morning after the disaster struck, SQR immediately began coordinating emergency relief aid to the affected area. In the first 6 to 8 months, SQR funnelled cash, services and material donations in excess of 15 million RMB to towns and villages in the quake zone – mainly tents, food, water, medical, hygiene and camping supplies, as well as several small-scale water and sanitation projects. SQR’s Winter Relief Project supplied warm bedding, clothing and camping gear worth more than 2 million RMB to more than 6,000 villagers.</li>
             <li>Acting as a logistics and information hub, SQR connected with other NGOs, donors and volunteers, as well as keeping media and wider communities updated on the latest situation. Recognising the repercussions for survivors and those who had suffered loss or injury, we linked dozens of international and local psychological experts with stricken communities.</li>
@@ -1161,6 +1162,12 @@
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
+            <Videos>
+            	<li embed="http://www.youtube.com/watch?v=nR3DPKzBrwo" text="SQR 2008 Report"/>
+            </Videos>
+            <Maps>
+            	<li embed="<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Chengdu,+Sichuan,+China&amp;aq=0&amp;oq=sichuan+province+chengdu&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=10&amp;ll=30.572269,104.066541&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Chengdu,+Sichuan,+China&amp;aq=0&amp;oq=sichuan+province+chengdu&amp;sll=37.0625,-95.677068&amp;sspn=44.069599,58.095703&amp;ie=UTF8&amp;hq=&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=10&amp;ll=30.572269,104.066541" style="color:#0000FF;text-align:left">View Larger Map</a></small>"/>
+            </Maps>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
