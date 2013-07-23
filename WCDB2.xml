@@ -726,10 +726,13 @@
             </ExternalLinks>
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://www.mrconservative.com/files/2013/03/0219_adam-lanza2.jpg" />
                 <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
+                <li embed="http://www.abc.net.au/reslib/201305/r1113059_13548909.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/ItsOJUpK-cY" text="ABC News: Why Did Adam Lanza Snap?"/>
+                <li embed="//www.youtube.com/embed/ddyiMd3tdwE" text="Chilling Details Emerge on Newtown School Shooter Adam Lanza "/>
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
@@ -760,9 +763,12 @@
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/5/59/Hu_Jintao_Cannes2011.jpg" text="Chinese President Hu Jintao" />
+                <li embed="http://politics.blogs.foxnews.com/sites/politics.blogs.foxnews.com/files/Obama%20Hu%20Jintao.jpg" text="Hu Jintao and Obama" />
+                <li embed="http://houston.china-consulate.org/eng/nv/W020080524158158759020.jpg" text="Hu Jintao tries to comfort an earthquake surviving pupil" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
+                <li embed="//www.youtube.com/embed/9auz-AAGyks" />
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
@@ -785,19 +791,27 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
 	    <Citations>
-		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
+		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">Biography.com</li>
+		<li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8344034/Libya-civil-war-breaks-out-as-Gaddafi-mounts-rearguard-fight.html">Gaddafi Mounts Rearguard Fight</li>
 	    </Citations>
             <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Death_of_Muammar_Gaddafi">Death of Gaddafo Wikipedia</li>
+		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
                 <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">"Muammar Gaddafi". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://www.biography.com/imported/images/Biography/Images/Profiles/Q/Muammar-al-Qaddafi-39014-1-402.jpg" />
                 <li embed="http://www.dailyguideghana.com/wp-content/uploads/2011/10/muammar_gaddafi.jpg" />
-                <li embed="http://www.africanews.com/documents/a2/99/a2990fcc227fb9152557c7e4354186cf.jpg" />
+                <li embed="http://www.timeslive.co.za/incoming/2011/07/02/gaddafi.jpg/ALTERNATES/crop_630x400/Gaddafi.jpg" />
             </Images>
 	    <Videos>
+               <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>	
+               <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>	
                 <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>		
 	    </Videos>
+	    <Maps>
+		<li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
+	    </Maps>
             <Summary>
                 Muammar Muhammad Abu Minyar al-Gaddafi, or Colonel Gaddafi, was an Libyan politician who de facto ruled Lybya for 42 years. In 1969 he conducted a coup against King Idris and that led to the formation of the Libyan Arab Republic. He died on 20 October 2011 during the Battle of Sirte, and was found hiding in a culvert west of Sirte and captured by National Transitional Council forces. He was killed shortly afterwards. 
             </Summary>
@@ -816,15 +830,22 @@
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
-                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">"Mali’s President, Ousted in Coup, Steps Down". The New York Times.</li>
+                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">NY Times: Toure resigns after coup </li>
+                <li href="http://www.aljazeera.com/news/africa/2012/03/20123229824215677.html">Aljazeera Profile: Amadou Touré</li>
             </Citations>
             <ExternalLinks>
+                <li href="http://news.bbc.co.uk/2/shared/spl/hi/picture_gallery/05/africa_mali_president/html/2.stm">Photo Journal of Amadou Touré</li>
+                <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">Amadou Touré's Wikipedia</li>
+                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">"Mali’s President, Ousted in Coup, Steps Down". The New York Times.</li>
                 <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">"Amadou Toumani Tour%C3%A9". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" text="Former Malian President Amadou Toumani Touré" />
+                <li embed="http://www.bloomberg.com/image/iwjVOKWVaNaE.jpg" text="Amadou Toumani Touré" />
+                <li embed="http://s1.ibtimes.com/sites/www.ibtimes.com/files/styles/v2_article_large/public/2012/04/18/264413-malis-ex-president-amadou-toumani-toure-at-the-presidential-palace-in-.jpg" text="Amadou Toumani Touré Speech" />
             </Images>
             <Videos>
+                <li embed="//www.youtube.com/embed/dSWdg5kTYHo" text="Mali soldiers say president toppled in coup"/>
                 <li embed="//www.youtube.com/embed/5ecQtecInJs" text="Toure Speaks After 2012 Coup"/>
             </Videos>
             <Maps>
@@ -847,25 +868,37 @@
         <Location>Turkey</Location>
         <Common>
             <Citations>
+                <li href="http://www.britannica.com/EBchecked/topic/913988/Recep-Tayyip-Erdogan">Recep Tayyip Ergodan Brittanica</li>
                 <li href="http://www.akparti.org.tr/english/yonetim/genel-baskan">Turkey's Justice and Development Party</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Wikipedia</li>
+                <li href="http://www.news.com.au/world-news/turkey-protesters-defy-deadline-riot-police-fire-tear-gas/story-fndir2ev-1226664741434">Recep Tayyip Erdogan holds rally as riot police try to quell protest</li>
+                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Recep Tayyip Ergodan Wikipedia</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/b/b8/Tayyip_Erdo%C4%9Fan.JPG" text="Turkish Prime Minister Recep Tayyip Erdogan" />
+                <li embed="http://www.2013mersin.net//HLIC/b274db2d66e1173a46a5ed5b74721ad3.jpg" text="Recep Tayyip Erdogan" />
+                <li embed="http://galeri.uludagsozluk.com/41/recep-tayyip-erdo%C4%9Fan-%C4%B1n-muhte%C5%9Fem-karizmas%C4%B1_129465.jpg" text="Recep Tayyip Erdogan Hand on Heart" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/Ael3SSICrLA" text="Erdogan Rejects 'dictator' Label"/>
+                <li embed="//www.youtube.com/embed/zSwup4gy8wc" text="BBC News - Turkey clashes: Thousands rally as PM Erdogan returns "/>
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=Ba%C5%9Fbakanl%C4%B1k+Konutu&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Başbakanlık Konutu, Ankara, Turkey"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/RT_Erdogan" />
+            </Feeds>
             <Summary>
                 Recep Tayyip Erdogan is the 25th and current Prime Minister of Turkey, in office since 2003. He served as Mayor of Istanbul from 1994 to 1998 and established the Justice and Development Party (AKP) in 2001. From its first year, the AKP became the largest publicly supported political movement in Turkey. May and June 2013 saw protests against what large sections of the Turkish public perceive as a growing authoritarianism of Erdogan and his government and his policies.
             </Summary>
         </Common>
     </Person>
+
+
+
+
 
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
         <Crises>
@@ -878,20 +911,28 @@
         <Location>L.A.</Location>
         <Common>
 	    <Citations>
-		<li href="http://www.biography.com/people/magic-johnson-9356150">Biography.com</li>
+		<li href="http://www.biography.com/people/magic-johnson-9356150">Magic Johnson Biography</li>
 	    </Citations>
             <ExternalLinks>
                 <li href="http://www.magicjohnson.org/">Magic Johnson Foundation</li>
-                <li href="http://en.wikipedia.org/wiki/Magic_Johnson">Wikipedia</li>
+                <li href="http://www.basketball-reference.com/players/j/johnsma02.html">Magic Johnson Basketball Stats</li>
+                <li href="http://en.wikipedia.org/wiki/Magic_Johnson">Magic Johnson Wikipedia</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://lakers.topbuzz.com/gallery/d/1295-3/magic-johnson-oly_full_56875188cc009_radio_shack_s.jpg" />
                 <li embed="http://www.biography.com/imported/images/Biography/Images/Profiles/J/Magic-Johnson-9356150-1-402.jpg" />
+                <li embed="http://www.easyreadsystem.com/news/wp-content/uploads/2012/08/earvin-magic-johnson_pictures4_us_1.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/q8Qbo0WqvOI" text="Magic Johnson NBA Career Highlights"/>
                 <li embed="//www.youtube.com/embed/qoPmLYArzHI" text="Magic Johnson Foundation -20 years"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=los+angeles&amp;aq=&amp;sll=34.043136,-118.267025&amp;sspn=0.017905,0.031629&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=Los+Angeles,+California&amp;t=m&amp;z=10&amp;ll=34.052234,-118.243685&amp;output=embed"/>
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/MagicJohnson" />
+            </Feeds>
             <Summary>
                 Earvin "Magic" Johnson, Jr. is a former NBA player of the Los Angeles Lakers.  He is one of the most decorated point guard to play the game with 5 NBA Championships, 3 MVP awards, and an induction into the NBA Hall of Fame. On November 7, 1991 Magic announced his retirement due to him testing positive for HIV.  After the announcement, he created the Magic Johnson Foundation to help combat HIV and provide other charitable causes.  Magic has been a 20+ year survivor of HIV and continues to do amazing things through his foundation.
             </Summary>
@@ -910,24 +951,34 @@
         <Common>
 	    <Citations>
 		<li href="http://www.britannica.com/EBchecked/topic/1658252/Kan-Naoto">Brittanica Biography</li>
+		<li href="http://www.bbc.co.uk/news/10228471">BBC Profile: Naoto Kan</li>
 	    </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Naoto_Kan">Wikipedia</li>
-		<li href="http://www.forbes.com/profile/naoto-kan/">Forbes</li>
+                <li href="http://en.wikipedia.org/wiki/Naoto_Kan">Naoto Kan Wikipedia</li>
+		<li href="http://www.forbes.com/profile/naoto-kan/">Forbes Profile: Naoto Kan</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://i.dailymail.co.uk/i/pix/2011/04/14/article-0-0B6F583C00000578-799_306x423.jpg" />
                 <li embed="http://www.browsebiography.com/images/3/8995-Naoto_Kan_bio.jpg" />
-                <li embed="http://www.browsebiography.com/images/3/8995-Naoto_Kan_bio.jpg" />
+                <li embed="http://www.thehindu.com/multimedia/dynamic/00369/DEVA_JAPAN_POLITICS_369058f.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/5NTCcruJsPE" text="Naoto Kan- Fukushima Interview"/>
+                <li embed="//www.youtube.com/embed/VqteFhsr-Lo" text="Naoto Kan Says Japan Must Review Nuclear Power Policy"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=S%C5%8Dri+Daijin+Kantei&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=68.344727,129.550781&amp;ie=UTF8&amp;hq=S%C5%8Dri+Daijin+Kantei&amp;hnear=&amp;radius=15000&amp;t=m&amp;ll=35.673063,139.742578&amp;spn=0.071946,0.071946&amp;output=embed" text="Sōri Daijin Kantei (Prime Minister's House)"/>
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/NaotoKan" />
+            </Feeds>
             <Summary>
                 Naoto Kan is a Japanese politician who was the former leader of the Democratic Party of Japan. (BETTER SUMMARY COMING -Dalton) (Damn right...there better be a better summary coming. - Jonathan lol)
             </Summary>
         </Common>
     </Person>
+
+
 
     <Person ID="PER_BROBMA" Name="Barack Obama">
         <Crises>
@@ -949,8 +1000,8 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg" text="President Barack Obama"/>
-                <li embed="http://upload.wikimedia.org/wikipedia/en/thumb/3/33/Ann_Dunham_with_father_and_children.jpg/220px-Ann_Dunham_with_father_and_children.jpg" text="Young Barack Obama with family"/>
-                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flickr_Obama_Springfield_01.jpg/220px-Flickr_Obama_Springfield_01.jpg" text="President Obama and First Lady at a rally"/>
+                <li embed="http://rogueoperator.files.wordpress.com/2012/03/obama-smiling-2-01-50576.jpg" text="Barack Obama"/>
+                <li embed="http://media.al.com/wire/photo/barack-obama-90a238b2071e197a.jpg" text="President Obama"/>
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
@@ -989,15 +1040,21 @@
             <Images>
                 <li embed="http://a.abcnews.com/images/Blotter/gty_osama_bin_laden_jef_111209_wg.jpg" />
                 <li embed="http://deathandtaxesmag.wpengine.netdna-cdn.com/wp-content/uploads/2010/10/alg_osama_bin_laden.jpeg" />
+                <li embed="http://ohverlycritical.com/news/wp-content/uploads/2011/05/Osama-Bin-Laden-dead-killed-650x4871.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/RjXGOluWSR0" text="1998 - Osama Bin Laden Interview With ABC John Miller"/>
+                <li embed="//www.youtube.com/embed/gWVC4JBjtEE" text="Osama Bin Laden Talks About the 9/11 Attacks"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=34%C2%B010%E2%80%B209.51%E2%80%B3N+73%C2%B014%E2%80%B232.78%E2%80%B3E&amp;aq=&amp;sll=35.464026,140.104523&amp;sspn=1.126331,2.024231&amp;ie=UTF8&amp;ll=34.169308,73.242439&amp;spn=0.008939,0.015814&amp;t=m&amp;z=14&amp;iwloc=6545032258397794998&amp;output=embed" text="Osama Bin Laden's Compound"/>
+            </Maps>
             <Summary>
                 Osama Bin Laden was the founder of al-Qaeda, the Sunni Islamist group responsible for the September 11 attacks against the United States.  After these attacks, Osama was a prime target in War on Terror.  On May 2, 2011, bin Laden was shot and killed inside a private residential compound in Abbottabad, Pakistan by the United States Special Ops under the command of Barack Obama.
             </Summary>
         </Common>
     </Person>
+
 
     <Person ID="PER_JOSHAZ" Name="Joseph Hazelwood">
         <Crises>
@@ -1018,20 +1075,23 @@
                 <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">NYPost Article</li>  
             </ExternalLinks>
             <Images>
-                <li embed="http://library.thinkquest.org/10867/spill/people/hazelwood.jpg" text="Joseph Hazelwood pic"/>
-                <li embed="http://cache.daylife.com/imageserve/071weEIcxP1ys/x500.jpg" text="pic of Joseph Hazelwood"/>
-                <li embed="http://www.nypost.com/rw/nypost/2010/05/31/news/photos_stories/cropped/joseph_hazelwood--300x300.jpg" text="old Joseph Hazelwood"/>
-                <li embed="http://cdn2.shipspotting.com/photos/middle/8/8/1/976188.jpg" text="Exxon Valdez ship"/>
-                <li embed="http://c.gcaptain.com/wp-content/uploads/2011/07/1302184844-49.jpg" text="Joseph Hazelwood wearing a cap"/>
+                <li embed="http://www.akpresswomen.org/files/images/1243672059-hazelwood.jpg" text="Joseph Hazelwood Old"/>
+                <li embed="http://einestages.spiegel.de/hund-images/2009/03/20/6/bffa111561aa81e0e8ad2b7d53703279_image_document_large_featured_borderless.jpg" text="Joseph Hazelwood Trial"/>
+                <li embed="http://www.nypost.com/rw/nypost/2010/05/31/news/photos_stories/cropped/joseph_hazelwood--300x300.jpg" text="Joseph Hazelwood Hat"/>
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/gFkZ8zd4684" text="Exxon Valdez Story - Why Things Went So Wrong"/>
+                <li embed="//www.youtube.com/embed/xLuLSNiDA5U" text="CBS News Special Report: Hazelwood Trial (1990)"/>
             </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=60.83333%C2%B0N+146.86667%C2%B0W&amp;aq=&amp;sll=30.307761,-97.753401&amp;sspn=1.193878,2.024231&amp;ie=UTF8&amp;t=m&amp;z=12&amp;ll=60.83333,-146.86667&amp;output=embed" text="Coordinates of Oil Spill"/>
+            </Maps>
             <Summary>
                 Joseph Hazelwood was the captain of the Exxon Valdez, an oil tanker that spilled more than 257,000 barrels of oil off the Alaskan coastline.  Before the spill, Hazelwood was sleeping in his cabin and left the third mate in charge.  Hazelwood was supposedly heavily drinking that night, but his trial never convicted him as being intoxicated during the spill.  After his trial, Hazelwood's license was suspended for 9 months, fined $50,000, and sentenced to 1,000 hours of community service.
             </Summary>
         </Common>
     </Person>
+
 
     <!-- Organization elements -->
     <Organization ID="ORG_UNDWAY" Name="United Way">
@@ -1059,6 +1119,12 @@
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/YCT9cZNh0MQ" text="United Way Campaign" />
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Way-Western+Ct,+West+Street,+Danbury,+CT&amp;aq=0&amp;oq=united+way+western+c&amp;sll=42.352582,-71.047726&amp;sspn=0.118487,0.124454&amp;ie=UTF8&amp;hq=United+Way-Western+Ct,&amp;hnear=West+St,+Danbury,+Connecticut+06810&amp;ll=41.391889,-73.45814&amp;spn=0.015035,0.015557&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2348952424447283674&amp;output=embed" />
+            </Maps>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -1073,6 +1139,7 @@
             <Person ID="PER_HUJNTO" />
         </People>
         <Kind>Non-profit, humanitarian Organization</Kind>
+        <Location>Chengdu, China</Location>
         <History>
             <li>Founded the morning after the disaster struck, SQR immediately began coordinating emergency relief aid to the affected area. In the first 6 to 8 months, SQR funnelled cash, services and material donations in excess of 15 million RMB to towns and villages in the quake zone – mainly tents, food, water, medical, hygiene and camping supplies, as well as several small-scale water and sanitation projects. SQR’s Winter Relief Project supplied warm bedding, clothing and camping gear worth more than 2 million RMB to more than 6,000 villagers.</li>
             <li>Acting as a logistics and information hub, SQR connected with other NGOs, donors and volunteers, as well as keeping media and wider communities updated on the latest situation. Recognising the repercussions for survivors and those who had suffered loss or injury, we linked dozens of international and local psychological experts with stricken communities.</li>
@@ -1101,6 +1168,12 @@
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
             </Images>
+            <Videos>
+            	<li embed="www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/>          	
+            </Maps>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
@@ -1115,6 +1188,7 @@
             <Person ID="PER_MURGDI" />
         </People>
         <Kind>de facto Government</Kind>
+        <Location>Benghazi, Libya</Location>
         <History>
             <li>A National Transitional Council was formed on February 26th, 2011 to act as "the political face of the revolution". Its spokesman, Hafiz Ghoga, made clear at the launch press conference that the national council was not a provisional government and added that the newly formed council was not in contact with foreign governments and did not want them to intervene.</li>
             <li>On March 5th, 2011, the council issued a statement in which it declared itself to be the "sole representative of all Libya". Mustafa Abdul Jalil was named as chairman of the council.</li>
@@ -1131,7 +1205,14 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
+                <li embed="http://www1.pictures.zimbio.com/gi/President+Obama+Meets+President+National+Transitional+STm2i_EQWMMl.jpg"/>
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/gIVZlSk1qbI"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;aq=0&amp;oq=national+transitional+counc&amp;sll=41.391894,-73.45813&amp;sspn=0.015035,0.015557&amp;ie=UTF8&amp;hq=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;ll=32.862133,13.197563&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" />
+            </Maps>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
             </Summary>
@@ -1146,10 +1227,10 @@
             <Person ID="PER_AMTOTO" />
         </People>
         <Kind>Union</Kind>
+        <Location>Addi Ababa, Ethiopia</Location>
         <History>
             <li>The AU was established on May 26th, 2001, in Addis Ababa and launched on July 9th, 2002 in South Africa to replace the Organisation of African Unity (OAU).</li>
             <li>The union consists of 54 African states. The only all-African state not in the AU is Morocco.</li>
-            <li>On March 10th, 2011, France became the first country to recognise the council as Libya's only legitimate government.</li>
         </History>
         <ContactInfo>
             <li href="http://au.int/en/contact"> Contact Form</li>
@@ -1162,6 +1243,12 @@
             <Images>
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/G5Sn7PrXDoA" text="African Union on Mali" />
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Addis+Ababa,+Ethiopia&amp;aq=0&amp;oq=addis+ababa&amp;sll=32.862142,13.19767&amp;sspn=0.134675,0.124454&amp;ie=UTF8&amp;hq=&amp;hnear=Addis+Ababa,+Ethiopia&amp;ll=9.022736,38.746799&amp;spn=0.158348,0.124454&amp;t=m&amp;z=13&amp;output=embed" />
+            </Maps>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
             </Summary>
@@ -1196,6 +1283,12 @@
             <Images>
                 <li embed="http://25.media.tumblr.com/19e6fef221cb39926b9f0399eac6913c/tumblr_mnyuelETRW1ste7qoo1_1280.jpg" text="Twitter role with Turkey Protests"/>
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/J0xbjIE8cPM" text="How to Use Twitter" />
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=9.022762,38.746719&amp;sspn=0.158348,0.124454&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;ll=37.776618,-122.417112&amp;spn=0.017639,0.032015&amp;output=embed" />
+            </Maps>
             <Feeds>
                 <li embed="https://twitter.com/OccupyGezi" />
             </Feeds>
@@ -1226,6 +1319,15 @@
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">Wikipedia</li>
             </ExternalLinks>
+            <Images>
+            	<li embed="http://childrenshospital.org/clinicalservices/Site1899/Images/CDC.jpg"/>
+            </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/I_o_wkr7N8A?list=PL87B964CE4CF0A98C" text="CDC &amp; HIV/AIDS"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;aq=0&amp;oq=center+for+disease+control+and+&amp;sll=37.776618,-122.417112&amp;sspn=0.063364,0.062227&amp;ie=UTF8&amp;hq=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;ll=33.798494,-84.327162&amp;spn=0.006295,0.006747&amp;t=m&amp;output=embed" />
+            </Maps>
             <Feeds>
                 <li embed="https://twitter.com/CDC_HIVAIDS" />
             </Feeds>
@@ -1248,9 +1350,21 @@
             <li>www.usgs.gov/ask/index.php</li>
         </ContactInfo>
         <Common>
+            <Citations>
+            	<li href="http://www.usgs.gov/">USGS Official Site</li>
+            </Citations>
             <ExternalLinks>
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">United States Geological Survey Wiki</li>
             </ExternalLinks>
+            <Images>
+            	<li embed="http://t1.gstatic.com/images?q=tbn:ANd9GcQHml8QNmzoQdgj6I20DW-LyyrSp61-ZTrpDlnRiZm6o_7mOytg"/>
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/sMzK_aySff0" text="USGS Earthquakes" />
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;aq=2&amp;oq=US+Geological+Survey&amp;sll=33.929527,-84.263227&amp;sspn=0.066516,0.062227&amp;ie=UTF8&amp;hq=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;ll=38.947187,-77.367639&amp;spn=0.017356,0.032015&amp;t=m&amp;output=embed" />            
+            </Maps>
         </Common>
     </Organization>
 
@@ -1276,12 +1390,13 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_WHO.svg/800px-Flag_of_WHO.svg.png" text="WHO Flag"/>
+                <li embed="http://www.examiner.com/images/blog/EXID22920/images/World_Health_Organization(1).jpg"/>
             </Images>
             <Videos>
-                <li embed="http://www.youtube.com/watch?feature=player_profilepage&amp;v=QCljON3Pa4E" text="WHO Promotional Video"/>
+                <li embed="//www.youtube.com/embed/QCljON3Pa4E" text="WHO Promotional Video"/>
             </Videos>
             <Maps>
-                <li embed="http://media.web.britannica.com/eb-media/67/64667-004-7F7A1490.gif" text="Location of WHO Headquarters"/>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=World+Health+Organization+(WHO),+Avenue+Appia,+Geneva,+Switzerland&amp;aq=0&amp;oq=world+health+organization&amp;sll=38.947127,-77.367439&amp;sspn=0.249388,0.248909&amp;ie=UTF8&amp;hq=World+Health+Organization+(WHO),&amp;hnear=Avenue+Appia,+Gen%C3%A8ve,+Switzerland&amp;ll=46.232728,6.134357&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" text="Location of WHO Headquarters"/>
             </Maps>
         </Common>
     </Organization>
@@ -1295,8 +1410,8 @@
         </People>
         <Kind>Principal Organ</Kind>
         <Location>New York City</Location>
-        <History
-            ><li>The Security Council held its first session on January 17th, 1946 at Church House, Westminster, London. Since its first meeting, the Council, which exists in continuous session, has travelled widely, holding meetings in many cities, such as Paris and Addis Ababa, as well as at its current permanent home at the United Nations Headquarters in New York City.</li>
+        <History>
+            <li>The Security Council held its first session on January 17th, 1946 at Church House, Westminster, London. Since its first meeting, the Council, which exists in continuous session, has travelled widely, holding meetings in many cities, such as Paris and Addis Ababa, as well as at its current permanent home at the United Nations Headquarters in New York City.</li>
         </History>
         <ContactInfo>
             <li>http://www.un.org/en/sc/contact</li>
@@ -1305,9 +1420,19 @@
             <Citations>
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
+            <Images>
+            	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg" />
+            	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg" />
+            </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/gTB-LDWoETA" text="Obama at UN Security Council"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Nations+Security+Council,+New+York,+NY&amp;aq=0&amp;oq=UN+security&amp;sll=46.232815,6.134491&amp;sspn=0.221812,0.248909&amp;ie=UTF8&amp;hq=United+Nations+Security+Council,+New+York,+NY&amp;hnear=&amp;radius=15000&amp;ll=40.749911,-73.974858&amp;spn=0.071946,0.071946&amp;t=m&amp;output=embed" />
+            </Maps>
         </Common>
     </Organization>
-
+        
     <Organization ID="ORG_EXXSHI" Name="Exxon Shipping Company">
         <Crises>
             <Crisis ID="CRI_EXXVAL"/>
@@ -1333,6 +1458,12 @@
                 <li embed="http://www.exxonmobil.com.tr/Corporate/Newsroom/Publications/XOMGlobalCap/images/intro1.jpg" text="ExxonMobil corporate pic"/>
                 <li embed="http://www.1prime.ru/images/76116/13/761161389.jpg" text="ExxonMobil signage"/>
             </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/dODJ85R5-r4"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Exxon+Mobil+Corporation,+Las+Colinas+Boulevard,+Irving,+TX&amp;aq=1&amp;oq=exxon+mobil+irving+tx&amp;sll=40.749858,-73.974724&amp;sspn=0.242924,0.248909&amp;ie=UTF8&amp;hq=Exxon+Mobil+Corporation,&amp;hnear=Las+Colinas+Blvd,+Irving,+Texas&amp;ll=32.889861,-96.950211&amp;spn=0.067304,0.062227&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2295103862368292286&amp;output=embed" />
+            </Maps>
         </Common>
     </Organization>
 </WorldCrises>

@@ -7,8 +7,9 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
+from django.template.response import TemplateResponse
 
-from django.test.simple import DjangoTestSuiteRunner
+from xml.etree.ElementTree import ParseError
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -21,17 +22,35 @@ from download import *
 from models import *
 import subprocess
 
-from django.test import Client
-
-cwd = os.path.dirname(os.path.realpath(sys.argv[0]))
-
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
 
+'''
 def test(request):
     process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
     process.wait()
+    assert os.path.exists('TestWCDB2.out')
     return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
+'''
+
+newlines = ['\n', '\r\n', '\r']
+def capture(process):
+    while True:
+        out = process.stderr.read(1)
+        if out == '' and process.poll() != None:
+            break
+        if out in newlines:
+            yield '</br>'
+        if out != '':
+            yield out
+
+def results(request):
+    cmd = ['python', 'manage.py', 'test', 'database', '--noinput']
+    process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return HttpResponse((str(c) for c in capture(process)))
+
+def test(request):
+    return render(request, 'utility.html', {'view': 'test'})
 
 def download(request):
     root = ET.Element('WorldCrises')
@@ -50,8 +69,10 @@ def validate(request, file):
         elemTree = elementTreeWrapper.getTree()
         root = elemTree.getroot()
         insert(root)
-    except:
-        return render(request, 'utility.html', {'view': 'failure'})
+    except pyxsval.XsvalError, errstr:
+        return render(request, 'utility.html', {'view': 'failure', 'errstr': errstr})
+    except ParseError, e:
+        return render(request, 'utility.html', {'view': 'failure', 'errstr': 'Invalid token: line ' + str(e.position[0]) + ', column ' + str(e.position[1])})
     finally:
         os.remove(file)
     return render(request, 'utility.html', {'view': 'success'})
@@ -67,4 +88,5 @@ def upload(request):
             assert False
     else:
         form = UploadFileForm()
-    return render(request, 'utility.html', {'view': 'form', 'form': form,})
+    #return render(request, 'utility.html', {'view': 'form', 'form': form,})
+    return TemplateResponse(request, 'utility.html', {'view': 'form', 'form': form,})

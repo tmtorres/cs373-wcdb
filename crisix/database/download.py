@@ -7,6 +7,7 @@ from xml.etree.ElementTree import ElementTree
 from xml.dom import minidom
 
 def getCrises(root):
+    assert root is not None
     for c in Crisis.objects.all():
         node = ET.SubElement(root, 'Crisis')
         node.set('ID', c.id)
@@ -39,6 +40,7 @@ def getCrises(root):
         getCommon(node, c)
 
 def getOrganizations(root):
+    assert root is not None
     for o in Organization.objects.all():
         node = ET.SubElement(root, 'Organization')
         node.set('ID', o.id)
@@ -63,6 +65,7 @@ def getOrganizations(root):
         getCommon(node, o)
 
 def getPeople(root):
+    assert root is not None
     for p in Person.objects.all():
         node = ET.SubElement(root, 'Person')
         node.set('ID', p.id)
@@ -83,8 +86,9 @@ def getPeople(root):
         getCommon(node, p)
 
 def getCommon(node, entity):
+    assert root is not None
+    assert entity is not None
     attr = ET.SubElement(node, 'Common')
-
     w = entity.elements.filter(ctype='CITE')
     if len(w) > 0:
         elem = ET.SubElement(attr, 'Citations')

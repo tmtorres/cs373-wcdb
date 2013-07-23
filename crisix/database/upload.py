@@ -5,6 +5,7 @@ from datetime import time
 from xml.etree.ElementTree import tostring
 
 def insert(root):
+    assert root is not None
     for elem in root:
         if elem.tag == 'Crisis':
             criHandler(elem)
@@ -14,6 +15,8 @@ def insert(root):
             perHandler(elem)
 
 def getEntity(etype, eid):
+    assert etype in (Crisis, Organization, Person)
+    assert eid[:3] in ('CRI', 'ORG', 'PER')
     e = None
     try:
         e = etype.objects.get(id=eid)
@@ -100,6 +103,8 @@ def perHandler(node):
     p.save()
 
 def insertElem(query, attr):
+    assert type(query) is dict
+    assert type(attr) is dict
     try:
         WebElement.objects.get(**query)
     except WebElement.DoesNotExist:
