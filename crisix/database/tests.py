@@ -14,6 +14,7 @@ from upload import *
 from download import *
 from views import *
 from datetime import datetime
+from crisix.views import people, organizations, crises
 
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring

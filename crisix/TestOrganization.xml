@@ -1,0 +1,32 @@
+<WorldCrises>    
+    <Organization ID="ORG_UNDWAY" Name="United Way">
+        <Crises>
+            <Crisis ID="CRI_SHESSG" />
+        </Crises>
+        <People>
+            <Person ID="PER_ADMLNZ" />
+        </People>
+        <Kind>Non-profit Organization</Kind>
+        <Location>Worldwide</Location>
+        <History>
+            <li>In 1887, a Denver woman, a priest, two ministers and a rabbi recognized the need for cooperative action to address their city’s welfare problems.</li>
+            <li>Frances Wisebart Jacobs, the Rev. Myron W. Reed, Msgr. William J.O’Ryan, Dean H. Martyn Hart and Rabbi William S. Friedman put their heads together to plan the first united campaign for ten health and welfare agencies. They created an organization to serve as an agent to collect funds for local charities, as well as to coordinate relief services, counsel and refer clients to cooperating agencies, and make emergency assistance grants in cases which could not be referred.</li>
+            <li>That year, Denver raised $21,700 and created a movement that would spread throughout the country to become the United Way. More than 125 years later, United Way is still focused on mobilizing the caring power of communities and making a difference in people’s lives.</li>
+        </History>
+        <ContactInfo>
+            <li href="http://apps.unitedway.org/contact/">Contact Form</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://www.unitedway.org/">United Way Worldwide</li>
+            </Citations>
+            <Images>
+                <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
+            </Images>
+            <Summary>
+                Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
+            </Summary>
+        </Common>
+    </Organization>
+</WorldCrises>

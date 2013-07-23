@@ -1,0 +1,38 @@
+<WorldCrises>
+    <Person ID="PER_BROBMA" Name="Barack Obama">
+        <Crises>
+            <Crisis ID="CRI_HAIEAR"/>
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_WHORGN"/>
+        </Organizations>
+        <Kind>President</Kind>
+        <Location>Washington, D.C, United States of America</Location>
+        <Common>
+            <Citations>
+                <li href="http://en.wikipedia.org/wiki/Barack_Obama">Wikipedia page for Barack Obama</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://www.whitehouse.gov/administration/president-obama/">Official Whitehouse page for Barack Obama</li>
+                <li href="http://www.barackobama.com">Barack Obama's campaign website</li>
+                <li href="http://bioguide.congress.gov/scripts/biodisplay.pl?index=o000167">Official Congressional page for Barack Obama</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg" text="President Barack Obama"/>
+                <li embed="http://rogueoperator.files.wordpress.com/2012/03/obama-smiling-2-01-50576.jpg" text="Barack Obama"/>
+                <li embed="http://media.al.com/wire/photo/barack-obama-90a238b2071e197a.jpg" text="President Obama"/>
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
+                <li embed="//www.youtube.com/embed/zncqb-n3zMo" text="Barack Obama's second inaugural address (2013)"/>
+
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=cs&amp;ie=UTF8&amp;q=google+map+white+house&amp;fb=1&amp;gl=us&amp;hq=google+map+white+house&amp;hnear=google+map+white+house&amp;cid=0,0,8167675777476425407&amp;t=m&amp;ll=38.897683,-77.036497&amp;spn=0.006295,0.006295&amp;output=embed" text="The White House"/>
+            </Maps>
+            <Summary>
+                Barack Obama is the 44th President of the United States and former U.S. Senator from Illinois. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he was president of the Harvard Law Review. He defeated Republican nominee John McCain in the general election becoming the first African American elected to the presidency. Nine months later, Obama was named the 2009 Nobel Peace Prize laureate. He was re-elected president in November 2012, defeating Republican Mitt Romney, and was sworn in for a second term on January 20, 2013.
+            </Summary>
+        </Common>
+    </Person>
+</WorldCrises>
