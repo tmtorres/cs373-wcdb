@@ -1167,6 +1167,7 @@
             </Videos>
             <Maps>
             	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;ll=30.572312,104.06662&amp;spn=0.375999,0.453873&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=11"/>
+            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;ll=30.572312,104.06662&amp;spn=0.375999,0.453873&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;z=11" />
             </Maps>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
@@ -1241,7 +1242,7 @@
             	<li embed="http://www.aljazeera.com/news/africa/2013/01/201312763627716824.html" text="African Union &amp; Mali"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=Addis+Ababa,+Ethiopia&amp;hl=en&amp;ll=9.022762,38.746719&amp;spn=0.215651,0.226936&amp;sll=9.000066,38.7414&amp;sspn=0.053916,0.056734&amp;oq=addis+ababa+ethiopia&amp;hnear=Addis+Ababa,+Ethiopia&amp;t=m&amp;z=12"/>
+            	<li embed="https://maps.google.com/maps?q=Addis+Ababa,+Ethiopia&amp;hl=en&amp;ll=9.022762,38.746719&amp;spn=0.215651,0.226936&amp;sll=9.000066,38.7414&amp;sspn=0.053916,0.056734&amp;oq=addis+ababa+ethiopia&amp;hnear=Addis+Ababa,+Ethiopia&amp;t=m&amp;z=12" />
             </Maps>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
@@ -1348,7 +1349,9 @@
             	<li embed="http://t1.gstatic.com/images?q=tbn:ANd9GcQHml8QNmzoQdgj6I20DW-LyyrSp61-ZTrpDlnRiZm6o_7mOytg"/>
             </Images>
             <Maps>
+
             	<li embed="https://maps.google.com/maps?q=united+states+geological+survey+virginia&amp;hl=en&amp;ll=39.245017,-77.365723&amp;spn=2.705567,3.630981&amp;sll=30.344979,-97.675923&amp;sspn=0.188439,0.226936&amp;hq=united+states+geological+survey&amp;hnear=Virginia&amp;t=m&amp;z=8&amp;iwloc=A"/>
+            	<li embed="https://maps.google.com/maps?q=united+states+geological+survey+virginia&amp;hl=en&amp;ll=39.245017,-77.365723&amp;spn=2.705567,3.630981&amp;sll=30.344979,-97.675923&amp;sspn=0.188439,0.226936&amp;hq=united+states+geological+survey&amp;hnear=Virginia&amp;t=m&amp;z=8&amp;iwloc=A" />
             </Maps>
         </Common>
     </Organization>
@@ -1406,14 +1409,14 @@
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">United Nations Security Council Wiki</li>
             </Citations>
             <Images>
-            	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg"/>
-            	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg/></li>"
+            	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg" />
+            	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg" />
             </Images>
             <Videos>
             	<li embed="http://www.youtube.com/watch?v=gTB-LDWoETA" text="Obama at UN Security Council"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=United+Nations+Security+Council,+New+York,+NY,+United+States&hl=en&ll=40.750118,-73.968887&spn=0.23434,0.248909&sll=30.145154,-97.834892&sspn=1.069976,0.995636&oq=UN+security+council&hq=United+Nations+Security+Council,+New+York,+NY,+United+States&radius=15000&t=m&z=12"/>
+            	<li embed="https://maps.google.com/maps?q=United+Nations+Security+Council,+New+York,+NY,+United+States&amp;hl=en&amp;ll=40.750118,-73.968887&amp;spn=0.23434,0.248909&amp;sll=30.145154,-97.834892&amp;sspn=1.069976,0.995636&amp;oq=UN+security+council&amp;hq=United+Nations+Security+Council,+New+York,+NY,+United+States&amp;radius=15000&amp;t=m&amp;z=12" />
             </Maps>
         </Common>
     </Organization>
