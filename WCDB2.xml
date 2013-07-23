@@ -640,16 +640,24 @@
         <Organizations>
             <Org ID="ORG_EXXSHI"/>
         </Organizations>
-        <Kind>human-caused environmental disasters</Kind>
+        <Kind>Human-caused environmental disasters</Kind>
         <Date>1989-03-24</Date>
         <Time>06:00:00</Time>
         <Locations>
             <li>Prince William Sound, Alaska</li>
         </Locations>
         <HumanImpact>
+            <li>11 million gallons raw crude.</li>
+            <li>Tanker collision (carrying 50 million gallons raw crude).</li>
             <li>Several residents, including one former mayor, committed suicide after the spill.</li>
             <li>20 communities were in the oil's path where it caused major social and psychological impact like depression and Post-Traumatic Stress Disorder.This injury continues in places like Cordova today.</li>
-            <li>Cleanup workers faced average oil mist exposure 12 times in excess of the regulatory limits, with a maximum exposure 400 times higher during hot water beach washing.  In 1989, 1,811 workers filed compensation claims, primarily for respiratory system damage, according to National Institute of Occupational Safety and Health</li></HumanImpact><EconomicImpact><li>According to several studies funded by the state of Alaska, the spill had both short-term and long-term economic effects. These included the loss of recreational sports, fisheries, reduced tourism, and an estimate of what economists call "existence value", which is the value to the public of a pristine Prince William Sound.</li>
+            <li>Cleanup workers faced average oil mist exposure 12 times in excess of the regulatory limits, with a maximum exposure 400 times higher during hot water beach washing.  In 1989, 1,811 workers filed compensation claims, primarily for respiratory system damage, according to National Institute of Occupational Safety and Health</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>$2 billion cleanup.</li>
+            <li>$1 billion civil and criminal charges.</li>
+            <li>$500 million punitive damages.</li>
+            <li>According to several studies funded by the state of Alaska, the spill had both short-term and long-term economic effects. These included the loss of recreational sports, fisheries, reduced tourism, and an estimate of what economists call "existence value", which is the value to the public of a pristine Prince William Sound.</li>
             <li>The economy of the city of Cordova, Alaska was adversely affected after the spill damaged stocks of salmon and herring in the area.</li>
             <li>In 1991, following the collapse of the local marine population (particularly clams, herring, and seals) the Chugach Alaska Corporation, an Alaska Native Corporation, filed for Chapter 11 bankruptcy protection. It has since recovered</li>
         </EconomicImpact>
@@ -661,15 +669,17 @@
         </WaysToHelp>
         <Common>
             <Citations>
-                <li href="http://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill">Exxon Valdez Oil Spill Wiki page</li>
+                <li href="http://www.epa.gov/osweroe1/content/learning/exxon.htm">"Exxon Valdez". US. Environmental Protenction Agency.</li>
+                <li href="http://www.alaskadispatch.com/article/former-gov-cowper-exxon-valdez-we-couldn-t-just-throw-towel">"Former Gov. Cowper on Exxon Valdez: 'We couldn’t just throw in the towel'". Alaska Dispatch.</li>
+                <li href="http://www.nola.com/news/gulf-oil-spill/index.ssf/2010/06/alaskas_present_after_1989_exxon_valdez_oil_spill_might_be_gulf_coast_future.html">"Alaska's present, after 1989 Exxon Valdez oil spill, might be Gulf Coast's future". NOLA Media Group.</li>
+                <li href="http://arcticcircle.uconn.edu/SEEJ/Alaska/miller2.htm">"EXXON VALDEZ OIL SPILL: Ten Years Later". Pamela A. Miller, Arctic Connections 3/99.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://www.epa.gov/osweroe1/content/learning/exxon.htm">EPA webpage on oil spill</li>
-                <li href="http://www.alaskadispatch.com/article/former-gov-cowper-exxon-valdez-we-couldn-t-just-throw-towel">Steve Cowper on Alaska Dispatch</li>
-                <li href="http://www.nola.com/news/gulf-oil-spill/index.ssf/2010/06/alaskas_present_after_1989_exxon_valdez_oil_spill_might_be_gulf_coast_future.html">NOLA article</li>
-                <li href="http://arcticcircle.uconn.edu/SEEJ/Alaska/miller2.htm">EXXON VALDEZ OIL SPILL: Ten Years Later  </li>
+                <li href="http://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill">Exxon Valdez Oil Spill Wiki page</li>
             </ExternalLinks>
             <Images>
+                <li embed="https://www.ufz.de/export/data/1/27801_oil_spill.jpg" text="Cleaning work after the oil spill of the Exxon Valdez in the Prinz-William-Sund 1989, Alaska. Photo courtesy of the Exxon Valdez Oil Spill Trustee Council" />
+                <li embed="http://www.thedailygreen.com/cm/thedailygreen/images/Y7/exxon-valdez-oil-otter-lg.jpg" />
                 <li embed="http://pdxretro.com/wp-content/uploads/2011/03/Exxon-Valdez-oil-spill.jpg" text="Exxon-Valdez-oil-spill"/>
                 <li embed="http://media1.s-nbcnews.com/j/MSNBC/Components/Slideshows/_production/ss-090317-exxon-valdez/ss-090317-exxon-valdez-05.grid-8x2.jpg" text="Oil Slick from Exxon Valdez"/>
                 <li embed="http://media.treehugger.com/assets/images/2011/10/wxxon-valdez-oil-spill-photo.jpg" text="oil-spill-photo"/>
@@ -679,20 +689,20 @@
                 <li embed="http://static.ddmcdn.com/gif/blogs/6a00d8341bf67c53ef016769462b79970b-640wi.jpg" text="Exxon Valdez ship, back view"/>
             </Images>
             <Videos>
-                <li embed="http://vimeo.com/1532967" text="Exxon Valdez Oil Spill: Google Earth Field Trip"/>
-                <li embed="http://www.youtube.com/watch?v=YkzB1ZYcTwM" text="Exxon Valdez Oil Spill 1989"/>
-                <li embed="http://www.youtube.com/watch?v=MbjC9SMKClE" text="The Exxon Valdez Disaster: 20 Years Later"/>
-                <li embed="http://www.youtube.com/watch?v=qS2FbvfnNDw" text="Hindsight and Foresight: 20 Years After the Exxon Valdez Spill"/>
+                <li embed="//www.youtube.com/embed/YkzB1ZYcTwM" text="Exxon Valdez Oil Spill 1989"/>
+                <li embed="//www.youtube.com/embed/MbjC9SMKClE" text="The Exxon Valdez Disaster: 20 Years Later"/>
+                <li embed="//www.youtube.com/embed/qS2FbvfnNDw" text="Hindsight and Foresight: 20 Years After the Exxon Valdez Spill"/>
             </Videos>
             <Maps>
-                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=p&amp;oe=UTF8&amp;msa=0&amp;msid=218316811799567847406.0004898c12dd6c8d7df7e&amp;ll=16.123683,-37.798462&amp;spn=99.76913,218.600464&amp;iwloc=0004898cedc8b31e37b13&amp;output=embed" />
             </Maps>
-           <!--  <Feeds>
+            <Feeds>
                 <li embed="" />
             </Feeds>
             <Summary>
-                Txt here.
-            </Summary> -->
+                The Exxon Valdez oil spill occurred in Prince William Sound, Alaska, on March 24, 1989, when Exxon Valdez, an oil tanker bound for Long Beach, California, struck Prince William Sound's Bligh Reef and spilled 260,000 to 750,000 barrels (41,000 to 119,000 cubic meters) of crude oil. It is considered to be one of the most devastating human-caused environmental disasters. The Valdez spill was the largest ever in US waters until the 2010 Deepwater Horizon oil spill, in terms of volume released. However, Prince William Sound's remote location, accessible only by helicopter, plane, or boat, made government and industry response efforts difficult and severely taxed existing plans for response. The region is a habitat for salmon, sea otters, seals and seabirds. The oil, originally extracted at the Prudhoe Bay oil field, eventually covered 1,300 miles (2,100 km) of coastline, and 11,000 square miles (28,000 squared km) of ocean. Exxon's CEO, Lawrence Rawl, shaped the company's response.
+                According to official reports, the ship was carrying approximately 55 million US gallons (210,000 cubic meters) of oil, of which about 10.1 to 11 million US gallons (240,000 to 260,000 bbl; 38,000 to 42,000 cubic meters) were spilled into the Prince William Sound. A figure of 11 million US gallons (260,000 bbl; 42,000 cubic meters) was a commonly accepted estimate of the spill's volume and has been used by the State of Alaska's Exxon Valdez Oil Spill Trustee Council, the National Oceanic and Atmospheric Administration and environmental groups such as Greenpeace and the Sierra Club. Some groups, such as Defenders of Wildlife, dispute the official estimates, maintaining that the volume of the spill, which was calculated by subtracting the volume of material removed from the vessel's tanks after the spill from the volume of the original cargo, has been underreported. Alternative calculations, based on the assumption that the official reports underestimated how much seawater had been forced into the damaged tanks, placed the total at 25 to 32 million US gallons (600,000 to 760,000 bbl; 95,000 to 120,000 cubic meters).
+            </Summary>
         </Common>
     </Crisis>
     
