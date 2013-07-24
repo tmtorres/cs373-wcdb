@@ -67,4 +67,133 @@
             </Summary>
         </Common>
     </Crisis>
+    
+    <Crisis ID="CRI_SCHERQ" Name="2008 Sichuan earthquake">
+        <People>
+            <Person ID="PER_HUJNTO" />
+        </People>
+        <Organizations>
+            <Org ID="ORG_SNQKRF" />
+        </Organizations>
+        <Kind>Earthquake</Kind>
+        <Date>2008-05-12</Date>
+        <Time>14:28:01</Time>
+        <Locations>
+            <li>Wenchuan County, Sichuan</li>
+            <li>Sichuan Province</li>
+        </Locations>
+        <HumanImpact>
+            <li>It killed 69,195 people.</li>
+            <li>374,643 injured.</li>
+            <li>18,392 others missing.</li>
+            <li>It left about 4.8 million people homeless.</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>On November 6, 2008, the central government announced that it would spend 1 trillion yuan (about $146.5 billion) over the next three years to rebuild areas ravaged by the earthquake, as part of the Chinese economic stimulus program.</li>
+        </EconomicImpact>
+        <ResourcesNeeded>
+            <li>A little over 90 minutes after the earthquake, the Ministry of Health sent ten emergency medical teams to Wenchuan County.</li>
+            <li>The Chengdu Military Region Command dispatched 50,000 troops and armed police to help with disaster relief work in Wenchuan County.</li>
+            <li>An earthquake emergency relief team of 184 people (consisting of 12 people from the State Seismological Bureau, 150 from the Beijing Military Area Command, and 22 from the Armed Police General Hospital) left Beijing in two military transport planes to travel to Wenchuan County.</li>
+            <li>Over 150 aircrafts were deployed for the delivery of food, water, and emergency aid, and also the evacuation of the injured and reconnaissance of quake-stricken areas. 60 were to be provided by the PLAAF, 30 were to be provided by the civil aviation industry, and the rest by the air force, army, and civil aviation.</li>
+        </ResourcesNeeded>
+        <WaysToHelp>
+            <!-- Put text with optional hyperlinks here -->
+            <li href="http://sichuan-quake-relief.org/">Donate to the Sichuan Quake Relief</li>
+        </WaysToHelp>
+        <Common>
+            <Citations>
+                <!-- Put text with optional hyperlinks here -->
+                <li href="http://www.nytimes.com/2009/05/08/world/asia/08china.html?_r=0">"China Reports Student Toll for Quake". New York Times.</li>
+                <li href="http://www.bloomberg.com/apps/news?pid=newsarchive&amp;sid=aZhtsxh8IlB4&amp;refer=home">"50,000 troops deployed". Bloomberg L.P.</li>
+            </Citations>
+            <ExternalLinks>
+                <!-- Put text with compulsory hyperlinks here -->
+                <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">"2008 Sichuan Earthquake". Wikipedia.</li>
+            </ExternalLinks>
+            <!-- hrefs optional in the following depending on how you want them to behave on your site -->
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" text="Sichuan Earthquake Impact Map" />
+                <li embed="http://www.spark-of-inspiration.com/images/Sichuan_Earthquake.jpg" text="Sichuan Earthquake"/>
+                <li embed="http://media-1.web.britannica.com/eb-media/64/117264-004-4F6187D9.jpg" text="Rescue workers searching for survivors" />
+                <li embed="http://i.telegraph.co.uk/multimedia/archive/01112/earthquake-damage-_1112578c.jpg" text="Millions still homeless a year after Sichuan earthquake" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/78h-BpSkk1w" text="15 May 2008 - China Sichuan Quake - BBC Report"/>
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;oe=UTF8&amp;msa=0&amp;msid=206935958482646980562.00044d19b32c5c9a07f6b&amp;ll=31.028366,103.470526&amp;spn=0.014132,0.206852&amp;output=embed" />
+            </Maps>
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+                A deadly earthquake that measured at 8.0 Ms and 7.9 Mw, occured at 02:28 PM China Standard Time on Monday, May 12, 2008 in Sichuan province, killing 69,195 people, 374,643 injured, 18,392 missing, and 4.8 million people homeless.
+            </Summary>
+        </Common>
+    </Crisis>
+    
+    <Crisis ID="CRI_LYCLWR" Name="Libyan Civil War">
+        <People>
+            <Person ID="PER_MURGDI" />
+        </People>
+        <Organizations>
+            <Org ID="ORG_NLTLCL" />
+        </Organizations>
+        <Kind>Civil War</Kind>
+        <Date>2011-02-15</Date>
+        <Locations>
+            <li>Libya</li>
+        </Locations>
+        <HumanImpact>
+            <li>Anti-Gaddafi forces take control of all major Libyan cities.</li>
+            <li>Death of Muammar Gaddafi</li>
+            <li>Assumption of interim control by National Transitional Council (NTC)</li>
+            <li>Diplomatic recognition of NTC as sole governing authority for Libya by 105 countries, UN, EU, AL and AU</li>
+            <li>Ongoing inter-factional fighting</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>On December 29th, 2011, Libya's National Oil Corporation announced that the country's output of crude oil was a little over 1 million barrels per day (bpd), compared to 1.6 million bpd before the uprising.</li>
+            <li>At the beginning of the civil war, the UN Security Council froze an estimated $150 billion in foreign Libyan assets. By late November 2011, $18 billion had been released to the NTC by the council's sanctions committee. Meanwhile, demands for wages, medication and reconstruction were putting a strain on Libya's limited supply of cash, causing prices to rise. On December 10th, senior figures in Libya's new leadership wrote a letter to the United Nations, urging it to release the frozen assets which they said were "essential for the economic stability of Libya". On December 16th, the UN Security Council lifted sanctions on Libya's central bank and its offshore subsidiary, Libyan Foreign Bank. Later the same day, the U.S. Treasury Department said it had unblocked more than $30 billion in Libyan government assets. Western officials said legal complications prevented the money from being released quickly. A British Foreign Office minister said his administration would release Libyan assets frozen in the United Kingdom once Libyan authorities demonstrated their ability to manage them effectively.</li>
+        </EconomicImpact>
+        <ResourcesNeeded>
+            <li>The Libyan government were reported to have employed snipers, artillery, helicopter gunships, warplanes, anti-aircraft weaponry, and warships against demonstrations and funeral processions.</li>
+            <li>Security forces and foreign mercenaries repeatedly used firearms, including assault rifles and machine guns, as well as knives against protesters.</li>
+            <li>On 25 February, the International Committee of the Red Cross launched an emergency appeal for US$6.4 million to meet the emergency needs of people affected by the violent unrest</li>
+            <li>In March, the Swedish government donated medical supplies and other humanitarian aid and the UN World Food Programme provided food. Turkey sent a hospital ship to Misrata and a Turkish cargo ship brought 141 tons of humanitarian aid.</li>
+        </ResourcesNeeded>
+        <WaysToHelp>
+            <li href="https://twitter.com/huffpostimpact">Follow Huffington Post IMPACT on Twitter</li>
+        </WaysToHelp>
+        <Common>
+            <Citations>
+                <!-- Put text with optional hyperlinks here -->
+                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8335934/Libya-protests-140-massacred-as-Gaddafi-sends-in-snipers-to-crush-dissent.html">"Libya protests: 140 'massacred' as Gaddafi sends in snipers to crush dissent". The Daily Telegraph (UK).</li>
+                <li href="http://www.icrc.org/eng/resources/documents/news-release/2011/libya-news-2011-02-25.htm"> "Libya: ICRC Launches Emergency Appeal as Humanitarian Situation Deteriorates". International Committee of the Red Cross.</li>
+            </Citations>
+            <ExternalLinks>
+                <!-- Put text with compulsory hyperlinks here -->
+                <li href="en.wikipedia.org/wiki/Libyan_civil_war">"Libyan Civil War". Wikipedia.</li>
+            </ExternalLinks>
+            <!-- hrefs optional in the following depending on how you want them to behave on your site -->
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" text="Libyans celebrate news of Gadhafi's death." />
+                <li embed="http://images.politico.com/global/news/110220_libya_protests_ap_328.jpg" text="Protesters have seized control of some military bases and tanks. | AP Photo." />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/p3GN1fxA-B0" text="Visual diary shows Libyan soldier at war"/>
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="https://maps.google.co.uk/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=200809166078445189642.00049f7a79747b94b2b24&amp;t=m&amp;ll=31.515851,13.320786&amp;spn=24.023962,39.334073&amp;output=embed" />
+            </Maps>
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+                The 2011 Libyan civil war war an armed conflict in the North African state of Libya, fought between forces loyal to Colonel Muammar Gaddafi and those seeking to oust his government. The war was preceded by protests in Benghazi beginning on Tuesday, 15 February 2011, which led to clashes with security forces that fired on the crowd. The protests escalated into a rebellion that spread across the country. This concluded with the forces opposing Gaddafi establishing an interim governing body, the National Transitional Council, which received diplomatic recognition as sole governing authority for Libya by 105 countries, the United Nations, European Union, Arab League, and African Union.
+            </Summary>
+        </Common>
+    </Crisis>
 </WorldCrises>
