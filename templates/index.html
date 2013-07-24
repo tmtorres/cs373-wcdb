@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block sidebar %}
+<li class="nav-header">Crises</li>
+{% for c in crises %}
+<li><a href="{% url crisix.views.crises c.id %}">{{ c.name }}</a></li>
+{% endfor %}
+<li class="nav-header">Organizations</li>
+{% for o in organizations %}
+<li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
+{% endfor %}
+<li class="nav-header">People</li>
+{% for p in people %}
+<li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
+{% endfor %}
+{% endblock %}
+{% block body %}
+        <div class="span9">
+          <div class="hero-unit">
+            <h1>World Crises</h1>
+            <br><br>
+            <p>This site provides information on various world crises. Many such crises have impacted the world, and in these pages, you will find helpful informaiton about these crises, including key people who had a critical role in those events. In addition, you will find information on organizations that intervened. </p>
+
+            <p>This site, along with the information it contains, has been built by the group Crisix, whose members include (in no particular order) Enam Ayivi, Tom Torres, Dalton Schmidt, Ejenio Capetillo, Matt Thurner, and Jonathan Velasquez. </p>
+      
+          </div>
+          <div class="row-fluid">
+            <div class="span4 offset1">
+              <img src="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" width="350" height="250">
+              
+            </div><!--/span-->
+ 
+            <div class="span4 offset1">
+              <img src="http://static.globalgrind.com/sites/default/files/imagecache/article_images_540/images/2012_december/hc-timeline-newtown-shooting-1216-2012121501878564.jpeg" width="350" height="250">
+              
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="row-fluid">
+            <br>
+            <div class="span4 offset1">
+              <img src="http://is.china-embassy.org/eng/xwdt/W020060101209907667507.jpg" width="260" height="270"><br>
+              
+            </div><!--/span-->
+            <div class="span4 offset1">
+              <img src="http://bvfridays.org/assets/images/stories/UnitedWay.jpg" width="300" height="250">
+              
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+{% endblock %}

@@ -1,0 +1,21 @@
+*.pyc
+*~
+*.swp
+*.swo
+
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+bin
+include
+lib
+local
+build
+activate.sh
+*.thumbnail
+venv
