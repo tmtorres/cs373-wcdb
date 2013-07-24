@@ -314,22 +314,85 @@ class TestUpload(TestCase):
         self.assertEqual(str(p.location), 'Communist Party of China')
 
     def test_insert_elem_1(self):
-        pass
+        root = fromstring(open('TestPerson.xml').read())
+        perHandler(root[0])
+        p = Person.objects.get(id='PER_BROBMA')
+
+        # Test is proper amount of Videos are in DB
+        element = p.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 2)
+        # Test is insertion works without prior functions
+        insertElem({'href':'www.youtube.com/videos'}, {'entity':p, 'ctype':'VID', 'text': 'Test Youtube Video'})
+        element = str(p.elements.filter(ctype='VID'))
+        self.assertNotEqual(element.find('www.youtube.com/videos'), -1)
+        element = p.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 3)
+        element = p.elements.filter(ctype='CITE')
+        self.assertEqual(len(element), 1)
         
     def test_insert_elem_2(self):
-        pass
+        root = fromstring(open('TestCrisis.xml').read())
+        criHandler(root[0])
+        c = Crisis.objects.get(id='CRI_SHESSG')
+
+        # Test is proper amount of Videos are in DB
+        element = c.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 1)
+        # Test is insertion works without prior functions
+        insertElem({'href':'www.youtube.com/videos'}, {'entity':c, 'ctype':'VID', 'text': 'Test Youtube Video'})
+        element = str(c.elements.filter(ctype='VID'))
+        self.assertNotEqual(element.find('www.youtube.com/videos'), -1)
+        element = c.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 2)
+        element = c.elements.filter(ctype='CITE')
+        self.assertEqual(len(element), 3)
 
     def test_insert_elem_3(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        orgHandler(root[0])
+        o = Organization.objects.get(id='ORG_UNDWAY')
+
+        # Test is proper amount of Videos are in DB
+        element = o.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 0)
+        # Test is insertion works without prior functions
+        insertElem({'href':'www.youtube.com/videos'}, {'entity':o, 'ctype':'VID', 'text': 'Test Youtube Video'})
+        element = str(o.elements.filter(ctype='VID'))
+        self.assertNotEqual(element.find('www.youtube.com/videos'), -1)
+        element = o.elements.filter(ctype='VID')
+        self.assertEqual(len(element), 1)
+        element = o.elements.filter(ctype='MAP')
+        self.assertEqual(len(element), 0)
 
     def test_com_handler_1(self):
-    	pass
+    	root = fromstring(open('TestPerson.xml').read())
+        perHandler(root[0])
+        p = Person.objects.get(id='PER_BROBMA')
+
+        comHandler(root[0], p)
+        p.save()
+        summary = p.summary
+        self.assertNotEqual(summary.find('Barack Obama is the 44th President of the United States'), -1)
 
     def test_com_handler_2(self):
-        pass
+        root = fromstring(open('TestCrisis.xml').read())
+        criHandler(root[0])
+        c = Crisis.objects.get(id='CRI_SHESSG')
+
+        comHandler(root[0], c)
+        c.save()
+        summary = c.summary
+        self.assertNotEqual(summary.find('Adam Lanza is believed to have shot his mother'), -1)
 
     def test_com_handler_3(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        orgHandler(root[0])
+        o = Organization.objects.get(id='ORG_UNDWAY')
+
+        comHandler(root[0], o)
+        o.save()
+        summary = o.summary
+        self.assertNotEqual(summary.find('The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut'), -1)
 
 class TestDownload(TestCase):
     def test_get_crises_1(self):
