@@ -29,4 +29,104 @@
             </Summary>
         </Common>
     </Organization>
+    
+    <Organization ID="ORG_SNQKRF" Name="Sichuan Quake Relief">
+        <Crises>
+            <Crisis ID="CRI_SCHERQ" />
+        </Crises>
+        <People>
+            <Person ID="PER_HUJNTO" />
+        </People>
+        <Kind>Non-profit, humanitarian Organization</Kind>
+        <Location>Chengdu, China</Location>
+        <History>
+            <li>Founded the morning after the disaster struck, SQR immediately began coordinating emergency relief aid to the affected area. In the first 6 to 8 months, SQR funnelled cash, services and material donations in excess of 15 million RMB to towns and villages in the quake zone – mainly tents, food, water, medical, hygiene and camping supplies, as well as several small-scale water and sanitation projects. SQR’s Winter Relief Project supplied warm bedding, clothing and camping gear worth more than 2 million RMB to more than 6,000 villagers.</li>
+            <li>Acting as a logistics and information hub, SQR connected with other NGOs, donors and volunteers, as well as keeping media and wider communities updated on the latest situation. Recognising the repercussions for survivors and those who had suffered loss or injury, we linked dozens of international and local psychological experts with stricken communities.</li>
+            <li>In summer 2008 SQR sent over 70 foreign and local teachers to coordinate and run Summer Camps in six temporary villages, delivering basic school equipment and educational supplies to more than 30 schools. This project was expanded in the summer of 2009 to become the Sports, Art, Music and English (SAME) Camps in 13 affected villages. More than 260 local and foreign volunteers taught about 4,000 children in the SAME Camps over a 7-week period.</li>
+            <li>As the need for relief aid became less pressing, SQR began to look towards the long-term recovery and future development of the affected region. The badly-damaged Di Kang Le Kindergarten serving five villages in rural Guangji, Mianzhu County, was identified as in need of rebuilding. SQR entered into an agreement with the principal to not only rebuild the kindergarten, but vastly improve the community facilities in the area with a new community centre. The construction phase is complete and the community centre available for use by local community groups.</li>
+        </History>
+        <ContactInfo>
+            <li href="http://sichuan-quake-relief.org/contact-us/">Contact Form</li>
+            <li>Phone: (+91) 1-800-DONTKNOW</li>
+            <li>General enquiries: info@sichuan-quake-relief.org</li>
+            <li>Volunteer: volunteer@sichuan-quake-relief.org</li>
+            <li>Address:
+                c/o The Bookworm (LaoShuChong)
+                Renmin Nan Road, Section 4,#28
+                YuJie East Street, No2-7
+                Sichuan Province
+                Chengdu, China 610041
+            </li>
+            <li>Fax: +86 (0)28 8552-1997</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://sichuan-quake-relief.org/">Sichuan Quake Relief</li>
+            </Citations>
+            <ExternalLinks>
+             <li href="https://www.facebook.com/pages/Sichuan-Quake-Relief/195505027139931">SQR Facebook</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
+            </Images>
+            <Videos>
+             <li embed="//www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
+            </Videos>
+            <Maps>
+             <li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/>
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/SichuanRelief" />
+            </Feeds>
+            <Summary>
+                Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
+            </Summary>
+        </Common>
+    </Organization>
+
+    <Organization ID="ORG_NLTLCL" Name="National Transitional Council">
+        <Crises>
+            <Crisis ID="CRI_LYCLWR" />
+        </Crises>
+        <People>
+            <Person ID="PER_MURGDI" />
+        </People>
+        <Kind>de facto Government</Kind>
+        <Location>Benghazi, Libya</Location>
+        <History>
+            <li>A National Transitional Council was formed on February 26th, 2011 to act as "the political face of the revolution". Its spokesman, Hafiz Ghoga, made clear at the launch press conference that the national council was not a provisional government and added that the newly formed council was not in contact with foreign governments and did not want them to intervene.</li>
+            <li>On March 5th, 2011, the council issued a statement in which it declared itself to be the "sole representative of all Libya". Mustafa Abdul Jalil was named as chairman of the council.</li>
+            <li>On March 10th, 2011, France became the first country to recognise the council as Libya's only legitimate government.</li>
+            <li>In a ceremony on August 8th, 2012, the NTC formally transferred power to the General National Congress. Jalil stepped down as chairman, passing the position to the GNC's oldest member, Mohammed Ali Salim. The NTC was then dissolved, while the GNC members took their oath of office, led by Salim.</li>
+        </History>
+        <ContactInfo>
+            <li> Organization is no longer active. </li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://www.boston.com/news/world/middle-east/2012/08/08/libya-transitional-rulers-hand-over-power/uMPkXd9vTSSHg589mU9ykJ/story.html">"Libya's transitional rulers hand over power". Boston.com.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/National_Transitional_Council">Wikipedia</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
+                <li embed="http://www1.pictures.zimbio.com/gi/President+Obama+Meets+President+National+Transitional+STm2i_EQWMMl.jpg"/>
+            </Images>
+            <Videos>
+             <li embed="//www.youtube.com/embed/gIVZlSk1qbI"/>
+            </Videos>
+            <Maps>
+             <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;aq=0&amp;oq=national+transitional+counc&amp;sll=41.391894,-73.45813&amp;sspn=0.015035,0.015557&amp;ie=UTF8&amp;hq=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;ll=32.862133,13.197563&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" />
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/NTC_of_Libya" />
+            </Feeds>
+            <Summary>
+                The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
+            </Summary>
+        </Common>
+    </Organization>
 </WorldCrises>
