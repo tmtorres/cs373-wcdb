@@ -26,16 +26,8 @@ import subprocess
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
 
-'''
-def test(request):
-    process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
-    process.wait()
-    assert os.path.exists('TestWCDB2.out')
-    return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})S
-'''
-
 newlines = ['\n', '\r\n', '\r']
-def capture(process):
+def capture(request, process):
     yield open('style.html').read()
     while True:
         out = process.stderr.read(1)
@@ -49,7 +41,7 @@ def capture(process):
 def results(request):
     cmd = ['python', 'manage.py', 'test', 'database', '--noinput']
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    return HttpResponse((str(c) for c in capture(process)))
+    return HttpResponse((str(c) for c in capture(request, process)))
 
 def test(request):
     return render(request, 'utility.html', {'view': 'test'})
