@@ -323,7 +323,13 @@ class TestUpload(TestCase):
         pass
 
     def test_com_handler_1(self):
-    	pass
+    	"""
+    	root = fromstring(open('TestCrisis.xml'))
+    	
+    	c = Crisis.objects.get(id='CRI_SHESSG')
+    	comHandler(root[0][10], c)
+    	self.assertEqual(str(c.maps), 
+    	"""
 
     def test_com_handler_2(self):
         pass
@@ -333,7 +339,13 @@ class TestUpload(TestCase):
 
 class TestDownload(TestCase):
     def test_get_crises_1(self):
-    	pass
+    	root = fromstring(open('TestCrisis.xml').read())
+    	getCrises(root)
+    	
+    	self.assertEqual(root[0][2].text, 'Spree Shooting')
+    	self.assertEqual(root[0][3].text, '2012-12-14')
+    	self.assertEqual(root[1][2].text, 'Earthquake')
+    	self.assertEqual(root[2][3].text, '2011-02-15')
         
     def test_get_crises_2(self):
         pass
@@ -342,7 +354,13 @@ class TestDownload(TestCase):
         pass
 
     def test_get_organizations_1(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+    	getOrganizations(root)
+    	
+    	self.assertEqual(root[0][2].text, 'Non-profit Organization')
+    	self.assertEqual(root[0][3].text, 'Worldwide')
+    	self.assertEqual(root[1][2].text, 'Non-profit, humanitarian Organization')
+    	self.assertEqual(root[2][3].text, 'Benghazi, Libya')
 
     def test_get_organizations_2(self):
         pass
@@ -351,10 +369,14 @@ class TestDownload(TestCase):
         pass
 
     def test_get_people_1(self):
-        pass
+        root = fromstring(open('TestPerson.xml').read())
+    	getPeople(root)
+    	
+    	self.assertEqual(root[0][2].text, 'President')
+    	self.assertEqual(root[0][3].text, 'Washington, D.C, United States of America')
 
     def test_get_people_2(self):
-        pass
+    	pass
 
     def test_get_people_3(self):
         pass
