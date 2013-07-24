@@ -23,6 +23,8 @@ TEST_DATABASES = {
     'default': dj_database_url.config(env='TEST_DATABASE_URL')
 }
 
+TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['*']
@@ -67,8 +69,6 @@ THUMB_URL = '/media/thumbs/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(dirname(dirname(__file__)), "static")
 BASE_DIR = os.path.join(dirname(dirname(__file__)))
-
-TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
