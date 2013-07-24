@@ -13,7 +13,7 @@ LOCKDOWN_PASSWORDS = ('django')
 
 MANAGERS = ADMINS
 
-ENGINE = 'mysql' #'sqlite3' if 'test' in sys.argv else 'mysql'
+ENGINE =  'sqlite3' if '--noinput' in sys.argv else 'mysql'
 
 ZINFO = dict([s.split(' = ') for s in open('/u/z/users/cs373/' + os.getcwd().split('/')[4] + '/.zinfo').read().split('\n')[:3]])
 

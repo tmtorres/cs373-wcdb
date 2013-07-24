@@ -2,9 +2,6 @@
 {% block sidebar %}
 <li class="nav-header">Unit Tests</li>
 <li><a href="{% url database.views.test %}">Run Test Suite</a></li>
-<li class="nav-header">Facilities</li>
-<button type="submit" class="btn btn-primary" onclick="window.location.href='{% url database.views.upload %}'">Import<i class=" icon-upload"></i></button>
-<button type="submit" class="btn btn-primary" onClick="window.location.href='{% url database.views.download %}'">Export<i class=" icon-download"></i></button>
 <style>
 .hero-unit {
     background-color: #D9F0FF;
@@ -13,7 +10,11 @@
 {% endblock %}
 {% block body %}
         <div class="span9">
-          <div class="hero-unit">
+            <div style="float:right;padding:10px;border-style:none;background-color:transparent;">
+                <button type="submit" class="btn btn-primary" onclick="window.location.href='{% url database.views.upload %}'">Import<i class=" icon-upload"></i></button>
+                <button type="submit" class="btn btn-primary" onClick="window.location.href='{% url database.views.download %}'">Export<i class=" icon-download"></i></button>
+                </div><div class="hero-unit">
+            {% block hero %}
             {% if view == 'index' %}
                 <h1>Utilities</h1>
                 <br><br>
@@ -29,7 +30,7 @@
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
                 <br>
-                <iframe width="100%" height="500" frameborder="0" scrolling="yes" src="{% url database.views.results %}"></iframe>
+                <iframe width="100%" height="300" frameborder="0" scrolling="yes" src="{% url database.views.results %}"></iframe>
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
                 <br><br>
@@ -40,6 +41,7 @@
                 <p>Sorry, the following error occurred:</p>
                 <p>{{errstr}}</p>
             {% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
+            {% endblock %}
           </div>
         </div><!--/span-->
 {% endblock %}
