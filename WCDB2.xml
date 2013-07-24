@@ -397,6 +397,9 @@
                 <li embed="//www.youtube.com/embed/0GK6Vg008Mk" text="Testing for HIV (HIV #3)" />
                 <li embed="//www.youtube.com/embed/GLreHYWsk3s" text="Treating HIV (HIV #4)" />
             </Videos>
+            <Feeds>
+                <li embed="https://twitter.com/CDC_HIVAIDS" />
+            </Feeds>
             <Summary>
                 Human immunodeficiency virus infection / acquired immunodeficiency syndrome (HIV/AIDS) is a disease of the human immune system caused by infection with human immunodeficiency virus (HIV). Genetic research indicates that HIV originated in west-central Africa during the early twentieth century, although it was first recognized by the Centers for Disease Control and Prevention (CDC) in 1981 and its cause—HIV infection—was identified in the early part of the decade. During the initial infection, a person may experience a brief period of influenza-like illness. This is typically followed by a prolonged period without symptoms. As the illness progresses, it interferes more and more with the immune system, making the person much more likely to get infections, including opportunistic infections and tumors that do not usually affect people who have working immune systems.
                 HIV is transmitted primarily via unprotected sexual intercourse (including anal and even oral sex), contaminated blood transfusions, hypodermic needles, and from mother to child during pregnancy, delivery, or breastfeeding. Some bodily fluids, such as saliva and tears, do not transmit HIV. Prevention of HIV infection, primarily through safe sex and needle-exchange programs, is a key strategy to control the spread of the disease. There is no cure or vaccine; however, antiretroviral treatment can slow the course of the disease and may lead to a near-normal life expectancy. While antiretroviral treatment reduces the risk of death and complications from the disease, these medications are expensive and may be associated with side effects.
@@ -678,7 +681,7 @@
                 <li href="http://arcticcircle.uconn.edu/SEEJ/Alaska/miller2.htm">"EXXON VALDEZ OIL SPILL: Ten Years Later". Pamela A. Miller, Arctic Connections 3/99.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill">Exxon Valdez Oil Spill Wiki page</li>
+                <li href="http://en.wikipedia.org/wiki/Exxon_Valdez_oil_spill">"Exxon Valdez Oil Spill". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="https://www.ufz.de/export/data/1/27801_oil_spill.jpg" text="Cleaning work after the oil spill of the Exxon Valdez in the Prinz-William-Sund 1989, Alaska. Photo courtesy of the Exxon Valdez Oil Spill Trustee Council" />
@@ -699,9 +702,6 @@
             <Maps>
                 <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=p&amp;oe=UTF8&amp;msa=0&amp;msid=218316811799567847406.0004898c12dd6c8d7df7e&amp;ll=16.123683,-37.798462&amp;spn=99.76913,218.600464&amp;iwloc=0004898cedc8b31e37b13&amp;output=embed" />
             </Maps>
-            <Feeds>
-                <li embed="" />
-            </Feeds>
             <Summary>
                 The Exxon Valdez oil spill occurred in Prince William Sound, Alaska, on March 24, 1989, when Exxon Valdez, an oil tanker bound for Long Beach, California, struck Prince William Sound's Bligh Reef and spilled 260,000 to 750,000 barrels (41,000 to 119,000 cubic meters) of crude oil. It is considered to be one of the most devastating human-caused environmental disasters. The Valdez spill was the largest ever in US waters until the 2010 Deepwater Horizon oil spill, in terms of volume released. However, Prince William Sound's remote location, accessible only by helicopter, plane, or boat, made government and industry response efforts difficult and severely taxed existing plans for response. The region is a habitat for salmon, sea otters, seals and seabirds. The oil, originally extracted at the Prudhoe Bay oil field, eventually covered 1,300 miles (2,100 km) of coastline, and 11,000 square miles (28,000 squared km) of ocean. Exxon's CEO, Lawrence Rawl, shaped the company's response.
                 According to official reports, the ship was carrying approximately 55 million US gallons (210,000 cubic meters) of oil, of which about 10.1 to 11 million US gallons (240,000 to 260,000 bbl; 38,000 to 42,000 cubic meters) were spilled into the Prince William Sound. A figure of 11 million US gallons (260,000 bbl; 42,000 cubic meters) was a commonly accepted estimate of the spill's volume and has been used by the State of Alaska's Exxon Valdez Oil Spill Trustee Council, the National Oceanic and Atmospheric Administration and environmental groups such as Greenpeace and the Sierra Club. Some groups, such as Defenders of Wildlife, dispute the official estimates, maintaining that the volume of the spill, which was calculated by subtracting the volume of material removed from the vessel's tanks after the spill from the volume of the original cargo, has been underreported. Alternative calculations, based on the assumption that the official reports underestimated how much seawater had been forced into the damaged tanks, placed the total at 25 to 32 million US gallons (600,000 to 760,000 bbl; 95,000 to 120,000 cubic meters).
@@ -791,30 +791,29 @@
         </Organizations>
         <Kind>Revolutionary and Politician</Kind>
         <Location>Libya</Location>
-        <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
-	    <Citations>
-		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">Biography.com</li>
-		<li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8344034/Libya-civil-war-breaks-out-as-Gaddafi-mounts-rearguard-fight.html">Gaddafi Mounts Rearguard Fight</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.biography.com/people/muammar-al-qaddafi-39014">Biography.com</li>
+                <li href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/libya/8344034/Libya-civil-war-breaks-out-as-Gaddafi-mounts-rearguard-fight.html">Gaddafi Mounts Rearguard Fight</li>
+            </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Death_of_Muammar_Gaddafi">Death of Gaddafo Wikipedia</li>
-		<li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
+                <li href="http://www.biography.com/people/muammar-al-qaddafi-39014">"Muammar al-Qaddafi biography". A+E Television Networks, LLC.</li>
                 <li href="http://en.wikipedia.org/wiki/Muammar_Gaddafi">"Muammar Gaddafi". Wikipedia.</li>
+                <li href="http://en.wikipedia.org/wiki/Death_of_Muammar_Gaddafi">"Death of Muammar Gaddafi". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://www.biography.com/imported/images/Biography/Images/Profiles/Q/Muammar-al-Qaddafi-39014-1-402.jpg" />
                 <li embed="http://www.dailyguideghana.com/wp-content/uploads/2011/10/muammar_gaddafi.jpg" />
                 <li embed="http://www.timeslive.co.za/incoming/2011/07/02/gaddafi.jpg/ALTERNATES/crop_630x400/Gaddafi.jpg" />
             </Images>
-	    <Videos>
-               <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>	
-               <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>	
-                <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>		
-	    </Videos>
-	    <Maps>
-		<li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
-	    </Maps>
+            <Videos>
+                <li embed="//www.youtube.com/embed/6O8vM0-6EEE"> The Real Reason Why Gaddafi Was Killed  </li>
+                <li embed="//www.youtube.com/embed/pzI5_fa8CAY"> Fighting Gaddafi (BBC Documentary) </li>
+                <li embed="//www.youtube.com/embed/sGm492qVEzA">Warning: Graphic Video!</li>
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=214301650463033871851.0004aaf73e7ee9a96c942&amp;t=m&amp;ll=28.578823,14.051256&amp;spn=8.693769,9.01926&amp;output=embed" text="Free Libya Google Maps"/>
+            </Maps>
             <Summary>
                 Muammar Muhammad Abu Minyar al-Gaddafi, or Colonel Gaddafi, was an Libyan politician who de facto ruled Lybya for 42 years. In 1969 he conducted a coup against King Idris and that led to the formation of the Libyan Arab Republic. He died on 20 October 2011 during the Battle of Sirte, and was found hiding in a culvert west of Sirte and captured by National Transitional Council forces. He was killed shortly afterwards. 
             </Summary>
@@ -830,17 +829,14 @@
         </Organizations>
         <Kind>President</Kind>
         <Location>Mali</Location>
-        <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
             <Citations>
-                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">NY Times: Toure resigns after coup </li>
-                <li href="http://www.aljazeera.com/news/africa/2012/03/20123229824215677.html">Aljazeera Profile: Amadou Touré</li>
+                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">"Mali’s President, Ousted in Coup, Steps Down". The New York Times.</li>
+                <li href="http://www.aljazeera.com/news/africa/2012/03/20123229824215677.html">"Profile: Amadou Toumani Toure" Aljazeera.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://news.bbc.co.uk/2/shared/spl/hi/picture_gallery/05/africa_mali_president/html/2.stm">Photo Journal of Amadou Touré</li>
-                <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">Amadou Touré's Wikipedia</li>
-                <li href="http://www.nytimes.com/2012/04/09/world/africa/mali-president-amadou-toumani-toure-resigns-after-coup.html?ref=amadoutoumanitoure&amp;_r=0">"Mali’s President, Ousted in Coup, Steps Down". The New York Times.</li>
-                <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">"Amadou Toumani Tour%C3%A9". Wikipedia.</li>
+                <li href="http://news.bbc.co.uk/2/shared/spl/hi/picture_gallery/05/africa_mali_president/html/2.stm">"Photo journal: Mali president". BBC.</li>
+                <li href="http://en.wikipedia.org/wiki/Amadou_Toumani_Tour%C3%A9">"Amadou Toumani Touré". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://blogs.luc.edu/hubbub/wp-content/blogs.dir/478/files/evan-peterson/mali-iii.jpg" text="Former Malian President Amadou Toumani Touré" />
@@ -855,7 +851,9 @@
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=fs&amp;q=Bamako&amp;oe=utf-8&amp;ie=UTF8&amp;hl=en&amp;hq=&amp;hnear=Bamako,+Mali&amp;t=m&amp;z=11&amp;iwloc=A&amp;output=embed" text="Bamako, Mali"/>
             </Maps>
             <Summary>
-                Prince Amadou Toumani Touré was forced into exile and resignation on March 22, 2012 via coup d’état for his handling of the Northern Mali conflict. A group of rebel soldiers calling themselves the National Committee for the Restoration of Democracy and State took power and suspended Mali’s constitution.
+                Amadou Toumani Touré (born November 4th, 1948) is a Malian politician who was President of Mali from 2002 to 2012.
+                Touré was head of President Moussa Traoré's personal guard (and parachute regiment) when a popular revolution overthrew the regime in March 1991 and Colonel Touré arrested the President and led the revolution. He presided over a year-long military-civilian transition process that produced a new Constitution and multiparty elections; Touré handed power to Mali's first democratically elected president, Alpha Oumar Konaré, on June 6th, 1992. Konaré promoted Touré to the rank of General.
+                Prince Amadou Toumani Touré was forced into exile and resignation on March 22, 2012 via coup d’état for his handling of the Northern Mali conflict. A group of rebel soldiers calling themselves the National Committee for the Restoration of Democracy and State took power and suspended Mali’s constitution. 
             </Summary>
         </Common>
     </Person>
@@ -871,12 +869,12 @@
         <Location>Turkey</Location>
         <Common>
             <Citations>
-                <li href="http://www.britannica.com/EBchecked/topic/913988/Recep-Tayyip-Erdogan">Recep Tayyip Ergodan Brittanica</li>
                 <li href="http://www.akparti.org.tr/english/yonetim/genel-baskan">Turkey's Justice and Development Party</li>
+                <li href="http://www.news.com.au/world-news/turkey-protesters-defy-deadline-riot-police-fire-tear-gas/story-fndir2ev-1226664741434">"Turkey leader Recep Tayyip Erdogan holds rally as riot police try to quell protest".  News Limited.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://www.news.com.au/world-news/turkey-protesters-defy-deadline-riot-police-fire-tear-gas/story-fndir2ev-1226664741434">Recep Tayyip Erdogan holds rally as riot police try to quell protest</li>
-                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Recep Tayyip Ergodan Wikipedia</li>
+                <li href="http://www.britannica.com/EBchecked/topic/913988/Recep-Tayyip-Erdogan">"Recep Tayyip Ergodan". Encyclopædia Britannica, Inc.</li>
+                <li href="http://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">"Recep Tayyip Ergodan". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/b/b8/Tayyip_Erdo%C4%9Fan.JPG" text="Turkish Prime Minister Recep Tayyip Erdogan" />
@@ -899,10 +897,6 @@
         </Common>
     </Person>
 
-
-
-
-
     <Person ID="PER_MAGICJ" Name="Magic Johnson">
         <Crises>
             <Crisis ID="CRI_AIDSHI"/>
@@ -913,13 +907,13 @@
         <Kind>Basketball player</Kind>
         <Location>L.A.</Location>
         <Common>
-	    <Citations>
-		<li href="http://www.biography.com/people/magic-johnson-9356150">Magic Johnson Biography</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.biography.com/people/magic-johnson-9356150">"Magic Johnson biography". A+E Television Networks, LLC.</li>
+            </Citations>
             <ExternalLinks>
-                <li href="http://www.magicjohnson.org/">Magic Johnson Foundation</li>
-                <li href="http://www.basketball-reference.com/players/j/johnsma02.html">Magic Johnson Basketball Stats</li>
-                <li href="http://en.wikipedia.org/wiki/Magic_Johnson">Magic Johnson Wikipedia</li>
+                <li href="http://magicjohnson.org/">Magic Johnson Foundation</li>
+                <li href="http://www.basketball-reference.com/players/j/johnsma02.html">"Magic Johnson". Sports Reference LLC.</li>
+                <li href="http://en.wikipedia.org/wiki/Magic_Johnson">"Magic Johnson". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://lakers.topbuzz.com/gallery/d/1295-3/magic-johnson-oly_full_56875188cc009_radio_shack_s.jpg" />
@@ -952,13 +946,13 @@
         <Kind>Prime Minister</Kind>
         <Location>Japan</Location>
         <Common>
-	    <Citations>
-		<li href="http://www.britannica.com/EBchecked/topic/1658252/Kan-Naoto">Brittanica Biography</li>
-		<li href="http://www.bbc.co.uk/news/10228471">BBC Profile: Naoto Kan</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.britannica.com/EBchecked/topic/1658252/Kan-Naoto">"Kan Naoto". Encyclopædia Britannica, Inc.</li>
+                <li href="http://www.bbc.co.uk/news/10228471">"Profile: Naoto Kan". BBC.</li>
+            </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Naoto_Kan">Naoto Kan Wikipedia</li>
-		<li href="http://www.forbes.com/profile/naoto-kan/">Forbes Profile: Naoto Kan</li>
+                <li href="http://en.wikipedia.org/wiki/Naoto_Kan">"Naoto Kan". Wikipedia.</li>
+                <li href="http://www.forbes.com/profile/naoto-kan/">"Naoto Kan". Forbes.com LLC.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://i.dailymail.co.uk/i/pix/2011/04/14/article-0-0B6F583C00000578-799_306x423.jpg" />
@@ -976,12 +970,10 @@
                 <li embed="https://twitter.com/NaotoKan" />
             </Feeds>
             <Summary>
-                Naoto Kan is a Japanese politician who was the former leader of the Democratic Party of Japan. (BETTER SUMMARY COMING -Dalton) (Damn right...there better be a better summary coming. - Jonathan lol)
+                Naoto Kan (born October 10th, 1946) is a Japanese politician, and former Prime Minister of Japan. In June 2010, then-Finance Minister Kan was elected as the leader of the Democratic Party of Japan (DPJ) and designated Prime Minister by the Diet to succeed Yukio Hatoyama. Kan was the first Prime Minister of Japan since the resignation of Junichiro Koizumi in 2006 to serve for more than 1 year, with predecessors Yukio Hatoyama, Taro Aso, Yasuo Fukuda, and Shinzo Abe either resigning prematurely or losing an election. On 26 August 2011, Kan announced his resignation. Yoshihiko Noda was formally appointed as Prime Minister on September 2nd, 2011. On August 1st, 2012, United Nations Secretary-General Ban Ki-moon announced Kan would be one of the members of the UN high-level panel on the post-2015 development agenda.
             </Summary>
         </Common>
     </Person>
-
-
 
     <Person ID="PER_BROBMA" Name="Barack Obama">
         <Crises>
@@ -994,12 +986,12 @@
         <Location>Washington, D.C, United States of America</Location>
         <Common>
             <Citations>
-                <li href="http://en.wikipedia.org/wiki/Barack_Obama">Wikipedia page for Barack Obama</li>
+                <li href="http://www.whitehouse.gov/administration/president-obama/">"President Barack Obama". Official Whitehouse page.</li>
+                <li href="http://bioguide.congress.gov/scripts/biodisplay.pl?index=o000167">"OBAMA, Barack - Biographical Information". Official Congressional Page.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://www.whitehouse.gov/administration/president-obama/">Official Whitehouse page for Barack Obama</li>
-                <li href="http://www.barackobama.com">Barack Obama's campaign website</li>
-                <li href="http://bioguide.congress.gov/scripts/biodisplay.pl?index=o000167">Official Congressional page for Barack Obama</li>
+                <li href="http://www.barackobama.com">Barack Obama's campaign website.</li>
+                <li href="http://en.wikipedia.org/wiki/Barack_Obama">"Barack Obama". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/220px-President_Barack_Obama.jpg" text="President Barack Obama"/>
@@ -1009,11 +1001,13 @@
             <Videos>
                 <li embed="//www.youtube.com/embed/-1ljmtaibC4" text="Barack Obama's first inaugural address (2009)"/>
                 <li embed="//www.youtube.com/embed/zncqb-n3zMo" text="Barack Obama's second inaugural address (2013)"/>
-
             </Videos>
             <Maps>
                 <li embed="https://maps.google.com/maps?client=ubuntu&amp;channel=cs&amp;ie=UTF8&amp;q=google+map+white+house&amp;fb=1&amp;gl=us&amp;hq=google+map+white+house&amp;hnear=google+map+white+house&amp;cid=0,0,8167675777476425407&amp;t=m&amp;ll=38.897683,-77.036497&amp;spn=0.006295,0.006295&amp;output=embed" text="The White House"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/BarackObama" />
+            </Feeds>
             <Summary>
                 Barack Obama is the 44th President of the United States and former U.S. Senator from Illinois. Born in Honolulu, Hawaii, Obama is a graduate of Columbia University and Harvard Law School, where he was president of the Harvard Law Review. He defeated Republican nominee John McCain in the general election becoming the first African American elected to the presidency. Nine months later, Obama was named the 2009 Nobel Peace Prize laureate. He was re-elected president in November 2012, defeating Republican Mitt Romney, and was sworn in for a second term on January 20, 2013.
             </Summary>
@@ -1030,15 +1024,14 @@
         <Kind>Leader of Al-Qaeda</Kind>
         <Location>Middle East</Location>
         <Common>
-	    <Citations>
-
-		<li href="http://www.biography.com/people/osama-bin-laden-37172">Osama's Biography at Biography.com</li>
-		<li href="http://www.pbs.org/wgbh/pages/frontline/shows/binladen/who/bio.html">PBS Biography about Osama</li>
-	    </Citations>
+            <Citations>
+                <li href="http://www.biography.com/people/osama-bin-laden-37172">"Osama bin Laden biography".  A+E Television Networks, LLC.</li>
+                <li href="http://www.pbs.org/wgbh/pages/frontline/shows/binladen/who/bio.html">"A Biography of Osama Bin Ladin". PBS.org.</li>
+            </Citations>
             <ExternalLinks>
-		<li href="http://en.wikipedia.org/wiki/Death_of_Osama_bin_Laden"> Death of Osama Wikipedia</li>
-		<li href="http://en.wikipedia.org/wiki/Osama_bin_Laden"> Osama Bin Laden Wikipedia</li>
-		<li href="http://www.imdb.com/title/tt1790885/"> Zero Dark Thirty: A movie based on the killing of Osama</li>
+                <li href="http://en.wikipedia.org/wiki/Death_of_Osama_bin_Laden">"Death of Osama bin Laden". Wikipedia.</li>
+                <li href="http://en.wikipedia.org/wiki/Osama_bin_Laden">"Osama Bin Laden". Wikipedia.</li>
+                <li href="http://www.imdb.com/title/tt1790885/">"Zero Dark Thirty". IMDb.com, Inc.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://a.abcnews.com/images/Blotter/gty_osama_bin_laden_jef_111209_wg.jpg" />
@@ -1058,7 +1051,6 @@
         </Common>
     </Person>
 
-
     <Person ID="PER_JOSHAZ" Name="Joseph Hazelwood">
         <Crises>
             <Crisis ID="CRI_EXXVAL"/>
@@ -1070,12 +1062,11 @@
         <Location>Alaska</Location>
         <Common>
             <Citations>
-		<li href="http://www.britannica.com/EBchecked/topic/862348/Amadou-Toumani-Toure">Britannica.com</li>		
-		<li href="http://library.thinkquest.org/10867/spill/people/hazelwood.shtml">Thinkquest.org</li>
+                <li href="http://library.thinkquest.org/10867/spill/people/hazelwood.shtml">"EVOS: People: Joseph Hazelwood". Biography Magazine.</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/Joseph_Hazelwood">Joseph Hazelwood Wiki page</li>
-                <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">NYPost Article</li>  
+                <li href="http://en.wikipedia.org/wiki/Joseph_Hazelwood">"Joseph Hazelwood". Wikipedia.</li>
+                <li href="http://www.nypost.com/p/news/national/valdez_captain_spills_on_far_worse_Pax0hwPLjt2tWXdFcjPLGJ">"Valdez captain spills on far-worse fiasco". NYP Holdings, Inc.</li>  
             </ExternalLinks>
             <Images>
                 <li embed="http://www.akpresswomen.org/files/images/1243672059-hazelwood.jpg" text="Joseph Hazelwood Old"/>
@@ -1094,7 +1085,6 @@
             </Summary>
         </Common>
     </Person>
-
 
     <!-- Organization elements -->
     <Organization ID="ORG_UNDWAY" Name="United Way">
@@ -1121,6 +1111,7 @@
             </Citations>
             <ExternalLinks>
             	<li href="https://www.facebook.com/UnitedWay">United Way Facebook</li>
+                <li href="http://en.wikipedia.org/wiki/United_Way_Worldwide">"United Way Worldwide". Wikipedia.</li>
             </ExternalLinks>
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
@@ -1131,6 +1122,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Way-Western+Ct,+West+Street,+Danbury,+CT&amp;aq=0&amp;oq=united+way+western+c&amp;sll=42.352582,-71.047726&amp;sspn=0.118487,0.124454&amp;ie=UTF8&amp;hq=United+Way-Western+Ct,&amp;hnear=West+St,+Danbury,+Connecticut+06810&amp;ll=41.391889,-73.45814&amp;spn=0.015035,0.015557&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2348952424447283674&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/UnitedWay" />
+            </Feeds>
             <Summary>
                 Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
             </Summary>
@@ -1181,8 +1175,11 @@
             	<li embed="//www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
             </Videos>
             <Maps>
-            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/>          	
+            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/> 	
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/SichuanRelief" />
+            </Feeds>
             <Summary>
                 Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
             </Summary>
@@ -1225,6 +1222,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;aq=0&amp;oq=national+transitional+counc&amp;sll=41.391894,-73.45813&amp;sspn=0.015035,0.015557&amp;ie=UTF8&amp;hq=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;ll=32.862133,13.197563&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/NTC_of_Libya" />
+            </Feeds>
             <Summary>
                 The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
             </Summary>
@@ -1245,7 +1245,7 @@
             <li>The union consists of 54 African states. The only all-African state not in the AU is Morocco.</li>
         </History>
         <ContactInfo>
-            <li href="http://au.int/en/contact"> Contact Form</li>
+            <li href="http://au.int/en/contact">Contact Form</li>
         </ContactInfo>
         <!-- See Crisis element above for examples of everything under <Common> -->
         <Common>
@@ -1253,10 +1253,10 @@
             	<li href="http://reliefweb.int/report/mali/africa-readies-funds-military-mission-war-torn-mali">African Union Aids Mali</li>
             </Citations>
             <ExternalLinks>
-                <li href="http://en.wikipedia.org/wiki/African_Union">Wikipedia</li>
+                <li href="http://en.wikipedia.org/wiki/African_Union">"African Union". Wikipedia.</li>
             </ExternalLinks>
             <Images>
-                <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol </li>
+                <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol</li>
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/G5Sn7PrXDoA" text="African Union on Mali" />
@@ -1264,6 +1264,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Addis+Ababa,+Ethiopia&amp;aq=0&amp;oq=addis+ababa&amp;sll=32.862142,13.19767&amp;sspn=0.134675,0.124454&amp;ie=UTF8&amp;hq=&amp;hnear=Addis+Ababa,+Ethiopia&amp;ll=9.022736,38.746799&amp;spn=0.158348,0.124454&amp;t=m&amp;z=13&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/_AfricanUnion" />
+            </Feeds>
             <Summary>
                 The African Union played a big role in the coup d'état that overthrew President Amadou Toumani Touré. Shortly after, the MNLA declared independence from Mali. However, the declaration was rejected as invalid by the African Union. On January 27th, the African Union held a summit in Addis Ababa, Ethiopia. Outgoing AU chairperson Thomas Boni Yayi, the president of Benin, told fellow leaders their response to conflict in Mali had been too slow, and thanked France, the country's former colonial ruler, for taking the lead in its military intervention there.
             </Summary>
@@ -1304,6 +1307,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=9.022762,38.746719&amp;sspn=0.158348,0.124454&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;ll=37.776618,-122.417112&amp;spn=0.017639,0.032015&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/twitter" />
+            </Feeds>
             <Summary>
             	Twitter was founded as an online medium for microblogging and creating text-based messages in a social networking environment. Twitter headquarters are located in San Francisco, and additional corporate locations include New York City, Boston and San Antonio.
             </Summary>
@@ -1344,7 +1350,7 @@
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;aq=0&amp;oq=center+for+disease+control+and+&amp;sll=37.776618,-122.417112&amp;sspn=0.063364,0.062227&amp;ie=UTF8&amp;hq=Center+for+Disease+Control+and+Prevention,+Clifton+Road,+Atlanta,+GA&amp;ll=33.798494,-84.327162&amp;spn=0.006295,0.006747&amp;t=m&amp;output=embed" />
             </Maps>
             <Feeds>
-                <li embed="https://twitter.com/CDC_HIVAIDS" />
+                <li embed="https://twitter.com/CDCgov" />
             </Feeds>
             <Summary>
             	The Centers for Disease Control and Prevention is a major national public health institution based in the United States. It is recognized by the Department of Health and Human Services as a federal agency, and aims to maintain public health by preventing disease, injury and disability. The CDC focuses on infectious and non-infectious diseases, and environmental health among many other things.
@@ -1383,6 +1389,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;aq=2&amp;oq=US+Geological+Survey&amp;sll=33.929527,-84.263227&amp;sspn=0.066516,0.062227&amp;ie=UTF8&amp;hq=U.S.+Geological+Survey,+Sunrise+Valley+Drive,+Reston,+VA&amp;ll=38.947187,-77.367639&amp;spn=0.017356,0.032015&amp;t=m&amp;output=embed" />            
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/USGS" />
+            </Feeds>
             <Summary>
             	The United States Geological Survey is a scientific agency under the government of the United States. The USGS has four major focuses in regards to science discipline: biology, geography, geology and hydrology. USGS is headquartered in Reston, Virginia and has other major offices in locations such as Lakewood, Colorado and Menio Park, California.
             </Summary>
@@ -1423,6 +1432,9 @@
             <Maps>
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=World+Health+Organization+(WHO),+Avenue+Appia,+Geneva,+Switzerland&amp;aq=0&amp;oq=world+health+organization&amp;sll=38.947127,-77.367439&amp;sspn=0.249388,0.248909&amp;ie=UTF8&amp;hq=World+Health+Organization+(WHO),&amp;hnear=Avenue+Appia,+Gen%C3%A8ve,+Switzerland&amp;ll=46.232728,6.134357&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" text="Location of WHO Headquarters"/>
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/WHO" />
+            </Feeds>
             <Summary>
             	The World Health Organization (WHO) is a specialized agency of the United Nations (UN) that is concerned with international public health. They are headquartered in Geneva, Switzerland, and is a member of the United Nations Development Group. Since its creation, WHO has been responsible for playing a leading role in the eradication of smallpox. Its current priorities include communicable diseases, in particular, HIV/AIDS, malaria and tuberculosis; the mitigation of the effects of non-communicable diseases; sexual and reproductive health, development, and aging; nutrition, food security and healthy eating; occupational health; substance abuse; and drive the development of reporting, publications, and networking. WHO is responsible for the World Health Report, a leading international publication on health, the worldwide World Health Survey, and World Health Day (7th-April of every Year).
             </Summary>
@@ -1461,6 +1473,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Nations+Security+Council,+New+York,+NY&amp;aq=0&amp;oq=UN+security&amp;sll=46.232815,6.134491&amp;sspn=0.221812,0.248909&amp;ie=UTF8&amp;hq=United+Nations+Security+Council,+New+York,+NY&amp;hnear=&amp;radius=15000&amp;ll=40.749911,-73.974858&amp;spn=0.071946,0.071946&amp;t=m&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/SCRtweets" />
+            </Feeds>
             <Summary>
             	The United Nations Security Council (UNSC) is one of six organs of the U.N. Their main duties are to maintain international peace and security. Powers of the UNSC granted by the U.N. are the establishment of peacekeeping operations, establishment of international sanctions and military authorization.
             </Summary>
@@ -1501,6 +1516,9 @@
             <Maps>
             	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Exxon+Mobil+Corporation,+Las+Colinas+Boulevard,+Irving,+TX&amp;aq=1&amp;oq=exxon+mobil+irving+tx&amp;sll=40.749858,-73.974724&amp;sspn=0.242924,0.248909&amp;ie=UTF8&amp;hq=Exxon+Mobil+Corporation,&amp;hnear=Las+Colinas+Blvd,+Irving,+Texas&amp;ll=32.889861,-96.950211&amp;spn=0.067304,0.062227&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2295103862368292286&amp;output=embed" />
             </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/exxonmobil" />
+            </Feeds>
             <Summary>
             	ExxonMobil is a U.S. based oil and gas corporation with headquarters in Irving, Texas. It is the world's largers company in terms of revenue, and in addition, was recognized in 2013 as the world's largest publicly traded company in regards to market capitalization.
             </Summary>
