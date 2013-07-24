@@ -181,23 +181,58 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
 
     def test_insert_2(self):
-        root = fromstring()
+        root = fromstring(open('TestPerson.xml').read())
         insert(root)
-        c = Person.objects.get(id='PER_ADMLNZ')
-        self.assertEqual(str(c.kind), 'Murderer')
-        self.assertEqual(str(c.location), 'Newtown, Connecticut')
+        p = None
+        
+        try:
+            p = Person.objects.get(id='PER_BROBMA')
+        except Person.DoesNotExist:
+    	    self.assertTrue(False)
+        self.assertEqual(str(p.kind), 'President')
+        self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
 
     def test_insert_3(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        insert(root)
+        o = None
+        
+        try:
+            o = Organization.objects.get(id='ORG_UNDWAY')
+        except Organization.DoesNotExist:
+    	    self.assertTrue(False)
+        self.assertEqual(str(o.kind), 'Non-profit Organization')
+        self.assertEqual(str(o.location), 'Worldwide')
+        # self.assertTrue('<li>In 1887, a Denver woman, a priest, two ministers' in o.history)
+        self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
 
-    def test_get_entity_1(self):
-        pass
+    def test_get_entity_1(self): 
+    	root = fromstring(open('TestCrisis.xml').read())
+    	insert(root)
+    	
+        a = getEntity(Crisis, 'CRI_SHESSG')
+        self.assertEqual(str(a.kind), 'Spree Shooting')
+        self.assertEqual(str(a.date), '2012-12-14')
+        self.assertEqual(str(a.time), '09:35:00')
+        self.assertEqual(str(a.location), '<li>Newtown, Connecticut</li>')
 
     def test_get_entity_2(self):
-        pass
+    	root2 = fromstring(open('TestPerson.xml').read())
+    	insert(root2)
+    	
+    	b = getEntity(Person, 'PER_BROBMA')
+    	self.assertEqual(str(b.kind), 'President')
+    	self.assertEqual(str(b.location), 'Washington, D.C, United States of America')
 
     def test_get_entity_3(self):
-        pass
+    	root3 = fromstring(open('TestOrganization.xml').read())
+    	insert(root3)
+    	
+    	c = getEntity(Organization, 'ORG_UNDWAY')   	
+        self.assertEqual(str(c.kind), 'Non-profit Organization')
+        self.assertEqual(str(c.location), 'Worldwide')
+        self.assertEqual(str(c.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
+    	
 
     def test_cri_handler_1(self):
         pass
