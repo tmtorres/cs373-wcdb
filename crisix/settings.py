@@ -19,6 +19,10 @@ DATABASES = {}
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
 
+TEST_DATABASES = {
+    'default': dj_database_url.config(env='TEST_DATABASE_URL')
+}
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['*']
@@ -63,6 +67,8 @@ THUMB_URL = '/media/thumbs/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(dirname(dirname(__file__)), "static")
 BASE_DIR = os.path.join(dirname(dirname(__file__)))
+
+TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
