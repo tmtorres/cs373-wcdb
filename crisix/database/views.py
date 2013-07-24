@@ -30,7 +30,7 @@ def test(request):
     process = subprocess.Popen('python manage.py test database > TestWCDB2.out 2>&1', shell=True)
     process.wait()
     assert os.path.exists('TestWCDB2.out')
-    return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})
+    return render(request, 'utility.html', {'view': 'test', 'output': open('TestWCDB2.out').read().split('\n')[:-4]})S
 '''
 
 newlines = ['\n', '\r\n', '\r']

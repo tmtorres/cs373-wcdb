@@ -29,7 +29,7 @@
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
                 <br>
-                <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="{% url database.views.results %}"></iframe>
+                <iframe width="100%" height="500" frameborder="0" scrolling="yes" src="{% url database.views.results %}"></iframe>
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
                 <br><br>

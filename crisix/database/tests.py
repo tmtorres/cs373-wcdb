@@ -181,11 +181,8 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
 
     def test_insert_2(self):
-        root = fromstring()
+        root = fromstring('TestPerson.xml')
         insert(root)
-        c = Person.objects.get(id='PER_ADMLNZ')
-        self.assertEqual(str(c.kind), 'Murderer')
-        self.assertEqual(str(c.location), 'Newtown, Connecticut')
 
     def test_insert_3(self):
         pass
