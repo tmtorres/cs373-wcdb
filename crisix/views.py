@@ -15,9 +15,6 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 def index(request):
-    return redirect('crisix/')
-
-def home(request):
     crises = [{'id': str(c.id).lower()[4:], 'name': c.name} for c in Crisis.objects.all()]
     organizations = [{'id': str(o.id).lower()[4:], 'name': o.name} for o in Organization.objects.all()]
     people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]

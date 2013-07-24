@@ -58,7 +58,7 @@ def download(request):
 
 def validate(request, file):
     try:
-        elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile='/u/tmtorres/CS373/cs373-wcdb/WCDB2.xsd.xml',
+        elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
                              xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
         elemTree = elementTreeWrapper.getTree()
         root = elemTree.getroot()

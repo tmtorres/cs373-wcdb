@@ -14,16 +14,7 @@ LOCKDOWN_PASSWORDS = ('django')
 
 MANAGERS = ADMINS
 
-DATABASES = {
-'default': {
-    'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-    'NAME': 'db_name',                      # Or path to database file if using sqlite3.
-    'USER': '',                      # Not used with sqlite3.
-    'PASSWORD': '',
-    'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-    'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
- }
-}
+DATABASES = {}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
@@ -71,6 +62,7 @@ THUMB_URL = '/media/thumbs/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(dirname(dirname(__file__)), "static")
+BASE_DIR = os.path.join(dirname(dirname(__file__)))
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
