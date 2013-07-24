@@ -86,7 +86,7 @@ def getPeople(root):
         getCommon(node, p)
 
 def getCommon(node, entity):
-    assert root is not None
+    assert node is not None
     assert entity is not None
     attr = ET.SubElement(node, 'Common')
     w = entity.elements.filter(ctype='CITE')

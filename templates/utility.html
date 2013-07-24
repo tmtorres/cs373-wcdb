@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block sidebar %}
 <li class="nav-header">Unit Tests</li>
+{% if view == 'test' %}
+<li><b>Running...</b></li>
+{% else %}
 <li><a href="{% url database.views.test %}">Run Test Suite</a></li>
+{% endif %}
 <li class="nav-header">Facilities</li>
 <button type="submit" class="btn btn-primary" onclick="window.location.href='{% url database.views.upload %}'">Import<i class=" icon-upload"></i></button>
 <button type="submit" class="btn btn-primary" onClick="window.location.href='{% url database.views.download %}'">Export<i class=" icon-download"></i></button>

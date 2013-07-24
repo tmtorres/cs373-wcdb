@@ -19,6 +19,6 @@ urlpatterns = patterns('',
     url(r'^$', 'database.views.utility', name='utility'),
     url(r'^import/$', 'database.views.upload'),
     url(r'^export/$', 'database.views.download'),
-    url(r'^test/$', 'database.views.test'),
+    url(r'^test/$', 'database.views.test', name='test'),
     url(r'^results/$', 'database.views.results'),
 )

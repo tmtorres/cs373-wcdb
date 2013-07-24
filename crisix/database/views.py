@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 from django.core.urlresolvers import reverse
 from django.template.response import TemplateResponse
+from django.core import management
 
 from xml.etree.ElementTree import ParseError
 
@@ -35,6 +36,7 @@ def test(request):
 
 newlines = ['\n', '\r\n', '\r']
 def capture(process):
+    yield open('style.html').read()
     while True:
         out = process.stderr.read(1)
         if out == '' and process.poll() != None:
@@ -84,8 +86,6 @@ def upload(request):
         if form.is_valid():
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/test.xml', ContentFile(request.FILES['file'].read())))
             return validate(request, tmp)
-        else:
-            assert False
     else:
         form = UploadFileForm()
     #return render(request, 'utility.html', {'view': 'form', 'form': form,})
