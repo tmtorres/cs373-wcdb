@@ -233,37 +233,89 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), 'Worldwide')
         self.assertEqual(str(c.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
     	
-
     def test_cri_handler_1(self):
-        pass
-
+    	root = fromstring(open('TestCrisis.xml').read())    
+    	    
+    	criHandler(root[0]) 
+    	c = Crisis.objects.get(id='CRI_SHESSG')
+    	self.assertEqual(str(c.kind), 'Spree Shooting')
+        self.assertEqual(str(c.date), '2012-12-14')
+        self.assertEqual(str(c.time), '09:35:00')
+        self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
+       
     def test_cri_handler_2(self):
-        pass
-
+        root = fromstring(open('TestCrisis.xml').read())
+        
+        criHandler(root[1])
+        c = Crisis.objects.get(id='CRI_SCHERQ')
+        self.assertEqual(str(c.kind), 'Earthquake')
+        self.assertEqual(str(c.date), '2008-05-12')
+        self.assertEqual(str(c.time), '14:28:01')
+        self.assertEqual(str(c.location), '<li>Wenchuan County, Sichuan</li><li>Sichuan Province</li>')
+           
     def test_cri_handler_3(self):
-        pass
+        root = fromstring(open('TestCrisis.xml').read())
+        
+        criHandler(root[2])
+        c = Crisis.objects.get(id='CRI_LYCLWR')
+        self.assertEqual(str(c.kind), 'Civil War')
+        self.assertEqual(str(c.date), '2011-02-15')
+        self.assertEqual(str(c.location), '<li>Libya</li>')
 
     def test_org_handler_1(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        
+        orgHandler(root[0])
+        o = Organization.objects.get(id='ORG_UNDWAY')
+        self.assertEqual(str(o.kind), 'Non-profit Organization')
+        self.assertEqual(str(o.location), 'Worldwide')
+        self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
 
     def test_org_handler_2(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        
+        orgHandler(root[1])
+        o = Organization.objects.get(id='ORG_SNQKRF')
+        self.assertEqual(str(o.kind), 'Non-profit, humanitarian Organization')
+        self.assertEqual(str(o.location), 'Chengdu, China')
+        self.assertTrue('<li>Volunteer: volunteer@sichuan-quake-relief.org</li>' in str(o.contact)) 
 
     def test_org_handler_3(self):
-        pass
+        root = fromstring(open('TestOrganization.xml').read())
+        
+        orgHandler(root[2])
+        o = Organization.objects.get(id='ORG_NLTLCL')
+        self.assertEqual(str(o.kind), 'de facto Government')
+        self.assertEqual(str(o.location), 'Benghazi, Libya')
+        self.assertEqual(str(o.contact), '<li> Organization is no longer active. </li>')
 
     def test_per_handler_1(self):
-        pass
+        root = fromstring(open('TestPerson.xml').read())
+        
+        perHandler(root[0])
+        p = Person.objects.get(id='PER_BROBMA')
+        self.assertEqual(str(p.kind), 'President')
+        self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
 
     def test_per_handler_2(self):
-        pass
+        root = fromstring(open('TestPerson.xml').read())
+        
+        perHandler(root[1])
+        p = Person.objects.get(id='PER_ADMLNZ')
+        self.assertEqual(str(p.kind), 'Murderer')
+        self.assertEqual(str(p.location), 'Newtown, Connecticut')
 
     def test_per_handler_3(self):
-        pass
+        root = fromstring(open('TestPerson.xml').read())
+        
+        perHandler(root[2])
+        p = Person.objects.get(id='PER_HUJNTO')
+        self.assertEqual(str(p.kind), 'President')
+        self.assertEqual(str(p.location), 'Communist Party of China')
 
     def test_insert_elem_1(self):
         pass
-
+        
     def test_insert_elem_2(self):
         pass
 
@@ -271,7 +323,7 @@ class TestUpload(TestCase):
         pass
 
     def test_com_handler_1(self):
-        pass
+    	pass
 
     def test_com_handler_2(self):
         pass
@@ -281,8 +333,8 @@ class TestUpload(TestCase):
 
 class TestDownload(TestCase):
     def test_get_crises_1(self):
-        pass
-
+    	pass
+        
     def test_get_crises_2(self):
         pass
 
