@@ -1,6 +1,7 @@
 # Django settings for crisix project.
 import os, sys, dj_database_url
 from os.path import dirname
+from os import environ
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -25,7 +26,7 @@ DATABASES = {
 }
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
-DATABASES['default'] = dj_database_url.config(default='postgres://localhost/db_name')
+DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
