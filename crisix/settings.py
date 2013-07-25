@@ -15,13 +15,10 @@ LOCKDOWN_PASSWORDS = ('django')
 MANAGERS = ADMINS
 
 DATABASES = {}
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
 DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
 
-TEST_DATABASES = {
-    'default': dj_database_url.config(env='TEST_DATABASE_URL')
-}
+TEST_DATABASES = {}
+TEST_DATABASES['default'] = dj_database_url.config(default='postgres://ygzwjwrsghenrk:d_tbgauYlWirkd2oqb0daeGKUb@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d8i8o827885r42')
 
 TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
 
