@@ -7,6 +7,10 @@ from xml.etree.ElementTree import ElementTree
 from xml.dom import minidom
 
 def getCrises(root):
+    """
+    root is an ElementTree object
+    getCrises parses crises from the ElementTree to xml
+    """
     assert root is not None
     for c in Crisis.objects.all():
         node = ET.SubElement(root, 'Crisis')
@@ -40,6 +44,10 @@ def getCrises(root):
         getCommon(node, c)
 
 def getOrganizations(root):
+    """
+    root is an ElementTree object
+    getOrganizations parses orgss from the ElementTree to xml
+    """
     assert root is not None
     for o in Organization.objects.all():
         node = ET.SubElement(root, 'Organization')
@@ -65,6 +73,10 @@ def getOrganizations(root):
         getCommon(node, o)
 
 def getPeople(root):
+    """
+    root is an ElementTree object
+    getPeople parses people from the ElementTree to xml
+    """
     assert root is not None
     for p in Person.objects.all():
         node = ET.SubElement(root, 'Person')
@@ -86,6 +98,11 @@ def getPeople(root):
         getCommon(node, p)
 
 def getCommon(node, entity):
+    """
+    node is the root of the entity we are parsing a common element to
+    entity defies which etype we are parsing for
+    getCommon parses the common elements from the ET to xml
+    """
     assert node is not None
     assert entity is not None
     attr = ET.SubElement(node, 'Common')
