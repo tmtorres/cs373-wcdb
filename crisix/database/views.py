@@ -32,6 +32,7 @@ def capture(request, process):
     while True:
         out = process.stderr.read(1)
         if out == '' and process.poll() != None:
+            yield '</div>'
             break
         if out in newlines:
             yield '</br>'
