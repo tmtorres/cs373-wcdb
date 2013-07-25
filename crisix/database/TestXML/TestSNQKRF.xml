@@ -1,0 +1,56 @@
+<WorldCrises>
+    <Organization ID="ORG_SNQKRF" Name="Sichuan Quake Relief">
+        <Crises>
+            <Crisis ID="CRI_SCHERQ" />
+        </Crises>
+        <People>
+            <Person ID="PER_HUJNTO" />
+        </People>
+        <Kind>Non-profit, humanitarian Organization</Kind>
+        <Location>Chengdu, China</Location>
+        <History>
+            <li>Founded the morning after the disaster struck, SQR immediately began coordinating emergency relief aid to the affected area. In the first 6 to 8 months, SQR funnelled cash, services and material donations in excess of 15 million RMB to towns and villages in the quake zone – mainly tents, food, water, medical, hygiene and camping supplies, as well as several small-scale water and sanitation projects. SQR’s Winter Relief Project supplied warm bedding, clothing and camping gear worth more than 2 million RMB to more than 6,000 villagers.</li>
+            <li>Acting as a logistics and information hub, SQR connected with other NGOs, donors and volunteers, as well as keeping media and wider communities updated on the latest situation. Recognising the repercussions for survivors and those who had suffered loss or injury, we linked dozens of international and local psychological experts with stricken communities.</li>
+            <li>In summer 2008 SQR sent over 70 foreign and local teachers to coordinate and run Summer Camps in six temporary villages, delivering basic school equipment and educational supplies to more than 30 schools. This project was expanded in the summer of 2009 to become the Sports, Art, Music and English (SAME) Camps in 13 affected villages. More than 260 local and foreign volunteers taught about 4,000 children in the SAME Camps over a 7-week period.</li>
+            <li>As the need for relief aid became less pressing, SQR began to look towards the long-term recovery and future development of the affected region. The badly-damaged Di Kang Le Kindergarten serving five villages in rural Guangji, Mianzhu County, was identified as in need of rebuilding. SQR entered into an agreement with the principal to not only rebuild the kindergarten, but vastly improve the community facilities in the area with a new community centre. The construction phase is complete and the community centre available for use by local community groups.</li>
+        </History>
+        <ContactInfo>
+            <li href="http://sichuan-quake-relief.org/contact-us/">Contact Form</li>
+            <li>Phone: (+91) 1-800-DONTKNOW</li>
+            <li>General enquiries: info@sichuan-quake-relief.org</li>
+            <li>Volunteer: volunteer@sichuan-quake-relief.org</li>
+            <li>Address:
+                c/o The Bookworm (LaoShuChong)
+                Renmin Nan Road, Section 4,#28
+                YuJie East Street, No2-7
+                Sichuan Province
+                Chengdu, China 610041
+            </li>
+            <li>Fax: +86 (0)28 8552-1997</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://sichuan-quake-relief.org/">Sichuan Quake Relief</li>
+            </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/pages/Sichuan-Quake-Relief/195505027139931">SQR Facebook</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
+            </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?q=chengdu,+sichuan,+china&amp;hl=en&amp;client=safari&amp;oe=UTF-8&amp;hnear=Chengdu,+Sichuan,+China&amp;t=m&amp;ie=UTF8&amp;hq=&amp;z=11&amp;ll=30.572312,104.06662&amp;output=embed"/> 	
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/SichuanRelief" />
+            </Feeds>
+            <Summary>
+                Sichuan Quake Relief (SQR) is a non-profit, humanitarian organisation dedicated to improving the lives of those affected by the 12 May 2008 Sichuan earthquake.
+            </Summary>
+        </Common>
+    </Organization>
+</WorldCrises>

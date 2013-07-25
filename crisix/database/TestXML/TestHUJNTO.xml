@@ -1,0 +1,40 @@
+<WorldCrises>
+    <Person ID="PER_HUJNTO" Name="Hu Jintao">
+        <Crises>
+            <Crisis ID="CRI_SCHERQ" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_SNQKRF" />
+        </Organizations>
+        <Kind>President</Kind>
+        <Location>Communist Party of China</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://english.peopledaily.com.cn/data/people/hujintao.shtml">"Hu Jintao". People's Daily.</li>
+                <li href="http://news.bbc.co.uk/2/hi/asia-pacific/4165209.stm">"China's leader shows his stripes". BBC.</li>
+                <li href="http://www.time.com/time/magazine/article/0,9171,1668457,00.html">"In China, Hu is the Man to See". Time Inc.</li>
+
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Hu_Jintao">"Hu Jintao". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/5/59/Hu_Jintao_Cannes2011.jpg" text="Chinese President Hu Jintao" />
+                <li embed="http://politics.blogs.foxnews.com/sites/politics.blogs.foxnews.com/files/Obama%20Hu%20Jintao.jpg" text="Hu Jintao and Obama" />
+                <li embed="http://houston.china-consulate.org/eng/nv/W020080524158158759020.jpg" text="Hu Jintao tries to comfort an earthquake surviving pupil" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/QqSSjqpBrNw" />
+                <li embed="//www.youtube.com/embed/9auz-AAGyks" />
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China"/>
+            </Maps>
+            <Summary>
+                Hu Jintao was the 6th President of the People's Republic of China from 2003-2013. Hu has been involved in the Communist party bureaucracy for most of his adult life, notably as Party secretary for Guizhou province and the Tibet Autonomous Region, and then later First secretary of the Party Central Secretariat and Vice-President under former leader Jiang Zemin. Hu is the first leader of the Communist Party without any significant revolutionary credentials.
+            </Summary>
+        </Common>
+    </Person>
+</WorldCrises>

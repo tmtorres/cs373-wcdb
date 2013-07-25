@@ -1,0 +1,67 @@
+<WorldCrises>
+    <Crisis ID="CRI_SCHERQ" Name="2008 Sichuan earthquake">
+        <People>
+            <Person ID="PER_HUJNTO" />
+        </People>
+        <Organizations>
+            <Org ID="ORG_SNQKRF" />
+        </Organizations>
+        <Kind>Earthquake</Kind>
+        <Date>2008-05-12</Date>
+        <Time>14:28:01</Time>
+        <Locations>
+            <li>Wenchuan County, Sichuan</li>
+            <li>Sichuan Province</li>
+        </Locations>
+        <HumanImpact>
+            <li>It killed 69,195 people.</li>
+            <li>374,643 injured.</li>
+            <li>18,392 others missing.</li>
+            <li>It left about 4.8 million people homeless.</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>On November 6, 2008, the central government announced that it would spend 1 trillion yuan (about $146.5 billion) over the next three years to rebuild areas ravaged by the earthquake, as part of the Chinese economic stimulus program.</li>
+        </EconomicImpact>
+        <ResourcesNeeded>
+            <li>A little over 90 minutes after the earthquake, the Ministry of Health sent ten emergency medical teams to Wenchuan County.</li>
+            <li>The Chengdu Military Region Command dispatched 50,000 troops and armed police to help with disaster relief work in Wenchuan County.</li>
+            <li>An earthquake emergency relief team of 184 people (consisting of 12 people from the State Seismological Bureau, 150 from the Beijing Military Area Command, and 22 from the Armed Police General Hospital) left Beijing in two military transport planes to travel to Wenchuan County.</li>
+            <li>Over 150 aircrafts were deployed for the delivery of food, water, and emergency aid, and also the evacuation of the injured and reconnaissance of quake-stricken areas. 60 were to be provided by the PLAAF, 30 were to be provided by the civil aviation industry, and the rest by the air force, army, and civil aviation.</li>
+        </ResourcesNeeded>
+        <WaysToHelp>
+            <!-- Put text with optional hyperlinks here -->
+            <li href="http://sichuan-quake-relief.org/">Donate to the Sichuan Quake Relief</li>
+        </WaysToHelp>
+        <Common>
+            <Citations>
+                <!-- Put text with optional hyperlinks here -->
+                <li href="http://www.nytimes.com/2009/05/08/world/asia/08china.html?_r=0">"China Reports Student Toll for Quake". New York Times.</li>
+                <li href="http://www.bloomberg.com/apps/news?pid=newsarchive&amp;sid=aZhtsxh8IlB4&amp;refer=home">"50,000 troops deployed". Bloomberg L.P.</li>
+            </Citations>
+            <ExternalLinks>
+                <!-- Put text with compulsory hyperlinks here -->
+                <li href="http://en.wikipedia.org/wiki/2008_Sichuan_earthquake">"2008 Sichuan Earthquake". Wikipedia.</li>
+            </ExternalLinks>
+            <!-- hrefs optional in the following depending on how you want them to behave on your site -->
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://rcmi.files.wordpress.com/2008/05/705px-2008_sichuan_earthquake_map_no_labelssvg.png" text="Sichuan Earthquake Impact Map" />
+                <li embed="http://www.spark-of-inspiration.com/images/Sichuan_Earthquake.jpg" text="Sichuan Earthquake"/>
+                <li embed="http://media-1.web.britannica.com/eb-media/64/117264-004-4F6187D9.jpg" text="Rescue workers searching for survivors" />
+                <li embed="http://i.telegraph.co.uk/multimedia/archive/01112/earthquake-damage-_1112578c.jpg" text="Millions still homeless a year after Sichuan earthquake" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/78h-BpSkk1w" text="15 May 2008 - China Sichuan Quake - BBC Report"/>
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=h&amp;oe=UTF8&amp;msa=0&amp;msid=206935958482646980562.00044d19b32c5c9a07f6b&amp;ll=31.028366,103.470526&amp;spn=0.014132,0.206852&amp;output=embed" />
+            </Maps>
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+                A deadly earthquake that measured at 8.0 Ms and 7.9 Mw, occured at 02:28 PM China Standard Time on Monday, May 12, 2008 in Sichuan province, killing 69,195 people, 374,643 injured, 18,392 missing, and 4.8 million people homeless.
+            </Summary>
+        </Common>
+    </Crisis>
+</WorldCrises>

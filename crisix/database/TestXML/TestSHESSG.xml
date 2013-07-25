@@ -1,0 +1,70 @@
+<WorldCrises>
+    <!-- Crisis elements -->
+    <Crisis ID="CRI_SHESSG" Name="Sandy Hook Elementary School Shooting">
+        <People>
+            <Person ID="PER_ADMLNZ" />
+        </People>
+        <Organizations>
+            <Org ID="ORG_UNDWAY" />
+        </Organizations>
+        <Kind>Spree Shooting</Kind>
+        <Date>2012-12-14</Date>
+        <Time>09:35:00</Time>
+        <Locations>
+            <li>Newtown, Connecticut</li>
+        </Locations>
+        <HumanImpact>
+            <li>28 total deaths.</li>
+            <li>20 among the 28 were first grade students.</li>
+            <li>6 among the 28 were school personnel.</li> 
+            <li>1 among the 28 was the perpetrator mother.</li>
+            <li>The 28th death was the suicide of the perpetrator.</li>
+            <li>2 others were injured.</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>The shares of gun manufactures have decreased significantly. The number of gun and ammunition purchases rose over 180% the day after the shooting due to fear of harsher gun laws.  The school has been closed and a $57 million proposal has been made to demolish and rebuild the school.</li>
+        </EconomicImpact>
+        <ResourcesNeeded>
+            <li>Connecticut State Police received the first call at 9:41 am and with Newtown police they quickly mobilized local police dog, SWAP, a bomb squad, and a state helicopter.</li>
+            <li>At approximately 10:00 am, Danbury Hospital moved extra medical personnel in expectation of having to treat numerous victims.</li>
+            <li>The New York City medical examiner sent out a portable morgue to assist the authorities to remove the victims' bodies from the school.</li>
+            <li>A state trooper was assigned to each victim's family to protect their privacy and provide them with information.</li>
+        </ResourcesNeeded>
+        <WaysToHelp>
+            <!-- Put text with optional hyperlinks here -->
+            <li href="https://newtown.uwwesternct.org/">Donate to the Sandy Hook School Support Fund</li>
+            <li href="https://www.facebook.com/SandyHookChildren?fref=ts">Memoriam Facebook Page: R.I.P Sandy Hook Elementary School Children</li>
+        </WaysToHelp>
+        <Common>
+            <Citations>
+                <!-- Put text with optional hyperlinks here -->
+                <li href="http://www.cnn.com/interactive/2012/12/us/sandy-hook-timeline/index.html">"Sandy Hook shooting: What happened?". CNN.</li>
+                <li href="http://www.cnbc.com/id/100325110">"The Sandy Hook Effect: Gun Sales Rise as Stocks Fall". CNBC.</li>
+                <li href="http://www.investopedia.com/financial-edge/0113/sandy-hooks-consequences-for-the-gun-industry.aspx">"Sandy Hook's Consequences For The Gun Industry". Investopedia US.</li>
+            </Citations>
+            <ExternalLinks>
+                <!-- Put text with compulsory hyperlinks here -->
+                <li href="http://en.wikipedia.org/wiki/Newtown_shooting">"Sandy Hook Elementary School shooting". Wikipedia.</li>
+            </ExternalLinks>
+            <!-- hrefs optional in the following depending on how you want them to behave on your site -->
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg" text="Shooting victims: Sandy Hook Elementary School" />
+            </Images>
+            <Videos>
+                <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
+                <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
+                <li embed="//www.youtube.com/embed/RVHufEjU9VU" text="President Barack Obama makes a Statement on the Shooting."/>
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=m&amp;source=embed&amp;oe=UTF8&amp;msa=0&amp;msid=213845869214841596682.0004d0d7915820d13990e&amp;ll=41.414362,-73.253222&amp;spn=0.01001,0.05083&amp;output=embed" />
+            </Maps>
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+              Adam Lanza is believed to have shot his mother, Nancy Lanza, in the head at her home in Newtown, Connecticut, around 9 a.m. on December 14, 2012, before taking her car and driving approximately five miles to the Sandy Hook Elementary School, where he shot and killed 20 students between the ages of 5 and 10, as well as six adult workers. According to reports, most of the shooting occurred in two of the school's first-grade classrooms; 14 students in one classroom, and six in the other, were murdered. Only two of the victims who were shot by Lanza—both teachers—survived the attack. According to police, after firing between 50 to 100 shots, Lanza then turned the gun on himself, fatally shooting himself in the head as responders began arriving on scene, around 9:50 a.m.
+            </Summary>
+        </Common>
+    </Crisis>
+</WorldCrises>
