@@ -403,7 +403,7 @@ class TestDownload(TestCase):
     	getCrises(root)
     	
     	self.assertEqual(root[1][2].text, 'Civil War')
-    	self.assertEqual(root[0][3].text, '2012-12-14')
+    	self.assertEqual(root[0][3].text, '2008-05-12')
     	self.assertEqual(root[0][4].text, '09:35:00')
        
     def test_get_crises_2(self):
