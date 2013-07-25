@@ -161,8 +161,8 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/organizations/whorgn/">World Health Organization</a></li>'),-1)
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/people/brobma/">Barack Obama</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/organizations/whorgn/">World Health Organization</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/people/brobma/">Barack Obama</a></li>'),-1)
 
 class TestUpload(TestCase):
     def test_insert_1(self):
