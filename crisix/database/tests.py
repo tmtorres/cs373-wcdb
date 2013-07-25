@@ -404,7 +404,7 @@ class TestDownload(TestCase):
     	
     	self.assertEqual(root[1][2].text, 'Civil War')
     	self.assertEqual(root[0][3].text, '2008-05-12')
-    	self.assertEqual(root[0][4].text, '09:35:00')
+    	self.assertEqual(root[0][4].text, '14:28:01')
        
     def test_get_crises_2(self):
     	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
