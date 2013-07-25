@@ -100,7 +100,7 @@ def getPeople(root):
 def getCommon(node, entity):
     """
     node is the root of the entity we are parsing a common element to
-    entity defies which etype we are parsing for
+    entity defines which etype we are parsing for
     getCommon parses the common elements from the ET to xml
     """
     assert node is not None
