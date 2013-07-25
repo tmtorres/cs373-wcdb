@@ -48,7 +48,7 @@ class SimpleTest(TestCase, RequestFactory):
 
     def test_index(self):
         # Test if page can be accessed properly
-        resp = self.client.get('/crisix/')
+        resp = self.client.get('/')
         self.assertEqual(resp.status_code, 200)
 
         # Test if database is properly populated
@@ -88,7 +88,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/people/brobma')
         response = people(request, 'brobma')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
+        self.assertEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
         self.assertNotEqual(htmlstring.find('<li><a href="/crisix/organizations/whorgn/">World Health Organization</a></li>'),-1)
 
     # -----------------
@@ -124,7 +124,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/organization/whorgn')
         response = organizations(request, 'whorgn')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
+        self.assertEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
         self.assertNotEqual(htmlstring.find('<li><a href="/crisix/people/brobma/">Barack Obama</a></li>'),-1)
 
 
@@ -161,7 +161,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<li><a href="crisix/organizations/whorgn/">World Health Organization</a></li>'),-1)
+        self.assertEqual(htmlstring.find('<li><a href="crisix/organizations/whorgn/">World Health Organization</a></li>'),-1)
         self.assertNotEqual(htmlstring.find('<li><a href="crisix/people/brobma/">Barack Obama</a></li>'),-1)
 
 class TestUpload(TestCase):
