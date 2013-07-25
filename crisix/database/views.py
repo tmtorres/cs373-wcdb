@@ -28,7 +28,7 @@ def utility(request):
 
 newlines = ['\n', '\r\n', '\r']
 def capture(request, process):
-    yield open('style.html').read()
+    yield open(os.path.join(settings.BASE_DIR, 'crisix/style.html')).read()
     while True:
         out = process.stderr.read(1)
         if out == '' and process.poll() != None:
@@ -39,7 +39,7 @@ def capture(request, process):
             yield out
 
 def results(request):
-    cmd = ['python', 'manage.py', 'test', 'database', '--noinput']
+    cmd = ['python', 'crisix/manage.py', 'test', 'database', '--noinput']
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return HttpResponse((str(c) for c in capture(request, process)))
 
