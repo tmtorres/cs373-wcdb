@@ -51,7 +51,7 @@ def download(request):
     getCrises(root)
     getPeople(root)
     getOrganizations(root)
-    response = HttpResponse(content_type='text/xml')
+    response = HttpResponse(content_type='text/plain')
     response['Content-Disposition'] = 'attachment; filename="crisix.xml"'
     minidom.parseString(tostring(root)).writexml(response, indent="    ")
     return response
