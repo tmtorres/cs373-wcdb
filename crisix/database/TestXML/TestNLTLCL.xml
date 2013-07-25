@@ -1,0 +1,46 @@
+<WorldCrises>
+    <Organization ID="ORG_NLTLCL" Name="National Transitional Council">
+        <Crises>
+            <Crisis ID="CRI_LYCLWR" />
+        </Crises>
+        <People>
+            <Person ID="PER_MURGDI" />
+        </People>
+        <Kind>de facto Government</Kind>
+        <Location>Benghazi, Libya</Location>
+        <History>
+            <li>A National Transitional Council was formed on February 26th, 2011 to act as "the political face of the revolution". Its spokesman, Hafiz Ghoga, made clear at the launch press conference that the national council was not a provisional government and added that the newly formed council was not in contact with foreign governments and did not want them to intervene.</li>
+            <li>On March 5th, 2011, the council issued a statement in which it declared itself to be the "sole representative of all Libya". Mustafa Abdul Jalil was named as chairman of the council.</li>
+            <li>On March 10th, 2011, France became the first country to recognise the council as Libya's only legitimate government.</li>
+            <li>In a ceremony on August 8th, 2012, the NTC formally transferred power to the General National Congress. Jalil stepped down as chairman, passing the position to the GNC's oldest member, Mohammed Ali Salim. The NTC was then dissolved, while the GNC members took their oath of office, led by Salim.</li>
+        </History>
+        <ContactInfo>
+            <li> Organization is no longer active. </li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://www.boston.com/news/world/middle-east/2012/08/08/libya-transitional-rulers-hand-over-power/uMPkXd9vTSSHg589mU9ykJ/story.html">"Libya's transitional rulers hand over power". Boston.com.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/National_Transitional_Council">Wikipedia</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
+                <li embed="http://www1.pictures.zimbio.com/gi/President+Obama+Meets+President+National+Transitional+STm2i_EQWMMl.jpg"/>
+            </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/gIVZlSk1qbI"/>
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;aq=0&amp;oq=national+transitional+counc&amp;sll=41.391894,-73.45813&amp;sspn=0.015035,0.015557&amp;ie=UTF8&amp;hq=National+Transitional+Council,+Tripoli,+Tarabulus,+Libya&amp;ll=32.862133,13.197563&amp;spn=0.006295,0.006295&amp;t=m&amp;output=embed" />
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/NTC_of_Libya" />
+            </Feeds>
+            <Summary>
+                The National Transitional Council of Libya was the de facto government of Libya for a period during and after the Libyan civil war, in which rebel forces overthrew the regime of Muammar Gaddafi. The NTC governed Libya for a period of ten months after the end of the war, holding elections to a General National Congress on July 7th, 2012, and handing power to the newly elected assembly on August 8th, 2012.
+            </Summary>
+        </Common>
+    </Organization>
+</WorldCrises>

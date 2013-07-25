@@ -1,0 +1,37 @@
+<WorldCrises>
+    <Person ID="PER_ADMLNZ" Name="Adam Lanza">
+        <Crises>
+            <Crisis ID="CRI_SHESSG" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_UNDWAY" />
+        </Organizations>
+        <Kind>Murderer</Kind>
+        <Location>Newtown, Connecticut</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://www.biography.com/people/adam-lanza-21068899">"Adam Lanza biography". A+E Television Networks, LLC.</li>
+            </Citations>
+            <ExternalLinks>
+                <li href="http://en.wikipedia.org/wiki/Adam_lanza#Perpetrator">"Sandy Hook Elementary School shooting". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://www.mrconservative.com/files/2013/03/0219_adam-lanza2.jpg" />
+                <li embed="http://upload.wikimedia.org/wikipedia/en/f/f0/Adam_lanza_sandy_hook_shooter.jpg" />
+                <li embed="http://www.abc.net.au/reslib/201305/r1113059_13548909.jpg" />
+            </Images>
+            <Videos>
+                <li embed="//www.youtube.com/embed/ItsOJUpK-cY" text="ABC News: Why Did Adam Lanza Snap?"/>
+                <li embed="//www.youtube.com/embed/ddyiMd3tdwE" text="Chilling Details Emerge on Newtown School Shooter Adam Lanza "/>
+            </Videos>
+            <Maps>
+                <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;aq=1&amp;oq=s&amp;sll=41.419431,-73.278894&amp;sspn=0.007104,0.016512&amp;ie=UTF8&amp;hq=Sandy+Hook+Elementary+School,+Newtown,+CT&amp;t=m&amp;z=16&amp;iwloc=A&amp;output=embed" text="Newtown, Connecticut, USA" />
+            </Maps>
+            <Summary>
+                Adam Lanza was the perpetrator of the 2012 Sandy Elementary School shooting in Newtown, Connecticut, USA. Lanza lived in Sandy Hook, 5 miles from the school with his mother. He attended Western Connecticut State University in 2008 and 2009. Students and teachers who knew him in high school described Lanza as "intelligent, but nervous and fidgety". He avoided attracting attention and was uncomfortable socializing. He is not known to have had any close friends in school. According to a law enforcement official, Lanza was reported to have been diagnosed with Asperger Syndrome. Lanza's brother told law enforcement that Adam was believed to have a personality disorder and was "somewhat autistic". On December 14, 2012, Lanza killed his mother and 26 others at the school.
+            </Summary>
+        </Common>
+    </Person>
+</WorldCrises>

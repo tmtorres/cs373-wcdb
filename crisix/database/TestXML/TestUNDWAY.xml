@@ -1,0 +1,45 @@
+<WorldCrises>
+    <Organization ID="ORG_UNDWAY" Name="United Way">
+        <Crises>
+            <Crisis ID="CRI_SHESSG" />
+        </Crises>
+        <People>
+            <Person ID="PER_ADMLNZ" />
+        </People>
+        <Kind>Non-profit Organization</Kind>
+        <Location>Worldwide</Location>
+        <History>
+            <li>In 1887, a Denver woman, a priest, two ministers and a rabbi recognized the need for cooperative action to address their city’s welfare problems.</li>
+            <li>Frances Wisebart Jacobs, the Rev. Myron W. Reed, Msgr. William J.O’Ryan, Dean H. Martyn Hart and Rabbi William S. Friedman put their heads together to plan the first united campaign for ten health and welfare agencies. They created an organization to serve as an agent to collect funds for local charities, as well as to coordinate relief services, counsel and refer clients to cooperating agencies, and make emergency assistance grants in cases which could not be referred.</li>
+            <li>That year, Denver raised $21,700 and created a movement that would spread throughout the country to become the United Way. More than 125 years later, United Way is still focused on mobilizing the caring power of communities and making a difference in people’s lives.</li>
+        </History>
+        <ContactInfo>
+            <li href="http://apps.unitedway.org/contact/">Contact Form</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+        <Common>
+            <Citations>
+                <li href="http://www.unitedway.org/">United Way Worldwide</li>
+            </Citations>
+            <ExternalLinks>
+            	<li href="https://www.facebook.com/UnitedWay">United Way Facebook</li>
+                <li href="http://en.wikipedia.org/wiki/United_Way_Worldwide">"United Way Worldwide". Wikipedia.</li>
+            </ExternalLinks>
+            <Images>
+                <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
+            </Images>
+            <Videos>
+            	<li embed="//www.youtube.com/embed/YCT9cZNh0MQ" text="United Way Campaign" />
+            </Videos>
+            <Maps>
+            	<li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Way-Western+Ct,+West+Street,+Danbury,+CT&amp;aq=0&amp;oq=united+way+western+c&amp;sll=42.352582,-71.047726&amp;sspn=0.118487,0.124454&amp;ie=UTF8&amp;hq=United+Way-Western+Ct,&amp;hnear=West+St,+Danbury,+Connecticut+06810&amp;ll=41.391889,-73.45814&amp;spn=0.015035,0.015557&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=2348952424447283674&amp;output=embed" />
+            </Maps>
+            <Feeds>
+                <li embed="https://twitter.com/UnitedWay" />
+            </Feeds>
+            <Summary>
+                Immediately following the tragedy on December 14, 2012, The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut and the Newtown Savings Bank. The fund was established to receive undesignated financial donations, with the intent that the money raised would support families impacted by the tragedy, first responders, teachers, and the Newtown community in both the short and long-term. No fees or expenses have been taken for the administration of the SHSSF.
+            </Summary>
+        </Common>
+    </Organization>
+</WorldCrises>
