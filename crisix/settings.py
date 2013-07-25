@@ -71,6 +71,7 @@ THUMB_URL = '/media/thumbs/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(dirname(dirname(__file__)), "static")
+BASE_DIR = os.path.join(dirname(__file__))
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"

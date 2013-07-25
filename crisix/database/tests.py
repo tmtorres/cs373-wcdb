@@ -8,6 +8,7 @@ Replace this with more appropriate tests for your application.
 import os, sys
 from django.test import TestCase
 from django.test.client import RequestFactory
+from django.conf import settings
 
 from models import *
 from upload import *
@@ -166,7 +167,7 @@ class SimpleTest(TestCase, RequestFactory):
 
 class TestUpload(TestCase):
     def test_insert_1(self):
-        root = fromstring(open('TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
         insert(root)
         c = None
 
@@ -179,21 +180,25 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.date), '2012-12-14')
         self.assertEqual(str(c.time), '09:35:00')
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_insert_2(self):
-        root = fromstring(open('TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
         insert(root)
         p = None
-        
+     
         try:
             p = Person.objects.get(id='PER_BROBMA')
         except Person.DoesNotExist:
     	    self.assertTrue(False)
         self.assertEqual(str(p.kind), 'President')
         self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_insert_3(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
         insert(root)
         o = None
         
@@ -205,9 +210,11 @@ class TestUpload(TestCase):
         self.assertEqual(str(o.location), 'Worldwide')
         # self.assertTrue('<li>In 1887, a Denver woman, a priest, two ministers' in o.history)
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_get_entity_1(self): 
-    	root = fromstring(open('TestCrisis.xml').read())
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
     	insert(root)
     	
         a = getEntity(Crisis, 'CRI_SHESSG')
@@ -215,26 +222,32 @@ class TestUpload(TestCase):
         self.assertEqual(str(a.date), '2012-12-14')
         self.assertEqual(str(a.time), '09:35:00')
         self.assertEqual(str(a.location), '<li>Newtown, Connecticut</li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_get_entity_2(self):
-    	root2 = fromstring(open('TestPerson.xml').read())
+    	root2 = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
     	insert(root2)
     	
     	b = getEntity(Person, 'PER_BROBMA')
     	self.assertEqual(str(b.kind), 'President')
     	self.assertEqual(str(b.location), 'Washington, D.C, United States of America')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_get_entity_3(self):
-    	root3 = fromstring(open('TestOrganization.xml').read())
+    	root3 = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
     	insert(root3)
     	
     	c = getEntity(Organization, 'ORG_UNDWAY')   	
         self.assertEqual(str(c.kind), 'Non-profit Organization')
         self.assertEqual(str(c.location), 'Worldwide')
         self.assertEqual(str(c.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
-    	
+     	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_cri_handler_1(self):
-    	root = fromstring(open('TestCrisis.xml').read())    
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())    
     	    
     	criHandler(root[0]) 
     	c = Crisis.objects.get(id='CRI_SHESSG')
@@ -242,79 +255,97 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.date), '2012-12-14')
         self.assertEqual(str(c.time), '09:35:00')
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
-       
+     	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_cri_handler_2(self):
-        root = fromstring(open('TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSCHERQ.xml')).read())
         
-        criHandler(root[1])
+        criHandler(root[0])
         c = Crisis.objects.get(id='CRI_SCHERQ')
         self.assertEqual(str(c.kind), 'Earthquake')
         self.assertEqual(str(c.date), '2008-05-12')
         self.assertEqual(str(c.time), '14:28:01')
         self.assertEqual(str(c.location), '<li>Wenchuan County, Sichuan</li><li>Sichuan Province</li>')
-           
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_cri_handler_3(self):
-        root = fromstring(open('TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestLYCLWR.xml')).read())
         
-        criHandler(root[2])
+        criHandler(root[0])
         c = Crisis.objects.get(id='CRI_LYCLWR')
         self.assertEqual(str(c.kind), 'Civil War')
         self.assertEqual(str(c.date), '2011-02-15')
         self.assertEqual(str(c.location), '<li>Libya</li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_org_handler_1(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root =fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
         
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
         self.assertEqual(str(o.kind), 'Non-profit Organization')
         self.assertEqual(str(o.location), 'Worldwide')
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_org_handler_2(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSNQKRF.xml')).read())
         
-        orgHandler(root[1])
+        orgHandler(root[0])
         o = Organization.objects.get(id='ORG_SNQKRF')
         self.assertEqual(str(o.kind), 'Non-profit, humanitarian Organization')
         self.assertEqual(str(o.location), 'Chengdu, China')
         self.assertTrue('<li>Volunteer: volunteer@sichuan-quake-relief.org</li>' in str(o.contact)) 
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_org_handler_3(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestNLTLCL.xml')).read())
         
-        orgHandler(root[2])
+        orgHandler(root[0])
         o = Organization.objects.get(id='ORG_NLTLCL')
         self.assertEqual(str(o.kind), 'de facto Government')
         self.assertEqual(str(o.location), 'Benghazi, Libya')
         self.assertEqual(str(o.contact), '<li> Organization is no longer active. </li>')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_per_handler_1(self):
-        root = fromstring(open('TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
         
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
         self.assertEqual(str(p.kind), 'President')
         self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_per_handler_2(self):
-        root = fromstring(open('TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestADMLNZ.xml')).read())
         
-        perHandler(root[1])
+        perHandler(root[0])
         p = Person.objects.get(id='PER_ADMLNZ')
         self.assertEqual(str(p.kind), 'Murderer')
         self.assertEqual(str(p.location), 'Newtown, Connecticut')
-
+    	for c in Crisis.objects.all():
+    		c.delete()
+    		
     def test_per_handler_3(self):
-        root = fromstring(open('TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestHUJNTO.xml')).read())
         
-        perHandler(root[2])
+        perHandler(root[0])
         p = Person.objects.get(id='PER_HUJNTO')
         self.assertEqual(str(p.kind), 'President')
         self.assertEqual(str(p.location), 'Communist Party of China')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_insert_elem_1(self):
-        root = fromstring(open('TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
 
@@ -328,10 +359,12 @@ class TestUpload(TestCase):
         element = p.elements.filter(ctype='VID')
         self.assertEqual(len(element), 3)
         element = p.elements.filter(ctype='CITE')
-        self.assertEqual(len(element), 1)
-        
+        self.assertEqual(len(element), 2)
+    	for c in Crisis.objects.all():
+    		c.delete()
+
     def test_insert_elem_2(self):
-        root = fromstring(open('TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
         criHandler(root[0])
         c = Crisis.objects.get(id='CRI_SHESSG')
 
@@ -346,26 +379,30 @@ class TestUpload(TestCase):
         self.assertEqual(len(element), 2)
         element = c.elements.filter(ctype='CITE')
         self.assertEqual(len(element), 3)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_insert_elem_3(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
 
         # Test is proper amount of Videos are in DB
         element = o.elements.filter(ctype='VID')
-        self.assertEqual(len(element), 0)
+        self.assertEqual(len(element), 1)
         # Test is insertion works without prior functions
         insertElem({'href':'www.youtube.com/videos'}, {'entity':o, 'ctype':'VID', 'text': 'Test Youtube Video'})
         element = str(o.elements.filter(ctype='VID'))
         self.assertNotEqual(element.find('www.youtube.com/videos'), -1)
         element = o.elements.filter(ctype='VID')
-        self.assertEqual(len(element), 1)
+        self.assertEqual(len(element), 2)
         element = o.elements.filter(ctype='MAP')
-        self.assertEqual(len(element), 0)
+        self.assertEqual(len(element), 1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_com_handler_1(self):
-    	root = fromstring(open('TestPerson.xml').read())
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
 
@@ -373,9 +410,11 @@ class TestUpload(TestCase):
         p.save()
         summary = p.summary
         self.assertNotEqual(summary.find('Barack Obama is the 44th President of the United States'), -1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_com_handler_2(self):
-        root = fromstring(open('TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
         criHandler(root[0])
         c = Crisis.objects.get(id='CRI_SHESSG')
 
@@ -383,9 +422,11 @@ class TestUpload(TestCase):
         c.save()
         summary = c.summary
         self.assertNotEqual(summary.find('Adam Lanza is believed to have shot his mother'), -1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_com_handler_3(self):
-        root = fromstring(open('TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
 
@@ -393,10 +434,12 @@ class TestUpload(TestCase):
         o.save()
         summary = o.summary
         self.assertNotEqual(summary.find('The Sandy Hook School SupportFund (SHSSF) was created by United Way of Western Connecticut'), -1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
 class TestDownload(TestCase):
     def test_get_crises_1(self):
-    	test = fromstring(open('TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -405,30 +448,36 @@ class TestDownload(TestCase):
     	self.assertEqual(root[0][2].text, 'Spree Shooting')
     	self.assertEqual(root[0][3].text, '2012-12-14')
     	self.assertEqual(root[0][4].text, '09:35:00')
+    	for c in Crisis.objects.all():
+    		c.delete()
        
     def test_get_crises_2(self):
-    	test = fromstring(open('TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSCHERQ.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getCrises(root)
     	
-    	self.assertEqual(root[1][2].text, 'Earthquake')
-    	self.assertEqual(root[1][3].text, '2008-05-12')
-    	self.assertEqual(root[1][4].text, '14:28:01')
+    	self.assertEqual(root[0][2].text, 'Earthquake')
+    	self.assertEqual(root[0][3].text, '2008-05-12')
+    	self.assertEqual(root[0][4].text, '14:28:01')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_crises_3(self):
-    	test = fromstring(open('TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestLYCLWR.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getCrises(root)
     	
-    	self.assertEqual(root[2][2].text, 'Civil War')
-    	self.assertEqual(root[2][3].text, '2011-02-15')
+    	self.assertEqual(root[0][2].text, 'Civil War')
+    	self.assertEqual(root[0][3].text, '2011-02-15')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_organizations_1(self):
-    	test = fromstring(open('TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -436,29 +485,35 @@ class TestDownload(TestCase):
     	
     	self.assertEqual(root[0][2].text, 'Non-profit Organization')
     	self.assertEqual(root[0][3].text, 'Worldwide')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_organizations_2(self):
-    	test = fromstring(open('TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSNQKRF.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getOrganizations(root)
     	
-    	self.assertEqual(root[1][2].text, 'Non-profit, humanitarian Organization')
-    	self.assertEqual(root[1][3].text, 'Chengdu, China')
+    	self.assertEqual(root[0][2].text, 'Non-profit, humanitarian Organization')
+    	self.assertEqual(root[0][3].text, 'Chengdu, China')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_organizations_3(self):
-    	test = fromstring(open('TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestNLTLCL.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getOrganizations(root)
     	
-    	self.assertEqual(root[2][2].text, 'de facto Government')
-    	self.assertEqual(root[2][3].text, 'Benghazi, Libya')
+    	self.assertEqual(root[0][2].text, 'de facto Government')
+    	self.assertEqual(root[0][3].text, 'Benghazi, Libya')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_people_1(self):
-    	test = fromstring(open('TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestADMLNZ.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -466,29 +521,35 @@ class TestDownload(TestCase):
     	
     	self.assertEqual(root[0][2].text, 'Murderer')
     	self.assertEqual(root[0][3].text, 'Newtown, Connecticut')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_people_2(self):
-    	test = fromstring(open('TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getPeople(root)
     	
-    	self.assertEqual(root[1][2].text, 'President')
-    	self.assertEqual(root[1][3].text, 'Washington, D.C, United States of America')
+    	self.assertEqual(root[0][2].text, 'President')
+    	self.assertEqual(root[0][3].text, 'Washington, D.C, United States of America')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_people_3(self):
-    	test = fromstring(open('TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestHUJNTO.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
     	getPeople(root)
     	
-    	self.assertEqual(root[2][2].text, 'President')
-    	self.assertEqual(root[2][3].text, 'Communist Party of China')
+    	self.assertEqual(root[0][2].text, 'President')
+    	self.assertEqual(root[0][3].text, 'Communist Party of China')
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_common_1(self):
-    	test = fromstring(open('TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestSHESSG.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -499,10 +560,11 @@ class TestDownload(TestCase):
         c.save()
         summary= c.summary
         self.assertNotEqual(summary.find('According to reports, most of the shooting'), -1)
-
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_common_2(self):
-        test = fromstring(open('TestOrganization.xml').read())
+        test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestUNDWAY.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -513,9 +575,11 @@ class TestDownload(TestCase):
         c.save()
         summary= c.summary
         self.assertNotEqual(summary.find('Immediately following the tragedy on December 14, 2012,'), -1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
     def test_get_common_3(self):
-        test = fromstring(open('TestPerson.xml').read())
+        test = fromstring(open(os.path.join(settings.BASE_DIR, 'database/TestXML/TestBROBMA.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -526,6 +590,8 @@ class TestDownload(TestCase):
         c.save()
         summary= c.summary
         self.assertNotEqual(summary.find('He was re-elected president in November 2012,'), -1)
+    	for c in Crisis.objects.all():
+    		c.delete()
 
 class TestViews(TestCase):
     def test_basic_addition(self):
