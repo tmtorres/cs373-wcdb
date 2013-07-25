@@ -88,8 +88,8 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/people/brobma')
         response = people(request, 'brobma')
         htmlstring = response.content
-        self.assertEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/organizations/whorgn/">World Health Organization</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/organizations/whorgn/">World Health Organization</a></li>'),-1)
 
     # -----------------
     # Organization View
@@ -124,8 +124,8 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/organization/whorgn')
         response = organizations(request, 'whorgn')
         htmlstring = response.content
-        self.assertEqual(htmlstring.find('<li><a href="/crisix/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
-        self.assertNotEqual(htmlstring.find('<li><a href="/crisix/people/brobma/">Barack Obama</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
+        self.assertNotEqual(htmlstring.find('<li><a href="/people/brobma/">Barack Obama</a></li>'),-1)
 
 
     # -----------
@@ -402,7 +402,7 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	getCrises(root)
     	
-    	self.assertEqual(root[0][2].text, 'Spree Shooting')
+    	self.assertEqual(root[1][2].text, 'Earthquake')
     	self.assertEqual(root[0][3].text, '2012-12-14')
     	self.assertEqual(root[0][4].text, '09:35:00')
        
@@ -464,8 +464,8 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	getPeople(root)
     	
-    	self.assertEqual(root[0][2].text, 'Murderer')
-    	self.assertEqual(root[0][3].text, 'Newtown, Connecticut')
+    	self.assertEqual(root[1][2].text, 'President')
+    	self.assertEqual(root[1][3].text, 'Washington, D.C, United States of America')
 
     def test_get_people_2(self):
     	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
@@ -474,8 +474,8 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	getPeople(root)
     	
-    	self.assertEqual(root[1][2].text, 'President')
-    	self.assertEqual(root[1][3].text, 'Washington, D.C, United States of America')
+    	self.assertEqual(root[0][2].text, 'Murderer')
+    	self.assertEqual(root[0][3].text, 'Newtown, Connecticut')
 
     def test_get_people_3(self):
     	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
