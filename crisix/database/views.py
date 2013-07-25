@@ -53,7 +53,7 @@ def download(request):
     getOrganizations(root)
     response = HttpResponse(mimetype='text/xml')
     response['Content-Disposition'] = 'attachment; filename="crisix.xml"'
-    minidom.parseString(tostring(root)).writexml(response, indent='    ', newl='\n')
+    minidom.parseString(tostring(root)).writexml(response, addindent='    ', indent='    ', newl='\n')
     #minidom.parseString(tostring(root)).toprettyxml()
     return response
 
