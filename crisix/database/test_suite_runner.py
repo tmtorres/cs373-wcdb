@@ -26,7 +26,7 @@ class HerokuTestSuiteRunner(DjangoTestSuiteRunner):
             test_connection = test_connections[alias]
 
             # set django-wide connection to use test connection
-            django.db.connections[alias] = test_connection
+            django.db.connections[alias]._connections = test_connection
 
             # re-initialize database (this "replaces" the CREATE DATABASE which
             # cannot be issued on Heroku)
