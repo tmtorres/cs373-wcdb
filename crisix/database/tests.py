@@ -207,7 +207,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
 
     def test_get_entity_1(self): 
-    	root = fromstring(open('crisix/TestCrisis.xml').read())
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	insert(root)
     	
         a = getEntity(Crisis, 'CRI_SHESSG')
@@ -217,7 +217,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(a.location), '<li>Newtown, Connecticut</li>')
 
     def test_get_entity_2(self):
-    	root2 = fromstring(open('crisix/TestPerson.xml').read())
+    	root2 = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
     	insert(root2)
     	
     	b = getEntity(Person, 'PER_BROBMA')
@@ -225,7 +225,7 @@ class TestUpload(TestCase):
     	self.assertEqual(str(b.location), 'Washington, D.C, United States of America')
 
     def test_get_entity_3(self):
-    	root3 = fromstring(open('crisix/TestOrganization.xml').read())
+    	root3 = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
     	insert(root3)
     	
     	c = getEntity(Organization, 'ORG_UNDWAY')   	
@@ -234,7 +234,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
     	
     def test_cri_handler_1(self):
-    	root = fromstring(open('crisix/TestCrisis.xml').read())    
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	    
     	criHandler(root[0]) 
     	c = Crisis.objects.get(id='CRI_SHESSG')
@@ -244,7 +244,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), '<li>Newtown, Connecticut</li>')
        
     def test_cri_handler_2(self):
-        root = fromstring(open('crisix/TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
         
         criHandler(root[1])
         c = Crisis.objects.get(id='CRI_SCHERQ')
@@ -254,7 +254,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), '<li>Wenchuan County, Sichuan</li><li>Sichuan Province</li>')
            
     def test_cri_handler_3(self):
-        root = fromstring(open('crisix/TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
         
         criHandler(root[2])
         c = Crisis.objects.get(id='CRI_LYCLWR')
@@ -263,7 +263,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(c.location), '<li>Libya</li>')
 
     def test_org_handler_1(self):
-        root = fromstring(open('crisix/TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
         
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
@@ -272,7 +272,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
 
     def test_org_handler_2(self):
-        root = fromstring(open('crisix/TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
         
         orgHandler(root[1])
         o = Organization.objects.get(id='ORG_SNQKRF')
@@ -281,7 +281,7 @@ class TestUpload(TestCase):
         self.assertTrue('<li>Volunteer: volunteer@sichuan-quake-relief.org</li>' in str(o.contact)) 
 
     def test_org_handler_3(self):
-        root = fromstring(open('crisix/TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
         
         orgHandler(root[2])
         o = Organization.objects.get(id='ORG_NLTLCL')
@@ -290,7 +290,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(o.contact), '<li> Organization is no longer active. </li>')
 
     def test_per_handler_1(self):
-        root = fromstring(open('crisix/TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
         
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
@@ -306,7 +306,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(p.location), 'Newtown, Connecticut')
 
     def test_per_handler_3(self):
-        root = fromstring(open('crisix/TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
         
         perHandler(root[2])
         p = Person.objects.get(id='PER_HUJNTO')
@@ -314,7 +314,7 @@ class TestUpload(TestCase):
         self.assertEqual(str(p.location), 'Communist Party of China')
 
     def test_insert_elem_1(self):
-        root = fromstring(open('crisix/TestPerson.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
 
@@ -331,7 +331,7 @@ class TestUpload(TestCase):
         self.assertEqual(len(element), 1)
         
     def test_insert_elem_2(self):
-        root = fromstring(open('crisix/TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
         criHandler(root[0])
         c = Crisis.objects.get(id='CRI_SHESSG')
 
@@ -348,7 +348,7 @@ class TestUpload(TestCase):
         self.assertEqual(len(element), 3)
 
     def test_insert_elem_3(self):
-        root = fromstring(open('crisix/TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
 
@@ -365,7 +365,7 @@ class TestUpload(TestCase):
         self.assertEqual(len(element), 0)
 
     def test_com_handler_1(self):
-    	root = fromstring(open('crisix/TestPerson.xml').read())
+    	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
         perHandler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
 
@@ -375,7 +375,7 @@ class TestUpload(TestCase):
         self.assertNotEqual(summary.find('Barack Obama is the 44th President of the United States'), -1)
 
     def test_com_handler_2(self):
-        root = fromstring(open('crisix/TestCrisis.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
         criHandler(root[0])
         c = Crisis.objects.get(id='CRI_SHESSG')
 
@@ -385,7 +385,7 @@ class TestUpload(TestCase):
         self.assertNotEqual(summary.find('Adam Lanza is believed to have shot his mother'), -1)
 
     def test_com_handler_3(self):
-        root = fromstring(open('crisix/TestOrganization.xml').read())
+        root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
         orgHandler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
 
@@ -396,7 +396,7 @@ class TestUpload(TestCase):
 
 class TestDownload(TestCase):
     def test_get_crises_1(self):
-    	test = fromstring(open('crisix/TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -407,7 +407,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[0][4].text, '09:35:00')
        
     def test_get_crises_2(self):
-    	test = fromstring(open('crisix/TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -418,7 +418,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[1][4].text, '14:28:01')
 
     def test_get_crises_3(self):
-    	test = fromstring(open('crisix/TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -428,7 +428,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[2][3].text, '2011-02-15')
 
     def test_get_organizations_1(self):
-    	test = fromstring(open('crisix/TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -438,7 +438,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[0][3].text, 'Worldwide')
 
     def test_get_organizations_2(self):
-    	test = fromstring(open('crisix/TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -448,7 +448,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[1][3].text, 'Chengdu, China')
 
     def test_get_organizations_3(self):
-    	test = fromstring(open('crisix/TestOrganization.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -458,7 +458,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[2][3].text, 'Benghazi, Libya')
 
     def test_get_people_1(self):
-    	test = fromstring(open('crisix/TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -468,7 +468,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[0][3].text, 'Newtown, Connecticut')
 
     def test_get_people_2(self):
-    	test = fromstring(open('crisix/TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -478,7 +478,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[1][3].text, 'Washington, D.C, United States of America')
 
     def test_get_people_3(self):
-    	test = fromstring(open('crisix/TestPerson.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -488,7 +488,7 @@ class TestDownload(TestCase):
     	self.assertEqual(root[2][3].text, 'Communist Party of China')
 
     def test_get_common_1(self):
-    	test = fromstring(open('crisix/TestCrisis.xml').read())
+    	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestCrisis.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -502,7 +502,7 @@ class TestDownload(TestCase):
 
 
     def test_get_common_2(self):
-        test = fromstring(open('crisix/TestOrganization.xml').read())
+        test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestOrganization.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
@@ -515,7 +515,7 @@ class TestDownload(TestCase):
         self.assertNotEqual(summary.find('Immediately following the tragedy on December 14, 2012,'), -1)
 
     def test_get_common_3(self):
-        test = fromstring(open('crisix/TestPerson.xml').read())
+        test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/TestPerson.xml')).read())
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
