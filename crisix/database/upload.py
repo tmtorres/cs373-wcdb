@@ -5,6 +5,10 @@ from datetime import time
 from xml.etree.ElementTree import tostring
 
 def insert(root):
+    """
+    root is an ElementTree object
+    insert distributes each case depending on its etype
+    """
     assert root is not None
     for elem in root:
         if elem.tag == 'Crisis':
@@ -15,6 +19,12 @@ def insert(root):
             perHandler(elem)
 
 def getEntity(etype, eid):
+    """
+    etype is the entity's type
+    eid is the entity's ID
+    getEntity returns the matching ID object if it exists
+    if it doesn't exist, it creates and returns a new one
+    """
     assert etype in (Crisis, Organization, Person)
     assert eid[:3] in ('CRI', 'ORG', 'PER')
     e = None
@@ -27,6 +37,10 @@ def getEntity(etype, eid):
     return e
 
 def criHandler(node):
+    """
+    node is the start node of a Crisis
+    criHandler parses the xml info for this crisis
+    """
     assert node is not None
     c = getEntity(Crisis, node.attrib.get('ID'))
     c.name = node.attrib.get('Name')
@@ -59,6 +73,10 @@ def criHandler(node):
     c.save()
 
 def orgHandler(node):
+    """
+    node is the start node of an Organization
+    orHandler parses the xml info for this organizaton
+    """
     assert node is not None
     o = getEntity(Organization, node.attrib.get('ID'))
     o.name = node.attrib.get('Name')
@@ -83,6 +101,10 @@ def orgHandler(node):
     o.save()
 
 def perHandler(node):
+    """
+    node is the start node of a Person
+    perHandler parses the xml info for this person
+    """
     assert node is not None
     p = getEntity(Person, node.attrib.get('ID'))
     p.name = node.attrib.get('Name')
@@ -103,6 +125,11 @@ def perHandler(node):
     p.save()
 
 def insertElem(query, attr):
+    """
+    query is a dict specifying the type of element we want to insert
+    attr  is a dict utilized if the query type does not exist
+    insertElem is a helper method for comHandler
+    """
     assert type(query) is dict
     assert type(attr) is dict
     try:
@@ -113,6 +140,12 @@ def insertElem(query, attr):
         w.save()
 
 def comHandler(node, e):
+    """
+    node is the common element of the entity calling it
+    e is the entity
+    comHandler parses the xml info nested under common for
+    the entity calling it.
+    """
     assert node is not None
     assert e is not None
     for attr in node:
