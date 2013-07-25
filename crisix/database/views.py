@@ -53,7 +53,7 @@ def download(request):
     getOrganizations(root)
     response = HttpResponse(mimetype='text/plain')
     response['Content-Disposition'] = 'attachment; filename="crisix.xml"'
-    minidom.parseString(tostring(root)).writexml(response, indent="    ")
+    minidom.parseString(tostring(root)).writexml(response, indent="\n    ")
     return response
 
 def validate(request, file):
