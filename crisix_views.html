@@ -1,0 +1,48 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module crisix_views</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>crisix_views</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/jonathan/Documents/CS 373/cs373-wcdb/TURNIN/crisix_views.py">/v/filer4b/v38q001/jonathan/Documents/CS 373/cs373-wcdb/TURNIN/crisix_views.py</a></font></td></tr></table>
+    <p><tt>from&nbsp;django.shortcuts&nbsp;import&nbsp;redirect,&nbsp;render,&nbsp;render_to_response<br>
+from&nbsp;django.http&nbsp;import&nbsp;HttpResponse<br>
+from&nbsp;database.models&nbsp;import&nbsp;*<br>
+from&nbsp;django.shortcuts&nbsp;import&nbsp;render_to_response<br>
+from&nbsp;django.template&nbsp;import&nbsp;RequestContext<br>
+from&nbsp;xml.etree.ElementTree&nbsp;import&nbsp;fromstring<br>
+from&nbsp;xml.etree.ElementTree&nbsp;import&nbsp;ElementTree,&nbsp;Element<br>
+from&nbsp;django.conf&nbsp;import&nbsp;settings<br>
+from&nbsp;django.core.files&nbsp;import&nbsp;File<br>
+from&nbsp;PIL&nbsp;import&nbsp;Image<br>
+from&nbsp;urllib&nbsp;import&nbsp;urlretrieve<br>
+import&nbsp;glob,&nbsp;os<br>
+&nbsp;<br>
+from&nbsp;django.core.files.storage&nbsp;import&nbsp;default_storage<br>
+from&nbsp;django.core.files.base&nbsp;import&nbsp;ContentFile</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-crises"><strong>crises</strong></a>(request, id)</dt><dd><tt>id&nbsp;is&nbsp;a&nbsp;unique&nbsp;key&nbsp;to&nbsp;know&nbsp;which&nbsp;page&nbsp;to&nbsp;display<br>
+crises&nbsp;renders&nbsp;a&nbsp;page&nbsp;with&nbsp;the&nbsp;id&nbsp;specified&nbsp;crisis&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-display"><strong>display</strong></a>(request, etype<font color="#909090">=''</font>)</dt><dd><tt>etype&nbsp;defines&nbsp;which&nbsp;page&nbsp;user&nbsp;was&nbsp;trying&nbsp;to&nbsp;access<br>
+display&nbsp;is&nbsp;used&nbsp;to&nbsp;display&nbsp;plain&nbsp;tab&nbsp;pages<br>
+when&nbsp;an&nbsp;id&nbsp;is&nbsp;not&nbsp;specified</tt></dd></dl>
+ <dl><dt><a name="-home"><strong>home</strong></a>(request)</dt><dd><tt>home&nbsp;returns&nbsp;a&nbsp;rendered&nbsp;display&nbsp;as&nbsp;our&nbsp;home&nbsp;page<br>
+with&nbsp;all&nbsp;entity&nbsp;entries&nbsp;displayed</tt></dd></dl>
+ <dl><dt><a name="-index"><strong>index</strong></a>(request)</dt><dd><tt>index&nbsp;redirects&nbsp;a&nbsp;valild&nbsp;short&nbsp;URL&nbsp;to&nbsp;the&nbsp;official&nbsp;home&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-organizations"><strong>organizations</strong></a>(request, id)</dt><dd><tt>id&nbsp;is&nbsp;a&nbsp;unique&nbsp;key&nbsp;to&nbsp;know&nbsp;which&nbsp;page&nbsp;to&nbsp;display<br>
+organizations&nbsp;renders&nbsp;a&nbsp;page&nbsp;with&nbsp;the&nbsp;id&nbsp;specified&nbsp;org&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-people"><strong>people</strong></a>(request, id)</dt><dd><tt>id&nbsp;is&nbsp;a&nbsp;unique&nbsp;key&nbsp;to&nbsp;know&nbsp;which&nbsp;page&nbsp;to&nbsp;display<br>
+people&nbsp;renders&nbsp;a&nbsp;page&nbsp;with&nbsp;the&nbsp;id&nbsp;specified&nbsp;persons&nbsp;data</tt></dd></dl>
+ <dl><dt><a name="-thumbnail"><strong>thumbnail</strong></a>(e)</dt></dl>
+</td></tr></table>
+</body></html>
