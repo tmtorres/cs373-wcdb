@@ -2,7 +2,7 @@ import sys, glob, os
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
-#from django.conf import settings
+from django.conf import settings
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
