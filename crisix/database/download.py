@@ -9,6 +9,8 @@ from xml.dom import minidom
 def getCrises(root):
     """
     root is an ElementTree object
+    attributes are assigned to crisis element
+    ElementTree is creating subelements to store data from the database module
     getCrises parses crises from the ElementTree to xml
     """
     assert root is not None
@@ -46,7 +48,9 @@ def getCrises(root):
 def getOrganizations(root):
     """
     root is an ElementTree object
-    getOrganizations parses orgss from the ElementTree to xml
+    for each object in the module, attributes are assigned to specified organization element and
+    ElementTree is creating subelements to store data from the database module
+    getOrganizations parses orgs from the ElementTree to xml
     """
     assert root is not None
     for o in Organization.objects.all():
@@ -75,6 +79,8 @@ def getOrganizations(root):
 def getPeople(root):
     """
     root is an ElementTree object
+    for each object in the module, attributes are assigned to specified person element and
+    ElementTree is creating subelements to store data from the database module
     getPeople parses people from the ElementTree to xml
     """
     assert root is not None

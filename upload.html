@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module upload</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>upload</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/mgt91/CS373/cs373-wcdb/crisix/database/upload.py">/v/filer4b/v38q001/mgt91/CS373/cs373-wcdb/crisix/database/upload.py</a></font></td></tr></table>
+    <p><tt>#from&nbsp;models&nbsp;import&nbsp;*</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-comHandler"><strong>comHandler</strong></a>(node, e)</dt><dd><tt>node&nbsp;is&nbsp;the&nbsp;common&nbsp;element&nbsp;of&nbsp;the&nbsp;entity&nbsp;calling&nbsp;it<br>
+e&nbsp;is&nbsp;the&nbsp;entity<br>
+comHandler&nbsp;parses&nbsp;the&nbsp;xml&nbsp;info&nbsp;nested&nbsp;under&nbsp;common&nbsp;for<br>
+the&nbsp;entity&nbsp;calling&nbsp;it.</tt></dd></dl>
+ <dl><dt><a name="-criHandler"><strong>criHandler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;the&nbsp;start&nbsp;node&nbsp;of&nbsp;a&nbsp;Crisis<br>
+criHandler&nbsp;parses&nbsp;the&nbsp;xml&nbsp;info&nbsp;for&nbsp;this&nbsp;crisis<br>
+gathered&nbsp;info&nbsp;is&nbsp;stored&nbsp;in&nbsp;django&nbsp;module&nbsp;database</tt></dd></dl>
+ <dl><dt><a name="-getEntity"><strong>getEntity</strong></a>(etype, eid)</dt><dd><tt>etype&nbsp;is&nbsp;the&nbsp;entity's&nbsp;type<br>
+eid&nbsp;is&nbsp;the&nbsp;entity's&nbsp;ID<br>
+getEntity&nbsp;returns&nbsp;the&nbsp;matching&nbsp;ID&nbsp;object&nbsp;if&nbsp;it&nbsp;exists<br>
+if&nbsp;it&nbsp;doesn't&nbsp;exist,&nbsp;it&nbsp;creates&nbsp;and&nbsp;returns&nbsp;a&nbsp;new&nbsp;one</tt></dd></dl>
+ <dl><dt><a name="-insert"><strong>insert</strong></a>(root)</dt><dd><tt>root&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;object<br>
+insert&nbsp;distributes&nbsp;each&nbsp;case&nbsp;depending&nbsp;on&nbsp;its&nbsp;etype<br>
+specific&nbsp;'handlers'&nbsp;are&nbsp;called&nbsp;for&nbsp;each&nbsp;element&nbsp;in&nbsp;a&nbsp;given&nbsp;entity&nbsp;which&nbsp;fills&nbsp;<br>
+database&nbsp;with&nbsp;necessary&nbsp;info&nbsp;to&nbsp;match&nbsp;the&nbsp;xml</tt></dd></dl>
+ <dl><dt><a name="-insertElem"><strong>insertElem</strong></a>(query, attr)</dt><dd><tt>query&nbsp;is&nbsp;a&nbsp;dict&nbsp;specifying&nbsp;the&nbsp;type&nbsp;of&nbsp;element&nbsp;we&nbsp;want&nbsp;to&nbsp;insert<br>
+attr&nbsp;&nbsp;is&nbsp;a&nbsp;dict&nbsp;utilized&nbsp;if&nbsp;the&nbsp;query&nbsp;type&nbsp;does&nbsp;not&nbsp;exist<br>
+insertElem&nbsp;is&nbsp;a&nbsp;helper&nbsp;method&nbsp;for&nbsp;comHandler</tt></dd></dl>
+ <dl><dt><a name="-orgHandler"><strong>orgHandler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;the&nbsp;start&nbsp;node&nbsp;of&nbsp;an&nbsp;Organization<br>
+orHandler&nbsp;parses&nbsp;the&nbsp;xml&nbsp;info&nbsp;for&nbsp;this&nbsp;organizaton<br>
+gathered&nbsp;info&nbsp;is&nbsp;stored&nbsp;in&nbsp;django&nbsp;module&nbsp;database</tt></dd></dl>
+ <dl><dt><a name="-perHandler"><strong>perHandler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;the&nbsp;start&nbsp;node&nbsp;of&nbsp;a&nbsp;Person<br>
+perHandler&nbsp;parses&nbsp;the&nbsp;xml&nbsp;info&nbsp;for&nbsp;this&nbsp;person<br>
+gathered&nbsp;info&nbsp;is&nbsp;stored&nbsp;in&nbsp;django&nbsp;module&nbsp;database</tt></dd></dl>
+</td></tr></table>
+</body></html>

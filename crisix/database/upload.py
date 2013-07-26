@@ -8,6 +8,8 @@ def insert(root):
     """
     root is an ElementTree object
     insert distributes each case depending on its etype
+    specific 'handlers' are called for each element in a given entity which fills 
+    database with necessary info to match the xml
     """
     assert root is not None
     for elem in root:
@@ -40,6 +42,7 @@ def criHandler(node):
     """
     node is the start node of a Crisis
     criHandler parses the xml info for this crisis
+    gathered info is stored in django module database
     """
     assert node is not None
     c = getEntity(Crisis, node.attrib.get('ID'))
@@ -76,6 +79,7 @@ def orgHandler(node):
     """
     node is the start node of an Organization
     orHandler parses the xml info for this organizaton
+    gathered info is stored in django module database
     """
     assert node is not None
     o = getEntity(Organization, node.attrib.get('ID'))
@@ -104,6 +108,7 @@ def perHandler(node):
     """
     node is the start node of a Person
     perHandler parses the xml info for this person
+    gathered info is stored in django module database
     """
     assert node is not None
     p = getEntity(Person, node.attrib.get('ID'))
