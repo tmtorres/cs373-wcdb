@@ -1,0 +1,6 @@
+crisix.database.download	crisix.database.download-module.html
+crisix.database.download.getCrises	crisix.database.download-module.html#getCrises
+crisix.database.download.getCommon	crisix.database.download-module.html#getCommon
+crisix.database.download.getPeople	crisix.database.download-module.html#getPeople
+crisix.database.download.__package__	crisix.database.download-module.html#__package__
+crisix.database.download.getOrganizations	crisix.database.download-module.html#getOrganizations
