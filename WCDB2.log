@@ -1,0 +1,1176 @@
+commit cd17222c4d4992ab091264c888e3a1017afe6460
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 21:25:55 2013 -0500
+
+    finished tech report
+
+commit 229404d26ecb1afda7957620cd9cb28f952b70b8
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 21:05:13 2013 -0500
+
+    another commit
+
+commit b7d16e70bf8ead6b8c60f100a1fa8cf7e1c500d9
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 20:54:57 2013 -0500
+
+    clean up for turnin time
+
+commit 981cfd9d038e2341b4898076f9fb8e79109e9e61
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:52:18 2013 -0500
+
+    Delete makefile
+
+commit 2350de58afc2aab3820f7ea403950ac187108729
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:51:59 2013 -0500
+
+    Delete WCDB1.xsd.xml
+
+commit 797117a9707de5a090f436ee27a2530850c6508a
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:51:44 2013 -0500
+
+    Delete tmtorres-TestWCDB2.py
+
+commit dc44e17f94e1d9bbd577d605c8e4f8e40c43a1e4
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:49:49 2013 -0500
+
+    Delete tmtorres-TestWCDB2.out
+
+commit d979c1750a1affdcdc0fcd11b95313dc85315a03
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:49:29 2013 -0500
+
+    Delete WCDB1.xml
+
+commit 4ef7536c035beeec978d6f88bee0ae61226ce43d
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:49:09 2013 -0500
+
+    Delete WCDB1.pdf
+
+commit b7330db0d725235e34111a152d88d9249b19ee1c
+Author: Jonathan Velasquez <jovelasquez@utexas.edu>
+Date:   Thu Jul 25 20:48:56 2013 -0500
+
+    Delete WCDB1.log
+
+commit 5d67a5260913f1ea6b6899adb845d2eb69cc557a
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 20:46:39 2013 -0500
+
+    clean up for turnin time
+
+commit 9411cfca9b8a4eb5f61734d1f4c29133cb4eda46
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 20:30:14 2013 -0500
+
+    documentation complete
+
+commit 648d966a7afcda83580b11f27192e16ff915b8ed
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 19:28:27 2013 -0500
+
+    pyc files deleted, makefile added
+
+commit 3ed5eeec83e84e9c4c5ed65905e188934c8f6fcc
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 19:01:43 2013 -0500
+
+    unittest output
+
+commit ba1670f7bea738d5c6f2aa15ea6c340b4140bb25
+Merge: 21f2494 bfed8b6
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 19:00:39 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 21f24945aee82891eb7b7133d239a26118835efc
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 19:00:27 2013 -0500
+
+    unittests
+
+commit bfed8b67db31622cfc9331fdcfb46ada05cc4bb6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 18:26:52 2013 -0500
+
+    documentation for reset.py
+
+commit 197c7700511a14e96a7207f3a9a7d18b341a31b7
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 18:24:30 2013 -0500
+
+    documentation for env.py
+
+commit 5913cdc946f4f9f1f3f548ae97fd1aacd470ca19
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 18:12:29 2013 -0500
+
+    documentation for second views
+
+commit 584435c0921263fbb8062f7aa1e41c78c9bde6d5
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 17:58:16 2013 -0500
+
+    documentation for first views.py
+
+commit ccdfbfe49197a4c117b3ff4577cdab75d89956f9
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Thu Jul 25 17:40:35 2013 -0500
+
+    Update download.py
+
+commit 97f2fee652f3116cad807feae989c9ac1193f0f6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 17:37:29 2013 -0500
+
+    documentation for download.py
+
+commit a0d9976c095846384ee25cbb268d97c1f4c219af
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 17:31:31 2013 -0500
+
+    updated xmls for unittests
+
+commit 6cdb8e66c5e422925d1f8a550ef0bb2572072140
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 17:28:34 2013 -0500
+
+    unittests update
+
+commit 949e30a2be97fda5c5345301d77616582be61044
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Jul 25 17:27:20 2013 -0500
+
+    new unittests
+
+commit 6f4d2cfcc2cc161a7a322f6a51a34a4527be8bf4
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Jul 25 17:22:51 2013 -0500
+
+    documentation for upload.py
+
+commit b1f2aa799cbac6b4afe7bb58866d5b31a8c7098c
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Wed Jul 24 18:54:27 2013 -0500
+
+    Added UML
+
+commit 0561feac58cf6145f68e13bd4d1c7c963eddb955
+Merge: 73fc72d 1b9884f
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Jul 24 18:21:56 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	crisix/database/tests.py
+
+commit 73fc72d7169c09885e01d5af61dd5163681665d6
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Jul 24 18:10:22 2013 -0500
+
+    added new unittests
+
+commit 1b9884f6af31985f2f51b7d522060206c377cb6a
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Wed Jul 24 17:05:21 2013 -0500
+
+    Unit tests for upload added
+
+commit 3d1b7f0fb1ddfb58cd84292aa72a2accdd564483
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Jul 24 15:55:46 2013 -0500
+
+    new update
+
+commit 486ece025ef8447041cee909df092e88e574191c
+Merge: 044cb50 9eff0e9
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Jul 24 13:11:08 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 044cb50f810fc2669cefb6e5a9614aae1b109174
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Jul 24 13:10:50 2013 -0500
+
+    updated unittests
+
+commit 9eff0e9a9bb8b4979c3b97ebd796ac517a96c18f
+Merge: 09a1766 c2c6379
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 12:21:42 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 09a176613d56293a889357d09173c19171b01d82
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 12:21:20 2013 -0500
+
+    New schema
+
+commit c2c6379e59dce4e512a682a12b5c74f9056d2d93
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Wed Jul 24 12:05:22 2013 -0500
+
+    Update TestOrganization.xml
+    
+    Added more orgs for unittests
+
+commit 8cdae4b64096fb54ba18edab2cacffd52fc10842
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Wed Jul 24 12:03:59 2013 -0500
+
+    Update TestPerson.xml
+    
+    Added more people for unittests
+
+commit 667dd4ca25e612dd1a34eb3c151bc19ee12b98d6
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Wed Jul 24 11:49:18 2013 -0500
+
+    Update TestCrisis.xml
+
+commit 4d6660527df4faf00b1588065e012feb2c7be6b6
+Merge: 6651236 5033776
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Jul 24 11:32:59 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 6651236db6cb259e21136ffa537ba7d727d1aa02
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Jul 24 11:32:33 2013 -0500
+
+    changes to xml
+
+commit 50337764932c913ee26d15f4ab8c0695dc339e35
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 09:31:31 2013 -0500
+
+    Final tweaks.
+
+commit dd206438dc9a23be36d03908715b8cdb4b3e72ab
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 08:10:35 2013 -0500
+
+    Small tweaks to design.
+
+commit 1ca420a9d2ffea82e3f5dce272f0a4f2770a4ba5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 07:05:21 2013 -0500
+
+    Small tweaks.
+
+commit 3f03ad1be83f86fd9d2aec46ef62fe981bde8b96
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 01:43:10 2013 -0500
+
+    Added supplementary files.
+
+commit ee51560f7bc80651972d08b75ad8bdb0e59a45fa
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 01:35:18 2013 -0500
+
+    Small tweak.
+
+commit 6b78162badb7df83afd6cef0becf76e400d83c41
+Merge: 2d00de1 345546e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 01:16:18 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 2d00de188512c6bb8210bb395ca4b21ec19de3e5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 01:15:49 2013 -0500
+
+    Unified site pages.
+
+commit 1d0ab842573ceaf5635b08e65349ad4901922ada
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 00:55:42 2013 -0500
+
+    Modified style a bit.
+
+commit 345546ee62cbe0334d71162040bbfa28c562feec
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Tue Jul 23 22:35:27 2013 -0500
+
+    all feeds now included
+
+commit 3e3a85a7f5dd811d662c01113131c5f9688b426c
+Merge: d67952f 41d4e1d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 20:44:57 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	crisix/database/tests.py
+
+commit d67952f5e569680ee04c98aa026e1c4c2dfc8e04
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 20:43:49 2013 -0500
+
+    Unified lockdown form with website.
+
+commit 41d4e1dba9ec5a627cbaabe60cdad8273b49ae33
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Tue Jul 23 20:33:12 2013 -0500
+
+    updated tests
+
+commit 9afdd2e7ac593ded6f09d85d4391c73e02c51bfc
+Merge: b741982 dbc0b00
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Tue Jul 23 18:44:27 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit dbc0b00f668e55982765723240ede8ee6db2c14d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 18:44:07 2013 -0500
+
+    Unified test cases.
+
+commit b7419822c0eff2f3ab04f86b5879b1e2fb75a0d3
+Merge: d251e19 c731218
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Tue Jul 23 18:42:59 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit a01dc246a63839f8ca76654e02326d9647197815
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Jul 23 18:42:57 2013 -0500
+
+    Fixed merge.
+
+commit d251e198da48da9475156779e73d00821dd1ffa5
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Tue Jul 23 18:42:31 2013 -0500
+
+    new update
+
+commit c73121862f61abcb8ca614183ecf18e003219ca5
+Merge: bed09e4 e810e23
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Jul 23 18:36:45 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	crisix/database/tests.py
+
+commit bed09e4ba3fbc066d7a0a863a9ddec6224f12522
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Jul 23 18:26:40 2013 -0500
+
+    View Unit Tests Done
+
+commit e810e235dccdef897a12b779fc524a2bea027381
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 18:26:07 2013 -0500
+
+    Started unit tests for views.
+
+commit 4bceac49910a29eb042631934b7f2d2a28b9992f
+Merge: 15e8a46 d2046c2
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 17:41:16 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 15e8a46901bae640a4f7ec1f90c276e69977be9d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 17:40:58 2013 -0500
+
+    Fixed test runner.
+
+commit d2046c20846fc02d9baaa7e1f55b31f3400e5a8b
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Tue Jul 23 17:31:53 2013 -0500
+
+    organization update
+
+commit b2c982388857d9911f07ffd81537f31c24e9c4e3
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 16:41:23 2013 -0500
+
+    back from fix
+
+commit 943fb6561a9ce744afd92284e8e3fd7e201d88cb
+Merge: 786a267 43dfcc2
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 16:30:37 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	WCDB2.xml
+
+commit 786a2673cd78af78ca34fb9e7b0a79826b534746
+Merge: 7a3acf7 403e1a6
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 16:22:34 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	WCDB2.xml
+
+commit 43dfcc27baaac6672ec0a45bea0f9cb043047c71
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Tue Jul 23 16:18:32 2013 -0500
+
+    Update WCDB2.xml
+
+commit 7a3acf778d374c9c11607e4b21ad207ebe00d624
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 16:16:03 2013 -0500
+
+    xml validate
+
+commit 403e1a6eaac3f832eba0ec852f7c0518f65b4f7d
+Merge: d4c2be6 569ac41
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 16:13:41 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit d4c2be6b76dfac961ff74832159a151f371f0e4e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 16:13:21 2013 -0500
+
+    Made import more descriptive.
+
+commit 569ac4190fd13aad754bcd5e32fd94af49abfed8
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Tue Jul 23 16:05:42 2013 -0500
+
+    Update WCDB2.xml
+    
+    another org update
+
+commit 40ddde1d69872d12f8d2eae4cfe4f39a0d36f3a4
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Tue Jul 23 15:58:04 2013 -0500
+
+    fixed xml
+
+commit 058f23547bf7c75a8066d08b4f0221ef6f4a8886
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 15:50:24 2013 -0500
+
+    Fixed contact info bug.
+
+commit 8b57987acc04d0d2ce1ec73dc8a6fc11637f334c
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Tue Jul 23 14:48:53 2013 -0500
+
+    Update WCDB2.xml
+
+commit 730c2132aad1cafae1f3d39408f0951af5d3c700
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Tue Jul 23 14:35:08 2013 -0500
+
+    fixed xml
+
+commit f42934b0178562f5ec109f2c038cd28d73128f27
+Author: Matt Thurner <mthurner91@utexas.edu>
+Date:   Tue Jul 23 12:57:47 2013 -0500
+
+    Update WCDB2.xml
+    
+    Working on Organization data
+
+commit 1b48fe194041a679fa3322f8aa3bf2f23677bb20
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 07:32:04 2013 -0500
+
+    Integrated test suite with website.
+
+commit 2b9c14e0b1b22746b641ace385a3e15a00a6fa4e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 07:17:40 2013 -0500
+
+    Made tests realtime.
+
+commit ab608c57998d6cf57ce6a2edc85d0de0cff6f2c5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 02:56:41 2013 -0500
+
+    Edited templates a bit.
+
+commit d6bbc785d048cdf450f5fd841469744462ad9f8c
+Merge: 3e3a746 3ff6ba6
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 01:27:01 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 3e3a7467997634880ce829ea1375348e413f1958
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 23 01:26:49 2013 -0500
+
+    Started tests.
+
+commit 3ff6ba69f2fd39cb8275be2d0d28d1d69bf7ad36
+Merge: 8959218 3329c4e
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 01:21:54 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 89592180e565dc018f5290b05d0932df39a201cc
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 01:21:43 2013 -0500
+
+    Almost Finalized People
+
+commit 3329c4e3f4eb66e4c443b7b7ddde941db6dd139e
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Tue Jul 23 01:12:40 2013 -0500
+
+    Updated the design
+    
+    -changed the background of the .hero to match the rest of the page
+    -added btn-primary to element <input>
+
+commit dd30d41545722b324a670e49e7a29cc6c1d7c134
+Merge: 94fc6f8 054ff4d
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 00:18:07 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 94fc6f8e9fd0387557a1e90d58a03e25f3e68a96
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 00:17:32 2013 -0500
+
+    fixed XML
+
+commit 054ff4d0f92ad8cb5c86351ee81a8cd92d696bff
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Tue Jul 23 00:15:54 2013 -0500
+
+    Added {{ STATIC_URL }} to js/bootstrap
+
+commit 7750a3a9731f5b4e62b0e297aac2d7bac263fdc3
+Merge: ac872e7 6f09265
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 00:08:35 2013 -0500
+
+    Updated People
+
+commit ac872e7fe3cf1c4e428bb278f7d943baff63d076
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Tue Jul 23 00:07:06 2013 -0500
+
+    Updated People
+
+commit 6f092659d59f25ccde837c18d755f95b58b06c07
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 23:50:07 2013 -0500
+
+    xml crisis done
+
+commit 4fefce8f077fda8d3c1b8ba3ca660752ed00b2a9
+Merge: b5e42c2 f4657fc
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 23:39:15 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit b5e42c2d73a812799519349882d03da8e8692600
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 23:38:57 2013 -0500
+
+    Got unit tests to display to the screen.
+
+commit f4657fcb25f5ea1f68d19a18468f7e56e88c0ccb
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 23:31:30 2013 -0500
+
+    all crisis updated
+
+commit ee23e443bdfb733c518dfcfb933ed5ee8f4d0d39
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 22:59:24 2013 -0500
+
+    updated xml
+
+commit 7357f77c5c97fa8df757d509add81a4215b8e2d5
+Merge: b5566cc 8e04e14
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 21:03:31 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 8e04e140fd3c712a54ba6ab5be6715e045981ae2
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 19:35:47 2013 -0500
+
+    Util page better.
+
+commit 110f9461277674a44298727ef17fbc0cea946423
+Merge: e72224c dca449f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 19:15:50 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit e72224c14d839f381f2470a213241482d17929c1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 19:15:36 2013 -0500
+
+    Fixed util page.
+
+commit b5566cce8687d957ad18c5ddf0ca15a832903125
+Merge: e2e30c0 dca449f
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 18:41:45 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit e2e30c0e001afb85c860d8c2cb1fb90024903129
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 18:41:34 2013 -0500
+
+    merge
+
+commit dca449f245c7578f729bff82b63fb859736b3698
+Merge: c8473b2 17f642c
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Mon Jul 22 18:37:17 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit c8473b2a3186cffaabf55226f2a8a0d04ea9c978
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Mon Jul 22 18:36:57 2013 -0500
+
+    people update
+
+commit 17f642cfa05bd6c0dcc8f1a8d3b08db022cb2da9
+Merge: 1ce5eb5 126e968
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 17:50:02 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 1ce5eb570a334695e3d8dfa027f2ffe2821316fc
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 17:49:40 2013 -0500
+
+    Added folder.
+
+commit 126e9688224e460d8d4dbcfc3f495125bc3642d3
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 17:41:52 2013 -0500
+
+    updated xml
+
+commit 5b3163c32a4f79b490e5c257d26d47b1b42ec0e9
+Merge: bb2870e 4be4e11
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 17:31:29 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 4be4e1156045624f0c1a068502d3a20345d34cf3
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 17:29:50 2013 -0500
+
+    Fixed problem with thumbnails.
+
+commit 805768b6d72309c43e83eb4e514e68549cf84e98
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 17:26:48 2013 -0500
+
+    Update.
+
+commit bb2870e9a2cbb09a0be67bf6ddbc62dfb52077a6
+Merge: c390d86 2083ae5
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 17:11:13 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 2083ae53db798b560a73630b0d2a5905c8de8139
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 17:10:02 2013 -0500
+
+    Added media.
+
+commit c390d86239728728d5d247329296d0997a541563
+Merge: 258cf96 1af8ad1
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 16:39:34 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 1af8ad18deaab902745c7ccc9bac4418f79e4cb3
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 16:36:33 2013 -0500
+
+    Couple of fixes.
+
+commit 258cf96b347b082543d3d84a068e7cc29fad0062
+Merge: f1790b4 a01fb97
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 15:11:46 2013 -0500
+
+    xml
+
+commit f1790b490f4ac405eaf4b27666e6b3c557a48229
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Jul 22 15:10:58 2013 -0500
+
+    xml
+
+commit a01fb974fad729502e6f77b10a82240c1ffa48b8
+Merge: 1d15c1d e53cf23
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 14:50:51 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 1d15c1d8a38bef834733b6191222f8f5c0795f0e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 14:50:33 2013 -0500
+
+    Added reset file for database.
+
+commit e53cf23e37b5c1a5edcea14f8fb87b0b8ad9a6a4
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Mon Jul 22 12:02:18 2013 -0500
+
+    Update organization.html
+
+commit 1e07c567edf1877ade8d73bbb035573eebe503dc
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 11:55:18 2013 -0500
+
+    Minor changes.
+
+commit 59a4c6a5fa32fb0734bb0601ff6183ce58d4f8d3
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Jul 22 11:40:03 2013 -0500
+
+    Auto-clear thumbnail cache with each upload.
+
+commit b660543681d482ec7f513bb7de2ac6ef1599350a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 23:58:00 2013 -0500
+
+    One last improvement.
+
+commit 16eaf466b3ae19db6e1087ad243a6041580d0af0
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 23:51:24 2013 -0500
+
+    Improved thumbnails.
+
+commit 373dda04fb40e2303ffbea6d02314f7e8a2475b1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 23:35:35 2013 -0500
+
+    Fixed thumbnail bug.
+
+commit e54e9341aaedbc8d332f0f3b50021631ba253bdd
+Author: tmtorres <tmtorres@cs.utexas.edu>
+Date:   Sun Jul 21 21:53:35 2013 -0500
+
+    Update WCDB2.xml
+
+commit 12dcebffde6d0522362f22ab8f06e8b836738cd2
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 21:45:06 2013 -0500
+
+    Fixed bad unicode data.
+
+commit 3338e5aa0b47b14f358411b110c9988822e6e81e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 20:46:14 2013 -0500
+
+    Added thumbs to people and orgs.
+
+commit 591efa616f37e54d7261aa679d5f4360891f15c7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 20:43:14 2013 -0500
+
+    Used thumbnails for all entities.
+
+commit 7ca074e6bdbf3e4226977c5ed8def51c1a401e3d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 20:42:14 2013 -0500
+
+    Merged.
+
+commit 77862fab71615182599c6e3bef3d546b38e183d3
+Merge: 33b114f 07d28a8
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 20:41:27 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	crisix/views.py
+
+commit 33b114f48e68fd2ba3dca2aca5a14bfe24756581
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 20:40:16 2013 -0500
+
+    Utilized thumbnails.
+
+commit 07d28a8cda74df7a4a74bad8a286310922d7cfd1
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 20:38:56 2013 -0500
+
+    updated XML instance
+
+commit acb578d9784e8bcded5eabe169a5707cb567fbd6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 19:38:14 2013 -0500
+
+    updated XML
+
+commit 5a95fe4372f772e4bcc793b74e63ffbc46a92374
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Jul 21 18:46:30 2013 -0500
+
+    remove dark hero border
+
+commit 472522cdf5615e07b065703015a4433879265d88
+Merge: f468ba6 997b527
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Jul 21 18:39:38 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit f468ba6724a26360daecb30f40d95d96a44930c7
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Jul 21 18:39:31 2013 -0500
+
+    Implement video and img box
+
+commit 997b527591490be44108fd473fc0e1c39d33192b
+Merge: 0d8ef54 adf0b9c
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 18:33:17 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 0d8ef5476fb2d52f35e031e89f34ede1eba13a1b
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 18:33:08 2013 -0500
+
+    updated XML instance
+
+commit adf0b9cef3156bf5605decdd6cd277d9dcb9fe4a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 18:03:38 2013 -0500
+
+    Limited number of images/vids displayed.
+
+commit 77f1fc42ce53a5335482ecef64634fa0bb1fab71
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 17:54:22 2013 -0500
+
+    Fixed merge.
+
+commit 74d5963e402ed02e4a4f7afa9bcce407e48951a6
+Merge: e5db7e8 93fcdeb
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 17:35:13 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+    
+    Conflicts:
+    	WCDB2.xml
+
+commit e5db7e8a33e7df48926cc6085ad0fb32714bec36
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 17:26:58 2013 -0500
+
+    Additional Person modifications
+
+commit 93fcdebb6656a627b22e3dc3deae679aa927dacf
+Merge: 1da5b7f 5d13f22
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 17:16:50 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 1da5b7faa3c00356b76d5813707d1ef838ebd9c6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 17:16:27 2013 -0500
+
+    updated XML instance
+
+commit 078d611e3c69c4c92cc496bfa9eb32eb748ed4b9
+Merge: 0171293 8f0e3d4
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 17:15:48 2013 -0500
+
+    updated XML instance
+
+commit 5d13f228a37d39e4b8bcb84690ad31813b9536c4
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 17:09:01 2013 -0500
+
+    Basic organization template.
+
+commit 66d8f129f08cb237ef932ea5109160c03f096412
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 17:00:51 2013 -0500
+
+    Changed order of external links/citations.
+
+commit 2875c06695277919c1031142941dd6f3d80fae89
+Merge: ff83ae3 8f0e3d4
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 16:58:24 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit ff83ae38cfd4287e113809c254502421fe55279e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 16:58:03 2013 -0500
+
+    Added feeds to organizations.
+
+commit 0171293ddb65a7739cb20f641e639c6b34251031
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Jul 21 16:47:52 2013 -0500
+
+    updated XML instance
+
+commit 8f0e3d44e39043378a3bba41d9f3c4d8495320b0
+Merge: a6e38a9 a1e54ce
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 16:31:47 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+
+commit a6e38a9bbbd8e65f13fa0f952f2a94defccee411
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 16:31:26 2013 -0500
+
+    Fixed XML file
+
+commit a1e54ce865d36d13b7070431cdf2c1b22b661913
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 16:30:21 2013 -0500
+
+    Feeds works (Twitter).
+
+commit 0d340e7684088f107d35ac4d62982c6dd6cf5e94
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 15:24:59 2013 -0500
+
+    Changed export so that it writes to a file.
+
+commit e5da35753d6160e7a83c3a05b48e10f4a1d14c7c
+Merge: 43e32b1 15dc482
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 15:01:06 2013 -0500
+
+    Merge branch 'master' of github.com:tmtorres/cs373-wcdb
+
+commit 43e32b184e1dfad7e966f497cbd535405e12f603
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 15:00:27 2013 -0500
+
+    Modified person and crisis templates
+
+commit 15dc482d9dd5e5d685506722f5b3b5a2b2a19d8e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 14:57:39 2013 -0500
+
+    Minimal utility page.
+
+commit 5094380d63413f36ab8aab2a225818b5c992a139
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Jul 21 14:42:12 2013 -0500
+
+    Fixed import bug.
+
+commit 064a45f958ba69ec71afc00aeff0d9e67b89d3bb
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Sun Jul 21 14:37:44 2013 -0500
+
+    Person template completed
+
+commit af9bef130a5aff57d4856d3657c0b8206ef5ed1a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 20:58:49 2013 -0500
+
+    Small fixes.
+
+commit 54f9c32e42255319fdeb1eff270c85ea6d09b290
+Author: tmtorres <tmtorres@cs.utexas.edu>
+Date:   Sat Jul 20 20:39:24 2013 -0500
+
+    Update views.py
+
+commit 32ea7a55aabb34b5791204fa6670cb2f255ae643
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 20:17:22 2013 -0500
+
+    Updated git cache.
+
+commit f284c0feb45f4c5ad61c3bb7544ea7eb79b62fe9
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 20:16:25 2013 -0500
+
+    Modified gitignore.
+
+commit c4f9c152580bf3e0eb697e34740a5befe22d537e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 20:13:19 2013 -0500
+
+    Minor change.
+
+commit b04e082bcdfa2628cf5741b79f70e88f48351d4d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 20:08:30 2013 -0500
+
+    Changed settings to allow for separate databases.
+
+commit 67eaf83a623991006b06ab560e87687994b24686
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:57:27 2013 -0500
+
+    Fixed import error.
+
+commit e4da261d1984088a937c2c90d74a576c2b1afce7
+Merge: 4ed017b 3c095ea
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:52:50 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 4ed017bfac26312cceed946a6375225934c2012d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:52:26 2013 -0500
+
+    Fixed 'ways to help' bug.
+
+commit 3c095eaa17550942b4d69384fb5ee50b7165e0d5
+Merge: b29f03f 91bd7a4
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Jul 20 18:51:16 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit b29f03f721936adc69dd9a3c80587462ee5946d6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Jul 20 18:50:57 2013 -0500
+
+    updated XML
+
+commit 91bd7a44e30419759f1e1912d3c6fea2bdec69ea
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:47:30 2013 -0500
+
+    Fixed issue with Turkish protests.
+
+commit 79ce01b6f681f616775d669b5a4c1bea9ffc5458
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:42:42 2013 -0500
+
+    Fixed issue with footer.
+
+commit 762fdda1d4135c282dec133e5d82ca8d0e0bbe8f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:23:22 2013 -0500
+
+    Fixed a bug in export.
+
+commit cc33da765c28560f46c71f0ae5b3514e48bba4ec
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 18:18:07 2013 -0500
+
+    Fixed ways to help.
+
+commit a83fdf92c9045e6c8ef1e8d37cdce26fca371048
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 17:48:51 2013 -0500
+
+    Improved layout.
+
+commit 10024d808f816e1c7c96c0a01dcdb2dd8166c041
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 17:42:27 2013 -0500
+
+    Made code easier to read.
+
+commit 7b433407ad6a480c2a96fb37548b2ca626b6c347
+Merge: 1b93fe3 8d8d5bf
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 17:36:22 2013 -0500
+
+    Merge branch 'master' of https://github.com/tmtorres/cs373-wcdb
+
+commit 1b93fe3452e04d81c20e23e601f3f084116ad963
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 17:34:31 2013 -0500
+
+    Modified base, added index.
+
+commit 8d8d5bf3af52b4214214af2d08c84f0e18f09e7d
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Jul 20 17:27:08 2013 -0500
+
+    adapting XML instance to grader's schema
+
+commit f0483745e70f48f43a3fa9775ad179cd9ca8eac0
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Jul 20 17:15:24 2013 -0500
+
+    adding the grader's schema
+
+commit 971897465dcb09373d7cd2f4acf594df8afc5d69
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Jul 20 15:37:08 2013 -0500
+
+    update on XML
+
+commit dd62dbfdb6e9696f409fb986b05091d324096800
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Jul 20 15:13:48 2013 -0500
+
+    Skeleton templates for site pages.
+
+commit 87c7a5aec8123b4c49af6d514d15784966ea06ba
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 19 16:33:56 2013 -0500
+
+    Optimized upload.
+
+commit 7c79505c718f8e37b52ec050e40bcab06564e5b4
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 19 14:14:25 2013 -0500
+
+    Utilized template inheritance.
+
+commit cc4f5bccfa5d3f6fc73d8a83db57c98cb487f021
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 19 07:47:56 2013 -0500
+
+    Template inheritance.
+
+commit c9b52306214863659b9bd6a7f29b6d3672d5ea7d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Jul 19 06:58:29 2013 -0500
+
+    A bit of cleaning.
