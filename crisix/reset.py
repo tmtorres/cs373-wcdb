@@ -1,3 +1,8 @@
+"""
+reset.py is a script that helps us reset and
+sync the database very quickly
+"""
+
 import os, glob
 import settings
 

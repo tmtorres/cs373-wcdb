@@ -15,15 +15,27 @@ from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
 def index(request):
+    """
+    index redirects a valild short URL to the official home page
+    """
     return redirect('crisix/')
 
 def home(request):
+    """
+    home returns a rendered display as our home page
+    with all entity entries displayed
+    """
     crises = [{'id': str(c.id).lower()[4:], 'name': c.name} for c in Crisis.objects.all()]
     organizations = [{'id': str(o.id).lower()[4:], 'name': o.name} for o in Organization.objects.all()]
     people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
 def display(request, etype = ''):
+    """
+    etype defines which page user was trying to access
+    display is used to display plain tab pages
+    when an id is not specified
+    """
     return HttpResponse(etype + ' list page.')
 
 def thumbnail(e):
@@ -41,6 +53,10 @@ def thumbnail(e):
     return thumbs
 
 def people(request, id):
+    """
+    id is a unique key to know which page to display
+    people renders a page with the id specified persons data
+    """
     p = Person.objects.get(id='PER_' + str(id).upper())
     return render(request, 'person.html', {
         'p' : p,
@@ -55,6 +71,10 @@ def people(request, id):
         })
 
 def organizations(request, id):
+    """
+    id is a unique key to know which page to display
+    organizations renders a page with the id specified org data
+    """
     o = Organization.objects.get(id='ORG_' + str(id).upper())
     return render(request, 'organization.html', {
         'o' : o,
@@ -70,6 +90,10 @@ def organizations(request, id):
         })
 
 def crises(request, id):
+    """
+    id is a unique key to know which page to display
+    crises renders a page with the id specified crisis data
+    """
     c = Crisis.objects.get(id='CRI_' + str(id).upper())
     return render(request, 'crisis.html', {
         'c' : c, 

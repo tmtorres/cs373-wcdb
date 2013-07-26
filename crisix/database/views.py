@@ -24,9 +24,13 @@ from models import *
 import subprocess
 
 def utility(request):
+    """
+    utility returns a rendered display of our utility page
+    """
     return render(request, 'utility.html', {'view': 'index'})
 
 newlines = ['\n', '\r\n', '\r']
+
 def capture(request, process):
     yield open('style.html').read()
     while True:
@@ -44,9 +48,15 @@ def results(request):
     return HttpResponse((str(c) for c in capture(request, process)))
 
 def test(request):
+    """
+    test renders a page when the unit tests are ran
+    """
     return render(request, 'utility.html', {'view': 'test'})
 
 def download(request):
+    """
+    download renders a page for the export page within utilities
+    """
     root = ET.Element('WorldCrises')
     getCrises(root)
     getPeople(root)
@@ -57,6 +67,12 @@ def download(request):
     return response
 
 def validate(request, file):
+    """
+    file is the file imported
+    validate is a helper method for uplaod that returns
+    failure or success depending if the file given validates
+    against the appropriate schema
+    """
     try:
         elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile='/u/tmtorres/CS373/cs373-wcdb/WCDB2.xsd.xml',
                              xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
@@ -73,6 +89,9 @@ def validate(request, file):
 
 @lockdown()
 def upload(request):
+    """
+    upload renders a page for the import page within utilities
+    """
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
