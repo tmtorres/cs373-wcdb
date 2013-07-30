@@ -15,12 +15,24 @@ LOCKDOWN_PASSWORDS = ('django')
 MANAGERS = ADMINS
 
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
 
-TEST_DATABASES = {}
-TEST_DATABASES['default'] = dj_database_url.config(default='postgres://ygzwjwrsghenrk:d_tbgauYlWirkd2oqb0daeGKUb@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d8i8o827885r42')
+ZFILE = '/u/z/users/cs373/' + os.getcwd().split('/')[4] + '/.zinfo'
 
-TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
+if os.path.exists(ZFILE):
+    ZINFO = dict([s.split(' = ') for s in open(ZFILE).read().split('\n')[:3]])
+    DATABASES['default'] = {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': ZINFO['database'],
+            'USER': ZINFO['user'],
+            'PASSWORD': ZINFO['password'],
+            'HOST': 'z',
+            'PORT': '',
+            }
+else:
+    DATABASES['default'] = dj_database_url.config(default='postgres://zeaikgpvunxfbw:8B1Fa8UOkOoBhF3luOXkpf-etP@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d4trkud8kvgl55')
+    TEST_DATABASES = {}
+    TEST_DATABASES['default'] = dj_database_url.config(default='postgres://ygzwjwrsghenrk:d_tbgauYlWirkd2oqb0daeGKUb@ec2-54-227-238-31.compute-1.amazonaws.com:5432/d8i8o827885r42')
+    TEST_RUNNER = 'crisix.database.test_suite_runner.HerokuTestSuiteRunner'
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
