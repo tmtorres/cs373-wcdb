@@ -13,12 +13,12 @@
 
 <li class="nav-header">Related Crises</li>
 {% for c in related_crises %}
-<li><a href="{% url "crisix.views.crises" c.id %}">{{ c.name }}</a></li>
+<li><a href="{% url crisix.views.crises c.id %}">{{ c.name }}</a></li>
 {% endfor %}
 
 <li class="nav-header">Related People</li>
 {% for p in related_people %}
-<li><a href="{% url "crisix.views.people" p.id %}">{{ p.name }}</a></li>
+<li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
 {% endblock %}
 
