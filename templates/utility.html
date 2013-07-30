@@ -19,14 +19,32 @@
                 <h1>Utilities</h1>
                 <br><br>
                 <p>Welcome to the database management page.</p>
-            {% else %}{% if view == 'form' %}
+                {% else %}{% if view == 'form' %}
                 <h1>File Upload</h1></br>
-                <form enctype="multipart/form-data" action="" method="post">
-                {% csrf_token %}
-                {{ form.file.errors }}
-                <p>{{ form.file }}</p>
-                <p><input type="submit" class="btn btn-primary" value="Submit" /></p>
-                </form>
+                <form id="fileupload" enctype="multipart/form-data" action="" method="post">
+                    {% csrf_token %}
+                    {{ form.file.errors }}
+                    {{ form.file }}
+                <p>{{ form.merge }} Merge </p>
+                <p>
+                <div class="input-append">
+                   <input id="pretty" class="input-large" type="text">
+                   <button type="button" class="btn btn-primary" onClick="$('input[id=id_file]').click();">Browse</button>
+                </div>
+                </p><p>
+                <button type="submit" class="btn btn-primary start">
+                    <i class="icon-upload icon-white"></i> <span>Submit</span>
+                </button>
+                </p>
+            </form>
+            <script type="text/javascript">
+                function getFileName(s) {
+                    s = s.value;
+                    var sp = s.lastIndexOf("\\");
+                    var file = s.substring(sp+1);
+                    return file;
+                }
+            </script>
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
                 <br>
