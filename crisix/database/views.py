@@ -56,6 +56,10 @@ def download(request):
     minidom.parseString(tostring(root)).writexml(response, addindent='    ', indent='    ', newl='\n')
     return response
 
+def clear():
+    for e in Entity.objects.all():
+        e.delete()
+
 def validate(request, file):
     try:
         elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -76,9 +80,10 @@ def upload(request):
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
+            if not form.cleaned_data['merge']:
+                clear()
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/test.xml', ContentFile(request.FILES['file'].read())))
             return validate(request, tmp)
     else:
         form = UploadFileForm()
-    #return render(request, 'utility.html', {'view': 'form', 'form': form,})
     return TemplateResponse(request, 'utility.html', {'view': 'form', 'form': form,})

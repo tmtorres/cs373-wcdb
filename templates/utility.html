@@ -18,20 +18,20 @@
             {% if view == 'index' %}
                 <h1>Utilities</h1>
                 <br><br>
-                <p>Welcome to the database management page.</p>
+                <p>Welcome to the database management page.
                 {% else %}{% if view == 'form' %}
                 <h1>File Upload</h1></br>
                 <form id="fileupload" enctype="multipart/form-data" action="" method="post">
                     {% csrf_token %}
-                    {{ form.file.errors }}
                     {{ form.file }}
-                <p>{{ form.merge }} Merge </p>
-                <p>
+                <p>Please choose a file. To perform a merge, check the box below.
+                {{ form.file.errors }}
                 <div class="input-append">
-                   <input id="pretty" class="input-large" type="text">
+                   <input id="pretty" class="input-large" type="text" style="background-color:#fff;cursor:default;" readonly>
                    <button type="button" class="btn btn-primary" onClick="$('input[id=id_file]').click();">Browse</button>
-                </div>
-                </p><p>
+               </div>
+               <label class="checkbox">{{ form.merge }} Merge </label>
+                </p><p><br>
                 <button type="submit" class="btn btn-primary start">
                     <i class="icon-upload icon-white"></i> <span>Submit</span>
                 </button>
