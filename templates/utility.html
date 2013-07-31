@@ -26,9 +26,9 @@
                     {{ form.file }}
                 <p>Please choose a file. To perform a merge, check the box below.
                 {{ form.file.errors }}
-                <div class="input-append">
+                <div class="input-append" onClick="$('input[id=id_file]').click();">
                    <input id="pretty" class="input-large" type="text" style="background-color:#fff;cursor:default;" readonly>
-                   <button type="button" class="btn btn-primary" onClick="$('input[id=id_file]').click();">Browse</button>
+                   <button type="button" class="btn btn-primary">Browse</button>
                </div>
                <label class="checkbox">{{ form.merge }} Merge </label>
                 </p><p><br>
