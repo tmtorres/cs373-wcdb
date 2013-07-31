@@ -19,7 +19,7 @@
                 <h1>Utilities</h1>
                 <br><br>
                 <p>Welcome to the database management page.
-                {% else %}{% if view == 'form' %}
+            {% else %}{% if view == 'form' %}
                 <h1>File Upload</h1></br>
                 <form id="fileupload" enctype="multipart/form-data" action="" method="post">
                     {% csrf_token %}
@@ -29,26 +29,26 @@
                 <div class="input-append" onClick="$('input[id=id_file]').click();">
                    <input id="pretty" class="input-large" type="text" style="background-color:#fff;cursor:default;" readonly>
                    <button type="button" class="btn btn-primary">Browse</button>
-               </div>
-               <label class="checkbox">{{ form.merge }} Merge </label>
+                </div>
+                <label class="checkbox">{{ form.merge }} Merge </label>
                 </p><p><br>
                 <button type="submit" class="btn btn-primary start">
                     <i class="icon-upload icon-white"></i> <span>Submit</span>
                 </button>
                 </p>
-            </form>
-            <script type="text/javascript">
+                </form>
+                <script type="text/javascript">
                 function getFileName(s) {
                     s = s.value;
                     var sp = s.lastIndexOf("\\");
-                    var file = s.substring(sp+1);
+                    var file = s.substring(sp + 1);
                     return file;
                 }
-            </script>
+                </script>
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
                 <br>
-                <iframe width="100%" height="300" frameborder="0" scrolling="yes" src="{% url database.views.results %}"></iframe>
+                <iframe style="border-style:solid;border-width:1px;border-color:#e1e1e8;border-radius:4px;" width="100%" height="300" frameborder="0" scrolling="auto" src="{% url database.views.results %}" class="pre"></iframe>
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
                 <br><br>

@@ -14,6 +14,10 @@ def insert(root):
         elif elem.tag == 'Person':
             perHandler(elem)
 
+def clear():
+    for e in Entity.objects.all():
+        e.delete()
+
 def getEntity(etype, eid):
     assert etype in (Crisis, Organization, Person)
     assert eid[:3] in ('CRI', 'ORG', 'PER')

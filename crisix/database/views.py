@@ -56,10 +56,6 @@ def download(request):
     minidom.parseString(tostring(root)).writexml(response, addindent='    ', indent='    ', newl='\n')
     return response
 
-def clear():
-    for e in Entity.objects.all():
-        e.delete()
-
 def validate(request, file):
     try:
         elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
