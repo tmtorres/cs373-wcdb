@@ -26,12 +26,29 @@ from download import getCrises, getPeople, getOrganizations
 from search import normalize_query, get_query
 import subprocess
 
+def contextualize(summary, query_string):
+    i = summary.lower().find(query_string.lower())
+    context = summary.split(' ')
+    ignore = '.?!,0123456789 '
+    if i < 0:
+        body = ' '.join(context[:50]).lstrip(ignore)
+        return body if body.endswith('.') else body + ' ...' 
+    else:
+        n = 0
+        for j in range(0, len(context)):
+            n += len(context[j]) + 1
+            if n >= i:
+                start = max(0, (j - 25))
+                end = min(len(context), start + 50)
+                body = ' '.join(context[start:end]).lstrip(ignore)
+                return ('... ' if (body[0].islower() or body[0].isdigit()) else '') + (body if body.endswith('.') else body + ' ...')
+
 def search(request):
     query_string = ''
     found_entries = None
     if ('q' in request.GET) and request.GET['q'].strip():
         query_string = request.GET['q']
-        entry_query = get_query(query_string, ['name', 'kind', 'location', 'summary',])
+        entry_query, terms = get_query(query_string, ['name', 'kind', 'location', 'summary',])
         found_entries = Entity.objects.filter(entry_query)
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': str(e.id).lower()[:3],
@@ -39,7 +56,7 @@ def search(request):
         'name': e.name, 
         'kind': e.kind, 
         'location': e.location if '<li>' not in e.location else ''.join(e.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
-        'summary': ' '.join(e.summary.split(' ')[:50]) + ' ...',
+        'summary': contextualize(e.summary, query_string)
     } for e in found_entries]})
 
 def utility(request):

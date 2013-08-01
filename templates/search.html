@@ -1,6 +1,6 @@
 {% extends "hero.html" %}
 {% block body %}
-    <div class="span9" style="margin-left:0px; list-style: none;">
+    <div class="span6" id="results" style="margin-left:0px; list-style: none;">
             Showing search results for "{{ query_string }}":<br><br>
             {% for e in entries %}
             {% if e.type == "cri" %}
@@ -14,9 +14,16 @@
                 <li><b>http://crisix.herokuapp.com{% url crisix.views.people e.id %}</li></b>
             {% endif %}{% endif %}{% endif %}
             <li>{{ e.summary }}</li>
-            <li>{{ e.kind }}</li>
-            <li>{{ e.location }}</li>
+            <li>{{ e.kind }} | {{ e.location }}</li>
             <br>
             {% endfor %}
     </div>
+    <script>
+        function updateHaystack(input, needle) {
+            return input.replace(new RegExp('(.)(' + needle + ')(.)','ig'), '$1<b>$2</b>$3');
+        }
+        var markup = document.getElementById('results').innerHTML;
+        var output = updateHaystack(markup, '{{ query_string }}');
+        document.getElementById('results').innerHTML = output;
+    </script>
 {% endblock %}
