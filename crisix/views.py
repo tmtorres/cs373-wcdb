@@ -24,27 +24,29 @@ def display(request, etype = ''):
     return HttpResponse(etype + ' list page.')
 
 def thumbnails(e, n = 3):
-    imgs = [i for i in e.elements.filter(ctype='IMG')][:n]
-    for i in imgs:
-        if not i.thumb:
-            i.thumb = str(i.entity.id).lower() + str(i.id) + '.thumbnail'
-        path = os.path.join(settings.THUMB_ROOT, i.thumb)
-        if not os.path.exists(path):
-            urlretrieve(i.embed, path)
-            th = Image.open(path)
-            i.hash = str(imagehash.average_hash(th))
-            th.thumbnail((180, th.size[1]) if th.size[0] < th.size[1] else (th.size[0], 180))
-            th = th.crop((0, 0, 180, 180))
-            th.save(path, 'PNG')
-        i.save()
-    dup = set()
-    for i in range(0, len(imgs)):
-        for j in range(i + 1, len(imgs)):
-            if imgs[i].hash == imgs[j].hash:
-                dup.add(imgs[j])
-    for i in dup:
-        i.delete()
-    return imgs
+    hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
+    if len(hash) < n:
+        imgs = e.elements.filter(ctype='IMG').filter(hash=None)
+        for i in imgs:
+            if not i.thumb:
+                i.thumb = str(i.entity.id).lower() + str(i.id) + '.thumbnail'
+            path = os.path.join(settings.THUMB_ROOT, i.thumb)
+            if not os.path.exists(path):
+                urlretrieve(i.embed, path)
+                t = Image.open(path)
+                i.hash = str(imagehash.average_hash(t))
+                if i.hash in hash:
+                    os.remove(path)
+                    i.delete()
+                else:
+                    hash[i.hash] = i
+                    t.thumbnail((180, t.size[1]) if t.size[0] < t.size[1] else (t.size[0], 180))
+                    t = t.crop((0, 0, 180, 180))
+                    t.save(path, 'PNG')
+                    i.save()
+            if len(hash) == n:
+                break
+    return hash.values()[:n]
 
 def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
