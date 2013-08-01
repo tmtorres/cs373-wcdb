@@ -4,7 +4,6 @@ from django.http import HttpResponse
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring
 from xml.etree.ElementTree import ElementTree
-from xml.dom import minidom
 
 def getCrises(root):
     assert root is not None

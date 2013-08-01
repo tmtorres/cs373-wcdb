@@ -3,14 +3,16 @@ import sys, glob, os
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from django.conf import settings
-from django.http import HttpResponse
-from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response, render, redirect
-from django.core.urlresolvers import reverse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
 from django.core import management
 
 from xml.etree.ElementTree import ParseError
+import xml.etree.ElementTree as ET
+from xml.etree.ElementTree import tostring, fromstring
+from xml.etree.ElementTree import ElementTree
+from xml.dom import minidom
 
 from lockdown.decorators import lockdown
 from lockdown.forms import AuthForm
@@ -18,10 +20,27 @@ from lockdown.forms import AuthForm
 from forms import UploadFileForm
 from minixsv import pyxsval
 
-from upload import *
-from download import *
-from models import *
+from models import Entity
+from upload import insert, clear
+from download import getCrises, getPeople, getOrganizations
+from search import normalize_query, get_query
 import subprocess
+
+def search(request):
+    query_string = ''
+    found_entries = None
+    if ('q' in request.GET) and request.GET['q'].strip():
+        query_string = request.GET['q']
+        entry_query = get_query(query_string, ['name', 'kind', 'location', 'summary',])
+        found_entries = Entity.objects.filter(entry_query)
+    return render(request, 'search.html', {'query_string': query_string, 'entries': [{
+        'type': str(e.id).lower()[:3],
+        'id': str(e.id).lower()[4:], 
+        'name': e.name, 
+        'kind': e.kind, 
+        'location': e.location if '<li>' not in e.location else ''.join(e.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
+        'summary': ' '.join(e.summary.split(' ')[:50]) + ' ...',
+    } for e in found_entries]})
 
 def utility(request):
     return render(request, 'utility.html', {'view': 'index'})
@@ -38,7 +57,7 @@ def capture(request, process):
         if out != '':
             yield out
 
-def results(request):
+def runner(request):
     cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'test', 'database', '--noinput']
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     return HttpResponse((str(c) for c in capture(request, process)))

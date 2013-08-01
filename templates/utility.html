@@ -48,7 +48,7 @@
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
                 <br>
-                <iframe style="border-style:solid;border-width:1px;border-color:#e1e1e8;border-radius:4px;background-color:#fff;" width="100%" height="300" frameborder="0" scrolling="auto" src="{% url database.views.results %}" class="pre"></iframe>
+                <iframe style="border-style:solid;border-width:1px;border-color:#e1e1e8;border-radius:4px;background-color:#fff;" width="100%" height="300" frameborder="0" scrolling="auto" src="{% url database.views.runner %}" class="pre"></iframe>
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
                 <br><br>

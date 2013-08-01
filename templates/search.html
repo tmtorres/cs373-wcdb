@@ -1,0 +1,22 @@
+{% extends "hero.html" %}
+{% block body %}
+    <div class="span9" style="margin-left:0px; list-style: none;">
+            Showing search results for "{{ query_string }}":<br><br>
+            {% for e in entries %}
+            {% if e.type == "cri" %}
+                <li><a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a></li>
+                <li><b>http://crisix.herokuapp.com{% url crisix.views.crises e.id %}</li></b>
+            {% else %}{% if e.type == "org" %}
+                <li><a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a></li>
+                <li><b>http://crisix.herokuapp.com{% url crisix.views.organizations e.id %}</li></b>
+            {% else %}{% if e.type == "per" %}
+                <li><a href="{% url crisix.views.people e.id %}">{{ e.name }}</a></li>
+                <li><b>http://crisix.herokuapp.com{% url crisix.views.people e.id %}</li></b>
+            {% endif %}{% endif %}{% endif %}
+            <li>{{ e.summary }}</li>
+            <li>{{ e.kind }}</li>
+            <li>{{ e.location }}</li>
+            <br>
+            {% endfor %}
+    </div>
+{% endblock %}

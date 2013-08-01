@@ -26,6 +26,7 @@ urlpatterns = patterns('',
     url(r'^crises/(?P<id>\w{6})/$', 'crisix.views.crises'),
     url(r'^organizations/(?P<id>\w{6})/$', 'crisix.views.organizations'),
     url(r'^utility/', include('database.urls')),
+    url(r'^search/', 'database.views.search'),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
