@@ -71,7 +71,8 @@ class Person(Entity):
 class WebElement(models.Model):
     entity = models.ForeignKey(Entity, related_name='elements')
     ctype = models.CharField(max_length=10)
-    thumbnail = models.ImageField(upload_to="thumbs", null=True)
+    thumb = models.TextField(blank=True, null=True)
+    hash = models.TextField(blank=True, null=True)
     href = models.URLField(blank=True, null=True)
     embed = models.TextField(blank=True, null=True)
     text = models.TextField(blank=True, default='', null=True)

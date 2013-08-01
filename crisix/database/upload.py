@@ -1,7 +1,8 @@
 from models import *
 
-import datetime
+import datetime, os, glob
 from datetime import time
+from django.conf import settings
 from xml.etree.ElementTree import tostring
 
 def insert(root):
@@ -15,6 +16,8 @@ def insert(root):
             perHandler(elem)
 
 def clear():
+    for t in glob.glob(os.path.join(settings.THUMB_ROOT, '*.thumbnail')):
+        os.remove(t)
     for e in Entity.objects.all():
         e.delete()
 
@@ -128,7 +131,8 @@ def comHandler(node, e):
                 insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
         if attr.tag == 'Images':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
+                if str(elem.attrib.get('embed')).split('.')[-1].upper() in ('JPG', 'JPEG', 'PNG', 'GIF'):
+                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
                 if 'youtube' in elem.attrib.get('embed'):
