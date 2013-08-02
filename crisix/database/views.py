@@ -27,21 +27,16 @@ from search import normalize_query, get_query
 import subprocess
 
 def contextualize(summary, query_string):
-    i = summary.lower().find(query_string.lower())
-    context = summary.split(' ')
-    ignore = '.?!,0123456789 '
-    if i < 0:
-        body = ' '.join(context[:50]).lstrip(ignore)
-        return body if body.endswith('.') else body + ' ...' 
+    context = summary.split()
+    i = [context.index(s) for s in context if query_string.lower() in s.lower()]
+    if not len(i):
+        context = ' '.join(context[:50]).lstrip('.?!,0123456789 ').rstrip(',')
+        return context if context.endswith('.') else context + ' ...'
     else:
-        n = 0
-        for j in range(0, len(context)):
-            n += len(context[j]) + 1
-            if n >= i:
-                start = max(0, (j - 25))
-                end = min(len(context), start + 50)
-                body = ' '.join(context[start:end]).lstrip(ignore)
-                return ('... ' if (body[0].islower() or body[0].isdigit()) else '') + (body if body.endswith('.') else body + ' ...')
+        start = max(0, i[0] - 25)
+        end = min(len(context), start + 50)
+        context = ' '.join(context[start:end]).lstrip('.?!,0123456789 ').rstrip(',')
+        return ('... ' if (context[0].islower() or context[0].isdigit()) else '') + (context if context.endswith('.') else context + ' ...')
 
 def search(request):
     query_string = ''
@@ -52,7 +47,7 @@ def search(request):
         found_entries = Entity.objects.filter(entry_query)
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': str(e.id).lower()[:3],
-        'id': str(e.id).lower()[4:], 
+        'id': str(e.id).lower()[4:],
         'name': e.name, 
         'kind': e.kind, 
         'location': e.location if '<li>' not in e.location else ''.join(e.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
