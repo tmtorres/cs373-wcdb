@@ -1,5 +1,6 @@
-import re
+import re, operator
 from django.db.models import Q
+from substr import long_substr
 
 def normalize_query(query_string,
                     findterms=re.compile(r'"([^"]+)"|(\S+)').findall,
@@ -34,3 +35,30 @@ def get_query(query_string, search_fields):
         else:
             query = query & or_query
     return query
+
+def relevance_sort(query_string, search_fields, query_set):
+    sorted_set = {}
+    for entry in query_set:
+        substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
+        print substr
+        match = float(max([len(s) for s in substr])) / len(query_string)
+        if match in sorted_set:
+            sorted_set[match] += [entry]
+        else:
+            sorted_set[match] = [entry]
+    print sorted_set
+    print
+    return reduce(operator.add, sorted_set.values(), [])
+
+def contextualize(summary, query_string):
+    context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
+    if context is None:
+        #fix
+        return ' '.join(summary.split()[:50])
+    else:
+        pivot = context.group(0)
+        head, tail = summary.split(pivot, 1)
+        head = head.split()[-20:]
+        tail = tail.split()[:30]
+        context = ' '.join(head + [pivot] + tail).lstrip('.?!,0123456789 ').rstrip(',')
+        return ('... ' if (context[0].islower() or context[0].isdigit()) else '') + (context if context.endswith('.') else context + ' ...')

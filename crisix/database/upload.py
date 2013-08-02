@@ -4,16 +4,23 @@ import datetime, os, glob
 from datetime import time
 from django.conf import settings
 from xml.etree.ElementTree import tostring
+from minixsv import pyxsval
+
+def validate(file):
+    elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
+                         xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
+    elemTree = elementTreeWrapper.getTree()
+    return elemTree.getroot()
 
 def insert(root):
     assert root is not None
     for elem in root:
         if elem.tag == 'Crisis':
-            criHandler(elem)
+            cri_handler(elem)
         elif elem.tag == 'Organization':
-            orgHandler(elem)
+            org_handler(elem)
         elif elem.tag == 'Person':
-            perHandler(elem)
+            per_handler(elem)
 
 def clear():
     for t in glob.glob(os.path.join(settings.THUMB_ROOT, '*.thumbnail')):
@@ -21,7 +28,7 @@ def clear():
     for e in Entity.objects.all():
         e.delete()
 
-def getEntity(etype, eid):
+def get_entity(etype, eid):
     assert etype in (Crisis, Organization, Person)
     assert eid[:3] in ('CRI', 'ORG', 'PER')
     e = None
@@ -33,17 +40,17 @@ def getEntity(etype, eid):
     assert e is not None
     return e
 
-def criHandler(node):
+def cri_handler(node):
     assert node is not None
-    c = getEntity(Crisis, node.attrib.get('ID'))
+    c = get_entity(Crisis, node.attrib.get('ID'))
     c.name = node.attrib.get('Name')
     for attr in node:
         if attr.tag == 'Organizations':
             for elem in attr:
-                c.organizations.add(getEntity(Organization, elem.attrib.get('ID')))
+                c.organizations.add(get_entity(Organization, elem.attrib.get('ID')))
         if attr.tag == 'People':
             for elem in attr:
-                c.people.add(getEntity(Person, elem.attrib.get('ID')))
+                c.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
             c.kind = attr.text
         if attr.tag == 'Date':
@@ -61,21 +68,21 @@ def criHandler(node):
         if attr.tag == 'WaysToHelp':
             c.help += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
         if attr.tag == 'Common':
-            comHandler(attr, c)
+            com_handler(attr, c)
     assert c is not None
     c.save()
 
-def orgHandler(node):
+def org_handler(node):
     assert node is not None
-    o = getEntity(Organization, node.attrib.get('ID'))
+    o = get_entity(Organization, node.attrib.get('ID'))
     o.name = node.attrib.get('Name')
     for attr in node:
         if attr.tag == 'Crises':
             for elem in attr:
-                o.crises.add(getEntity(Crisis, elem.attrib.get('ID')))
+                o.crises.add(get_entity(Crisis, elem.attrib.get('ID')))
         if attr.tag == 'People':
             for elem in attr:
-                o.people.add(getEntity(Person, elem.attrib.get('ID')))
+                o.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
             o.kind = attr.text
         if attr.tag == 'Location':
@@ -85,31 +92,31 @@ def orgHandler(node):
         if attr.tag == 'ContactInfo':
             o.contact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.contact])
         if attr.tag == 'Common':
-            comHandler(attr, o)
+            com_handler(attr, o)
     assert o is not None
     o.save()
 
-def perHandler(node):
+def per_handler(node):
     assert node is not None
-    p = getEntity(Person, node.attrib.get('ID'))
+    p = get_entity(Person, node.attrib.get('ID'))
     p.name = node.attrib.get('Name')
     for attr in node:
         if attr.tag == 'Crises':
             for elem in attr:
-                p.crises.add(getEntity(Crisis, elem.attrib.get('ID')))
+                p.crises.add(get_entity(Crisis, elem.attrib.get('ID')))
         if attr.tag == 'Organizations':
             for elem in attr:
-                p.organizations.add(getEntity(Organization, elem.attrib.get('ID')))
+                p.organizations.add(get_entity(Organization, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
             p.kind = attr.text
         if attr.tag == 'Location':
             p.location = attr.text
         if attr.tag == 'Common':
-            comHandler(attr, p)
+            com_handler(attr, p)
     assert p is not None
     p.save()
 
-def insertElem(query, attr):
+def insert_elem(query, attr):
     assert type(query) is dict
     assert type(attr) is dict
     try:
@@ -119,30 +126,30 @@ def insertElem(query, attr):
         w = WebElement(**attr)
         w.save()
 
-def comHandler(node, e):
+def com_handler(node, e):
     assert node is not None
     assert e is not None
     for attr in node:
         if attr.tag == 'Citations':
             for elem in attr:
-                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'CITE', 'text' : elem.text})
+                insert_elem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'CITE', 'text' : elem.text})
         if attr.tag == 'ExternalLinks':
             for elem in attr:
-                insertElem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
+                insert_elem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
         if attr.tag == 'Images':
             for elem in attr:
                 if str(elem.attrib.get('embed')).split('.')[-1].upper() in ('JPG', 'JPEG', 'PNG', 'GIF'):
-                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
+                    insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
                 if 'youtube' in elem.attrib.get('embed'):
-                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
+                    insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
         if attr.tag == 'Maps':
             for elem in attr:
                 if 'google' in elem.attrib.get('embed'):
-                    insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
+                    insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
         if attr.tag == 'Feeds':
             for elem in attr:
-                insertElem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})
+                insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})
         if attr.tag == 'Summary':
             e.summary = attr.text

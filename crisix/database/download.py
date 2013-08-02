@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring
 from xml.etree.ElementTree import ElementTree
 
-def getCrises(root):
+def get_crises(root):
     assert root is not None
     for c in Crisis.objects.all():
         node = ET.SubElement(root, 'Crisis')
@@ -36,9 +36,9 @@ def getCrises(root):
             node.append(fromstring('<ResourcesNeeded>' + c.resources + '</ResourcesNeeded>'))
         if len(c.help) > 0:
             node.append(fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>'))
-        getCommon(node, c)
+        get_common(node, c)
 
-def getOrganizations(root):
+def get_organizations(root):
     assert root is not None
     for o in Organization.objects.all():
         node = ET.SubElement(root, 'Organization')
@@ -61,9 +61,9 @@ def getOrganizations(root):
             node.append(fromstring('<History>' + o.history + '</History>'))
         if len(o.contact) > 0:
             node.append(fromstring('<ContactInfo>' + o.contact + '</ContactInfo>'))
-        getCommon(node, o)
+        get_common(node, o)
 
-def getPeople(root):
+def get_people(root):
     assert root is not None
     for p in Person.objects.all():
         node = ET.SubElement(root, 'Person')
@@ -82,9 +82,9 @@ def getPeople(root):
             ET.SubElement(node, 'Kind').text = p.kind
         if len(p.location) > 0:
             ET.SubElement(node, 'Location').text = p.location
-        getCommon(node, p)
+        get_common(node, p)
 
-def getCommon(node, entity):
+def get_common(node, entity):
     assert node is not None
     assert entity is not None
     attr = ET.SubElement(node, 'Common')

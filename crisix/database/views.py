@@ -22,38 +22,10 @@ from forms import UploadFileForm
 from minixsv import pyxsval
 
 from models import Entity
-from upload import insert, clear
-from download import getCrises, getPeople, getOrganizations
-from search import normalize_query, get_query
-from substr import long_substr
-import subprocess, re, operator
-
-def relevance_sort(query_string, search_fields, query_set):
-    sorted_set = {}
-    for entry in query_set:
-        substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
-        print substr
-        match = float(max([len(s) for s in substr])) / len(query_string)
-        if match in sorted_set:
-            sorted_set[match] += [entry]
-        else:
-            sorted_set[match] = [entry]
-    print sorted_set
-    print
-    return reduce(operator.add, sorted_set.values(), [])
-
-def contextualize(summary, query_string):
-    context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
-    if context is None:
-        #fix
-        return ' '.join(summary.split()[:50])
-    else:
-        pivot = context.group(0)
-        head, tail = summary.split(pivot, 1)
-        head = head.split()[-20:]
-        tail = tail.split()[:30]
-        context = ' '.join(head + [pivot] + tail).lstrip('.?!,0123456789 ').rstrip(',')
-        return ('... ' if (context[0].islower() or context[0].isdigit()) else '') + (context if context.endswith('.') else context + ' ...')
+from upload import clear, validate, insert
+from download import get_crises, get_people, get_organizations
+from search import normalize_query, get_query, contextualize, relevance_sort
+import subprocess, re
 
 def search(request):
     query_string = ''
@@ -96,28 +68,13 @@ def test(request):
 
 def download(request):
     root = ET.Element('WorldCrises')
-    getCrises(root)
-    getPeople(root)
-    getOrganizations(root)
+    get_crises(root)
+    get_people(root)
+    get_organizations(root)
     response = HttpResponse(mimetype='text/xml')
     response['Content-Disposition'] = 'attachment; filename="crisix.xml"'
     minidom.parseString(tostring(root)).writexml(response, addindent='    ', indent='    ', newl='\n')
     return response
-
-def validate(request, file):
-    try:
-        elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
-                             xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
-        elemTree = elementTreeWrapper.getTree()
-        root = elemTree.getroot()
-        insert(root)
-    except pyxsval.XsvalError, errstr:
-        return render(request, 'utility.html', {'view': 'failure', 'errstr': errstr})
-    except ParseError, e:
-        return render(request, 'utility.html', {'view': 'failure', 'errstr': 'Invalid token: line ' + str(e.position[0]) + ', column ' + str(e.position[1])})
-    finally:
-        os.remove(file)
-    return render(request, 'utility.html', {'view': 'success'})
 
 @lockdown()
 def upload(request):
@@ -127,7 +84,15 @@ def upload(request):
             if not form.cleaned_data['merge']:
                 clear()
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/test.xml', ContentFile(request.FILES['file'].read())))
-            return validate(request, tmp)
+            try:
+                insert(validate(tmp))
+            except pyxsval.XsvalError, errstr:
+                return render(request, 'utility.html', {'view': 'failure', 'errstr': errstr})
+            except ParseError, e:
+                return render(request, 'utility.html', {'view': 'failure', 'errstr': 'Invalid token: line ' + str(e.position[0]) + ', column ' + str(e.position[1])})
+            finally:
+                os.remove(tmp)
+            return render(request, 'utility.html', {'view': 'success'})
     else:
         form = UploadFileForm()
     return TemplateResponse(request, 'utility.html', {'view': 'form', 'form': form,})
