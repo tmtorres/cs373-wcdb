@@ -5,24 +5,19 @@
             {% for e in entries %}
             {% if e.type == "cri" %}
                 <li><a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a></li>
-                <li>{{ e.kind }} | {{ e.location }}</li>
-                <li><b>http://crisix.herokuapp.com{% url crisix.views.crises e.id %}</li></b>
             {% else %}{% if e.type == "org" %}
                 <li><a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a></li>
-                <li>{{ e.kind }} | {{ e.location }}</li>
-                <li><b>http://crisix.herokuapp.com{% url crisix.views.organizations e.id %}</li></b>
             {% else %}{% if e.type == "per" %}
                 <li><a href="{% url crisix.views.people e.id %}">{{ e.name }}</a></li>
-                <li>{{ e.kind }} | {{ e.location }}</li>
-                <li><b>http://crisix.herokuapp.com{% url crisix.views.people e.id %}</li></b>
             {% endif %}{% endif %}{% endif %}
+            <li>{{ e.kind }} | {{ e.location }}</li>
             <p><li>{{ e.summary }}</li></p>
             <br>
             {% endfor %}
     </div>
     <script>
         function updateHaystack(input, needle) {
-            return input.replace(new RegExp('(.)(' + needle + ')(.)','ig'), '$1<b>$2</b>$3');
+            return input.replace(new RegExp('(.)(' + needle + ')(.)','igm'), '$1<b>$2</b>$3');
         }
         var markup = document.getElementById('results').innerHTML;
         var output = updateHaystack(markup, '{{ query_string }}');

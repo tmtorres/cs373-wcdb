@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
 from django.core import management
+from django.db.models import Q
 
 from xml.etree.ElementTree import ParseError
 import xml.etree.ElementTree as ET
@@ -24,26 +25,26 @@ from models import Entity
 from upload import insert, clear
 from download import getCrises, getPeople, getOrganizations
 from search import normalize_query, get_query
-import subprocess
+import subprocess, re
 
 def contextualize(summary, query_string):
-    context = summary.split()
-    i = [context.index(s) for s in context if query_string.lower() in s.lower()]
-    if not len(i):
-        context = ' '.join(context[:50]).lstrip('.?!,0123456789 ').rstrip(',')
-        return context if context.endswith('.') else context + ' ...'
+    context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
+    if context is None:
+        return ' '.join(summary.split()[:50])
     else:
-        start = max(0, i[0] - 25)
-        end = min(len(context), start + 50)
-        context = ' '.join(context[start:end]).lstrip('.?!,0123456789 ').rstrip(',')
+        pivot = context.group(0)
+        head, tail = summary.split(pivot, 1)
+        head = head.split()[-25:]
+        tail = tail.split()[:(50 - len(head))]
+        context = ' '.join(head + [pivot] + tail).lstrip('.?!,0123456789 ').rstrip(',')
         return ('... ' if (context[0].islower() or context[0].isdigit()) else '') + (context if context.endswith('.') else context + ' ...')
 
 def search(request):
     query_string = ''
     found_entries = None
-    if ('q' in request.GET) and request.GET['q'].strip():
-        query_string = request.GET['q']
-        entry_query, terms = get_query(query_string, ['name', 'kind', 'location', 'summary',])
+    if 'q' in request.GET:
+        query_string = request.GET['q'].strip()
+        entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
         found_entries = Entity.objects.filter(entry_query)
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': str(e.id).lower()[:3],
