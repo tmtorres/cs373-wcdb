@@ -26,16 +26,21 @@ from upload import insert, clear
 from download import getCrises, getPeople, getOrganizations
 from search import normalize_query, get_query
 from substr import long_substr
-import subprocess, re
+import subprocess, re, operator
 
 def relevance_sort(query_string, search_fields, query_set):
-    print len(query_set)
-    result_set = []
+    sorted_set = {}
     for entry in query_set:
         substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
-        result_set += [((float(max([len(s) for s in substr])) / len(query_string)), entry)]
-    return [v[1] for v in sorted(result_set, key=lambda t: t[0])][::-1]
-
+        print substr
+        match = float(max([len(s) for s in substr])) / len(query_string)
+        if match in sorted_set:
+            sorted_set[match] += [entry]
+        else:
+            sorted_set[match] = [entry]
+    print sorted_set
+    print
+    return reduce(operator.add, sorted_set.values(), [])
 
 def contextualize(summary, query_string):
     context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
