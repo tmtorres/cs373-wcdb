@@ -17,7 +17,7 @@
     </div>
     <script>
         function updateHaystack(input, needle) {
-            return input.replace(new RegExp('(.)(' + needle + ')(.)','igm'), '$1<b>$2</b>$3');
+            return input.replace(new RegExp('([^/]\\b)(' + needle + '\\w*)(\\b)','igm'), '$1<b>$2</b>$3');
         }
         var markup = document.getElementById('results').innerHTML;
         var output = updateHaystack(markup, '{{ query_string }}');
