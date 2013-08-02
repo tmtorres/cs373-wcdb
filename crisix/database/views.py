@@ -25,11 +25,22 @@ from models import Entity
 from upload import insert, clear
 from download import getCrises, getPeople, getOrganizations
 from search import normalize_query, get_query
+from substr import long_substr
 import subprocess, re
+
+def relevance_sort(query_string, search_fields, query_set):
+    print len(query_set)
+    result_set = []
+    for entry in query_set:
+        substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
+        result_set += [((float(max([len(s) for s in substr])) / len(query_string)), entry)]
+    return [v[1] for v in sorted(result_set, key=lambda t: t[0])][::-1]
+
 
 def contextualize(summary, query_string):
     context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
     if context is None:
+        #fix
         return ' '.join(summary.split()[:50])
     else:
         pivot = context.group(0)
@@ -45,7 +56,7 @@ def search(request):
     if 'q' in request.GET:
         query_string = request.GET['q'].strip()
         entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
-        found_entries = Entity.objects.filter(entry_query)
+        found_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(entry_query))
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': str(e.id).lower()[:3],
         'id': str(e.id).lower()[4:],
