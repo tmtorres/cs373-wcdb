@@ -13,7 +13,7 @@ def normalize_query(query_string,
         ['some', 'random', 'words', 'with quotes', 'and', 'spaces']
     
     '''
-    return [normspace(' ', (t[0] or t[1]).strip()) for t in findterms(query_string)] 
+    return [normspace(' ', (t[0] or t[1]).strip()) for t in findterms(query_string)]
 
 def get_query(query_string, search_fields):
     '''
@@ -36,19 +36,19 @@ def get_query(query_string, search_fields):
             query = query & or_query
     return query
 
+def insertion_sort(sequence, value, *bf):
+    for i in range(len(sequence)):
+        if ((value < sequence[i]) if bf is () else bf[0](value, sequence[i])):
+            return sequence.insert(i, value)
+    sequence.append(value)
+
 def relevance_sort(query_string, search_fields, query_set):
-    sorted_set = {}
+    sorted_set = []
     for entry in query_set:
         substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
-        print substr
         match = float(max([len(s) for s in substr])) / len(query_string)
-        if match in sorted_set:
-            sorted_set[match] += [entry]
-        else:
-            sorted_set[match] = [entry]
-    print sorted_set
-    print
-    return reduce(operator.add, sorted_set.values(), [])
+        insertion_sort(sorted_set, (match, entry), lambda x, y: x[0] > y[0])
+    return zip(*sorted_set)[1]
 
 def contextualize(summary, query_string):
     context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
