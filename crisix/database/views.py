@@ -34,8 +34,8 @@ def contextualize(summary, query_string):
     else:
         pivot = context.group(0)
         head, tail = summary.split(pivot, 1)
-        head = head.split()[-25:]
-        tail = tail.split()[:(50 - len(head))]
+        head = head.split()[-20:]
+        tail = tail.split()[:30]
         context = ' '.join(head + [pivot] + tail).lstrip('.?!,0123456789 ').rstrip(',')
         return ('... ' if (context[0].islower() or context[0].isdigit()) else '') + (context if context.endswith('.') else context + ' ...')
 
