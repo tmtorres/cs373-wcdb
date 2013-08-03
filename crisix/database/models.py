@@ -7,7 +7,7 @@ class Entity(models.Model):
     name = models.TextField(blank=True, null=True)
     kind = models.TextField(blank=True, null=True)
     location = models.TextField(blank=True, default='')
-    summary = models.TextField(blank=True, null=True)
+    summary = models.TextField(blank=True, default='')
     created = models.DateTimeField(auto_now_add=True)
 
     def __lt__(self, rhs):
