@@ -77,14 +77,14 @@
     </div></p>
     <hr>
     <h3>Human Impact</h3>
-        <p>{{ c.himpact|safe }}</p>
+    <ul style="list-style-type:square;">
+        {{ c.himpact|safe }}
+    </ul>
     <hr>
-    <ul style="margin-left:0px; list-style: none;">
         <h3>Economic Impact</h3>
         {% for i in eimpact %}
         <p>{{ i }}</p>
         {% endfor %}
-    </ul>
     <hr>
     <ul style="margin-left:0px; list-style: none;">
         <h3>Resources Needed</h3>
@@ -93,13 +93,13 @@
         {% endfor %}
     </ul>
     <hr>
-    <ul style="margin-left:0px; list-style: none;">
         <h3>Ways to Help</h3>
+    <ul style="list-style-type: square;">
         {% for h in help %}
         {% if h.href %}
-            <p><a href="{{ h.href }}">{{ h.text }}</a></p>
+            <li><a href="{{ h.href }}">{{ h.text }}</a></li>
         {% else %}
-            <p>{{ h.text }}</p>
+            <li>{{ h.text }}</li>
         {% endif %}
         {% endfor %}
     </ul>
