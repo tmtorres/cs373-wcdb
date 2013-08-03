@@ -24,7 +24,7 @@ def index(request):
 def display(request, etype = ''):
     return HttpResponse(etype + ' list page.')
 
-def thumbnails(e, n = 3):
+def generate_thumbs(e, n = 3):
     hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
     if len(hash) < n:
         imgs = e.elements.filter(ctype='IMG').filter(hash=None)
@@ -49,14 +49,31 @@ def thumbnails(e, n = 3):
                 break
     return hash.values()[:n]
 
+def convert_li(li_field):
+    '''
+    Removes '<li>' tags from a string.
+    '''
+    return ''.join(li_field.split('<li>')).replace('</li>', ' ').strip()
+
 def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
     return izip_longest(fillvalue=fillvalue, *args)
 
-def paragraphs(li_field):
-    li_field = ''.join(li_field.split('<li>')).replace('</li>', ' ').strip()
-    sentences = [' '.join(g) for g in grouper([s for s in re.split("(\S.+?[.!?])(?=\s+|$)", li_field) if len(s.strip())], 3, '')]
-    return sentences
+import nltk
+def paragraph_split(block):
+    '''
+    Splits a block of text into multiple paragraphs.
+    '''
+    #sentences = [s for s in re.split("(\S.+?[.!?])(?=\s+|$)", block) if len(s.strip())]
+    tokenizer = nltk.data.load('file:' + os.path.join(settings.BASE_DIR, 'nltk_data/tokenizers/punkt/english.pickle'))
+    sentences = tokenizer.tokenize(block)
+    groups = [filter(lambda x: len(x), g) for g in grouper(sentences, 3, '')]
+
+    if len(groups) > 1 and len(groups[-1]) < 2:
+        groups[-2] += groups[-1]
+        groups.pop()
+    return [' '.join(g) for g in groups]
+
 
 def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
@@ -67,7 +84,7 @@ def people(request, id):
         'citations' : [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='CITE')],
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in p.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
-        'images' : thumbnails(p),
+        'images' : generate_thumbs(p),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='VID'))[:2]],
         'external': [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='LINK')],
         })
@@ -83,7 +100,7 @@ def organizations(request, id):
         'history': ''.join(o.history.split('<li>')).replace('</li>', ' ').strip(),
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in o.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='MAP')],
-        'images' : thumbnails(o),
+        'images' : generate_thumbs(o),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='VID'))[:2]],
         'external': [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='LINK')],
         })
@@ -92,15 +109,15 @@ def crises(request, id):
     c = Crisis.objects.get(id='CRI_' + str(id).upper())
     return render(request, 'crisis.html', {
         'c' : c, 
-        'summary': paragraphs(c.summary),
+        'summary': paragraph_split(c.summary),
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
-        'eimpact': paragraphs(c.eimpact),
-        'resources': paragraphs(c.resources),
+        'eimpact': paragraph_split(convert_li(c.eimpact)),
+        'resources': paragraph_split(convert_li(c.resources)),
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
-        'images' : thumbnails(c),
+        'images' : generate_thumbs(c),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='VID'))[:1]],
         'external': [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='LINK')],
         })
