@@ -92,6 +92,7 @@ def crises(request, id):
     c = Crisis.objects.get(id='CRI_' + str(id).upper())
     return render(request, 'crisis.html', {
         'c' : c, 
+        'summary': paragraphs(c.summary),
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],

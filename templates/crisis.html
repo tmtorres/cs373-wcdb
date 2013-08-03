@@ -37,7 +37,9 @@
     <div class="row-fluid">
         <h1 class="main-focus;">{{ c.name }}</h1><hr>
         <div class="row-fluid">
-            {{ c.summary }}
+        {% for s in summary %}
+        <p>{{ s }}</p>
+        {% endfor %}
         </div>
     </div>
     <style type="text/css">
@@ -103,14 +105,14 @@
     </ul>
     <hr>
     <h3>External Links</h3>
-    <ol>
+    <ol style="word-wrap:break-word;">
     {% for w in external %}
         <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
     {% endfor %}
     </ol>
     <hr>
     <h3>Citations</h3>
-    <ol>
+    <ol style="word-wrap:break-word;">
     {% for w in citations %}
         <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
     {% endfor %}
