@@ -22,7 +22,7 @@
             }
             img {
             float: left;
-            padding-right: 5px;
+            padding-left: 5px;
             padding-bottom: 5px;
             }
             @media (max-width: 980px) {
@@ -69,11 +69,60 @@
                 </div>
             </div>
         </div>
+        <style>
+            .content {
+                margin-left:auto;
+                margin-right:auto;
+                width:1020px;
+                text-align:left;
+                padding:0px;
+                }
+            .dashboard {
+                float:left;
+                width:650px;
+                text-align:left;
+                height:auto;
+                background-color: #f5f5f5;
+                border: 1px solid #e3e3e3;
+                padding:20px;
+                -webkit-border-radius: 4px;
+                 -moz-border-radius: 4px;
+                      border-radius: 4px;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+                 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+                }
+            .left-sidebar {
+                float:left;
+                margin-left:10px;
+                width:310px;
+                }
+            .hero-unit {
+              padding: 10px;
+              background-color: transparent;
+            }
+        </style>
+        <div class="content">
+            <div class="dashboard">
+                {% block body %}
+                {% endblock %}
+            </div>
+        <div class="left-sidebar">
+             <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        {% block sidebar %}
+                        {% endblock %}
+                    </ul>
+             </div>
+             {% block feed %}
+             {% endblock %}
+        </div>
+        </div>
         <!-- End top navigation bar-->
         <div class="container-fluid">
         <div class="row-fluid">
             <style>
-            .hero-unit {
+            /*.hero-unit {
               background-color: #f5f5f5;
               border: 1px solid #e3e3e3;
               -webkit-border-radius: 4px;
@@ -82,12 +131,12 @@
               -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
                  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
                       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-            }
+            }*/
             </style>
-            {% block body %}
-            {% endblock%}
             </div>
             <!--/span9-->
+            <br>
+            <br>
             <hr>
             <footer>
                 <p>&copy; 2013 Crisix</p>

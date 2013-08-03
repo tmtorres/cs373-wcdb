@@ -9,7 +9,8 @@ from django.conf import settings
 from django.core.files import File
 from PIL import Image
 from urllib import urlretrieve
-import glob, os, itertools, imagehash
+import glob, os, itertools, imagehash, re
+from itertools import izip_longest
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -48,6 +49,15 @@ def thumbnails(e, n = 3):
                 break
     return hash.values()[:n]
 
+def grouper(iterable, n, fillvalue=None):
+    args = [iter(iterable)] * n
+    return izip_longest(fillvalue=fillvalue, *args)
+
+def paragraphs(li_field):
+    li_field = ''.join(li_field.split('<li>')).replace('</li>', ' ').strip()
+    sentences = [' '.join(g) for g in grouper([s for s in re.split("(\S.+?[.!?])(?=\s+|$)", li_field) if len(s.strip())], 3, '')]
+    return sentences
+
 def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
     return render(request, 'person.html', {
@@ -85,9 +95,11 @@ def crises(request, id):
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
+        'eimpact': paragraphs(c.eimpact),
+        'resources': paragraphs(c.resources),
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
         'images' : thumbnails(c),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='VID'))[:2]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='VID'))[:1]],
         'external': [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='LINK')],
         })
