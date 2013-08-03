@@ -11,6 +11,7 @@ from PIL import Image
 from urllib import urlretrieve
 import glob, os, itertools, imagehash, re
 from itertools import izip_longest
+import nltk
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -59,15 +60,12 @@ def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
     return izip_longest(fillvalue=fillvalue, *args)
 
-import nltk
 def paragraph_split(block):
     '''
     Splits a block of text into multiple paragraphs.
     '''
-    #sentences = [s for s in re.split("(\S.+?[.!?])(?=\s+|$)", block) if len(s.strip())]
     tokenizer = nltk.data.load('file:' + os.path.join(settings.BASE_DIR, 'nltk_data/tokenizers/punkt/english.pickle'))
-    sentences = tokenizer.tokenize(block)
-    groups = [filter(lambda x: len(x), g) for g in grouper(sentences, 3, '')]
+    groups = [filter(lambda x: len(x), g) for g in grouper(tokenizer.tokenize(block), 3, '')]
 
     if len(groups) > 1 and len(groups[-1]) < 2:
         groups[-2] += groups[-1]
