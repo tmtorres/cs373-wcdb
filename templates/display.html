@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="span9">
+    <div class="row-fluid">
+
+{% for p in list %}
+
+	{% if kind == 'person' %}
+	  <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
+	{% endif %}
+
+	{% if kind == 'organization' %}
+	  <li><a href="{% url crisix.views.organizations p.id %}">{{ p.name }}</a></li>
+	{% endif %}
+
+	{% if kind == 'crisis' %}
+	  <li><a href="{% url crisix.views.crises p.id %}">{{ p.name }}</a></li>
+	{% endif %}
+
+{% endfor %}
+
+	</div>
+</div>
+{% endblock %}

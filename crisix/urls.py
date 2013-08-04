@@ -27,6 +27,18 @@ urlpatterns = patterns('',
     url(r'^organizations/(?P<id>\w{6})/$', 'crisix.views.organizations'),
     url(r'^utility/', include('database.urls')),
     url(r'^search/', 'database.views.search'),
+
+    #Displays more photos/videos for an element
+    url(r'^(?P<etype>people)/(?P<id>\w{6})/(?P<ctype>\w+)', 'crisix.views.display_more'),
+    url(r'^(?P<etype>crises)/(?P<id>\w{6})/(?P<ctype>\w+)', 'crisix.views.display_more'),
+    url(r'^(?P<etype>organizations)/(?P<id>\w{6})/(?P<ctype>\w+)', 'crisix.views.display_more'),
+
+    #Displays all of the Crises/People/Orgs
+    url(r'^(?P<etype>people)/', 'crisix.views.display'),
+    url(r'^(?P<etype>crises)/', 'crisix.views.display'),
+    url(r'^(?P<etype>organizations)/', 'crisix.views.display'),
+
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+
 )

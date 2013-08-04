@@ -23,7 +23,41 @@ def index(request):
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
 def display(request, etype = ''):
-    return HttpResponse(etype + ' list page.')
+    if etype == 'people':
+        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Person.objects.all()], 'kind': 'person'})
+    if etype == 'crises':
+        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Crisis.objects.all()], 'kind': 'crisis'})
+    if etype == 'organizations':
+        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Organization.objects.all()], 'kind': 'organization'})
+
+
+def display_more(request, etype = '', id = '', ctype = '') :
+
+    if etype == 'organizations' :
+        e = Organization.objects.get(id='ORG_' + str(id).upper())
+    if etype == 'people' :
+        e = Person.objects.get(id='PER_' + str(id).upper())
+    if etype == 'crises' :
+        e = Crisis.objects.get(id='CRI_' + str(id).upper())
+
+
+    if(ctype == 'videos'):
+        vids = e.elements.filter(ctype='VID').filter(hash=None)
+        return render(request, 'more_photos_videos.html', {
+            'e' : e,
+            'ctype' : ctype,
+            'id' : id,
+            'videos' : vids,
+            })
+
+    return render(request, 'more_photos_videos.html', {
+        'e' : e,
+        'ctype' : ctype,
+        'id' : id,
+        'images' : generate_thumbs(e, len(e.elements.filter(ctype='IMG'))),
+        })
+
+
 
 def generate_thumbs(e, n = 3):
     hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
