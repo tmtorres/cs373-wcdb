@@ -115,13 +115,14 @@ def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
     return render(request, 'person.html', {
         'p' : p,
+        'summary': paragraph_split(p.summary),
         'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in p.crises.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in p.organizations.all()],
         'citations' : [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='CITE')],
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in p.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
         'images' : generate_thumbs(p),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='VID'))[:2]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='VID'))[:1]],
         'external': [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='LINK')],
         })
 
@@ -138,7 +139,7 @@ def organizations(request, id):
         'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in o.elements.filter(ctype='FEED')],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='MAP')],
         'images' : generate_thumbs(o),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='VID'))[:2]],
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='VID'))[:1]],
         'external': [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='LINK')],
         })
 
