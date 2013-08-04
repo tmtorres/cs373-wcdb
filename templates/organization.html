@@ -1,6 +1,9 @@
-{% extends "base.html" %}
+{% extends "base_sidebar.html" %}
 {% block sidebar %}
-
+{% for m in maps %}
+<iframe width="100%" height="250" frameborder="0" scrolling="no" src="{{ m.embed }}"></iframe>
+<hr>
+{% endfor %}
 {% if o.kind %}
 <li class="nav-header">Kind</li>
 <li>{{ o.kind }}</li>
@@ -22,7 +25,7 @@
 {% endfor %}
 {% endblock %}
 
-{% block twitter %}
+{% block feed %}
 {% for f in feeds %}
 <a class="twitter-timeline" href="https://twitter.com/{{ f.id }}" data-widget-id="359055502723915776" data-screen-name="{{ f.id }}" data-show-replies="false">Tweets by @{{ f.id }}</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -30,86 +33,83 @@
 {% endblock %}
 
 {% block body %}
-<div class="span9">
     <div class="row-fluid">
-        <div class="hero-unit">
-        <h1 class="main-focus">{{ o.name }}</h1>
-        <br>
+        <h1 class="main-focus;">{{ o.name }}</h1><hr>
         <div class="row-fluid">
-                {% for m in maps %}
-                <iframe width="300" height="300" frameborder="0" scrolling="no" src="{{ m.embed }}" style="float:left;margin:15px"></iframe>
-                {% endfor %}
-            <!--/span4-->
-                {{ o.summary }}
-            </div>
-            <!--/span6-->
+        {% for s in summary %}
+        <p>{{ s|safe }}</p>
+        {% endfor %}
         </div>
-        <!--end row-->
     </div>
-    <!--/end row-->
     <style type="text/css">
         img
         {
-        max-height:180px;
+        max-height:125px;
         }
     </style>
-    <div class="row-fluid test-border-row">
-        <div class ="span6">
+    <div class="row-fluid">
+        <div style="width:40%;float:left;">
             <h3>Videos</h3>
             <div class="video-content">
                 {% for w in videos %}
                     <iframe class="youtube-player" type="text/html"
-                        height="180" width="auto" src="{{ w.embed }}"
+                        height="125" width="221" src="{{ w.embed }}"
                         frameborder="0" allowFullScreen></iframe>
                 {% endfor %}                
             </div><!--end video-content-->
-
-
         </div> <!--end span4-->
-
-        <div class ="span6">
-            <h3>Photos</h3>
+        <div style="width:60%;float:right;">
+            <div id="photo-header" style="padding-top:0px;padding-left:5px;">
+                <h3>Photos</h3>
+            </div>
             <div class="photo-content">
                 {% for w in images %}
                 <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
                 {% endfor %}
-            </div><!--end photo-content-->
-
-        </div> <!--end span4-->
-    </div><!-- end row-fluid-->
-    <!--/row-->
-    <div class="row-fluid">
-        <h3>History</h3>
-        <ul style="margin-left:0px; list-style: none;">
-            <p>{{ history }}</p>
-        </ul>
+            </div>
+        </div>
+        <div style="width:60%;float:right;">
+            <div style="padding-top:0px;padding-left:5px;">
+                <a href="http://google.com">See all photos &raquo;</a>
+            </div>
+        </div>
+        <div style="width:40%;float:left;">
+            <div style="padding-top:0px;">
+                <a href="http://google.com">See all videos &raquo;</a>
+            </div>
+        </div>
     </div>
-
-    <div class="row-fluid">
-        <ul style="margin-left:0px; list-style: none;">
-            <h3>Contact</h3>
-            {% for v in contact %}
-            {% if v.href %}
-            <p><a href="{{ v.href }}">{{ v.text }}</a></p>
-            {% else %}
-            <p>{{ v.text }}</p>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-    <div class="row-fluid">
-        <h3>External Links</h3>
-        {% for w in external %}
-        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
+    <hr>
+    <h3>History</h3>
+    {% for h in history %}
+        <p>{{ h|safe }}</p>
+    {% endfor %}
+    <hr>
+    <h3>Contact</h3>
+    <ul style="list-style-type:square;">
+        {% for v in contact %}
+        {% if v.href %}
+        <li><a href="{{ v.href }}">{{ v.text }}</a></li>
+        {% else %}
+        <li>{{ v.text }}</li>
+        {% endif %}
         {% endfor %}
-    </div>
+    </ul>
+    <hr>
+    <h3>External Links</h3>
+    <ul style="list-style-type:square;word-wrap:break-word;">
+    {% for w in external %}
+        <li><a href="{{ w.href }}">{{ w.text }}</a></li>
+    {% endfor %}
+    </ul>
+    <hr>
     <!-- end/row-->
-    <div class="row-fluid">
-        <h3>Citations</h3>
-        {% for w in citations %}
-        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
-        {% endfor %}
-    </div>
+    <h3>References</h3>
+    <ol style="word-wrap:break-word;">
+    {% for w in citations %}
+        <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
+    {% endfor %}
+    </ol>
 </div>
 <!--/span9-->
 {% endblock %}

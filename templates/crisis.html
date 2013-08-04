@@ -32,13 +32,12 @@
 <li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
 {% endfor %}
 {% endblock %}
-
 {% block body %}
     <div class="row-fluid">
         <h1 class="main-focus;">{{ c.name }}</h1><hr>
         <div class="row-fluid">
         {% for s in summary %}
-        <p>{{ s }}</p>
+        <p>{{ s|safe }}</p>
         {% endfor %}
         </div>
     </div>
@@ -89,17 +88,17 @@
     <hr>
         <h3>Economic Impact</h3>
         {% for i in eimpact %}
-        <p>{{ i }}</p>
+        <p>{{ i|safe }}</p>
         {% endfor %}
     <hr>
     <ul style="margin-left:0px;list-style:none;">
         <h3>Resources Needed</h3>
         {% for r in resources %}
-        <p>{{ r }}</p>
+        <p>{{ r|safe }}</p>
         {% endfor %}
     </ul>
     <hr>
-        <h3>Ways to Help</h3>
+    <h3>Ways to Help</h3>
     <ul style="list-style-type:square;">
         {% for h in help %}
         {% if h.href %}

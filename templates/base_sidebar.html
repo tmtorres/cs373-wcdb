@@ -126,6 +126,7 @@
                 padding-left:20px;
                 padding-right:20px; 
                 padding-top:20px;
+                padding-bottom:20px;
             }
         </style>
         <div class="content">
@@ -139,11 +140,11 @@
                         {% block sidebar %}
                         {% endblock %}
                     </ul>
-                </div>
-                <div style="float:left;width:100%;">
-                </div>
+                <div style="padding:20px">
                 {% block feed %}
                 {% endblock %}
+                </div>
+                </div>
             </div>
         </div>
         <!-- End top navigation bar-->
