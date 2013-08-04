@@ -1,14 +1,26 @@
-{% extends "base_sidebar.html" %}
+{% extends "base.html" %}
 	{% block body %}
-	<div class="span9">
+	<div>
 	    <div class="row-fluid">
-	    <li><a href="{% url crisix.views.people id %}">{{ name }} Homepage </a></li>
+	    {% if etype == 'people' %}
+	    	<li><a href="{% url crisix.views.people id %}">{{ name }} Homepage </a></li>
+	    {% endif %}
 	    
+	    {% if etype == 'crises' %}
+	    	<li><a href="{% url crisix.views.crises id %}">{{ name }} Homepage </a></li>
+	    {% endif %}
+	    
+	    {% if etype == 'organizations' %}
+	    	<li><a href="{% url crisix.views.organizations id %}">{{ name }} Homepage </a></li>
+	    {% endif %}
+	    	
 	    <div style="padding-top:40px;">
 	    
 	{% if ctype == 'photos' %}
 		{% for i in images %}
-			    <a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
+			<div style="margin:0 auto:">
+				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
+			</div>
 		{% endfor %}
 	{% endif %}
 
