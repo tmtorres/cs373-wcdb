@@ -2,8 +2,8 @@
 <style>
 </style>
 {% block body %}
-    <div  id="results" style="margin-left:0px; list-style: none;">
-            Showing search results for "{{ query_string }}":<br><br>
+    <div id="results" style="margin-left:0px; list-style:none;">
+            <p style="padding-bottom:20px;color:#eee;">Showing search results for "{{ query_string }}":</p>
             {% for e in entries %}
             <div style="padding-bottom:20px;">
                 <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>

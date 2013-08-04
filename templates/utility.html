@@ -9,18 +9,14 @@
 </style>
 {% endblock %}
 {% block body %}
-        <div class="span9">
-            <div style="float:right;padding:10px;border-style:none;background-color:transparent;">
-                <button type="submit" class="btn btn-primary" onclick="window.location.href='{% url database.views.upload %}'">Import<i class=" icon-upload"></i></button>
-                <button type="submit" class="btn btn-primary" onClick="window.location.href='{% url database.views.download %}'">Export<i class=" icon-download"></i></button>
-                </div><div class="hero-unit">
+            <div style="padding-bottom:20px;">
             {% block hero %}
             {% if view == 'index' %}
                 <h1>Utilities</h1>
                 <br><br>
                 <p>Welcome to the database management page.
             {% else %}{% if view == 'form' %}
-                <h1>File Upload</h1></br>
+                <h1>File Upload</h1>
                 <form id="fileupload" enctype="multipart/form-data" action="" method="post">
                     {% csrf_token %}
                     {{ form.file }}
@@ -47,21 +43,17 @@
                 </script>
             {% else %}{% if view == 'test' %}
                 <h1>Test Results</h1>
-                <br>
                 <iframe style="border-style:solid;border-width:1px;border-color:#e1e1e8;border-radius:4px;background-color:#fff;" width="100%" height="300" frameborder="0" scrolling="auto" src="{% url database.views.runner %}" class="pre"></iframe>
             {% else %}{% if view == 'success' %}
                 <h1>Success!</h1>
-                <br><br>
                 <p>The data has been successfully imported into the database.</p>
             {% else %}{% if view == 'failure' %}
                 <h1>Oops..!</h1>
-                <br><br>
                 <p>Sorry, the following error occurred:</p>
                 <p>{{errstr}}</p>
             {% endif %}{% endif %}{% endif %}{% endif %}{% endif %}
             {% endblock %}
-          </div>
-        </div><!--/span-->
+            </div>
 {% endblock %}
 
 

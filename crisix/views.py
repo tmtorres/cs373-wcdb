@@ -40,10 +40,10 @@ def display_more(request, etype = '', id = '', ctype = '') :
     if etype == 'crises' :
         e = Crisis.objects.get(id='CRI_' + str(id).upper())
 
-
     if(ctype == 'videos'):
         vids = e.elements.filter(ctype='VID').filter(hash=None)
         return render(request, 'more_photos_videos.html', {
+            'etype' : etype,
             'e' : e,
             'ctype' : ctype,
             'id' : id,
@@ -52,6 +52,7 @@ def display_more(request, etype = '', id = '', ctype = '') :
             })
 
     return render(request, 'more_photos_videos.html', {
+        'etype' : etype,
         'e' : e,
         'ctype' : ctype,
         'id' : id,
