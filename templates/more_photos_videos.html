@@ -18,7 +18,7 @@
 	    
 	{% if ctype == 'photos' %}
 		{% for i in images %}
-			<div style="margin:0 auto:">
+			<div style="margin:0 auto;">
 				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
 			</div>
 		{% endfor %}
@@ -35,7 +35,7 @@
                 </div>
 		{% endfor %}
 	{% endif %}
-
+</div>
 		</div>
 	</div>
 	{% endblock %}
