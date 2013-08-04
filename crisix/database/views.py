@@ -26,6 +26,7 @@ from upload import clear, validate, insert
 from download import get_crises, get_people, get_organizations
 from search import normalize_query, get_query, contextualize, relevance_sort
 import subprocess, re
+from crisix.views import generate_thumbs
 
 def search(request):
     query_string = ''
@@ -40,7 +41,8 @@ def search(request):
         'name': e.name, 
         'kind': e.kind, 
         'location': e.location if '<li>' not in e.location else ''.join(e.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
-        'summary': contextualize(e.summary, query_string)
+        'summary': contextualize(e.summary, query_string),
+        'thumb': generate_thumbs(e, 1)[0].thumb,
     } for e in found_entries]})
 
 def utility(request):

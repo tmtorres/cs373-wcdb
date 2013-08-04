@@ -1,8 +1,13 @@
-{% extends "base.html" %}
+{% extends "search_bubble.html" %}
+<style>
+</style>
 {% block body %}
-    <div class="span6" id="results" style="margin-left:0px; list-style: none;">
+    <div  id="results" style="margin-left:0px; list-style: none;">
             Showing search results for "{{ query_string }}":<br><br>
             {% for e in entries %}
+            <div style="padding-bottom:20px;">
+                <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
+            <div class="bubble" style="margin-left:125px;">
             {% if e.type == "cri" %}
                 <li><a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a></li>
             {% else %}{% if e.type == "org" %}
@@ -12,7 +17,7 @@
             {% endif %}{% endif %}{% endif %}
             <li>{{ e.kind }} | {{ e.location }}</li>
             <p><li>{{ e.summary }}</li></p>
-            <br>
+            </div></div>
             {% endfor %}
     </div>
     <script>
