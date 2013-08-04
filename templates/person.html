@@ -22,7 +22,7 @@
 {% endfor %}
 {% endblock %}
 
-{% block twitter %}
+{% block feed %}
 {% for f in feeds %}
 <a class="twitter-timeline" href="https://twitter.com/{{ f.id }}" data-widget-id="359055502723915776" data-screen-name="{{ f.id }}" data-show-replies="false">Tweets by @{{ f.id }}</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -30,102 +30,65 @@
 {% endblock %}
 
 {% block body %}
-<div class="span9">
-    <div class="row-fluid">
-        <div class="hero-unit">
-        <h1 class="main-focus">{{ p.name }}</h1>
-        <br>
-        <div class="row-fluid">
-                {% for m in maps %}
-                <iframe width="300" height="300" frameborder="0" scrolling="no" src="{{ m.embed }}" style="float:left;margin:15px"></iframe>
-                {% endfor %}
-            <!--/span4-->
-                {{ p.summary }}
-            </div>
-            <!--/span6-->
-        </div>
-        <!--end row-->
-    </div>
+<div style="padding-bottom:20px;">
     <style type="text/css">
         img
         {
-        max-height:180px;
+            max-height:125px;
         }
     </style>
-    <div class="row-fluid test-border-row">
-        <div class ="span6">
-            <h3>Videos</h3>
-            <div class="video-content">
-                {% for w in videos %}
-                    <iframe class="youtube-player" type="text/html"
-                        height="180" width="auto" src="{{ w.embed }}"
-                        frameborder="0" allowFullScreen></iframe>
-                {% endfor %}                
-            </div><!--end video-content-->
-
-
-        </div> <!--end span4-->
-
-        <div class ="span6">
-            <h3>Photos</h3>
-            <div class="photo-content">
-                {% for w in images %}
-                <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
-                {% endfor %}
-            </div><!--end photo-content-->
-
-        </div> <!--end span4-->
-
- <!--   <table border="0" width="100%">
-            <tr>
-                <th align="left">
-                    <h3>
-                    Videos
-                    <h3>
-                </th>
-                <th align="left">
-                    <h3>
-                    Photos
-                    <h3>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <table border="0" >
-                        {% for w in videos %}
-                        <td>
-                            <iframe class="youtube-player" type="text/html"
-                                height="180" width="auto" src="{{ w.embed }}"
-                                frameborder="0" allowFullScreen></iframe>
-                        </td>
-                        {% endfor %}
-                    </table>
-                </td>
-                <td>
-                    <table border="0">
-                        {% for w in images %}
-                        <td>
-                            <a href=""><img src="{{ w.embed }}"></a>
-                        </td>
-                        {% endfor %}
-                    </table>
-                </td>
-            </tr>
-        </table> -->
-    </div><!-- end row-fluid-->
-    <!--/row-->
     <div class="row-fluid">
-        <h3>External Links</h3>
-        {% for w in external %}
-        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
-        {% endfor %}
+        <h1 class="main-focus;">{{ p.name }}</h1><hr>
+        <div class="textblock">
+            <div class="bubble">
+                <div class="row-fluid">
+                    <div style="width:220px;float:left;">
+                        <div class="video-content">
+                            {% for w in videos %}
+                                <iframe class="youtube-player" type="text/html"
+                                    height="125" width="221" src="{{ w.embed }}"
+                                    frameborder="0" allowFullScreen>
+                                </iframe>
+                            {% endfor %}                
+                        </div><!--end video-content-->
+                    </div> <!--end span4-->
+                    <div style="width:390px;float:right;">
+                        <div class="photo-content">
+                            {% for w in images %}
+                            <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                 <div style="width:390px;float:right;">
+                        <div style="padding-top:0px;padding-left:5px;">
+                            <a href="http://google.com">See all photos &raquo;</a>
+                        </div>
+                    </div>
+                <div style="width:35%;float:left;">
+                    <div style="padding-top:0px;">
+                        <a href="http://google.com">See all videos &raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+{% for s in summary %}
+    <p>{{ s|safe }}</p>
+{% endfor %}
+    <h3>References</h3><hr>
+    <ol style="word-wrap:break-word;">
+    {% for w in citations %}
+        <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
+    {% endfor %}
+    </ol>
+    <h3>External Links</h3><hr>
+    <ul style="list-style-type:square;word-wrap:break-word;">
+    {% for w in external %}
+        <li><a href="{{ w.href }}">{{ w.text }}</a></li>
+    {% endfor %}
+    </ul>
     <!-- end/row-->
-    <div class="row-fluid">
-        <h3>Citations</h3>
-        {% for w in citations %}
-        <p><a href="{{ w.href }}">{{ w.text }}</a></p>
-        {% endfor %}
-    </div>
+</div>
 </div><!--/span9-->
 {% endblock %}
