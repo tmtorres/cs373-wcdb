@@ -27,6 +27,10 @@
 <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
 
+{% block title %}
+    {{ name }} | Crisix
+{% endblock %}
+
 <li class="nav-header">Related Organizations</li>
 {% for o in related_orgs %}
 <li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
