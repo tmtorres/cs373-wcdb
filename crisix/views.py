@@ -113,52 +113,49 @@ def paragraph_split(block):
         groups.pop()
     return [' '.join(g) for g in groups]
 
+def common(e):
+    return {
+        'name': e.name,
+        'summary': paragraph_split(e.summary),
+        'citations' : [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='CITE')],
+        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in e.elements.filter(ctype='FEED')],
+        'maps' : [{'embed': w.embed, 'text': w.text} for w in e.elements.filter(ctype='MAP')[:1]],
+        'images' : generate_thumbs(e),
+        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='VID'))[:1]],
+        'external': [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='LINK')],
+    }
 
 def people(request, id):
     p = Person.objects.get(id='PER_' + str(id).upper())
-    return render(request, 'person.html', {
-        'p' : p,
-        'summary': paragraph_split(p.summary),
+    attr = {
+        'p': p,
         'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in p.crises.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in p.organizations.all()],
-        'citations' : [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='CITE')],
-        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in p.elements.filter(ctype='FEED')],
-        'maps' : [{'embed': w.embed, 'text': w.text} for w in p.elements.filter(ctype='MAP')],
-        'images' : generate_thumbs(p),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(p.elements.filter(ctype='VID'))[:1]],
-        'external': [{'href': w.href, 'text': w.text} for w in p.elements.filter(ctype='LINK')],
-        })
+    }
+    attr.update(common(p))
+    return render(request, 'person.html', attr)
 
 def organizations(request, id):
     o = Organization.objects.get(id='ORG_' + str(id).upper())
-    return render(request, 'organization.html', {
-        'o' : o,
-        'summary': paragraph_split(o.summary),
+    attr = {
+        'o': o,
         'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in o.crises.all()],
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in o.people.all()],
-        'citations' : [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='CITE')],
         'contact' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<ContactInfo>' + o.contact + '</ContactInfo>')],
         'history': paragraph_split(convert_li(o.history)),
-        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in o.elements.filter(ctype='FEED')],
-        'maps' : [{'embed': w.embed, 'text': w.text} for w in o.elements.filter(ctype='MAP')],
-        'images' : generate_thumbs(o),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(o.elements.filter(ctype='VID'))[:1]],
-        'external': [{'href': w.href, 'text': w.text} for w in o.elements.filter(ctype='LINK')],
-        })
+    }
+    attr.update(common(o))
+    return render(request, 'organization.html', attr)
 
 def crises(request, id):
     c = Crisis.objects.get(id='CRI_' + str(id).upper())
-    return render(request, 'crisis.html', {
-        'c' : c, 
-        'summary': paragraph_split(c.summary),
+    attr = {
+        'c': c,
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
-        'citations' : [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='CITE')],
         'eimpact': paragraph_split(convert_li(c.eimpact)),
         'resources': paragraph_split(convert_li(c.resources)),
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
-        'maps' : [{'embed': w.embed, 'text': w.text} for w in c.elements.filter(ctype='MAP')],
-        'images' : generate_thumbs(c),
-        'videos' : [{'embed': w.embed, 'text': w.text} for w in list(c.elements.filter(ctype='VID'))[:1]],
-        'external': [{'href': w.href, 'text': w.text} for w in c.elements.filter(ctype='LINK')],
-        })
+    }
+    attr.update(common(c))
+    return render(request, 'crisis.html', attr)
