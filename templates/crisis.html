@@ -33,72 +33,65 @@
 {% endfor %}
 {% endblock %}
 {% block body %}
+<div style="padding-bottom:20px;">
     <div class="row-fluid">
         <h1 class="main-focus;">{{ c.name }}</h1><hr>
-        <div class="row-fluid">
-        {% for s in summary %}
-        <p>{{ s|safe }}</p>
-        {% endfor %}
-        </div>
-    </div>
     <style type="text/css">
         img
         {
             max-height:125px;
         }
     </style>
-    <div class="row-fluid">
-        <div style="width:40%;float:left;">
-            <h3>Videos</h3>
-            <div class="video-content">
-                {% for w in videos %}
-                    <iframe class="youtube-player" type="text/html"
-                        height="125" width="221" src="{{ w.embed }}"
-                        frameborder="0" allowFullScreen>
-                    </iframe>
-                {% endfor %}                
-            </div><!--end video-content-->
-        </div> <!--end span4-->
-        <div style="width:60%;float:right;">
-            <div id="photo-header" style="padding-top:0px;padding-left:5px;">
-                <h3>Photos</h3>
+    <div class="textblock">
+    <div class="bubble">
+        <div class="row-fluid">
+            <div style="width:220px;float:left;">
+                <div class="video-content">
+                    {% for w in videos %}
+                        <iframe class="youtube-player" type="text/html"
+                            height="125" width="221" src="{{ w.embed }}"
+                            frameborder="0" allowFullScreen>
+                        </iframe>
+                    {% endfor %}                
+                </div><!--end video-content-->
+            </div> <!--end span4-->
+            <div style="width:390px;float:right;">
+                <div class="photo-content">
+                    {% for w in images %}
+                    <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="photo-content">
-                {% for w in images %}
-                <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
-                {% endfor %}
+            <div style="width:390px;float:right;">
+                <div style="padding-top:0px;padding-left:5px;">
+                    <a href="http://google.com">See all photos &raquo;</a>
+                </div>
+            </div>
+            <div style="width:35%;float:left;">
+                <div style="padding-top:0px;">
+                    <a href="http://google.com">See all videos &raquo;</a>
+                </div>
             </div>
         </div>
-        <div style="width:60%;float:right;">
-            <div style="padding-top:0px;padding-left:5px;">
-                <a href="http://google.com">See all photos &raquo;</a>
-            </div>
-        </div>
-        <div style="width:40%;float:left;">
-            <div style="padding-top:0px;">
-                <a href="http://google.com">See all videos &raquo;</a>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <h3>Human Impact</h3>
+</div></div></div>
+        {% for s in summary %}
+        <p>{{ s|safe }}</p>
+        {% endfor %}
+    <h3>Human Impact</h3><hr>
     <ul style="list-style-type:square;">
         {{ c.himpact|safe }}
     </ul>
-    <hr>
-        <h3>Economic Impact</h3>
+        <h3>Economic Impact</h3><hr>
         {% for i in eimpact %}
         <p>{{ i|safe }}</p>
         {% endfor %}
-    <hr>
     <ul style="margin-left:0px;list-style:none;">
-        <h3>Resources Needed</h3>
+        <h3>Resources Needed</h3><hr>
         {% for r in resources %}
         <p>{{ r|safe }}</p>
         {% endfor %}
     </ul>
-    <hr>
-    <h3>Ways to Help</h3>
+    <h3>Ways to Help</h3><hr>
     <ul style="list-style-type:square;">
         {% for h in help %}
         {% if h.href %}
@@ -108,20 +101,19 @@
         {% endif %}
         {% endfor %}
     </ul>
-    <hr>
-    <h3>References</h3>
+    <h3>References</h3><hr>
     <ol style="word-wrap:break-word;">
     {% for w in citations %}
         <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
     {% endfor %}
     </ol>
-    <hr>
-    <h3>External Links</h3>
+    <h3>External Links</h3><hr>
     <ul style="list-style-type:square;word-wrap:break-word;">
     {% for w in external %}
         <li><a href="{{ w.href }}">{{ w.text }}</a></li>
     {% endfor %}
     </ul>
 </div><!-- end row-fluid-->
+</div>
 <!--/span9-->
 {% endblock %}
