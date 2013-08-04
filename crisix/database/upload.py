@@ -142,7 +142,10 @@ def com_handler(node, e):
                     insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
-                insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
+                link = elem.attrib.get('embed').lstrip('htps:')
+                if link.find('youtube') is not -1 and link.find('embed') is -1:
+                    continue
+                insert_elem({'embed' : link}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
         if attr.tag == 'Maps':
             for elem in attr:
                 insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text})
