@@ -16,10 +16,9 @@
         <style type="text/css">
             body {
             padding-top: 30px;
-            padding-bottom: 10px;
-            padding-right: 10px;
-            background-color: #D9F0FF;
+            /*background-color: #D9F0FF;*/
             background-attachment:fixed;
+            background-image:url('http://img580.imageshack.us/img580/4992/vhlj.jpg');
             }
             .sidebar-nav {
             padding: 9px 0;
@@ -59,26 +58,73 @@
                     <span class="icon-bar"></span>
                     </button>
                     <a class="brand" href="{% url crisix.views.index %}">Crisix</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="{% url database.views.utility %}">Utility</a></li>
-                        </ul>
+                    <div class="nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Crises <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/crises/exxval/">Exxon Valdez Oil Spill</a></li>
+                                <li><a href="/crises/sptmel/">September 11th</a></li>
+                                <li><a href="/crises/haiear/">2010 Haiti Earthquake</a></li>
+                                <li><a href="/crises/tohoqu/">2010 Tohoku Earthquake and Tsunami</a></li>
+                                <li><a href="/crises/aidshi/">HIV/AIDS</a></li>
+                                <li><a href="/crises/nrmacf/">Northern Mali Conflict</a></li>
+                                <li><a href="/crises/tukpro/">2013 protests in Turkey</a></li>
+                                <li><a href="/crises/shessg/">Sandy Hook Elementary School Shooting</a></li>
+                                <li><a href="/crises/scherq/">2008 Sichuan Earthquake</a></li>
+                                <li><a href="/crises/lyclwr/">Libyan Civil War</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/crises/">See all crises &raquo;</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Organizations <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/organizations/undway/">United Way</a></li>
+                                <li><a href="/organizations/snqkrf/">Sichuan Quake Relief</a></li>
+                                <li><a href="/organizations/nltlcl/">National Transitional Council</a></li>
+                                <li><a href="/organizations/afiuni/">African Union</a></li>
+                                <li><a href="/organizations/twiter/">Twitter</a></li>
+                                <li><a href="/organizations/cdcpre/">Centers for Disease Control and Prevention</a></li>
+                                <li><a href="/organizations/usgeos/">United States Geological Survey</a></li>
+                                <li><a href="/organizations/whorgn/">World Health Organization</a></li>
+                                <li><a href="/organizations/unnscl/">United Nations Security Council</a></li>
+                                <li><a href="/organizations/exxshi/">Exxon Shipping Company</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/crises/">See all organizations &raquo;</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">People <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/people/admlnz/">Adam Lanza</a></li>
+                                <li><a href="/people/amtoto/">Amadou Toumani Touré</a></li>
+                                <li><a href="/people/brobma/">Barack Obama</a></li>
+                                <li><a href="/people/erdoga/">Recep Tayyip Erdogan</a></li>
+                                <li><a href="/people/hujnto/">Hu Jintao</a></li>
+                                <li><a href="/people/joshaz/">Joseph Hazelwood</a></li>
+                                <li><a href="/people/magicj/">Magic Johnson</a></li>
+                                <li><a href="/people/murgdi/">Muammar Gaddafi</a></li>
+                                <li><a href="/people/naokan/">Naoto Kan</a></li>
+                                <li><a href="/people/osamab/">Osama Bin Laden</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/crises/">See all people &raquo;</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="admin_cog" class="icon-cog icon-white" style="opacity:0.5;"></span>
+                            <b class="caret"></b>
+                        </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url database.views.upload %}">Import</a></li>
+                                <li><a href="{% url database.views.download %}">Export</a></li>
+                                <li><a href="{% url database.views.test %}">Unit Tests</a></li>
+                            </ul>
+                        </li>
                     </div>
-
-                    <ul class="nav">
-                        <li class="active"><a href="/crises">Crises</a></li>
-                        <li><a href="/organizations">Organizations</a></li>
-                        <li><a href="/people">People</a></li>
-                    </ul>
-
-
-
-
                     <!--/.nav-collapse -->
                     <form class="navbar-search pull-right" name="search" action="/search/" method="get">
-        			<input type="text" placeholder="Find crises, organizations, people and more..." class="span4 search-query" name="q" autocomplete="off">
+                        <input type="text" placeholder="Find crises, organizations, people and more..." class="span4 search-query" name="q" autocomplete="off">
+                        <i class="icon-search"></i>
 				    </form>
                 </div>
             </div>
@@ -90,13 +136,12 @@
                 min-height: 100%;
                 width: 980px;
                 margin: 0 auto;
-                padding: 22px;
                 background: #f5f5f5;
-                border: 1px solid #d9d9d9;
+                background-color: #fff;
                 overflow: auto;
-                -webkit-box-shadow: 0 0 4px rgba(0,0,0,.3);
-                -moz-box-shadow: 0 0 4px rgba(0,0,0,.3);
-                box-shadow: 0 0 4px rgba(0,0,0,.3);
+                -webkit-box-shadow: 0 0 10px #000;
+                -moz-box-shadow: 0 0 10px #000;
+                box-shadow: 0 0 10px #000;
                 }
             .dashboard {
                 float: left;
@@ -116,78 +161,63 @@
               background-color: transparent;
             }
             .nav.nav-list {
+                background-color: transparent;
                 border-style:none;
-                padding:0px;
-                padding-left:10px;
+                padding-left:20px;
+                padding-right:20px;
+                padding-top:20px;
             }
-            .well.sidebar-nav { 
-                width:300px;
+            .well.sidebar-nav {
+                width:289px;
                 float:right;
                 background-color:transparent;
                 border-style:none;
                 box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.05);
             }
-            .content hr {
+            .entity {
+                border-right:1px dotted #ccc;
+                padding-left:20px;
+                padding-right:20px; 
+                padding-top:20px;
+            }
+            .entity hr {
                 border-top:1px solid #dedede;
+                margin-top:0px;
             }
-            .bubble 
-            {
-                position: relative;
-                width: 250px;
-                height: 120px;
-                padding: 0px;
-                background: #FFFFFF;
-                -webkit-border-radius: 6px;
-                -moz-border-radius: 6px;
-                border-radius: 6px;
+            .entity h3 {
+                margin-bottom:0px;
             }
-
-            .bubble:after 
-            {
-            content: "";
-            position: absolute;
-            top: 28px;
-            left: -15px;
-            border-style: solid;
-            border-width: 12px 15px 12px 0;
-            border-color: transparent #FFFFFF;
-            display: block;
-            width: 0;
-            z-index: 1;
+            .bubble {
+                border:1px solid #dedede;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                padding:10px;
+            }
+            .bubble hr {
+                margin-top:0px;
+            }
+            .bubble h3 {
+                margin-bottom:0px;
+            }
+            .textblock {
+                padding-bottom:20px;
             }
         </style>
         <div class="content">
             <div class="dashboard">
-                <div style="width:100%;">
+                <div class="entity">
                 {% block body %}
                 {% endblock %}
                 </div>
+                <div class="container-fluid" style="float:left;width:980px;padding:0px;">
+                    <div style="background-color:#eee;padding:20px;border-top:1px dotted #ccc;">
+                        &copy; 2013 Crisix
+                    </div>
+                </div>
             </div>
-        </div>
+    </div>
         <!-- End top navigation bar-->
-        <div class="container-fluid">
-        <div class="row-fluid">
-            <style>
-            /*.hero-unit {
-              background-color: #f5f5f5;
-              border: 1px solid #e3e3e3;
-              -webkit-border-radius: 4px;
-                 -moz-border-radius: 4px;
-                      border-radius: 4px;
-              -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-                 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-                      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-            }*/
-            </style>
-            </div>
-            <!--/span9-->
-            <br>
-            <br>
-            <hr>
-            <footer>
-                <p>&copy; 2013 Crisix</p>
-            </footer>
-        </div>
         <!--/.fluid-container-->
         <!-- Le javascript
             ================================================== -->
