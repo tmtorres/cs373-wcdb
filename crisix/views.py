@@ -48,12 +48,14 @@ def display_more(request, etype = '', id = '', ctype = '') :
             'ctype' : ctype,
             'id' : id,
             'videos' : vids,
+            'name' : e.name,
             })
 
     return render(request, 'more_photos_videos.html', {
         'e' : e,
         'ctype' : ctype,
         'id' : id,
+        'name' : e.name,
         'images' : generate_thumbs(e, len(e.elements.filter(ctype='IMG'))),
         })
 

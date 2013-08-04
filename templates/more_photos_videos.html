@@ -1,8 +1,11 @@
-{% extends "base.html" %}
+{% extends "base_sidebar.html" %}
 	{% block body %}
 	<div class="span9">
 	    <div class="row-fluid">
-
+	    <li><a href="{% url crisix.views.people id %}">{{ name }} Homepage </a></li>
+	    
+	    <div style="padding-top:40px;">
+	    
 	{% if ctype == 'photos' %}
 		{% for i in images %}
 			    <a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
@@ -11,11 +14,13 @@
 
 	{% if ctype == 'videos' %}
 		{% for v in videos %}
-			<div>
+		<div style="padding-left:125px;">
+		<div style="padding-top:60px;">
             <iframe class="youtube-player" type="text/html"
                 height="385" width="640" src="{{ v.embed }}"
                 frameborder="0" allowFullScreen></iframe>
-            </div>	   
+                </div>
+                </div>
 		{% endfor %}
 	{% endif %}
 
