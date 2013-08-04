@@ -1,7 +1,7 @@
 {% extends "base_sidebar.html" %}
 {% block sidebar %}
 {% for m in maps %}
-<iframe width="100%" height="290" frameborder="0" scrolling="no" style="margin-top:5px;" src="{{ m.embed }}"></iframe>
+<iframe width="100%" height="250" frameborder="0" scrolling="no" src="{{ m.embed }}"></iframe>
 <hr>
 {% endfor %}
 <li class="nav-header">Date</li>
@@ -72,12 +72,12 @@
         </div>
         <div style="width:60%;float:right;">
             <div style="padding-top:0px;padding-left:5px;">
-                <a href="http://google.com">View all photos</a>
+                <a href="http://google.com">See all photos &raquo;</a>
             </div>
         </div>
         <div style="width:40%;float:left;">
             <div style="padding-top:0px;">
-                <a href="http://google.com">View all videos</a>
+                <a href="http://google.com">See all videos &raquo;</a>
             </div>
         </div>
     </div>

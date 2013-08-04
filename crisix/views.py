@@ -69,8 +69,12 @@ def generate_thumbs(e, n = 3):
             path = os.path.join(settings.THUMB_ROOT, i.thumb)
             if not os.path.exists(path):
                 urlretrieve(i.embed, path)
-                t = Image.open(path)
-                i.hash = str(imagehash.average_hash(t))
+                try:
+                    t = Image.open(path)
+                    i.hash = str(imagehash.average_hash(t))
+                except IOError:
+                    os.remove(path)
+                    continue
                 if i.hash in hash:
                     os.remove(path)
                     i.delete()
