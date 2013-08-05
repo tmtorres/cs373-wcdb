@@ -16,11 +16,21 @@ import nltk
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
+from django.core.paginator import Paginator, InvalidPage, EmptyPage
+
 def index(request):
     crises = [{'id': str(c.id).lower()[4:], 'name': c.name} for c in Crisis.objects.all()]
     organizations = [{'id': str(o.id).lower()[4:], 'name': o.name} for o in Organization.objects.all()]
     people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
+
+def get_datetime(e):
+    out = []
+    if hasattr(e, 'date') and e.date is not None:
+        out += [str(e.date)]
+    if hasattr(e, 'time') and e.time is not None:
+        out += [str(e.time)]
+    return '(' + ', '.join(out).strip(', ') + ')'
 
 def display(request, etype = ''):
     e = None
@@ -33,17 +43,31 @@ def display(request, etype = ''):
         e = Crisis.objects.all().order_by(order)
     elif etype == 'organizations':
         e = Organization.objects.all().order_by(order)
-    return render(request, 'display.html', {
-        'order': order,
-        'list': [{
+    entity_list = [{
             'type': etype,
+            'datetime': get_datetime(v),
             'name': v.name, 
             'kind': v.kind, 
             'location': v.location if '<li>' not in v.location else ''.join(v.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
             'id': str(v.id).lower()[4:], 
             'summary': ' '.join(v.summary.split()[:50]) + ' ...',
             'thumb': generate_thumbs(v, 1)[0].thumb,
-            } for v in e]})
+            } for v in e]
+    paginator = Paginator(entity_list, 10)
+    try:
+        page = int(request.GET.get('page', '1'))
+    except ValueError:
+        page = 1
+
+    try:
+        entity = paginator.page(page)
+    except (EmptyPage, InvalidPage):
+        entity = paginator.page(paginator.num_pages)
+
+    return render(request, 'display.html', {
+        'order': order,
+        'entity': entity
+        })
 
 
 def display_more(request, etype = '', id = '', ctype = '') :
