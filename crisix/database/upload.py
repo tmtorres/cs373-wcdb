@@ -59,7 +59,7 @@ def cri_handler(node):
         if attr.tag == 'Time':
             c.time = attr.text
         if attr.tag == 'Locations':
-            c.location += ''.join([v for v in [tostring('<li>' + li.text.strip().title() + '</li>') for li in attr] if v not in c.location])
+            c.location += ''.join([v for v in [('<li>' + li.text.strip().title() + '</li>') for li in attr] if v not in c.location])
         if attr.tag == 'HumanImpact':
             c.himpact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.himpact])
         if attr.tag == 'EconomicImpact':
