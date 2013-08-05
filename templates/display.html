@@ -2,23 +2,19 @@
 <style>
 </style>
 {% block body %}
-<div style="text-align:right;">
-    <h4 style="padding-bottom:20px;color:#eee;padding-bottom:0px;">Order by:</h4>
-    <form action="">
-        <select method="get" name="q" onchange="this.form.submit()">
-            <option value="name" {% if order == "name" %}selected{% endif %}>Name</option>
-            <option value="location" {% if order == "location" %}selected{% endif %}>Location</option>
-            <option value="date" {% if order == "date" %}selected{% endif %}>Date</option>
-            <option value="kind" {% if order == "kind" %}selected{% endif %}>Kind</option>
-        </select>
-</form></div>
-<div style="margin-left:0px; list-style: none;">
-            {% for e in list %}
+
+<!-- Single button -->
+<!-- Single button -->
+<div style="margin-left:0px; list-style: none; padding-top:20px;">
+            {% for e in entity.object_list %}
             <div style="padding-bottom:20px;">
                 <a href="{{ e.id }}/"><img src="/media/thumbs/{{ e.thumb }}"></a>
             <div class="bubble" style="margin-left:125px;">
             {% if e.type == "crises" %}
                 <a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a>
+                {% if e.datetime != "()" %}
+                <span style="color:#c4c4c4;">{{ e.datetime }}</span>
+                {% endif %}
             {% else %}{% if e.type == "organizations" %}
                 <a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a>
             {% else %}{% if e.type == "people" %}
@@ -28,6 +24,19 @@
             <p><li>{{ e.summary }}</li></p>
             </div></div>
             {% endfor %}
+        </div>
+        <div class="pagination" style="float:right;color:#eee;">
+            <span class="step-links">
+            {% if entity.has_previous %}
+                <a href="?page={{ entity.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="current">
+                Page {{ entity.number }} of {{ entity.paginator.num_pages }}
+            </span>
+            {% if entity.has_next %}
+                <a href="?page={{ entity.next_page_number }}">next</a>
+            {% endif %}
+            </span>
         </div>
 
 {% endblock %}

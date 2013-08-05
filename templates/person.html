@@ -1,6 +1,9 @@
 {% extends "base_sidebar.html" %}
 {% block sidebar %}
-
+{% for m in maps %}
+<iframe width="100%" height="250" frameborder="0" scrolling="no" src="{{ m.embed }}"></iframe>
+<hr>
+{% endfor %}
 {% if p.kind %}
 <li class="nav-header">Kind</li>
 <li>{{ p.kind }}</li>
