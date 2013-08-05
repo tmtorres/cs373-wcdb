@@ -28,6 +28,7 @@ from search import normalize_query, get_query, contextualize, relevance_sort
 import subprocess, re
 from crisix.views import generate_thumbs
 
+DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
 def search(request):
     query_string = ''
     found_entries = []
@@ -37,7 +38,7 @@ def search(request):
             entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
             found_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(entry_query).order_by('name'))
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
-        'type': str(e.id).lower()[:3],
+        'type': DISPLAY_TYPE[str(e.id).lower()[:3]],
         'id': str(e.id).lower()[4:],
         'name': e.name, 
         'kind': e.kind, 

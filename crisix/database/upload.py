@@ -127,6 +127,15 @@ def insert_elem(query, attr):
         w = WebElement(**attr)
         w.save()
 
+def valid_link(embed):
+    link = embed.lstrip('htps:')
+    if 'youtube' in link or 'vimeo' in link:
+        return link
+
+def valid_map(embed):
+    if ('output' in embed or 'source' in embed) and 'embed' in embed:
+        return embed
+
 def com_handler(node, e):
     assert node is not None
     assert e is not None
@@ -143,14 +152,14 @@ def com_handler(node, e):
                     insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'IMG', 'text' : elem.text})
         if attr.tag == 'Videos':
             for elem in attr:
-                link = elem.attrib.get('embed').lstrip('htps:') 
-                if link.find('youtube.com/embed/') is not -1 or link.find('player.vimeo') is not -1:
-                    insert_elem({'embed' : link}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
+                embed = valid_link(elem.attrib.get('embed'))
+                if embed is not None:
+                    insert_elem({'embed' : embed}, {'entity' : e, 'ctype' : 'VID', 'text' : elem.text})
         if attr.tag == 'Maps':
             for elem in attr:
-                link = elem.attrib.get('embed')
-                if link.find('embed') is not -1 and link.find('source=embed') is -1 or link.find('output=embed') is not -1:
-                    insert_elem({'embed' : link}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text}) 
+                embed = valid_map(elem.attrib.get('embed'))
+                if embed is not None:
+                    insert_elem({'embed' : embed}, {'entity' : e, 'ctype' : 'MAP', 'text' : elem.text}) 
         if attr.tag == 'Feeds':
             for elem in attr:
                 insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})

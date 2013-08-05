@@ -22,26 +22,28 @@ def index(request):
     people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
-
-def short_summary(summary):
-    if len(summary) < 330 :
-        return summary
-		
-    index = 325
-    i = summary[index]
-    while i != ' ' and i != ',':
-        index += 1
-        i = summary[index]
-		
-    return summary[0:index] + "..."
-
 def display(request, etype = ''):
+    e = None
+    order = 'name'
+    if 'q' in request.GET:
+        order = request.GET['q']
     if etype == 'people':
-    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Person', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Person.objects.all()]})
-    if etype == 'crises':
-    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Crisis', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Crisis.objects.all()]})
-    if etype == 'organizations':
-    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Organization', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Organization.objects.all()]})
+        e = Person.objects.all().order_by(order)
+    elif etype == 'crises':
+        e = Crisis.objects.all().order_by(order)
+    elif etype == 'organizations':
+        e = Organization.objects.all().order_by(order)
+    return render(request, 'display.html', {
+        'order': order,
+        'list': [{
+            'type': etype,
+            'name': v.name, 
+            'kind': v.kind, 
+            'location': v.location if '<li>' not in v.location else ''.join(v.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
+            'id': str(v.id).lower()[4:], 
+            'summary': ' '.join(v.summary.split()[:50]) + ' ...',
+            'thumb': generate_thumbs(v, 1)[0].thumb,
+            } for v in e]})
 
 
 def display_more(request, etype = '', id = '', ctype = '') :
