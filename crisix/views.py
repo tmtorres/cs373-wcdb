@@ -24,13 +24,17 @@ def index(request):
 
 def display(request, etype = ''):
     e = None
+    order = 'name'
+    if 'q' in request.GET:
+        order = request.GET['q']
     if etype == 'people':
-        e = Person.objects.all().order_by('name')
+        e = Person.objects.all().order_by(order)
     elif etype == 'crises':
-        e = Crisis.objects.all().order_by('name')
+        e = Crisis.objects.all().order_by(order)
     elif etype == 'organizations':
-        e = Organization.objects.all().order_by('name')
+        e = Organization.objects.all().order_by(order)
     return render(request, 'display.html', {
+        'order': order,
         'list': [{
             'type': etype,
             'name': v.name, 

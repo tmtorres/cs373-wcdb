@@ -2,7 +2,17 @@
 <style>
 </style>
 {% block body %}
-	<div style="margin-left:0px; list-style: none;">
+<div style="text-align:right;">
+    <h4 style="padding-bottom:20px;color:#eee;padding-bottom:0px;">Order by:</h4>
+    <form action="">
+        <select method="get" name="q" onchange="this.form.submit()">
+            <option value="name" {% if order == "name" %}selected{% endif %}>Name</option>
+            <option value="location" {% if order == "location" %}selected{% endif %}>Location</option>
+            <option value="date" {% if order == "date" %}selected{% endif %}>Date</option>
+            <option value="kind" {% if order == "kind" %}selected{% endif %}>Kind</option>
+        </select>
+</form></div>
+<div style="margin-left:0px; list-style: none;">
             {% for e in list %}
             <div style="padding-bottom:20px;">
                 <a href="{{ e.id }}/"><img src="/media/thumbs/{{ e.thumb }}"></a>
