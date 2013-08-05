@@ -4,15 +4,14 @@
 {% block body %}
 	<div style="margin-left:0px; list-style: none;">
             {% for e in list %}
-            
             <div style="padding-bottom:20px;">
                 <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
             <div class="bubble" style="margin-left:125px;">
-            {% if e.kind == "Crisis" %}
+            {% if e.type == "crises" %}
                 <a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a>
-            {% else %}{% if e.kind == "Organization" %}
+            {% else %}{% if e.type == "organizations" %}
                 <a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a>
-            {% else %}{% if e.kind == "Person" %}
+            {% else %}{% if e.type == "people" %}
                 <a href="{% url crisix.views.people e.id %}">{{ e.name }}</a>
             {% endif %}{% endif %}{% endif %}<br>
             {{ e.kind }} | {{ e.location }}<br>
