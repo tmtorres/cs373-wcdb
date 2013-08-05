@@ -29,13 +29,11 @@ def str_match(new, old):
     for new_li in new:
         substr = [(long_substr([new_li.text.strip(), old_li.text.strip()]), old_li) for old_li in old]
         match = sorted(substr, key=lambda x: len(x[0]), reverse=True)[0]
-        if float(len(match[0]))/len(match[1].text) > 0.4:
+        diff_str = [new_li.text.replace(match[0], '', 1).strip(), match[1].text.replace(match[0], '', 1).strip()]
+        if not len(diff_str[0]) or not len(diff_str[1]):
+            match[1].text = new_li.text
+        elif (float(len(long_substr(diff_str))) / len(diff_str[1])) > 0.4:
             match[1].text = new_li.text
         else:
             ET.SubElement(old, 'li').text = new_li.text
     return old
-
-old = fromstring('<old><li>Worldwide</li><li>New York</li></old>')
-new = fromstring('<new><li>World Wide</li><li>London</li></new>')
-
-str_match(new, old)
