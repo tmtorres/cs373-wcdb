@@ -26,7 +26,7 @@ from upload import clear, validate, insert
 from download import get_crises, get_people, get_organizations
 from search import normalize_query, get_query, contextualize, relevance_sort
 import subprocess, re
-from crisix.views import generate_thumbs, get_datetime
+from crisix.views import get_icon
 
 DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
 def search(request):
@@ -40,12 +40,11 @@ def search(request):
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': DISPLAY_TYPE[str(e.id).lower()[:3]],
         'id': str(e.id).lower()[4:],
-        'datetime': get_datetime(e),
         'name': e.name, 
         'kind': e.kind, 
         'location': e.location if '<li>' not in e.location else ''.join(e.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
         'summary': contextualize(e.summary, query_string),
-        'thumb': generate_thumbs(e, 1)[0].thumb,
+        'thumb': get_icon(e)
     } for e in found_entries]})
 
 def utility(request):

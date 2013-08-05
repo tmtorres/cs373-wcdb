@@ -11,9 +11,6 @@
             <div class="bubble" style="margin-left:125px;">
             {% if e.type == "crises" %}
                 <li><a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a></li>
-                {% if e.datetime != "()" %}
-                <span style="color:#c4c4c4;">{{ e.datetime }}</span>
-                {% endif %}
             {% else %}{% if e.type == "organizations" %}
                 <li><a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a></li>
             {% else %}{% if e.type == "people" %}

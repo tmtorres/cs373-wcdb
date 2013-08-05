@@ -2,9 +2,6 @@
 <style>
 </style>
 {% block body %}
-
-<!-- Single button -->
-<!-- Single button -->
 <div style="margin-left:0px; list-style: none; padding-top:20px;">
             {% for e in entity.object_list %}
             <div style="padding-bottom:20px;">
@@ -12,16 +9,19 @@
             <div class="bubble" style="margin-left:125px;">
             {% if e.type == "crises" %}
                 <a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a>
-                {% if e.datetime != "()" %}
-                <span style="color:#c4c4c4;">{{ e.datetime }}</span>
-                {% endif %}
             {% else %}{% if e.type == "organizations" %}
                 <a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a>
             {% else %}{% if e.type == "people" %}
                 <a href="{% url crisix.views.people e.id %}">{{ e.name }}</a>
             {% endif %}{% endif %}{% endif %}<br>
-            {{ e.kind }} | {{ e.location }}<br>
+            {{ e.kind }} | {{ e.location|title }}<br>
             <p><li>{{ e.summary }}</li></p>
+                {% if e.datetime|length > 0 %}
+                <span style="color:#c4c4c4;">{{ e.datetime }}</span>
+                {% endif %}
+                {% if e.contact|length > 0 %}
+                <span><a style="color:#c4c4c4;" href="{{ e.contact }}">{{ e.contact }}</a></span>
+                {% endif %}
             </div></div>
             {% endfor %}
         </div>
@@ -38,5 +38,4 @@
             {% endif %}
             </span>
         </div>
-
 {% endblock %}

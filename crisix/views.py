@@ -30,7 +30,18 @@ def get_datetime(e):
         out += [str(e.date)]
     if hasattr(e, 'time') and e.time is not None:
         out += [str(e.time)]
-    return '(' + ', '.join(out).strip(', ') + ')'
+    return ', '.join(out).strip(', ')
+
+def get_contact(e):
+    if hasattr(e, 'contact') and len(e.contact) > 0:
+        return ''.join([c for c in [v.attrib.get('href') for v in fromstring('<Contact>' + e.contact + '</Contact>')] if c is not None][:1])
+    return ''
+
+def get_icon(e):
+    t = generate_thumbs(e, 1)
+    if not len(t):
+        return 'noimage.jpg'
+    return t[0].thumb
 
 def display(request, etype = ''):
     e = None
@@ -46,12 +57,13 @@ def display(request, etype = ''):
     entity_list = [{
             'type': etype,
             'datetime': get_datetime(v),
+            'contact': get_contact(v),
             'name': v.name, 
             'kind': v.kind, 
             'location': v.location if '<li>' not in v.location else ''.join(v.location.split('<li>')).replace('</li>', ', ').rstrip(', '),
             'id': str(v.id).lower()[4:], 
-            'summary': ' '.join(v.summary.split()[:50]) + ' ...',
-            'thumb': generate_thumbs(v, 1)[0].thumb,
+            'summary': ' '.join(v.summary.split()[:50]) + ' ...' if len(v.summary) else '',
+            'thumb': get_icon(v),
             } for v in e]
     paginator = Paginator(entity_list, 10)
     try:
@@ -68,7 +80,6 @@ def display(request, etype = ''):
         'order': order,
         'entity': entity
         })
-
 
 def display_more(request, etype = '', id = '', ctype = '') :
 

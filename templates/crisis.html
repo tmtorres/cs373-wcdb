@@ -19,18 +19,22 @@
 
 {% if c.location %}
 <li class="nav-header">Locations</li>
-<li>{{ c.location|safe }}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
+<li>{{ c.location|safe|title }}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
+{% if related_people|length > 0 %}
 <li class="nav-header">Related People</li>
 {% for p in related_people %}
 <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
+{% endif %}
 
+{% if related_orgs|length > 0 %}
 <li class="nav-header">Related Organizations</li>
 {% for o in related_orgs %}
 <li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
 {% endfor %}
+{% endif %}
 {% endblock %}
 
 {% block title %}
@@ -46,7 +50,9 @@
         }
     </style>
     <div class="row-fluid">
-        <h1 class="main-focus;">{{ c.name }}</h1><hr>
+        <h1 class="main-focus;">{{ c.name }}</h1>
+        {% if images|length or videos|length %}
+        <hr>
         <div class="textblock">
             <div class="bubble">
                 <div class="row-fluid">
@@ -80,6 +86,7 @@
             </div>
         </div>
     </div>
+    {% endif %}
 </div>
 {% for s in summary %}
     <p>{{ s|safe }}</p>
@@ -108,18 +115,22 @@
         {% endif %}
     {% endfor %}
 </ul>
+{% if citations|length > 0 %}
 <h3>References</h3><hr>
 <ol style="word-wrap:break-word;">
     {% for w in citations %}
         <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
     {% endfor %}
 </ol>
+{% endif %}
+{% if external|length > 0 %}
 <h3>External Links</h3><hr>
 <ul style="list-style-type:square;word-wrap:break-word;">
     {% for w in external %}
         <li><a href="{{ w.href }}">{{ w.text }}</a></li>
     {% endfor %}
 </ul>
+{% endif %}
 </div>
 </div>
 <!--/span9-->

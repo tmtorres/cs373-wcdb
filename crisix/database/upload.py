@@ -52,7 +52,7 @@ def cri_handler(node):
             for elem in attr:
                 c.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            c.kind = attr.text
+            c.kind = attr.text.title()
         if attr.tag == 'Date':
             c.date = attr.text
         if attr.tag == 'Time':
@@ -84,9 +84,9 @@ def org_handler(node):
             for elem in attr:
                 o.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            o.kind = attr.text
+            o.kind = attr.text.title()
         if attr.tag == 'Location':
-            o.location = attr.text
+            o.location = attr.text.title()
         if attr.tag == 'History':
             o.history += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.history])
         if attr.tag == 'ContactInfo':
@@ -108,9 +108,9 @@ def per_handler(node):
             for elem in attr:
                 p.organizations.add(get_entity(Organization, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            p.kind = attr.text
+            p.kind = attr.text.title()
         if attr.tag == 'Location':
-            p.location = attr.text
+            p.location = attr.text.title()
         if attr.tag == 'Common':
             com_handler(attr, p)
     assert p is not None
@@ -120,20 +120,22 @@ def insert_elem(query, attr):
     assert type(query) is dict
     assert type(attr) is dict
     try:
-        WebElement.objects.get(**query)
+        w = attr['entity'].elements.get(**query)
     except WebElement.DoesNotExist:
         attr.update(query)
         w = WebElement(**attr)
         w.save()
 
-def valid_link(embed):
-    link = embed.lstrip('htps:')
-    if 'youtube' in link or 'vimeo' in link:
+def valid_link(link):
+    if 'youtube' in link:
+        return link if 'embed' in link else ('//www.youtube.com/embed/' + link.split('=')[-1] if 'watch?v' in link else None)
+    elif 'vimeo' in link:
         return link
 
 def valid_map(embed):
-    if ('output' in embed or 'source' in embed) and 'embed' in embed:
-        return embed
+    if 'maps.google.com' in embed:
+        if 'embed' not in embed:
+            return embed + '&output=embed'
 
 def com_handler(node, e):
     assert node is not None
