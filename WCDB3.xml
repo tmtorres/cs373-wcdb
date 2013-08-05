@@ -189,6 +189,9 @@
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
                 <li embed="https://static-secure.guim.co.uk/sys-images/Guardian/About/General/2011/11/19/1321713344809/Libyans-celebrate-news-of-007.jpg" text="Libyans celebrate news of Gadhafi's death." />
                 <li embed="http://images.politico.com/global/news/110220_libya_protests_ap_328.jpg" text="Protesters have seized control of some military bases and tanks. | AP Photo." />
+                <li embed="http://02varvara.files.wordpress.com/2012/03/00-libyan-militia-thugs-in-libyan-civil-war.jpg" />
+                <li embed="http://usawatchdog.com/wp-content/uploads/2011/02/cairo-riot3.jpg" />
+                <li embed="http://s133.photobucket.com/user/chainsawmoth/media/Libyan%20Civil%20War/Abu_Salim_seven_burned.jpg.html" text="Casualties" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/p3GN1fxA-B0" text="Visual diary shows Libyan soldier at war"/>
@@ -1117,6 +1120,9 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://www.unitedwayokc.org/sites/all/themes/uw/images/1.jpg" />
+                <li embed="http://www.unitedwaynwfl.org/Portals/12/front%20page%20graphic.jpg" />
+                <li embed="http://unitedwaymatsu.org/images/ourwork/0181_HR.jpg" />
+                <li embed="http://www.uwgk.org/wp-content/uploads/2013/05/United-Way-Banner1.jpg" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/YCT9cZNh0MQ" text="United Way Campaign" />
@@ -1172,6 +1178,9 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://www.gochengdoo.com/images/blog/7031.jpg" />
+                <li embed="http://www.leaderpost.com/news/cms/binary/8280367.jpg" />
+                <li embed="http://cdn.physorg.com/newman/gfx/news/2013/8-7-6-5-4-3-2-1-chinarushesr.jpg" />
+                <li embed="http://www.gochengdoo.com/images/blog/7046.jpg" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/nR3DPKzBrwo" text="SQR 2008 Report"/>
@@ -1217,6 +1226,8 @@
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Seal_of_the_National_Transitional_Council_%28Libya%29.svg/200px-Seal_of_the_National_Transitional_Council_%28Libya%29.svg.png" />
                 <li embed="http://www1.pictures.zimbio.com/gi/President+Obama+Meets+President+National+Transitional+STm2i_EQWMMl.jpg"/>
+                <li embed="http://www.economym.com/files/attach/images/90/845/007/56814dce32de68a6751693583e1e0350.jpg" />
+                <li embed="http://images.blatantworld.com/001_full_sized_image/new_libyan_national_flag_national_transitional_council_ntc.png" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/gIVZlSk1qbI"/>
@@ -1259,6 +1270,9 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://1.bp.blogspot.com/-gxJP8gYN4DU/Tqmx3Vxe0BI/AAAAAAAAAtE/xzv4M8pB7gU/s320/49169African-Union.png"> African Union Symbol</li>
+                <li embed="http://www.au.int/en/sites/default/files/u1/flagbakground_700.jpg" />
+                <li embed="http://www.un.org/News/dh/photos/large/2013/January/541545-ki-moon-group.jpg" text="AU Leaders" />
+                <li embed="http://bielbienne.files.wordpress.com/2009/03/ug.jpg" text="African Union Military" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/G5Sn7PrXDoA" text="African Union on Mali" />
@@ -1302,7 +1316,9 @@
                 <li href="http://en.wikipedia.org/wiki/Twitter">"Twitter". Wikipedia.</li>
             </ExternalLinks>
             <Images>
+                <li embed="http://theinspirationroom.com/daily/design/2012/6/new_twitter_logo.jpg" />
                 <li embed="http://25.media.tumblr.com/19e6fef221cb39926b9f0399eac6913c/tumblr_mnyuelETRW1ste7qoo1_1280.jpg" text="Twitter role with Turkey Protests"/>
+                <li embed="http://cdn.thenextweb.com/files/2010/11/twitter_london.jpg" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/J0xbjIE8cPM" text="How to Use Twitter" />
@@ -1344,7 +1360,9 @@
                 <li href="http://en.wikipedia.org/wiki/Centers_for_Disease_Control_and_Prevention">"Centers for Disease Control and Prevention". Wikipedia.</li>
             </ExternalLinks>
             <Images>
+                <li embed="http://www.capitolmarkets.com/files/2012/11/CDC-Headquarters.jpg" text="CDC headquarters" />
             	<li embed="http://childrenshospital.org/clinicalservices/Site1899/Images/CDC.jpg"/>
+                <li embed="http://www.bu.edu/ihblast/files/2012/09/IMG_1292.jpg" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/I_o_wkr7N8A?list=PL87B964CE4CF0A98C" text="CDC &amp; HIV/AIDS"/>
@@ -1384,7 +1402,9 @@
                 <li href="http://en.wikipedia.org/wiki/United_States_Geological_Survey">"United States Geological Survey". Wikipedia.</li>
             </ExternalLinks>
             <Images>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/0/05/Usgs_Logo_Old.gif" />
             	<li embed="http://wxow.images.worldnow.com/images/20427163_BG1.jpg"/>
+                <li embed="http://www.usgs.gov/newsroom/images/mt_st_helens/msh04_gps_usgs_scientist_mount_adams_9-29-04.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/sMzK_aySff0" text="USGS Earthquakes" />
@@ -1427,7 +1447,9 @@
             </ExternalLinks>
             <Images>
                 <li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_WHO.svg/800px-Flag_of_WHO.svg.png" text="WHO Flag"/>
+                <li embed="http://myhomedesign.ph/admin/wp-content/uploads/2011/12/2.jpg" />
                 <li embed="http://www.examiner.com/images/blog/EXID22920/images/World_Health_Organization(1).jpg"/>
+                <li embed="http://upload.wikimedia.org/wikipedia/commons/f/f3/World_Health_Organization_Flag.jpg" />
             </Images>
             <Videos>
                 <li embed="//www.youtube.com/embed/QCljON3Pa4E" text="WHO Promotional Video"/>
@@ -1468,8 +1490,10 @@
                 <li href="http://en.wikipedia.org/wiki/United_Nations_Security_Council">"United Nations Security Council". Wikipedia.</li>
             </ExternalLinks>
             <Images>
+                <li embed="http://www.sleepout.com/nomad/wp-content/uploads/2013/05/The-United-Nations.jpg" />
             	<li embed="http://bosmun.org/wp-content/uploads/2012/06/United-Nations-Security-Council.jpg" />
             	<li embed="http://graphics8.nytimes.com/images/2009/06/24/timestopics/UN-395.jpg" />
+                <li embed="http://metricpioneer.com/wp-content/uploads/2012/08/United-Nations-Security-Council1.jpg" />
             </Images>
             <Videos>
             	<li embed="//www.youtube.com/embed/gTB-LDWoETA" text="Obama at UN Security Council"/>
