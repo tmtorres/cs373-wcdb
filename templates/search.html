@@ -4,16 +4,16 @@
 {% block body %}
     <div id="results" style="margin-left:0px; list-style:none;">
     {% if query_string|length > 0 %}
-            <p style="padding-bottom:20px;color:#eee;">Showing search results for "{{ query_string }}":</p>
+            <h3 style="padding-bottom:20px;color:#eee;">Showing search results for "{{ query_string }}":</h3>
             {% for e in entries %}
             <div style="padding-bottom:20px;">
-                <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
+                <a href="/{{ e.type }}/{{ e.id }}/"><img src="/media/thumbs/{{ e.thumb }}"></a>
             <div class="bubble" style="margin-left:125px;">
-            {% if e.type == "cri" %}
+            {% if e.type == "crises" %}
                 <li><a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a></li>
-            {% else %}{% if e.type == "org" %}
+            {% else %}{% if e.type == "organizations" %}
                 <li><a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a></li>
-            {% else %}{% if e.type == "per" %}
+            {% else %}{% if e.type == "people" %}
                 <li><a href="{% url crisix.views.people e.id %}">{{ e.name }}</a></li>
             {% endif %}{% endif %}{% endif %}
             <li>{{ e.kind }} | {{ e.location }}</li>
@@ -29,7 +29,7 @@
                 document.getElementById('results').innerHTML = output;
             </script>
     {% else %}
-        <p style="padding-bottom:20px;color:#eee;"><b>You asked for nothing. And you shall receive it... <i>in abundance!</i></b></p>
+    <h3 style="padding-bottom:20px;color:#eee;"><b>You asked for nothing. And you shall receive it... <i>in abundance!</i></b></h3>
     {% endif %}
     </div>
 {% endblock %}

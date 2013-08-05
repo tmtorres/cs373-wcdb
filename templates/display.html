@@ -5,7 +5,7 @@
 	<div style="margin-left:0px; list-style: none;">
             {% for e in list %}
             <div style="padding-bottom:20px;">
-                <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
+                <a href="{{ e.id }}/"><img src="/media/thumbs/{{ e.thumb }}"></a>
             <div class="bubble" style="margin-left:125px;">
             {% if e.type == "crises" %}
                 <a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a>
