@@ -133,8 +133,12 @@ def valid_link(embed):
         return link
 
 def valid_map(embed):
-    if ('output' in embed or 'source' in embed) and 'embed' in embed:
+    if 'google' in embed and ('output' in embed or 'source' in embed) and 'embed' in embed:
         return embed
+    elif 'bing.com/maps/embed/' in embed :
+        return embed
+    else :
+        return None 
 
 def com_handler(node, e):
     assert node is not None
