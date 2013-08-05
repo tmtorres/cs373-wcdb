@@ -80,7 +80,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/people/brobma')
         response = people(request, 'brobma')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">Barack Obama</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">Barack Obama</h1>'),-1)
 
     def test_people4(self):
         # Test if related objects are on page in format designated in template
@@ -116,7 +116,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/organization/whorgn')
         response = organizations(request, 'whorgn')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">World Health Organization</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">World Health Organization</h1>'),-1)
 
     def test_organization4(self):
         # Test if related objects are on page in format designated in template
@@ -153,7 +153,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">2010 Haiti Earthquake</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">2010 Haiti Earthquake</h1>'),-1)
 
     def test_crisis4(self):
         # Test if related objects are on page in format designated in template
