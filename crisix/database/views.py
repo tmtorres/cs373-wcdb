@@ -30,11 +30,12 @@ from crisix.views import generate_thumbs
 
 def search(request):
     query_string = ''
-    found_entries = None
+    found_entries = []
     if 'q' in request.GET:
         query_string = request.GET['q'].strip()
-        entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
-        found_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(entry_query).order_by('name'))
+        if len(query_string):
+            entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
+            found_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(entry_query).order_by('name'))
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': str(e.id).lower()[:3],
         'id': str(e.id).lower()[4:],
