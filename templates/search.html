@@ -2,8 +2,9 @@
 <style>
 </style>
 {% block body %}
-    <div  id="results" style="margin-left:0px; list-style: none;">
-            Showing search results for "{{ query_string }}":<br><br>
+    <div id="results" style="margin-left:0px; list-style:none;">
+    {% if query_string|length > 0 %}
+            <p style="padding-bottom:20px;color:#eee;">Showing search results for "{{ query_string }}":</p>
             {% for e in entries %}
             <div style="padding-bottom:20px;">
                 <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
@@ -19,13 +20,16 @@
             <p><li>{{ e.summary }}</li></p>
             </div></div>
             {% endfor %}
+            <script>
+                function updateHaystack(input, needle) {
+                    return input.replace(new RegExp('([^/]\\b)(' + needle + '\\w*)(\\b)','igm'), '$1<b>$2</b>$3');
+                }
+                var markup = document.getElementById('results').innerHTML;
+                var output = updateHaystack(markup, '{{ query_string }}');
+                document.getElementById('results').innerHTML = output;
+            </script>
+    {% else %}
+        <p style="padding-bottom:20px;color:#eee;"><b>You asked for nothing. And you shall receive it... <i>in abundance!</i></b></p>
+    {% endif %}
     </div>
-    <script>
-        function updateHaystack(input, needle) {
-            return input.replace(new RegExp('([^/]\\b)(' + needle + '\\w*)(\\b)','igm'), '$1<b>$2</b>$3');
-        }
-        var markup = document.getElementById('results').innerHTML;
-        var output = updateHaystack(markup, '{{ query_string }}');
-        document.getElementById('results').innerHTML = output;
-    </script>
 {% endblock %}

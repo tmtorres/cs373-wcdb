@@ -15,7 +15,7 @@
         <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
         <style type="text/css">
             body {
-            padding-top: 30px;
+            padding-top: 40px;
             /*background-color: #D9F0FF;*/
             background-attachment:fixed;
             background-image:url('http://img580.imageshack.us/img580/4992/vhlj.jpg');
@@ -116,7 +116,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="admin_cog" class="icon-cog icon-white" style="opacity:0.5;"></span>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span id="admin_cog" class="icon-cog icon-white"></span>
                             <b class="caret"></b>
                         </a>
                             <ul class="dropdown-menu">
@@ -217,18 +217,8 @@
                 {% block body %}
                 {% endblock %}
                 </div>
-                <div class="well sidebar-nav">
-                    <ul class="nav nav-list">
-                        {% block sidebar %}
-                        {% endblock %}
-                    </ul>
-                    <div style="padding:20px">
-                    {% block feed %}
-                    {% endblock %}
-                    </div>
-                </div>
                 <div class="container-fluid" style="float:left;width:980px;padding:0px;">
-                    <div style="background-color:#eee;padding:20px;border-top:1px dotted #ccc;">
+                    <div style="background-color:transparent;padding:20px;border-top:1px solid #eee;color:#eee;">
                         &copy; 2013 Crisix
                     </div>
                 </div>
