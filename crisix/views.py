@@ -23,7 +23,7 @@ def index(request):
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
 
-def short_summary(summary) :
+def short_summary(summary):
     if len(summary) < 330 :
         return summary
 		

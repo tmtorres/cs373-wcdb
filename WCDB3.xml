@@ -53,17 +53,21 @@
             <!-- hrefs optional in the following depending on how you want them to behave on your site -->
             <Images>
                 <!-- Put full URLs to images here, display them on your site in your own cool way -->
-                <li embed="http://www.realbiblecodes.com/blog/wp-content/uploads/2012/12/2012-12-17T065603Z_1_CBRE8BG0J9I00_RTROPTP_2_USA-SHOOTING-CONNECTICUT.jpg" text="Shooting victims: Sandy Hook Elementary School" />
+                <li embed="http://letsfindthem.files.wordpress.com/2012/12/sandy_hook_victims.jpg" text="Shooting victims: Sandy Hook Elementary School" />
+                <li embed="http://tribwpmt.files.wordpress.com/2012/12/s017686762-300.jpg" text="Sandy Hook Memorial" />
+                <li embed="http://img.chinasmack.com/www/wp-content/uploads/2012/12/sandy-hook-shooting-obama-tears-04.jpg" />
             </Images>
             <Videos>
                 <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
                 <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
                 <li embed="//www.youtube.com/embed/RVHufEjU9VU" text="President Barack Obama makes a Statement on the Shooting."/>
+                <li embed="//www.youtube.com/embed/WZwwzP6ANQo" />
+                <li embed="//www.youtube.com/embed/TX8V_ZWwgb4" />
             </Videos>
             <Maps>
                 <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
                 <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
-                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=m&amp;source=embed&amp;oe=UTF8&amp;msa=0&amp;msid=213845869214841596682.0004d0d7915820d13990e&amp;ll=41.414362,-73.253222&amp;spn=0.01001,0.05083&amp;output=embed" />
+                <li embed="https://maps.google.com/maps/ms?ie=UTF8&amp;t=m&amp;oe=UTF8&amp;msa=0&amp;msid=213845869214841596682.0004d0d7915820d13990e&amp;ll=41.413896,-73.252716&amp;spn=0.077243,0.102997&amp;z=12&amp;output=embed" />
             </Maps>
             <!-- Optional summary field for extra random data -->
             <Summary>
@@ -322,9 +326,6 @@
                 <li embed="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Taksim+Gezi+Park&amp;aq=&amp;sll=40.878218,29.196167&amp;sspn=0.467774,1.056747&amp;ie=UTF8&amp;hq=Taksim+Gezi+Park&amp;hnear=&amp;t=m&amp;z=10&amp;output=embed" />
                 <!--https://maps.google.com/maps?client=ubuntu&channel=fs&q=northern+mali+conflict+google+maps&oe=utf-8&ie=UTF-8&ei=LafcUdniEouK9gTe-oHoDg&ved=0CAoQ_AUoAg -->
             </Maps>
-            <Feeds>
-                <li embed="https://twitter.com/OccupyGezi" />
-            </Feeds>
             <!-- Optional summary field for extra random data -->
             <Summary>
                 Protests in Turkey started on May 28th, 2013 to initially contest the plans of replacing Taksim Gezi Park with a shopping mall and possible residence. The protests developed into riots when a group occupying the park was attacked by police with no mercy. The subjects of the protests have since broadened beyond the development of Taksim Gezi Park, covering issues such as freedom of assembly and freedom of expression, as well as more broadly defending the secularism of Turkey. The protests also spread to other cities in Turkey, and protests were seen in other countries with significant Turkish communities. On July 8th, Istanbul governor Hüseyin Avni Mutlu led a public reopening of the Gezi Park in front of all the media cameras. People called by the Taksim Solidarity group for a mass visit quickly filled it up. Within less than an hour of governor's leave, the park was cordoned by police and people forcefully evacuated, thus closing the park to the public again. This is still an ongoing event.

@@ -8,7 +8,7 @@
 	<h1 class="main-focus;">Photos of '{{ name }}'</h1><hr>
 	<div style="padding-bottom:180px;">
 		{% for i in images %}
-			<div>
+			<div style="margin:0 auto;">
 				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
 			</div>
 		{% endfor %}
