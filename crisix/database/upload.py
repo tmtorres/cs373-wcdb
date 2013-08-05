@@ -5,6 +5,7 @@ from datetime import time
 from django.conf import settings
 from xml.etree.ElementTree import tostring
 from minixsv import pyxsval
+from crisix.views import convert_li
 
 def validate(file):
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -136,6 +137,8 @@ def valid_map(embed):
     if 'maps.google.com' in embed:
         if 'embed' not in embed:
             return embed + '&output=embed'
+    elif 'bing.com/maps/embed/' in embed :
+        return embed
 
 def com_handler(node, e):
     assert node is not None

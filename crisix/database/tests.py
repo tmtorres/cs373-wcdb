@@ -35,7 +35,6 @@ class SimpleTest(TestCase, RequestFactory):
         self.o.crises.add(self.c)
         self.o.people.add(self.p)
 
-
 	# ------------
 	# Simple Tests
 	# ------------
@@ -53,7 +52,6 @@ class SimpleTest(TestCase, RequestFactory):
 
         # Test if database is properly populated
         self.assertEqual(self.p.name,'Barack Obama')
-
 
     # -----------
     # People View
@@ -80,7 +78,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/people/brobma')
         response = people(request, 'brobma')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">Barack Obama</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">Barack Obama</h1>'),-1)
 
     def test_people4(self):
         # Test if related objects are on page in format designated in template
@@ -116,7 +114,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/organization/whorgn')
         response = organizations(request, 'whorgn')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">World Health Organization</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">World Health Organization</h1>'),-1)
 
     def test_organization4(self):
         # Test if related objects are on page in format designated in template
@@ -126,7 +124,6 @@ class SimpleTest(TestCase, RequestFactory):
         htmlstring = response.content
         self.assertNotEqual(htmlstring.find('<li><a href="/crises/haiear/">2010 Haiti Earthquake</a></li>'),-1)
         self.assertNotEqual(htmlstring.find('<li><a href="/people/brobma/">Barack Obama</a></li>'),-1)
-
 
     # -----------
     # Crisis View
@@ -153,7 +150,7 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('<h1 class="main-focus">2010 Haiti Earthquake</h1>'),-1)
+        self.assertNotEqual(htmlstring.find('<h1 class="main-focus;">2010 Haiti Earthquake</h1>'),-1)
 
     def test_crisis4(self):
         # Test if related objects are on page in format designated in template
@@ -436,6 +433,33 @@ class TestUpload(TestCase):
     	for c in Crisis.objects.all():
     		c.delete()
 
+    def test_valid_map_1(self):
+        """
+        testing a valid Google Map
+        """
+        s = 'https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=zhongnanhai,+Beijing,+China&amp;aq=1&amp;oq=Zhongnanhai&amp;sll=30.307761,-97.753401&amp;sspn=1.046869,2.113495&amp;ie=UTF8&amp;hq=zhongnanhai,&amp;hnear=Beijing,+China&amp;t=m&amp;z=15&amp;output=embed" text="Zhongnanhai, Beijing, China'
+
+        assert (valid_map(s) is not None)
+
+    def test_valid_map_2(self):
+        """
+        testing an invalid Google Map
+        """
+        s = 'https://maps.google.com/maps?client=ubuntu&channel=fs&q=white+house&oe=utf-8&ie=UTF-8&ei=5xgAUsqdFIGMyQHknYCoDQ&ved=0CAoQ_AUoAg'
+
+        assert (valid_map(s) is None)
+
+    def test_valid_map_3(self):
+        """
+        testing a valid Bing Map
+        """
+        s = 'http://www.bing.com/maps/embed/?v=2&amp;cp=38.897610~-77.036720&amp;lvl=18&amp;dir=0&amp;sty=r&amp;q=white%20house&amp;form=LMLTEW&amp;emid=85759cd1-e41e-4e69-9d3b-dacd3d688a9c'
+        t = 'http://www.bing.com/maps/embed/?v=2&amp;cp=17.573495~-3.998823&amp;lvl=6&amp;dir=0&amp;sty=r&amp;q=mali&amp;form=LMLTEW&amp;emid=e012f5fb-e4f7-1293-6e86-377c384ee67a'
+
+        assert (valid_map(s) is not None)
+        assert (valid_map(t) is not None)
+        
+
 class TestDownload(TestCase):
     def test_get_crises_1(self):
     	test = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSHESSG.xml')).read())
@@ -552,7 +576,7 @@ class TestDownload(TestCase):
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
-	c = Crisis.objects.get(id='CRI_SHESSG')   	
+        c = Crisis.objects.get(id='CRI_SHESSG')   	
     	x = ET.SubElement(root, 'Crisis')
         get_common(x, c)
         
@@ -567,7 +591,7 @@ class TestDownload(TestCase):
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
-	c = Organization.objects.get(id='ORG_UNDWAY')   	
+        c = Organization.objects.get(id='ORG_UNDWAY')   	
     	x = ET.SubElement(root, 'Organization')
         get_common(x, c)
         
@@ -582,7 +606,7 @@ class TestDownload(TestCase):
     	insert(test)
     	
     	root = ET.Element('WorldCrises')
-	c = Person.objects.get(id='PER_BROBMA')   	
+        c = Person.objects.get(id='PER_BROBMA')   	
     	x = ET.SubElement(root, 'Person')
         get_common(x, c)
         
