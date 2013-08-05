@@ -19,7 +19,7 @@
 
 {% if c.location %}
 <li class="nav-header">Locations</li>
-<li>{{ c.location|safe|title }}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
+<li>{{ c.location|safe }}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
 {% if related_people|length > 0 %}
