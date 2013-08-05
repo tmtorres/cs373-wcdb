@@ -22,13 +22,26 @@ def index(request):
     people = [{'id': str(p.id).lower()[4:], 'name': p.name} for p in Person.objects.all()]
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
+
+def short_summary(summary) :
+    if len(summary) < 330 :
+        return summary
+		
+    index = 325
+    i = summary[index]
+    while i != ' ' and i != ',':
+        index += 1
+        i = summary[index]
+		
+    return summary[0:index] + "..."
+
 def display(request, etype = ''):
     if etype == 'people':
-        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Person.objects.all()], 'kind': 'person'})
+    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Person', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Person.objects.all()]})
     if etype == 'crises':
-        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Crisis.objects.all()], 'kind': 'crisis'})
+    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Crisis', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Crisis.objects.all()]})
     if etype == 'organizations':
-        return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:]} for p in Organization.objects.all()], 'kind': 'organization'})
+    	    return render(request, 'display.html', {'list': [{'name': p.name, 'id': str(p.id).lower()[4:], 'kind': 'Organization', 'location': p.location, 'summary': short_summary(p.summary), 'thumb': generate_thumbs(p, 1)[0].thumb} for p in Organization.objects.all()]})
 
 
 def display_more(request, etype = '', id = '', ctype = '') :
@@ -39,6 +52,7 @@ def display_more(request, etype = '', id = '', ctype = '') :
         e = Person.objects.get(id='PER_' + str(id).upper())
     if etype == 'crises' :
         e = Crisis.objects.get(id='CRI_' + str(id).upper())
+
 
     if(ctype == 'videos'):
         vids = e.elements.filter(ctype='VID').filter(hash=None)
