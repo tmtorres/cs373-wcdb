@@ -1,24 +1,24 @@
-{% extends "base.html" %}
+{% extends "search_bubble.html" %}
+<style>
+</style>
 {% block body %}
-<div class="span9">
-    <div class="row-fluid">
+	<div style="margin-left:0px; list-style: none;">
+            {% for e in list %}
+            
+            <div style="padding-bottom:20px;">
+                <a href=""><img src="/media/thumbs/{{ e.thumb }}"></a>
+            <div class="bubble" style="margin-left:125px;">
+            {% if e.kind == "Crisis" %}
+                <a href="{% url crisix.views.crises e.id %}">{{ e.name }}</a>
+            {% else %}{% if e.kind == "Organization" %}
+                <a href="{% url crisix.views.organizations e.id %}">{{ e.name }}</a>
+            {% else %}{% if e.kind == "Person" %}
+                <a href="{% url crisix.views.people e.id %}">{{ e.name }}</a>
+            {% endif %}{% endif %}{% endif %}<br>
+            {{ e.kind }} | {{ e.location }}<br>
+            <p><li>{{ e.summary }}</li></p>
+            </div></div>
+            {% endfor %}
+        </div>
 
-{% for p in list %}
-
-	{% if kind == 'person' %}
-	  <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
-	{% endif %}
-
-	{% if kind == 'organization' %}
-	  <li><a href="{% url crisix.views.organizations p.id %}">{{ p.name }}</a></li>
-	{% endif %}
-
-	{% if kind == 'crisis' %}
-	  <li><a href="{% url crisix.views.crises p.id %}">{{ p.name }}</a></li>
-	{% endif %}
-
-{% endfor %}
-
-	</div>
-</div>
 {% endblock %}
