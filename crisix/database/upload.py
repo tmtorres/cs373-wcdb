@@ -6,6 +6,7 @@ from django.conf import settings
 from xml.etree.ElementTree import tostring
 from minixsv import pyxsval
 from crisix.views import convert_li
+import urlparse
 
 def validate(file):
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -127,9 +128,12 @@ def insert_elem(query, attr):
         w = WebElement(**attr)
         w.save()
 
+def extract_ytid(link):
+    return urlparse.parse_qs(urlparse.urlparse(link).query)["v"][0]
+
 def valid_link(link):
     if 'youtube' in link:
-        return link if 'embed' in link else ('//www.youtube.com/embed/' + link.split('=')[-1] if 'watch?v' in link else None)
+        return link if 'embed' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if '?v=' in link else None)
     elif 'vimeo' in link:
         return link
 

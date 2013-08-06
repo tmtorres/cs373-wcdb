@@ -14,15 +14,19 @@
 <li>{{ o.location}}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
+{% if related_crises|length > 0 %}
 <li class="nav-header">Related Crises</li>
 {% for c in related_crises %}
 <li><a href="{% url crisix.views.crises c.id %}">{{ c.name }}</a></li>
 {% endfor %}
+{% endif %}
 
+{% if related_people|length > 0 %}
 <li class="nav-header">Related People</li>
 {% for p in related_people %}
 <li><a href="{% url crisix.views.people p.id %}">{{ p.name }}</a></li>
 {% endfor %}
+{% endif %}
 {% endblock %}
 
 {% block feed %}
@@ -45,7 +49,9 @@
         }
     </style>
     <div class="row-fluid">
-        <h1 class="main-focus;">{{ name }}</h1><hr>
+        <h1 class="main-focus;">{{ name }}</h1>
+        {% if images|length or videos|length %}
+        <hr>
         <div class="textblock">
             <div class="bubble">
                 <div class="row-fluid">
@@ -79,14 +85,20 @@
             </div>
         </div>
     </div>
+   {% endif %}
 </div>
-{% for s in summary %}
-    <p>{{ s|safe }}</p>
-{% endfor %}
+    {% for s in summary %}
+        <p>{{ s|safe }}</p>
+    {% endfor %}
+
+    {% if history|length > 0 %}
     <h3>History</h3><hr>
     {% for h in history %}
         <p>{{ h|safe }}</p>
     {% endfor %}
+    {% endif %}
+
+    {% if contact|length > 0 %}
     <h3>Contact</h3><hr>
     <ul style="list-style-type:square;">
         {% for v in contact %}
@@ -97,19 +109,25 @@
         {% endif %}
         {% endfor %}
     </ul>
-    <!-- end/row-->
+    {% endif %}
+
+    {% if citations|length > 0 %}
     <h3>References</h3><hr>
     <ol style="word-wrap:break-word;">
-    {% for w in citations %}
-        <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
-    {% endfor %}
+        {% for w in citations %}
+            <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
+        {% endfor %}
     </ol>
+    {% endif %}
+
+    {% if external|length > 0 %}
     <h3>External Links</h3><hr>
     <ul style="list-style-type:square;word-wrap:break-word;">
-    {% for w in external %}
-        <li><a href="{{ w.href }}">{{ w.text }}</a></li>
-    {% endfor %}
+        {% for w in external %}
+            <li><a href="{{ w.href }}">{{ w.text }}</a></li>
+        {% endfor %}
     </ul>
+    {% endif %}
 </div>
 </div>
 <!--/span9-->

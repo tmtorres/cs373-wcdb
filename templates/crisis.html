@@ -88,13 +88,19 @@
     </div>
     {% endif %}
 </div>
+
 {% for s in summary %}
     <p>{{ s|safe }}</p>
 {% endfor %}
+
+{% if c.himpact|length > 0 %}
 <h3>Human Impact</h3><hr>
 <ul style="list-style-type:square;">
     {{ c.himpact|safe }}
 </ul>
+{% endif %}
+
+{% if eimpact|length > 0 %}
 <h3>Economic Impact</h3><hr>
     {% for i in eimpact %}
         <p>{{ i|safe }}</p>
@@ -105,6 +111,9 @@
             <p>{{ r|safe }}</p>
         {% endfor %}
 </ul>
+{% endif %}
+
+{% if help|length > 0 %}
 <h3>Ways to Help</h3><hr>
 <ul style="list-style-type:square;">
     {% for h in help %}
@@ -115,6 +124,8 @@
         {% endif %}
     {% endfor %}
 </ul>
+{% endif %}
+
 {% if citations|length > 0 %}
 <h3>References</h3><hr>
 <ol style="word-wrap:break-word;">
@@ -123,6 +134,7 @@
     {% endfor %}
 </ol>
 {% endif %}
+
 {% if external|length > 0 %}
 <h3>External Links</h3><hr>
 <ul style="list-style-type:square;word-wrap:break-word;">
