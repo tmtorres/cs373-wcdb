@@ -164,8 +164,15 @@ def paragraph_split(block):
         groups.pop()
     return [' '.join(g) for g in groups]
 
+def is_stub(e):
+    if hasattr(e, 'crisis'):
+        return len(e.summary.split() + e.eimpact.split() + e.himpact.split() + e.resources.split() + e.help.split()) < 100
+    if hasattr(e, 'organization'):
+        return len(e.summary.split() + e.contact.split() + e.history.split()) < 100 
+
 def common(e):
     return {
+        'stub': is_stub(e),
         'name': e.name,
         'summary': paragraph_split(e.summary),
         'citations' : [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='CITE')],
@@ -173,6 +180,7 @@ def common(e):
         'maps' : [{'embed': w.embed, 'text': w.text} for w in e.elements.filter(ctype='MAP')[:1]],
         'images' : generate_thumbs(e),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='VID'))[:1]],
+        'additional': {'images': len(e.elements.filter(ctype='IMG')) > 3, 'videos': len(e.elements.filter(ctype='VID')) > 1},
         'external': [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='LINK')],
     }
 

@@ -14,15 +14,19 @@
 <li>{{ p.location}}</li> <!--Don't use 'safe' for people or organizations. Only locations for Crises are stored as list items.-->
 {% endif %}
 
+{% if related_crises|length > 0 %}
 <li class="nav-header">Related Crises</li>
 {% for c in related_crises %}
 <li><a href="{% url crisix.views.crises c.id %}">{{ c.name }}</a></li>
 {% endfor %}
+{% endif %}
 
+{% if related_orgs|length > 0 %}
 <li class="nav-header">Related Organizations</li>
 {% for o in related_orgs %}
 <li><a href="{% url crisix.views.organizations o.id %}">{{ o.name }}</a></li>
 {% endfor %}
+{% endif %}
 {% endblock %}
 {% block title %}
     {{ name }} | Crisix
@@ -36,10 +40,12 @@
         }
     </style>
     <div class="row-fluid">
-        <h1 class="main-focus;">{{ name }}</h1><hr>
+        <h1 class="main-focus;">{{ name }}</h1>
+        <hr>
         <div class="textblock">
             <div class="bubble">
                 <div class="row-fluid">
+                    {% if videos|length %}
                     <div style="width:220px;float:left;">
                         <div class="video-content">
                             {% for w in videos %}
@@ -48,44 +54,59 @@
                                     frameborder="0" allowFullScreen>
                                 </iframe>
                             {% endfor %}                
+                            {% if additional.videos %}
+                            <a href="http://google.com">See all videos &raquo;</a>
+                            {% endif %}
                         </div><!--end video-content-->
                     </div> <!--end span4-->
-                    <div style="width:390px;float:right;">
+                    {% else %}
+                    <div id="add-videos" style="width:212px;float:left;">
+                        <div style="height:84px;text-align:center;padding:20px;background:#eee;border:1px dotted #ccc;color:#acacac;">
+                            <p><h3>+ <a href="{% url database.views.upload %}" style="color:#acacac;line-height:64px;">Add videos</a></h3></p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if images|length %}
+                    <div style="width:405px;float:right;">
                         <div class="photo-content">
                             {% for w in images %}
                             <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
                             {% endfor %}
                         </div>
+                        {% if additional.images %}
+                        <a style="padding-left:10px" href="http://google.com">See all photos &raquo;</a>
+                        {% endif %}
                     </div>
-                 <div style="width:390px;float:right;">
-                        <div style="padding-top:0px;padding-left:5px;">
-                            <a href="http://google.com">See all photos &raquo;</a>
+                    {% else %}
+                    <div id="add-photos" style="width:405px;float:right;">
+                        <div style="height:84px;text-align:center;padding:20px;background:#eee;border:1px dotted #ccc;color:#acacac;">
+                            <p><h3>+ <a href="{% url database.views.upload %}" style="color:#acacac;line-height:64px;">Add photos</a></h3></p>
                         </div>
                     </div>
-                <div style="width:35%;float:left;">
-                    <div style="padding-top:0px;">
-                        <a href="http://google.com">See all videos &raquo;</a>
-                    </div>
-                </div>
+                    {% endif %}
             </div>
         </div>
     </div>
 </div>
 {% for s in summary %}
     <p>{{ s|safe }}</p>
-{% endfor %}
+    {% endfor %}
+    {% if citations|length %}
     <h3>References</h3><hr>
     <ol style="word-wrap:break-word;">
     {% for w in citations %}
         <li><a href="{{ w.href }}">{{ w.href }}</a> {{ w.text }}</li>
     {% endfor %}
-    </ol>
+</ol>
+{% endif %}
+{% if external|length %}
     <h3>External Links</h3><hr>
     <ul style="list-style-type:square;word-wrap:break-word;">
     {% for w in external %}
         <li><a href="{{ w.href }}">{{ w.text }}</a></li>
     {% endfor %}
-    </ul>
+</ul>
+{% endif %}
     <!-- end/row-->
 </div>
 </div><!--/span9-->

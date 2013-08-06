@@ -25,17 +25,17 @@
             </div></div>
             {% endfor %}
         </div>
-        <div class="pagination" style="float:right;color:#eee;">
+        <div class="pagination" style="text-align:center;color:#eee;">
             <span class="step-links">
             {% if entity.has_previous %}
-                <a href="?page={{ entity.previous_page_number }}">previous</a>
+                <a style="color:#eee;float:left;" href="?page={{ entity.previous_page_number }}">&laquo; Previous</a>
             {% endif %}
             <span class="current">
                 Page {{ entity.number }} of {{ entity.paginator.num_pages }}
             </span>
             {% if entity.has_next %}
-                <a href="?page={{ entity.next_page_number }}">next</a>
+                <a style="color:#eee;float:right;" href="?page={{ entity.next_page_number }}">Next &raquo;</a>
             {% endif %}
             </span>
-        </div>
+    </div>
 {% endblock %}

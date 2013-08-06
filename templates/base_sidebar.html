@@ -3,7 +3,7 @@
 <style>
     img {
     float: left;
-    padding-left: 5px;
+    padding-left: 10px;
     padding-bottom: 5px;
     }
     .content {
@@ -86,6 +86,16 @@
 <div class="content">
     <div class="dashboard">
         <div class="entity">
+        {% if stub %}
+        <p><div style="background:#d9efff;border:1px dotted #809db2;text-align:center;">
+            <h4 style="color:#708da2">This article is a stub. Please <a style="color:#708da2" href="{% url database.views.upload %}"><u>help improve it.</u></a></h4>
+        </div></p>
+        <!--
+        <p><div style="background:#fff8b1;border:1px dotted #daaa36;text-align:center;">
+            <h4 style="color:#d7ae08">This article is a stub. Please <a style="color:#d7ae08" href="{% url database.views.upload %}"><u>help improve it.</u></a></h4>
+        </div></p>
+        -->
+        {% endif %}
         {% block body %}
         {% endblock %}
         </div>
