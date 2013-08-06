@@ -142,11 +142,11 @@ def generate_thumbs(e, n = 3):
                 break
     return hash.values()[:n]
 
-def convert_li(li_field):
+def convert_li(li_field, delim = ' '):
     '''
     Removes '<li>' tags from a string.
     '''
-    return ''.join(li_field.split('<li>')).replace('</li>', ' ').strip()
+    return ''.join(li_field.split('<li>')).replace('</li>', delim).strip()
 
 def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
@@ -212,6 +212,7 @@ def crises(request, id):
         'c': c,
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
+        'himpact': paragraph_split(convert_li(c.himpact)),
         'eimpact': paragraph_split(convert_li(c.eimpact)),
         'resources': paragraph_split(convert_li(c.resources)),
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],

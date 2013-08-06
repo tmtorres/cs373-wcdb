@@ -97,10 +97,12 @@
     <p>{{ s|safe }}</p>
 {% endfor %}
 
-{% if c.himpact|length > 0 %}
+{% if himpact|length > 0 %}
 <h3>Human Impact</h3><hr>
 <ul style="list-style-type:square;">
-    {{ c.himpact|safe }}
+    {% for h in himpact %}
+    <li>{{ h|safe }}</li>
+    {% endfor %}
 </ul>
 {% endif %}
 
