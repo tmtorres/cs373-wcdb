@@ -1,0 +1,167 @@
+Database
+information_schema
+cs373_ejenioc
+sql_cs373_ejenioc
+Tables_in_cs373_ejenioc
+auth_group
+auth_group_permissions
+auth_message
+auth_permission
+auth_user
+auth_user_groups
+auth_user_user_permissions
+database_crisis
+database_crisis_organizations
+database_crisis_people
+database_entity
+database_organization
+database_organization_people
+database_person
+database_webelement
+django_admin_log
+django_content_type
+django_session
+django_site
+manage_crisis
+manage_crisis_organizations
+manage_crisis_people
+manage_entity
+manage_organization
+manage_organization_people
+manage_person
+manage_webelement
+
+
+database_entity_columns
+id
+name
+kind
+location
+summary
+created
+
+
+database_crisis_columns
+entity_ptr_id
+date
+time
+himpact
+eimpact
+resources
+help
+
+
+database_crisis_organizations_columns
+id
+crisis_id
+organization_id
+
+
+database_crisis_people_columns
+id
+crisis_id
+person_id
+
+
+Get Celebrities (Actors, Musicians, Athletes) related to Crises/Orginizations
+Get Celebrities (Actors, Musicians, Athletes) related to Crises/Orginizations
+id
+PER_MAGICJ
+
+
+Get all Crises/Organizations/People who have feeds
+Get all Crises/Organizations/People who have feeds
+entity_id
+CRI_AIDSHI
+PER_ERDOGA
+PER_MAGICJ
+PER_NAOKAN
+PER_BROBMA
+ORG_UNDWAY
+ORG_SNQKRF
+ORG_NLTLCL
+ORG_AFIUNI
+ORG_TWITER
+ORG_CDCPRE
+ORG_USGEOS
+ORG_WHORGN
+ORG_UNNSCL
+ORG_EXXSHI
+
+
+Get the name and location of all crises related to natural disasters
+Get the name and location of all crises related to natural disasters
+kind	name	location
+Epidemic	HIV/AIDS	<li>Worldwide</li>
+Natural Disaster	2010 Haiti Earthquake	<li>Haiti</li><li>Dominican Republic</li>
+Earthquake	2008 Sichuan Earthquake	<li>Wenchuan County, Sichuan</li><li>Sichuan Province</li>
+Megathrust Earthquake	2011 Tohoku Earthquake and Tsunami	<li>Japan</li>
+
+
+People involved in crises that happened in China/Japan
+People involved in crises that happened in China/Japan
+person_id
+PER_NAOKAN
+
+
+Crises that are tied to a president
+Crises that are tied to a president
+crisis_id
+CRI_HAIEAR
+CRI_NRMACF
+CRI_SCHERQ
+
+
+All crises in alphabetical order by name of crisis (no duplicates)
+All crises in alphabetical order by name of crisis (no duplicates)
+id	name
+CRI_SCHERQ	2008 Sichuan Earthquake
+CRI_HAIEAR	2010 Haiti Earthquake
+CRI_TOHOQU	2011 Tohoku Earthquake and Tsunami
+CRI_TUKPRO	2013 Protests in Turkey
+CRI_EXXVAL	Exxon Valdez Oil Spill
+CRI_AIDSHI	HIV/AIDS
+CRI_LYCLWR	Libyan Civil War
+CRI_NRMACF	Northern Mali Conflict
+CRI_SHESSG	Sandy Hook Elementary School Shooting
+CRI_SPTMEL	September 11th
+
+
+Crises whose kind value contains the word 'shooting'
+Crises whose kind value contains the word 'shooting'
+id	name
+CRI_SHESSG	Sandy Hook Elementary School Shooting
+
+
+All people with first names that start with letters A through P (no duplicates)
+All people with first names that start with letters A through P (no duplicates)
+id	name
+PER_ADMLNZ	Adam Lanza
+PER_AMTOTO	Amadou Toumani Touré
+PER_BROBMA	Barack Obama
+PER_HUJNTO	Hu Jintao
+PER_JOSHAZ	Joseph Hazelwood
+PER_MAGICJ	Magic Johnson
+PER_MURGDI	Muammar Gaddafi
+PER_NAOKAN	Naoto Kan
+PER_OSAMAB	Osama Bin Laden
+
+
+Show the name and economic impact of natural disasters occuring after 2001
+Show the name and economic impact of natural disasters occuring after 2001
+name	eimpact
+Sandy Hook Elementary School Shooting	<li>The shares of gun manufactures have decreased significantly. The number of gun and ammunition purchases rose over 180% the day after the shooting due to fear of harsher gun laws.  The school has been closed and a $57 million proposal has been made to demolish and rebuild the school.</li>
+2008 Sichuan Earthquake	<li>On November 6, 2008, the central government announced that it would spend 1 trillion yuan (about $146.5 billion) over the next three years to rebuild areas ravaged by the earthquake, as part of the Chinese economic stimulus program.</li>
+Libyan Civil War	<li>On December 29th, 2011, Libya's National Oil Corporation announced that the country's output of crude oil was a little over 1 million barrels per day (bpd), compared to 1.6 million bpd before the uprising.</li><li>At the beginning of the civil war, the UN Security Council froze an estimated $150 billion in foreign Libyan assets. By late November 2011, $18 billion had been released to the NTC by the council's sanctions committee. Meanwhile, demands for wages, medication and reconstruction were putting a strain on Libya's limited supply of cash, causing prices to rise. On December 10th, senior figures in Libya's new leadership wrote a letter to the United Nations, urging it to release the frozen assets which they said were "essential for the economic stability of Libya". On December 16th, the UN Security Council lifted sanctions on Libya's central bank and its offshore subsidiary, Libyan Foreign Bank. Later the same day, the U.S. Treasury Department said it had unblocked more than $30 billion in Libyan government assets. Western officials said legal complications prevented the money from being released quickly. A British Foreign Office minister said his administration would release Libyan assets frozen in the United Kingdom once Libyan authorities demonstrated their ability to manage them effectively.</li>
+Northern Mali Conflict	<li>The events happening in Mali are still ongoing.</li><li>They are in desparate need for humanitarian aid. The instability will make it harder for donors and NGOs to do their work, especially since funds are low. But the need won&#8217;t wait; hundreds of thousands of men, women and children are hungry, endangered or displaced at this very moment.</li><li>Bergamaschi hopes that big changes are in order. Over time, she said, aid groups should work toward better coordination, more civil engagement and a more concerted effort to engage with the different economic systems in various parts of the vast country.</li>
+2013 Protests in Turkey	<li>Istanbul's stock exchange experienced a loss of 10.5%, the biggest one-day loss in a decade.</li><li>Delay of EU accession talks.</li><li>Cancellation of the planned construction, in Taksim area, that sparked the protests.</li>
+2011 Tohoku Earthquake and Tsunami	<li>Early estimates placed insured losses from the earthquake alone at US$14.5 to $34.6 billion. The World Bank's estimated economic cost was US$235 billion, making it the costliest natural disaster in world history. By April 12th, 2011 the Japanese government estimated that the cost of just the direct material damage could exceed &#165;25 trillion ($300 billion).</li>
+2010 Haiti Earthquake	<li>Hundreds of thousands of buildings plummeted to the ground including homes, the presidential palace, and even the United Nations Peacekeeping Mission. The earthquake resulted in 105,000 homes being destroyed, causing $2.3 billion in damage and the nation being covered in rubble (Haiti). The government of Haiti estimated that 250,000 residences and 30,000 commercial buildings had collapsed or were severely damaged.</li>
+
+
+Crises that took place in Texas (Location data should contain 'Texas' or 'TX')
+Crises that took place in Texas (Location data should contain 'Texas' or 'TX')
+id	name	location
+ORG_EXXSHI	Exxon Shipping Company	Irving, Texas
+
+
