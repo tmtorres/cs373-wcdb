@@ -2,17 +2,14 @@
 	{% block body %}
 	    <div class="row-fluid">
 	    
-	    <div style="padding-top:40px;">
-	    
 	{% if ctype == 'photos' %}
 	<h1 class="main-focus;">Photos of '{{ name }}'</h1><hr>
-	<div style="padding-bottom:180px;">
 		{% for i in images %}
-			<div style="margin:0 auto;">
+			<div style="margin:0 auto;">			
 				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
 			</div>
+
 		{% endfor %}
-	</div>
 	{% endif %}
 
 	{% if ctype == 'videos' %}
@@ -28,9 +25,10 @@
 		{% endfor %}
 	{% endif %}
 	
-	        <div style="padding-top:40px;">
-        	</div>
+		</div>
 	
+		<div style="padding-top:15px;">
+		<div style="padding-bottom:5px;">
 	{% if etype == 'people' %}
 	    	<li><a href="{% url crisix.views.people id %}">{{ name }} Homepage </a></li>
 	{% endif %}
@@ -42,10 +40,7 @@
 	{% if etype == 'organizations' %}
 	    	<li><a href="{% url crisix.views.organizations id %}">{{ name }} Homepage </a></li>
         {% endif %}
-        
-        	<div style="padding-bottom:30px;">
         	</div>
-
-		</div>
-	</div>
+        	</div>
+	
 	{% endblock %}
