@@ -32,3 +32,14 @@ old = fromstring('<old><li>Barack Obama and Michelle Obama live in America.</li>
 new = fromstring('<new><li>Barack Obama and Michelle Obama play in France.</li></new>')
 
 print tostring(str_match(new, old))
+
+old = fromstring('<old><li>Southern Haiti</li></old>')
+new = fromstring('<new><li>southern Haiti</li></new>')
+
+print tostring(str_match(new, old))
+
+
+old = fromstring('<old><li>Haiti</li></old>')
+new = fromstring('<new><li>southern Haiti</li></new>')
+
+print tostring(str_match(new, old))

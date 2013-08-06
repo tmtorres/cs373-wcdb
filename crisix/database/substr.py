@@ -26,10 +26,15 @@ def str_match(new, old):
     new is an ElementTree of new content to be added
     old is an ElementTree of info in the database
     '''
+    if len(list(old)) == 0:
+        return new
+
     for new_li in new:
-        substr = [(long_substr([new_li.text.strip(), old_li.text.strip()]), old_li) for old_li in old]
+        substr = [(long_substr([new_li.text.strip().lower(), old_li.text.strip().lower()]), old_li) for old_li in old]
         match = max(substr, key=lambda x: len(x[0]))
-        diff_str = [new_li.text.replace(match[0], '', 1).strip(), match[1].text.replace(match[0], '', 1).strip()]
+        print match
+        diff_str = [new_li.text.lower().replace(match[0], '', 1).strip(), match[1].text.lower().replace(match[0], '', 1).strip()]
+        print diff_str
         if not (len(diff_str[0]) and len(diff_str[1])) or (float(len(long_substr(diff_str))) / len(diff_str[1])) > 0.4:
             match[1].text = new_li.text
         else:

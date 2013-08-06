@@ -41,12 +41,13 @@
     </style>
     <div class="row-fluid">
         <h1 class="main-focus;">{{ name }}</h1>
+        {% if videos|length or images|length %}
         <hr>
         <div class="textblock">
             <div class="bubble">
-                <div class="row-fluid">
+                <span class="row-fluid" style="margin: 0 auto;">
                     {% if videos|length %}
-                    <div style="width:220px;float:left;">
+                    <div style="float:left;padding-right:10px;padding-left:1px;">
                         <div class="video-content">
                             {% for w in videos %}
                                 <iframe class="youtube-player" type="text/html"
@@ -54,39 +55,28 @@
                                     frameborder="0" allowFullScreen>
                                 </iframe>
                             {% endfor %}                
-                            {% if additional.videos %}
-                            <a href="videos/">See all videos &raquo;</a>
-                            {% endif %}
                         </div><!--end video-content-->
+                        {% if additional.videos %}
+                        <a href="videos/">See all videos &raquo;</a>
+                        {% endif %}
                     </div> <!--end span4-->
-                    {% else %}
-                    <div id="add-videos" style="width:212px;float:left;">
-                        <div style="height:84px;text-align:center;padding:20px;background:#eee;border:1px dotted #ccc;color:#acacac;">
-                            <p><h3>+ <a href="{% url database.views.upload %}" style="color:#acacac;line-height:64px;">Add videos</a></h3></p>
-                        </div>
-                    </div>
                     {% endif %}
                     {% if images|length %}
-                    <div style="width:405px;float:right;">
+                    <div style="padding-left:0px;">
                         <div class="photo-content">
                             {% for w in images %}
                             <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
                             {% endfor %}
                         </div>
-                        {% if additional.images %}
-                        <a style="padding-left:10px" href="photos/">See all photos &raquo;</a>
-                        {% endif %}
-                    </div>
-                    {% else %}
-                    <div id="add-photos" style="width:405px;float:right;">
-                        <div style="height:84px;text-align:center;padding:20px;background:#eee;border:1px dotted #ccc;color:#acacac;">
-                            <p><h3>+ <a href="{% url database.views.upload %}" style="color:#acacac;line-height:64px;">Add photos</a></h3></p>
-                        </div>
+                    {% if additional.images %}
+                    <a href="photos/">See all photos &raquo;</a>
+                    {% endif %}
                     </div>
                     {% endif %}
-            </div>
+            </span>
         </div>
     </div>
+    {% endif %}
 </div>
 {% for s in summary %}
     <p>{{ s|safe }}</p>

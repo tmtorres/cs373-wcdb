@@ -88,6 +88,10 @@ def upload(request):
             if not form.cleaned_data['merge']:
                 clear()
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/test.xml', ContentFile(request.FILES['file'].read())))
+            #backup = ET.Element('WordCrises')
+            #get_crises(backup)
+            #get_people(backup)
+            #get_organizations(backup)
             try:
                 insert(validate(tmp))
             except pyxsval.XsvalError, errstr:
@@ -95,6 +99,9 @@ def upload(request):
             except ParseError, e:
                 return render(request, 'utility.html', {'view': 'failure', 'errstr': 'Invalid token: line ' + str(e.position[0]) + ', column ' + str(e.position[1])})
             finally:
+                #if(os.path.exists(tmp)):
+                #    clear()
+                #    insert(backup)
                 os.remove(tmp)
             return render(request, 'utility.html', {'view': 'success'})
     else:

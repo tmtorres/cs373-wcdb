@@ -3,9 +3,10 @@ from models import *
 import datetime, os, glob
 from datetime import time
 from django.conf import settings
-from xml.etree.ElementTree import tostring
+from xml.etree.ElementTree import tostring, fromstring
 from minixsv import pyxsval
 from crisix.views import convert_li
+from substr import str_match
 import urlparse
 
 def validate(file):
@@ -54,16 +55,18 @@ def cri_handler(node):
             for elem in attr:
                 c.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            c.kind = attr.text.title()
+            c.kind = attr.text.title() if attr.text is not None else c.kind
         if attr.tag == 'Date':
-            c.date = attr.text
+            c.date = attr.text if attr.text is not None else c.date
         if attr.tag == 'Time':
-            c.time = attr.text
+            c.time = attr.text if attr.text is not None else c.time
         if attr.tag == 'Locations':
-            c.location += ''.join([v for v in [('<li>' + li.text.strip().title() + '</li>') for li in attr] if v not in c.location])
+            old = fromstring('<Locations>' + c.location + '</Locations>')
+            c.location = ''.join([v for v in [('<li>' + li.text.strip().title() + '</li>') for li in str_match(attr, old)]])
         if attr.tag == 'HumanImpact':
             c.himpact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.himpact])
         if attr.tag == 'EconomicImpact':
+            old = fromstring('<EconomicImpact>' + c.eimpact + '</EconomicImpact>')
             c.eimpact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.eimpact])
         if attr.tag == 'ResourcesNeeded':
             c.resources += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.resources])
@@ -86,9 +89,9 @@ def org_handler(node):
             for elem in attr:
                 o.people.add(get_entity(Person, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            o.kind = attr.text.title()
+            o.kind = attr.text.title() if attr.text is not None else o.kind
         if attr.tag == 'Location':
-            o.location = attr.text.title()
+            o.location = attr.text.title() if attr.text is not None else o.location
         if attr.tag == 'History':
             o.history += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.history])
         if attr.tag == 'ContactInfo':
@@ -110,7 +113,7 @@ def per_handler(node):
             for elem in attr:
                 p.organizations.add(get_entity(Organization, elem.attrib.get('ID')))
         if attr.tag == 'Kind':
-            p.kind = attr.text.title()
+            p.kind = attr.text.title() if attr.text is not None else p.kind
         if attr.tag == 'Location':
             p.location = attr.text.title()
         if attr.tag == 'Common':
@@ -141,9 +144,8 @@ def valid_link(link):
 
 def valid_map(embed):
     if 'maps.google.com' in embed:
-        if 'embed' not in embed:
-            return embed + '&output=embed'
-    elif 'bing.com/maps/embed/' in embed :
+        return embed + ('&output=embed' if 'embed' not in embed else '')
+    elif 'bing.com/maps/embed/' in embed:
         return embed
 
 def com_handler(node, e):
@@ -174,4 +176,4 @@ def com_handler(node, e):
             for elem in attr:
                 insert_elem({'embed' : elem.attrib.get('embed')}, {'entity' : e, 'ctype' : 'FEED', 'text' : elem.text})
         if attr.tag == 'Summary':
-            e.summary = attr.text
+            e.summary = attr.text if attr.text is not None and len(attr.text) > len(e.summary) else e.summary
