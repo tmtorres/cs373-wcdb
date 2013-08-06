@@ -14,7 +14,7 @@ from upload import *
 from download import *
 from views import *
 from datetime import datetime
-from crisix.views import people, organizations, crises
+from crisix.views import people, organizations, crises, display, display_more
 
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring
@@ -53,10 +53,18 @@ class SimpleTest(TestCase, RequestFactory):
         # Test if database is properly populated
         self.assertEqual(self.p.name,'Barack Obama')
 
+    def test_display(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/people')
+        response = display(request, 'people')
+        htmlstring = response.content
+        self.assertTrue(True)
+
     # -----------
     # People View
     # -----------
-
+    
     def test_people1(self):
         # Test if the instance page is accessible
         request_factory = RequestFactory()
@@ -189,7 +197,7 @@ class TestUpload(TestCase):
         except Person.DoesNotExist:
     	    self.assertTrue(False)
         self.assertEqual(str(p.kind), 'President')
-        self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
+        self.assertEqual(str(p.location), 'Washington, D.C, United States Of America')
     	for c in Crisis.objects.all():
     		c.delete()
     		
@@ -202,7 +210,7 @@ class TestUpload(TestCase):
             o = Organization.objects.get(id='ORG_UNDWAY')
         except Organization.DoesNotExist:
     	    self.assertTrue(False)
-        self.assertEqual(str(o.kind), 'Non-profit Organization')
+        self.assertEqual(str(o.kind), 'Non-Profit Organization')
         self.assertEqual(str(o.location), 'Worldwide')
         # self.assertTrue('<li>In 1887, a Denver woman, a priest, two ministers' in o.history)
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
@@ -227,7 +235,7 @@ class TestUpload(TestCase):
     	
     	b = get_entity(Person, 'PER_BROBMA')
     	self.assertEqual(str(b.kind), 'President')
-    	self.assertEqual(str(b.location), 'Washington, D.C, United States of America')
+    	self.assertEqual(str(b.location), 'Washington, D.C, United States Of America')
     	for c in Crisis.objects.all():
     		c.delete()
     		
@@ -236,7 +244,7 @@ class TestUpload(TestCase):
     	insert(root3)
     	
     	c = get_entity(Organization, 'ORG_UNDWAY')   	
-        self.assertEqual(str(c.kind), 'Non-profit Organization')
+        self.assertEqual(str(c.kind), 'Non-Profit Organization')
         self.assertEqual(str(c.location), 'Worldwide')
         self.assertEqual(str(c.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
      	for c in Crisis.objects.all():
@@ -282,7 +290,7 @@ class TestUpload(TestCase):
         
         org_handler(root[0])
         o = Organization.objects.get(id='ORG_UNDWAY')
-        self.assertEqual(str(o.kind), 'Non-profit Organization')
+        self.assertEqual(str(o.kind), 'Non-Profit Organization')
         self.assertEqual(str(o.location), 'Worldwide')
         self.assertEqual(str(o.contact), '<li href="http://apps.unitedway.org/contact/">Contact Form</li>')
     	for c in Crisis.objects.all():
@@ -293,7 +301,7 @@ class TestUpload(TestCase):
         
         org_handler(root[0])
         o = Organization.objects.get(id='ORG_SNQKRF')
-        self.assertEqual(str(o.kind), 'Non-profit, humanitarian Organization')
+        self.assertEqual(str(o.kind), 'Non-Profit, Humanitarian Organization')
         self.assertEqual(str(o.location), 'Chengdu, China')
         self.assertTrue('<li>Volunteer: volunteer@sichuan-quake-relief.org</li>' in str(o.contact)) 
     	for c in Crisis.objects.all():
@@ -304,7 +312,7 @@ class TestUpload(TestCase):
         
         org_handler(root[0])
         o = Organization.objects.get(id='ORG_NLTLCL')
-        self.assertEqual(str(o.kind), 'de facto Government')
+        self.assertEqual(str(o.kind), 'De Facto Government')
         self.assertEqual(str(o.location), 'Benghazi, Libya')
         self.assertEqual(str(o.contact), '<li> Organization is no longer active. </li>')
     	for c in Crisis.objects.all():
@@ -316,7 +324,7 @@ class TestUpload(TestCase):
         per_handler(root[0])
         p = Person.objects.get(id='PER_BROBMA')
         self.assertEqual(str(p.kind), 'President')
-        self.assertEqual(str(p.location), 'Washington, D.C, United States of America')
+        self.assertEqual(str(p.location), 'Washington, D.C, United States Of America')
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -336,7 +344,7 @@ class TestUpload(TestCase):
         per_handler(root[0])
         p = Person.objects.get(id='PER_HUJNTO')
         self.assertEqual(str(p.kind), 'President')
-        self.assertEqual(str(p.location), 'Communist Party of China')
+        self.assertEqual(str(p.location), 'Communist Party Of China')
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -393,7 +401,7 @@ class TestUpload(TestCase):
         element = o.elements.filter(ctype='VID')
         self.assertEqual(len(element), 2)
         element = o.elements.filter(ctype='MAP')
-        self.assertEqual(len(element), 1)
+        self.assertEqual(len(element), 0)
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -506,7 +514,7 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	get_organizations(root)
     	
-    	self.assertEqual(root[0][2].text, 'Non-profit Organization')
+    	self.assertEqual(root[0][2].text, 'Non-Profit Organization')
     	self.assertEqual(root[0][3].text, 'Worldwide')
     	for c in Crisis.objects.all():
     		c.delete()
@@ -518,7 +526,7 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	get_organizations(root)
     	
-    	self.assertEqual(root[0][2].text, 'Non-profit, humanitarian Organization')
+    	self.assertEqual(root[0][2].text, 'Non-Profit, Humanitarian Organization')
     	self.assertEqual(root[0][3].text, 'Chengdu, China')
     	for c in Crisis.objects.all():
     		c.delete()
@@ -530,7 +538,7 @@ class TestDownload(TestCase):
     	root = ET.Element('WorldCrises')
     	get_organizations(root)
     	
-    	self.assertEqual(root[0][2].text, 'de facto Government')
+    	self.assertEqual(root[0][2].text, 'De Facto Government')
     	self.assertEqual(root[0][3].text, 'Benghazi, Libya')
     	for c in Crisis.objects.all():
     		c.delete()
@@ -555,7 +563,7 @@ class TestDownload(TestCase):
     	get_people(root)
     	
     	self.assertEqual(root[0][2].text, 'President')
-    	self.assertEqual(root[0][3].text, 'Washington, D.C, United States of America')
+    	self.assertEqual(root[0][3].text, 'Washington, D.C, United States Of America')
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -567,7 +575,7 @@ class TestDownload(TestCase):
     	get_people(root)
     	
     	self.assertEqual(root[0][2].text, 'President')
-    	self.assertEqual(root[0][3].text, 'Communist Party of China')
+    	self.assertEqual(root[0][3].text, 'Communist Party Of China')
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -615,3 +623,4 @@ class TestDownload(TestCase):
         self.assertNotEqual(summary.find('He was re-elected president in November 2012,'), -1)
     	for c in Crisis.objects.all():
     		c.delete()
+    
