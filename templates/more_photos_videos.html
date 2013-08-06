@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 	{% block body %}
-	    <div class="row-fluid">
+	    <div class="row-fluid" style="margin-left:5px;padding-bottom:20px;">
 	    
 	{% if ctype == 'photos' %}
-	<h1 class="main-focus;">Photos of '{{ name }}'</h1><hr>
+    <p><h2 class="main-focus;" style="padding-bottom:10px;padding-left:5px;">Photos of 
+        {% if etype == "crises" %}
+        "<a style="color:#333" href="{% url crisix.views.crises id %}"><u>{{ name }}</u></a>"
+        {% else %}{% if ctype == "organizations" %}
+        '<a href="">{{ name }}</a>'
+        {% else %}{% if ctype == "people" %}
+        '<a href="">{{ name }}</a>'
+        {% endif %}{% endif %}{% endif %}
+    </h2></p>
 		{% for i in images %}
 			<div style="margin:0 auto;">			
 				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
@@ -26,21 +34,4 @@
 	{% endif %}
 	
 		</div>
-	
-		<div style="padding-top:15px;">
-		<div style="padding-bottom:5px;">
-	{% if etype == 'people' %}
-	    	<li><a href="{% url crisix.views.people id %}">{{ name }} Homepage </a></li>
-	{% endif %}
-	    
-	{% if etype == 'crises' %}
-	    	<li><a href="{% url crisix.views.crises id %}">{{ name }} Homepage </a></li>
-	{% endif %}
-	    
-	{% if etype == 'organizations' %}
-	    	<li><a href="{% url crisix.views.organizations id %}">{{ name }} Homepage </a></li>
-        {% endif %}
-        	</div>
-        	</div>
-	
 	{% endblock %}

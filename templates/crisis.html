@@ -65,7 +65,7 @@
                                 </iframe>
                             {% endfor %}                
                             {% if additional.videos %}
-                            <a href="http://google.com">See all videos &raquo;</a>
+                            <a href="videos/">See all videos &raquo;</a>
                             {% endif %}
                         </div><!--end video-content-->
                     </div> <!--end span4-->
@@ -76,15 +76,15 @@
                         </div>
                     </div>
                     {% endif %}
-                    {% if additional.images %}
+                    {% if images|length %}
                     <div style="width:405px;float:right;">
                         <div class="photo-content">
                             {% for w in images %}
                             <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
                             {% endfor %}
                         </div>
-                        {% if images|length > 3 %}
-                        <a style="padding-left:10px" href="http://google.com">See all photos &raquo;</a>
+                        {% if additional.images %}
+                        <a style="padding-left:10px" href="photos/">See all photos &raquo;</a>
                         {% endif %}
                     </div>
                     {% else %}
