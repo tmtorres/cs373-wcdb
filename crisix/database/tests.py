@@ -52,15 +52,56 @@ class SimpleTest(TestCase, RequestFactory):
 
         # Test if database is properly populated
         self.assertEqual(self.p.name,'Barack Obama')
-
-    def test_display(self):
+    
+    def test_display_1(self):
         # Test if person name is on page in format designated in template
         request_factory = RequestFactory()
         request = request_factory.get('/people')
         response = display(request, 'people')
         htmlstring = response.content
-        self.assertTrue(True)
+        self.assertNotEqual(htmlstring.find('President'),-1)   
+        
+    def test_display_2(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/organizations')
+        response = display(request, 'organizations')
+        htmlstring = response.content   
+        self.assertNotEqual(htmlstring.find('Public Health'),-1) 
 
+        
+    def test_display_3(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/crises')
+        response = display(request, 'crises')
+        htmlstring = response.content
+        self.assertNotEqual(htmlstring.find('Natural Disaster'),-1) 
+        
+    def test_display_more_1(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/people/brobma/videos')
+        response = display_more(request, 'people', 'brobma', 'videos')
+        htmlstring = response.content
+        self.assertNotEqual(htmlstring.find('Barack Obama Homepage'),-1)
+    
+    def test_display_more_2(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/organizations/whorgn/videos')
+        response = display_more(request, 'organizations', 'whorgn', 'videos')
+        htmlstring = response.content
+        self.assertNotEqual(htmlstring.find('World Health Organization Homepage'),-1)
+        
+    def test_display_more_3(self):
+        # Test if person name is on page in format designated in template
+        request_factory = RequestFactory()
+        request = request_factory.get('/crises/haiear/videos')
+        response = display_more(request, 'crises', 'haiear', 'videos')
+        htmlstring = response.content
+        self.assertNotEqual(htmlstring.find('Haiti Earthquake Homepage'),-1)
+   
     # -----------
     # People View
     # -----------
