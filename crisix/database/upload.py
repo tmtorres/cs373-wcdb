@@ -93,7 +93,7 @@ def org_handler(node):
         if attr.tag == 'Location':
             o.location = attr.text.title() if attr.text is not None else o.location
         if attr.tag == 'History':
-            o.history += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.history])
+            o.history = '<li>' + seq_match(convert_li(o.history), convert_li(tostring(attr))).strip() + '</li>'
         if attr.tag == 'ContactInfo':
             o.contact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.contact])
         if attr.tag == 'Common':
