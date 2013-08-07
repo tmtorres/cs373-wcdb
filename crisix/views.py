@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render, render_to_response
+from django.shortcuts import redirect, render, render_to_response, get_object_or_404
 from django.http import HttpResponse
 from database.models import *
 from django.shortcuts import render_to_response
@@ -114,6 +114,13 @@ def display_more(request, etype = '', id = '', ctype = '') :
 
 
 def generate_thumbs(e, n = 3):
+    '''
+    e is an entity
+    n is the number of thumbnails to be generated
+    retrieves images for entity e and hashes them
+    returns n dictionaries with the original link
+    and thumbnail keys
+    '''
     hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
     if len(hash) < n:
         imgs = e.elements.filter(ctype='IMG').filter(hash=None)
@@ -142,6 +149,16 @@ def generate_thumbs(e, n = 3):
                 break
     return hash.values()[:n]
 
+def filter_field(text):
+    '''
+    Filters bad fields/entries
+    '''
+    if len(text) and not len(text[0]):
+        return ''
+    if len(text) and ''.join(text[0].split()).lower() in ('na', 'n/a', 'notapplicable', 'none'):
+        return ''
+    return text
+
 def convert_li(li_field, delim = ' '):
     '''
     Removes '<li>' tags from a string.
@@ -164,7 +181,18 @@ def paragraph_split(block):
         groups.pop()
     return [' '.join(g) for g in groups]
 
+def format_text(text):
+    '''
+    Strips <li> tags, formats block into paragraphs
+    and filters empty fields so they won't be displayed
+    '''
+    return filter_field(paragraph_split(convert_li(text)))
+
 def is_stub(e):
+    '''
+    e is an Entity
+    determines if the content of a page is lacking
+    '''
     if hasattr(e, 'crisis'):
         return len(e.summary.split() + e.eimpact.split() + e.himpact.split() + e.resources.split() + e.help.split()) < 100
     if hasattr(e, 'organization'):
@@ -185,7 +213,7 @@ def common(e):
     }
 
 def people(request, id):
-    p = Person.objects.get(id='PER_' + str(id).upper())
+    p = get_object_or_404(Person, id='PER_' + str(id).upper())
     attr = {
         'p': p,
         'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in p.crises.all()],
@@ -195,7 +223,7 @@ def people(request, id):
     return render(request, 'person.html', attr)
 
 def organizations(request, id):
-    o = Organization.objects.get(id='ORG_' + str(id).upper())
+    o = get_object_or_404(Organization, id='ORG_' + str(id).upper())
     attr = {
         'o': o,
         'related_crises' : [{'id': str(c.id).lower()[4:], 'name': c.name} for c in o.crises.all()],
@@ -207,14 +235,14 @@ def organizations(request, id):
     return render(request, 'organization.html', attr)
 
 def crises(request, id):
-    c = Crisis.objects.get(id='CRI_' + str(id).upper())
+    c = get_object_or_404(Crisis, id='CRI_' + str(id).upper())
     attr = {
         'c': c,
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],
         'related_orgs' : [{'id': str(o.id).lower()[4:], 'name': o.name} for o in c.organizations.all()],
-        'himpact': paragraph_split(convert_li(c.himpact)),
-        'eimpact': paragraph_split(convert_li(c.eimpact)),
-        'resources': paragraph_split(convert_li(c.resources)),
+        'himpact': format_text(c.himpact),
+        'eimpact': format_text(c.eimpact),
+        'resources': format_text(c.resources),
         'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
     }
     attr.update(common(c))

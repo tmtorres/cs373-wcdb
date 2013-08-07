@@ -44,6 +44,9 @@ def get_entity(etype, eid):
     assert e is not None
     return e
 
+def subelements(attr):
+    return ''.join([tostring(li).strip() for li in attr])
+
 def cri_handler(node):
     assert node is not None
     c = get_entity(Crisis, node.attrib.get('ID'))
@@ -65,11 +68,11 @@ def cri_handler(node):
             old = fromstring('<Locations>' + c.location + '</Locations>')
             c.location = ''.join([v for v in [('<li>' + li.text.strip().title() + '</li>') for li in str_match(attr, old)]])
         if attr.tag == 'HumanImpact':
-            c.himpact = '<li>' + seq_match(convert_li(c.himpact), convert_li(tostring(attr))).strip() + '</li>'
+            c.himpact = '<li>' + seq_match(convert_li(c.himpact), convert_li(subelements(attr))).strip() + '</li>'
         if attr.tag == 'EconomicImpact':
-            c.eimpact = '<li>' + seq_match(convert_li(c.eimpact), convert_li(tostring(attr))).strip() + '</li>'
+            c.eimpact = '<li>' + seq_match(convert_li(c.eimpact), convert_li(subelements(attr))).strip() + '</li>'
         if attr.tag == 'ResourcesNeeded':
-            c.resources = '<li>' + seq_match(convert_li(c.resources), convert_li(tostring(attr))).strip() + '</li>'
+            c.resources = '<li>' + seq_match(convert_li(c.resources), convert_li(subelements(attr))).strip() + '</li>'
         if attr.tag == 'WaysToHelp':
             c.help += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
         if attr.tag == 'Common':
@@ -93,7 +96,7 @@ def org_handler(node):
         if attr.tag == 'Location':
             o.location = attr.text.title() if attr.text is not None else o.location
         if attr.tag == 'History':
-            o.history = '<li>' + seq_match(convert_li(o.history), convert_li(tostring(attr))).strip() + '</li>'
+            o.history = '<li>' + seq_match(convert_li(o.history), convert_li(subelements(attr))).strip() + '</li>'
         if attr.tag == 'ContactInfo':
             o.contact += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in o.contact])
         if attr.tag == 'Common':
