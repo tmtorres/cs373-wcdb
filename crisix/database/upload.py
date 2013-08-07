@@ -26,9 +26,10 @@ def insert(root):
         elif elem.tag == 'Person':
             per_handler(elem)
 
-def clear():
-    for t in glob.glob(os.path.join(settings.THUMB_ROOT, '*.thumbnail')):
-        os.remove(t)
+def clear(thumbs = True):
+    if thumbs:
+        for t in glob.glob(os.path.join(settings.THUMB_ROOT, '*.thumbnail')):
+            os.remove(t)
     for e in Entity.objects.all():
         e.delete()
 

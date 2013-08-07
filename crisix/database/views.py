@@ -88,12 +88,19 @@ def upload(request):
             if not form.cleaned_data['merge']:
                 clear()
             tmp = os.path.join(settings.MEDIA_ROOT, default_storage.save('tmp/' + request.FILES['file'].name, ContentFile(request.FILES['file'].read())))
+            backup = os.path.join(settings.MEDIA_ROOT, 'tmp', 'crisix.json')
+            cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'dumpdata', '>', backup]
+            os.system(' '.join(cmd).strip())
             try:
                 insert(validate(tmp))
             except Exception, error:
+                clear(thumbs=False)
+                cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'loaddata', backup]
+                os.system(' '.join(cmd).strip())
                 return render(request, 'utility.html', {'view': 'form', 'message': 'failure', 'form': form, 'errstr': str(error)})
             finally:
                 os.remove(tmp)
+                os.remove(backup)
             return render(request, 'utility.html', {'view': 'form', 'message': 'success', 'form': UploadFileForm()})
     else:
         form = UploadFileForm()
