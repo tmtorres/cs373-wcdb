@@ -18,24 +18,26 @@ SELECT "";
 -- Crisix Queries
 
 SELECT "Get Celebrities (Actors, Musicians, Athletes) related to Crises/Orginizations";
-SELECT id FROM database_entity WHERE id LIKE "PER_%" and kind REGEXP '.*(Actor|Actress|Singer|Celebrity|Athlete|Player$).*';
+SELECT id, kind, name FROM database_entity e WHERE id LIKE "PER_%" and kind REGEXP '.*(Actor|Actress|Singer|Celebrity|Athlete|Player).*' 
+AND (EXISTS (SELECT * from database_crisis_people cp WHERE cp.person_id = e.id) OR EXISTS (SELECT * from database_organization_people cp WHERE cp.person_id = e.id));
 SELECT "";
 
 SELECT "Get all Crises/Organizations/People who have feeds";
-SELECT DISTINCT entity_id FROM database_webelement WHERE ctype = "FEED";
+SELECT DISTINCT entity_id, name FROM database_webelement AS w, database_entity AS e WHERE ctype = "FEED" AND w.entity_id = e.id;
 SELECT "";
 
 SELECT "Get the name and location of all crises related to natural disasters";
-SELECT kind, name, location FROM database_entity WHERE (kind LIKE "%Earthquake%" or kind LIKE "%Natural Disaster%" OR kind LIKE "%Epidemic%") and id LIKE "CRI_%";
+SELECT kind, name, location FROM database_entity WHERE kind REGEXP '.*(Earthquake|Fire|Tsunami|Natural Disaster|Epidemic|Hurricane|Tornado|Flood|Storm|Blizzard).*' 
+	AND id LIKE "CRI_%";
 SELECT "";
 
 SELECT "People involved in crises that happened in China/Japan";
-SELECT person_id FROM database_crisis_people WHERE crisis_id IN
+SELECT person_id, name FROM database_crisis_people AS p, database_entity AS e WHERE p.person_id=e.id AND crisis_id IN
 	(SELECT id FROM database_entity WHERE (location LIKE "%China%" OR location LIKE "%Japan%") AND id LIKE "CRI_%");
 SELECT "";
 
 SELECT "Crises that are tied to a president";
-SELECT crisis_id FROM database_crisis_people WHERE person_id IN
+SELECT crisis_id, name FROM database_crisis_people AS p, database_entity AS e WHERE p.crisis_id=e.id AND person_id IN
 	(SELECT id FROM database_entity WHERE kind LIKE "%President%");
 SELECT "";
 
@@ -45,7 +47,7 @@ SELECT DISTINCT id, name FROM database_entity WHERE id LIKE "CRI_%" ORDER BY nam
 SELECT "";
 
 SELECT "Crises whose kind value contains the word 'shooting'";
-SELECT id, name FROM database_entity WHERE kind LIKE "%Shooting%" AND id LIKE "CRI_%";
+SELECT id, kind, name FROM database_entity WHERE kind LIKE "%Shooting%" AND id LIKE "CRI_%";
 SELECT "";
 
 SELECT "All people with first names that start with letters A through P (no duplicates)";
@@ -53,7 +55,8 @@ SELECT id, name FROM database_entity WHERE name REGEXP '^[A-P]' AND id LIKE "PER
 SELECT "";
 
 SELECT "Show the name and economic impact of natural disasters occuring after 2001";
-SELECT e.name, c.eimpact FROM database_crisis c, database_entity e WHERE date >= '2002-01-01' AND c.entity_ptr_id = e.id; 
+SELECT c.date, e.kind, e.name, c.eimpact FROM database_crisis c, database_entity e WHERE date >= '2002-01-01' AND kind REGEXP '.*(Earthquake|Fire|Tsunami|Natural Disaster|Epidemic|Hurricane|Tornado|Flood|Storm|Blizzard).*'
+	AND c.entity_ptr_id = e.id ORDER BY c.date; 
 SELECT "";
 
 SELECT "Crises that took place in Texas (Location data should contain 'Texas' or 'TX')";
