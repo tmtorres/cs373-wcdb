@@ -135,6 +135,7 @@ def insert_elem(query, attr):
         w = WebElement(**attr)
         w.save()
 
+#unidecode
 def extract_ytid(link):
     return urlparse.parse_qs(urlparse.urlparse(link).query)["v"][0]
 

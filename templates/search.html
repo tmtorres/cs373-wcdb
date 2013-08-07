@@ -24,9 +24,13 @@
                 function updateHaystack(input, needle) {
                     return input.replace(new RegExp('([^/]\\b)(' + needle + '\\w*)(\\b)','igm'), '$1<b>$2</b>$3');
                 }
-                var markup = document.getElementById('results').innerHTML;
-                var output = updateHaystack(markup, '{{ query_string }}');
-                document.getElementById('results').innerHTML = output;
+                var query = '{{ query_string }}'
+                var terms = query.split(' ')
+                for (var i = 0; i < terms.length; ++i) {
+                    var markup = document.getElementById('results').innerHTML;
+                    var output = updateHaystack(markup, terms[i]);
+                    document.getElementById('results').innerHTML = output;
+                }
             </script>
     {% else %}
     <h3 style="padding-bottom:20px;color:#eee;"><b>You asked for nothing. And you shall receive it... <i>in abundance!</i></b></h3>
