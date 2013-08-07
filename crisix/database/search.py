@@ -1,6 +1,7 @@
 import re, operator
 from django.db.models import Q
 from substr import long_substr
+import operator
 
 def normalize_query(query_string,
                     findterms=re.compile(r'"([^"]+)"|(\S+)').findall,
@@ -15,7 +16,7 @@ def normalize_query(query_string,
     '''
     return [normspace(' ', (t[0] or t[1]).strip()) for t in findterms(query_string)]
 
-def get_query(query_string, search_fields):
+def get_query(query_string, search_fields, op = operator.and_):
     '''
     Returns a query, that is a combination of Q objects. That combination
     aims to search keywords within a model by testing the given search fields.
@@ -33,7 +34,7 @@ def get_query(query_string, search_fields):
         if query is None:
             query = or_query
         else:
-            query = query & or_query
+            query = op(query, or_query)
     return query
 
 def relevance_sort(query_string, search_fields, query_set):

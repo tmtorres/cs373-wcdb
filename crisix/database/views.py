@@ -25,7 +25,7 @@ from models import Entity
 from upload import clear, validate, insert
 from download import get_crises, get_people, get_organizations
 from search import normalize_query, get_query, contextualize, relevance_sort
-import subprocess, re
+import subprocess, re, operator
 from crisix.views import get_icon
 
 DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
@@ -35,8 +35,11 @@ def search(request):
     if 'q' in request.GET:
         query_string = request.GET['q'].strip()
         if len(query_string):
-            entry_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
-            found_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(entry_query).order_by('name'))
+            and_query = get_query(query_string, ['name', 'kind', 'location']) | Q(summary__iregex='(^| )' +  query_string + '($|[ .,!?])')
+            or_query = get_query(query_string, ['name', 'kind', 'location'], operator.or_)
+            and_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(and_query).order_by('name'))
+            or_entries = relevance_sort(query_string, ['name', 'kind', 'location'], Entity.objects.filter(or_query).order_by('name'))
+            found_entries = list(and_entries) + [o for o in or_entries if o not in and_entries]
     return render(request, 'search.html', {'query_string': query_string, 'entries': [{
         'type': DISPLAY_TYPE[str(e.id).lower()[:3]],
         'id': str(e.id).lower()[4:],
