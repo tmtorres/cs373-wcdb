@@ -70,9 +70,6 @@
                                 </iframe>
                             {% endfor %}                
                         </div><!--end video-content-->
-                        {% if additional.videos %}
-                        <a href="videos/">See all videos &raquo;</a>
-                        {% endif %}
                     </div> <!--end span4-->
                     {% endif %}
                     {% if images|length %}
@@ -82,14 +79,20 @@
                             <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
                             {% endfor %}
                         </div>
-                    {% if additional.images %}
-                    <a href="photos/">See all photos &raquo;</a>
-                    {% endif %}
                     </div>
                     {% endif %}
-            </span>
+                </span>
+                <span>
+                {% if videos|length %}
+                    <a href="videos/">{{ meta.videos }} video{% if meta.videos > 1 %}s{% endif %}</a>
+                    {%if images|length %} | {% endif %}
+                {% endif %}
+                {% if images|length %}
+                <a href="photos/">{{ meta.images }} photo{% if meta.images > 1 %}s{% endif %}</a> &raquo;
+                {% endif %}
+                </span>
+            </div>
         </div>
-    </div>
     {% endif %}
 </div>
 

@@ -141,7 +141,7 @@ def extract_ytid(link):
 
 def valid_link(link):
     if 'youtube' in link:
-        return link if 'embed' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if '?v=' in link else None)
+        return link if '/embed/' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if 'v=' in link else None)
     elif 'vimeo' in link:
         if 'player' not in link:
             return 'http://player.vimeo.com/video/' + link.split('/')[-1]

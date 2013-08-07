@@ -244,7 +244,7 @@ def common(e):
         'maps' : [{'embed': w.embed, 'text': w.text} for w in e.elements.filter(ctype='MAP')[:1]],
         'images' : generate_thumbs(e),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='VID'))[:1]],
-        'additional': {'images': len(e.elements.filter(ctype='IMG')) > 3, 'videos': len(e.elements.filter(ctype='VID')) > 1},
+        'meta': {'images': len(e.elements.filter(ctype='IMG')), 'videos': len(e.elements.filter(ctype='VID'))},
         'external': [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='LINK')],
     }
 
