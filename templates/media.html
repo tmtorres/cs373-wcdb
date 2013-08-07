@@ -3,8 +3,8 @@
 <style>
             img {
             float: left;
-            padding-left: 5px;
-            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-bottom: 10px;
         }
 
     .bubble {
@@ -23,9 +23,23 @@
     .textblock {
         padding-bottom:20px;
     }
+    .outer {
+    float: right;
+    right: 50%;
+    position: relative;
+    margin-bottom:10px;
+    }
+    .inner {
+    float: right;
+    right: -50%;
+    position: relative;
+    margin-right:10px;
+    }
+    .clear {
+    clear: both;
+    }
 </style>
-	    <div class="row-fluid" style="margin-left:5px;padding-bottom:20px;">
-	    
+	    <div class="row-fluid">
 	{% if ctype == 'photos' %}
     <p><h2 class="main-focus;" style="padding-bottom:10px;">Photos of 
         {% if etype == "crises" %}
@@ -36,12 +50,14 @@
         "<a style="color:#333" href="{% url crisix.views.people id %}"><u>{{ name }}</u></a>"
         {% endif %}{% endif %}{% endif %}
     </h2></p>
-		{% for i in images %}
-			<div style="margin:0 auto;">			
+        <div class="outer">
+			<div class="inner">	
+		{% for i in images %}		
 				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
-			</div>
-
 		{% endfor %}
+                <div class="clear"></div>
+			</div>
+        </div>
 	{% endif %}
 
 
