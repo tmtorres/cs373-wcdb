@@ -30,7 +30,8 @@
                 <br><br>
                 <p>Welcome to the database management page.
             {% else %}{% if view == 'form' %}
-                <h1>File Upload</h1>
+            <div style="margin:0 auto;width:400px;">
+            <h1>File Upload</h1>
                 <form id="fileupload" enctype="multipart/form-data" action="" method="post">
                     {% csrf_token %}
                     {{ form.file }}
@@ -46,7 +47,8 @@
                     <i class="icon-upload icon-white"></i> <span>Submit</span>
                 </button>
                 </p>
-                </form>
+            </form>
+        </div>
                 <script type="text/javascript">
                 function getFileName(s) {
                     s = s.value;
