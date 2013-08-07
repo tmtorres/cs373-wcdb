@@ -11,7 +11,7 @@ from PIL import Image
 from urllib import urlretrieve
 import glob, os, itertools, imagehash, re
 from itertools import izip_longest
-import nltk
+import nltk, paramiko
 
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
@@ -111,7 +111,40 @@ def display_more(request, etype = '', id = '', ctype = '') :
         'images' : generate_thumbs(e, len(e.elements.filter(ctype='IMG'))),
         })
 
+ZURL = 'http://zweb.cs.utexas.edu/users/cs373/tmtorres/thumbnails/'
+def thumb_retrieve(url, file):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect('128.83.130.37', username='tmtorres', password='')
+    stdin, stdout, stderr = ssh.exec_command('echo "' + url + ' ' + file + '" | python hash.py')
+    return stdout.readlines()[0]
 
+def generate_thumbs2(e, n = 3):
+    '''
+    e is an entity
+    n is the number of thumbnails to be generated
+    retrieves images for entity e and hashes them
+    returns n dictionaries with the original link
+    and thumbnail keys
+    '''
+    hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
+    if len(hash) < n:
+        imgs = e.elements.filter(ctype='IMG').filter(hash=None)
+        for i in imgs:
+            if not i.thumb:
+                i.thumb = str(i.entity.id).lower() + str(i.id) + '.thumbnail'
+            path = os.path.join(settings.THUMB_ROOT, i.thumb)
+            if not os.path.exists(path):
+                i.hash = thumb_retrieve(i.embed, i.thumb)
+                if i.hash == 'invalid' or i.hash in hash:
+                    i.delete()
+                else:
+                    urlretrieve(ZURL + i.thumb, path)
+                    hash[i.thumb] = i
+                    i.save()
+            if len(hash) == n:
+                break
+    return hash.values()[:n]
 
 def generate_thumbs(e, n = 3):
     '''
@@ -129,7 +162,10 @@ def generate_thumbs(e, n = 3):
                 i.thumb = str(i.entity.id).lower() + str(i.id) + '.thumbnail'
             path = os.path.join(settings.THUMB_ROOT, i.thumb)
             if not os.path.exists(path):
-                urlretrieve(i.embed, path)
+                try:
+                    urlretrieve(i.embed, path)
+                except:
+                    pass
                 try:
                     t = Image.open(path)
                     i.hash = str(imagehash.average_hash(t))

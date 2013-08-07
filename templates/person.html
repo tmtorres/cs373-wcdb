@@ -37,10 +37,14 @@
         img
         {
             max-height:125px;
+            padding-bottom:5px;
+        }
+        .bubble {
+            padding-right:0px;
         }
     </style>
     <div class="row-fluid">
-        <h1 class="main-focus;">{{ name }}</h1>
+        <h1 class="main-focus;">{{ p.name }}</h1>
         {% if videos|length or images|length %}
         <hr>
         <div class="textblock">
@@ -78,6 +82,7 @@
     </div>
     {% endif %}
 </div>
+
 {% for s in summary %}
     <p>{{ s|safe }}</p>
     {% endfor %}
