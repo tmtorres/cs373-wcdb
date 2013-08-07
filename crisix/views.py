@@ -93,7 +93,7 @@ def display_more(request, etype = '', id = '', ctype = '') :
 
     if(ctype == 'videos'):
         vids = e.elements.filter(ctype='VID').filter(hash=None)
-        return render(request, 'more_photos_videos.html', {
+        return render(request, 'media.html', {
             'etype' : etype,
             'e' : e,
             'ctype' : ctype,
@@ -102,7 +102,7 @@ def display_more(request, etype = '', id = '', ctype = '') :
             'name' : e.name,
             })
 
-    return render(request, 'more_photos_videos.html', {
+    return render(request, 'media.html', {
         'etype' : etype,
         'e' : e,
         'ctype' : ctype,
