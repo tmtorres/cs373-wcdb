@@ -84,23 +84,23 @@ class SimpleTest(TestCase, RequestFactory):
         request = request_factory.get('/people/brobma/videos')
         response = display_more(request, 'people', 'brobma', 'videos')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('Barack Obama Homepage'),-1)
+        self.assertNotEqual(htmlstring.find('Barack Obama'),-1)
     
     def test_display_more_2(self):
-        # Test if person name is on page in format designated in template
+        # Test if organization name is on page in format designated in template
         request_factory = RequestFactory()
         request = request_factory.get('/organizations/whorgn/videos')
         response = display_more(request, 'organizations', 'whorgn', 'videos')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('World Health Organization Homepage'),-1)
+        self.assertNotEqual(htmlstring.find('World Health Organization'),-1)
         
     def test_display_more_3(self):
-        # Test if person name is on page in format designated in template
+        # Test if crisis name is on page in format designated in template
         request_factory = RequestFactory()
         request = request_factory.get('/crises/haiear/videos')
         response = display_more(request, 'crises', 'haiear', 'videos')
         htmlstring = response.content
-        self.assertNotEqual(htmlstring.find('Haiti Earthquake Homepage'),-1)
+        self.assertNotEqual(htmlstring.find('Haiti Earthquake'),-1)
    
     # -----------
     # People View
@@ -442,7 +442,7 @@ class TestUpload(TestCase):
         element = o.elements.filter(ctype='VID')
         self.assertEqual(len(element), 2)
         element = o.elements.filter(ctype='MAP')
-        self.assertEqual(len(element), 0)
+        self.assertEqual(len(element), 1)
     	for c in Crisis.objects.all():
     		c.delete()
 
@@ -494,7 +494,7 @@ class TestUpload(TestCase):
         """
         testing an invalid Google Map
         """
-        s = 'https://maps.google.com/maps?client=ubuntu&channel=fs&q=white+house&oe=utf-8&ie=UTF-8&ei=5xgAUsqdFIGMyQHknYCoDQ&ved=0CAoQ_AUoAg'
+        s = 'https://maps.google/maps?client=ubuntu&channel=fs&q=white+house&oe=utf-8&ie=UTF-8&ei=5xgAUsqdFIGMyQHknYCoDQ&ved=0CAoQ_AUoAg'
 
         assert (valid_map(s) is None)
 
