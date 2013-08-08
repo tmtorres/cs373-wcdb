@@ -180,7 +180,13 @@ def generate_thumbs(e, n = 3):
                     hash[i.hash] = i
                     t.thumbnail((180, t.size[1]) if t.size[0] < t.size[1] else (t.size[0], 180))
                     t = t.crop((0, 0, 180, 180))
-                    t.save(path, 'PNG')
+                    try:
+                        t.save(path, 'PNG')
+                    except IOError:
+                        del hash[i.hash]
+                        os.remove(path)
+                        i.delete()
+                        continue
                     i.save()
             if len(hash) == n:
                 break
@@ -243,7 +249,7 @@ def common(e):
         'name': e.name,
         'summary': paragraph_split(e.summary),
         'citations' : [{'href': w.href, 'text': w.text} for w in e.elements.filter(ctype='CITE')],
-        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in e.elements.filter(ctype='FEED')],
+        'feeds' : [{'id': str(w.embed).split('/')[-1]} for w in e.elements.filter(ctype='FEED')[:1]],
         'maps' : [{'embed': w.embed, 'text': w.text} for w in e.elements.filter(ctype='MAP')[:1]],
         'images' : generate_thumbs(e),
         'videos' : [{'embed': w.embed, 'text': w.text} for w in list(e.elements.filter(ctype='VID'))[:1]],
