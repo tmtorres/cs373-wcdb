@@ -24,4 +24,6 @@ urlpatterns = patterns('',
     url(r'^export/$', 'database.views.download'),
     url(r'^test/$', 'database.views.test', name='test'),
     url(r'^runner/$', 'database.views.runner'),
+    url(r'^query/$', 'database.views.query', name='query'),
+    url(r'^queryrunner/$', 'database.views.queryrunner'),
 )
