@@ -14,7 +14,7 @@ from upload import *
 from download import *
 from views import *
 from datetime import datetime
-from crisix.views import people, organizations, crises, display, display_more
+from crisix.views import people, organizations, crises, display, display_more, get_datetime, get_contact, convert_li
 
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring
@@ -53,6 +53,54 @@ class SimpleTest(TestCase, RequestFactory):
         # Test if database is properly populated
         self.assertEqual(self.p.name,'Barack Obama')
     
+    def test_datetime_1(self):
+	# Test if date and time match for given crisis
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSHESSG.xml')).read())
+        insert(root)
+	a = Crisis.objects.get(id='CRI_SHESSG')
+	res = get_datetime(a)
+	self.assertEqual(res, '2012-12-14, 09:35:00')
+    
+    def test_datetime_2(self):
+	# Test if date and time match for given crisis
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestLYCLWR.xml')).read())
+        insert(root)
+	a = Crisis.objects.get(id='CRI_LYCLWR')
+	res = get_datetime(a)
+	self.assertEqual(res, '2011-02-15')
+
+    def test_datetime_3(self):
+	# Test if date and time are applicable to a non-crisis
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestBROBMA.xml')).read())
+        insert(root)
+	a = Person.objects.get(id='PER_BROBMA')
+	res = get_datetime(a)
+	self.assertEqual(res, '')
+
+    def test_contact_1(self):
+	# Test if contact info is applicable to non-organization
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestBROBMA.xml')).read())
+        insert(root)
+	a = Person.objects.get(id='PER_BROBMA')
+	res = get_contact(a)
+	self.assertEqual(res, '')
+
+    def test_contact_2(self):
+	# Test if contact info matches for given organization
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestUNDWAY.xml')).read())
+        insert(root)
+	a = Organization.objects.get(id='ORG_UNDWAY')
+	res = get_contact(a)
+	self.assertEqual(res, 'http://apps.unitedway.org/contact/')
+
+    def test_contact_3(self):
+	# Test if contact info matches for given organization
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSNQKRF.xml')).read())
+        insert(root)
+	a = Organization.objects.get(id='ORG_SNQKRF')
+	res = get_contact(a)
+	self.assertEqual(res, 'http://sichuan-quake-relief.org/contact-us/')
+
     def test_display_1(self):
         # Test if person name is on page in format designated in template
         request_factory = RequestFactory()
@@ -68,8 +116,7 @@ class SimpleTest(TestCase, RequestFactory):
         response = display(request, 'organizations')
         htmlstring = response.content   
         self.assertNotEqual(htmlstring.find('Public Health'),-1) 
-
-        
+       
     def test_display_3(self):
         # Test if person name is on page in format designated in template
         request_factory = RequestFactory()
@@ -101,6 +148,22 @@ class SimpleTest(TestCase, RequestFactory):
         response = display_more(request, 'crises', 'haiear', 'videos')
         htmlstring = response.content
         self.assertNotEqual(htmlstring.find('Haiti Earthquake'),-1)
+
+    def test_convertli_1(self):
+	text = "<li>World Health Organization</li>"
+	res = convert_li(text)
+	self.assertEqual(res, 'World Health Organization')
+
+    def test_convertli_2(self):
+	text = "<li>Barack Obama</li><li>Adam Lanza</li>"
+	res = convert_li(text)
+	self.assertEqual(res, 'Barack Obama Adam Lanza')
+
+    def test_convertli_3(self):
+	text = "<li>This is a sentence. Remove all li tags.</li>"
+	res = convert_li(text)
+	self.assertEqual(res, 'This is a sentence. Remove all li tags.')
+	
    
     # -----------
     # People View
@@ -186,7 +249,7 @@ class SimpleTest(TestCase, RequestFactory):
         self.assertEqual(response.status_code, 200)
 
     def test_crisis2(self):
-        # Test if person kind is on page in format designated in template
+        # Test if crisis kind is on page in format designated in template
         request_factory = RequestFactory()
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
@@ -194,7 +257,7 @@ class SimpleTest(TestCase, RequestFactory):
         self.assertNotEqual(htmlstring.find('<li>Natural Disaster</li>'),-1)
 
     def test_crisis3(self):
-        # Test if person name is on page in format designated in template
+        # Test if crisis name is on page in format designated in template
         request_factory = RequestFactory()
         request = request_factory.get('/crisix/crises/haiear')
         response = crises(request, 'haiear')
@@ -664,4 +727,4 @@ class TestDownload(TestCase):
         self.assertNotEqual(summary.find('He was re-elected president in November 2012,'), -1)
     	for c in Crisis.objects.all():
     		c.delete()
-    
+
