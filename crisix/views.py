@@ -186,13 +186,15 @@ def generate_thumbs(e, n = 3):
                 break
     return hash.values()[:n]
 
+exclude = ('na', 'n/a', 'notapplicable', 'none', 'none.')
+
 def filter_field(text):
     '''
     Filters bad fields/entries
     '''
     if len(text) and not len(text[0]):
         return ''
-    if len(text) and ''.join(text[0].split()).lower() in ('na', 'n/a', 'notapplicable', 'none'):
+    if len(text) and ''.join(text[0].split()).lower() in exclude:
         return ''
     return text
 
@@ -281,7 +283,8 @@ def crises(request, id):
         'himpact': format_text(c.himpact),
         'eimpact': format_text(c.eimpact),
         'resources': format_text(c.resources),
-        'help' : [{'href': li.attrib.get('href'), 'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>')],
+        'help' : [{'href': li.attrib.get('href'), 
+                   'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>') if li.text.lower().strip() not in exclude],
     }
     attr.update(common(c))
     return render(request, 'crisis.html', attr)

@@ -64,7 +64,7 @@ def seq_match(new, old):
     for line in new:
         subseq = [(lcs(line.strip().lower(), old[i].strip().lower()), i) for i in range(0, len(old))]
         match = max(subseq, key=lambda x: len(x[0]))
-        if (float(len(match[0])) / len(old[match[1]])) > 0.4:
+        if (float(len(match[0])) / len(old[match[1]])) > 0.5:
             old[match[1]] = line
         else:
             old += [line]

@@ -29,7 +29,6 @@ from download import get_crises, get_people, get_organizations
 from search import normalize_query, get_query, contextualize, relevance_sort
 import subprocess, re, operator
 from crisix.views import get_icon
-from unidecode import unidecode
 
 DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
 def search(request):
@@ -82,7 +81,7 @@ def queryrunner(request):
     cursor = connection.cursor()
     rawresult = '<pre style="background-color:#fff;">'
     for item in queries:
-        rawresult += '<br>' + item + '</br>'
+        rawresult += item + '</br>'
         cursor.execute(item)
         row = cursor.fetchall()
         for elem in row:
