@@ -106,7 +106,35 @@ def query(request):
     if 'q' in request.GET:
         queryno = int(request.GET['q'])
         if queryno == 1:
-            return render(request, 'utility.html', {'view': 'query', 'sql': 'A query in plain English.', 'output': 'ename, dname'})
+            querystring = 'Get celebrities (actors, musicians, athletes) related to crises/organizations'
+            sql = ['SELECT id, kind, name FROM database_entity e WHERE id LIKE "PER_%%"',
+                   'AND kind REGEXP ".*(Actor|Actress|Singer|Celebrity|Athlete|Player).*"', 
+                   'AND (EXISTS (SELECT * from database_crisis_people cp WHERE cp.person_id = e.id)',
+                   'OR EXISTS (SELECT * from database_organization_people cp WHERE cp.person_id = e.id))']
+            cursor = connection.cursor()
+            cursor.execute(' '.join(sql).strip())
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 2:
+            querystring = 'Get all crises/organizations/people who have feeds'
+            sql = 'SELECT DISTINCT entity_id, name FROM database_webelement AS w, database_entity AS e WHERE ctype = "FEED" AND w.entity_id = e.id'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 3:
+            querystring = 'Get the name and location of all crises related to natural disasters'
+            sql = 'SELECT kind, name, location FROM database_entity WHERE kind REGEXP ".*(Earthquake|Fire|Tsunami|Natural Disaster|Epidemic|Hurricane|Tornado|Flood|Storm|Blizzard).*" AND id LIKE "CRI_%%"'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
     return render(request, 'utility.html', {'view': 'query'})
 
 def download(request):
@@ -130,7 +158,6 @@ def upload(request):
             backup = os.path.join(settings.MEDIA_ROOT, 'tmp', 'crisix.json')
             cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'dumpdata', '>', backup]
             os.system(' '.join(cmd).strip())
-            '''
             try:
                 insert(validate(tmp))
             except Exception, error:
@@ -138,9 +165,6 @@ def upload(request):
                 cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'loaddata', backup]
                 os.system(' '.join(cmd).strip())
                 return render(request, 'utility.html', {'view': 'form', 'message': 'failure', 'form': form, 'errstr': str(error)})
-            '''
-            try:
-                insert(validate(tmp))
             finally:
                 os.remove(tmp)
                 os.remove(backup)
