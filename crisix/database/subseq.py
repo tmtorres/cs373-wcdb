@@ -6,6 +6,11 @@ import nltk, os
 from django.conf import settings
 
 def lcs(a, b):
+    '''
+    a is a string
+    b is a string
+    returns the longest common subsequence of a and b
+    '''
     lengths = [[0 for j in range(len(b)+1)] for i in range(len(a)+1)]
     # row 0 and column 0 are initialized to 0 already
     for i, x in enumerate(a):
@@ -35,6 +40,8 @@ def li_match(new, old):
     '''
     new is an ElementTree of new content to be added
     old is an ElementTree of info in the database
+    compares links to links and text to text
+    returns union of new and old
     '''
     if not len(list(old)):
         return ''.join([tostring(li).strip() for li in new])
@@ -51,6 +58,7 @@ def seq_match(new, old):
     '''
     new is a string of new content to be added
     old is a string of info in the database
+    returns the union of new and old
     '''
     if not len(old):
         return new

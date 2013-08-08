@@ -146,8 +146,7 @@ def generate_thumbs2(e, n = 3):
     e is an entity
     n is the number of thumbnails to be generated
     retrieves images for entity e and hashes them
-    returns n dictionaries with the original link
-    and thumbnail keys
+    returns n dictionaries with the original link and thumbnail keys
     '''
     hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
     if len(hash) < n:
@@ -173,8 +172,7 @@ def generate_thumbs(e, n = 3):
     e is an entity
     n is the number of thumbnails to be generated
     retrieves images for entity e and hashes them
-    returns n dictionaries with the original link
-    and thumbnail keys
+    returns n dictionaries with the original link and thumbnail keys
     '''
     hash = dict([(i.hash, i) for i in e.elements.filter(ctype='IMG').exclude(hash=None)])
     if len(hash) < n:
@@ -263,7 +261,9 @@ def is_stub(e):
     if hasattr(e, 'crisis'):
         return len(e.summary.split() + e.eimpact.split() + e.himpact.split() + e.resources.split() + e.help.split()) < 100
     if hasattr(e, 'organization'):
-        return len(e.summary.split() + e.contact.split() + e.history.split()) < 100 
+        return len(e.summary.split() + e.contact.split() + e.history.split()) < 100
+    if hasattr(e, 'person'):
+        return len(e.summary.split() + [e.location] + [e.kind] + [e.name]) < 40
 
 def common(e):
     return {
