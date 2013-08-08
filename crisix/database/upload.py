@@ -207,7 +207,7 @@ def valid_map(embed):
     validates the link for embedding on a page
     '''
     if embed is not None:
-        if 'maps.google' in embed:
+        if 'maps.google.' in embed:
             return embed + ('&output=embed' if '&output=embed' not in embed else '')
         elif 'bing.com/maps/embed/' in embed:
             return embed
