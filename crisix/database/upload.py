@@ -9,6 +9,7 @@ from crisix.views import convert_li
 from substr import str_match
 from subseq import seq_match, li_match
 from urlparse import urlparse, parse_qs
+from django.core.exceptions import ValidationError
 
 def validate(file):
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -79,7 +80,14 @@ def cri_handler(node):
         if attr.tag == 'Common':
             com_handler(attr, c)
     assert c is not None
-    c.save()
+    try:
+        c.save()
+    except ValidationError, error:
+        if 'Enter a valid time' in str(error):
+            c.time = None
+        if 'Enter a valid date' in str(error):
+            c.date = None
+        c.save()
 
 def org_handler(node):
     assert node is not None
@@ -128,31 +136,36 @@ def per_handler(node):
 def insert_elem(query, attr):
     assert type(query) is dict
     assert type(attr) is dict
-    try:
-        w = attr['entity'].elements.get(**query)
-    except WebElement.DoesNotExist:
-        attr.update(query)
-        w = WebElement(**attr)
-        w.save()
+    if query.values()[0] is not None:
+        try:
+            w = attr['entity'].elements.get(**query)
+        except WebElement.DoesNotExist:
+            attr.update(query)
+            w = WebElement(**attr)
+            w.save()
 
 def extract_ytid(link):
-    return parse_qs(urlparse(link).query)["v"][0]
+    if link is not None:
+        return parse_qs(urlparse(link).query)["v"][0]
 
 def valid_link(link):
-    if 'youtube' in link:
-        return link if '/embed/' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if 'v=' in link else None)
-    elif 'vimeo' in link:
-        if 'player' not in link:
-            return 'http://player.vimeo.com/video/' + link.split('/')[-1]
-        return link
+    if link is not None:
+        if 'youtube' in link:
+            return link if '/embed/' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if 'v=' in link else None)
+        elif 'vimeo' in link:
+            if 'player' not in link:
+                return 'http://player.vimeo.com/video/' + link.split('/')[-1]
+            return link
 
 def valid_map(embed):
-    if 'maps.google.com' in embed:
-        return embed + ('&output=embed' if '&output=embed' not in embed else '')
-    elif 'bing.com/maps/embed/' in embed:
-        return embed
+    if embed is not None:
+        if 'maps.google.com' in embed:
+            return embed + ('&output=embed' if '&output=embed' not in embed else '')
+        elif 'bing.com/maps/embed/' in embed:
+            return embed
 
 def urlstrip(url):
+    if url is not None:
         return 'http://' + ''.join(urlparse(url)[1:])
     
 
