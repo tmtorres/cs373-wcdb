@@ -127,6 +127,7 @@ def upload(request):
             backup = os.path.join(settings.MEDIA_ROOT, 'tmp', 'crisix.json')
             cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'dumpdata', '>', backup]
             os.system(' '.join(cmd).strip())
+            '''
             try:
                 insert(validate(tmp))
             except Exception, error:
@@ -134,6 +135,9 @@ def upload(request):
                 cmd = ['python', os.path.join(settings.BASE_DIR, 'crisix/manage.py'), 'loaddata', backup]
                 os.system(' '.join(cmd).strip())
                 return render(request, 'utility.html', {'view': 'form', 'message': 'failure', 'form': form, 'errstr': str(error)})
+            '''
+            try:
+                insert(validate(tmp))
             finally:
                 os.remove(tmp)
                 os.remove(backup)

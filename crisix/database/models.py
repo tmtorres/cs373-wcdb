@@ -73,7 +73,7 @@ class WebElement(models.Model):
     ctype = models.CharField(max_length=10)
     thumb = models.TextField(blank=True, null=True)
     hash = models.TextField(blank=True, null=True)
-    href = models.URLField(blank=True, null=True)
+    href = models.TextField(blank=True, null=True)
     embed = models.TextField(blank=True, null=True)
     text = models.TextField(blank=True, default='', null=True)
     def __unicode__(self):

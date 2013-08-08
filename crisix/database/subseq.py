@@ -30,7 +30,7 @@ def lcs(a, b):
             y -= 1
     return result
 
-def seq_match(new, old):
+def li_match(new, old):
     '''
     new is an ElementTree of new content to be added
     old is an ElementTree of info in the database
@@ -45,7 +45,7 @@ def seq_match(new, old):
             match[1].text = new_li.text
         else:
             ET.SubElement(old, 'li').text = new_li.text
-    return old
+    return ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
 
 def seq_match(new, old):
     '''
@@ -67,3 +67,4 @@ def seq_match(new, old):
         else:
             old += [line]
     return ' '.join(old)
+            

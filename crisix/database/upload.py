@@ -9,6 +9,7 @@ from crisix.views import convert_li
 from substr import str_match
 from subseq import seq_match
 import urlparse
+from urlparse import urlparse
 
 def validate(file):
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -153,16 +154,20 @@ def valid_map(embed):
     elif 'bing.com/maps/embed/' in embed:
         return embed
 
+def urlstrip(url):
+        return 'http://' + ''.join(urlparse(url)[1:])
+    
+
 def com_handler(node, e):
     assert node is not None
     assert e is not None
     for attr in node:
         if attr.tag == 'Citations':
             for elem in attr:
-                insert_elem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'CITE', 'text' : elem.text})
+                insert_elem({'href' : urlstrip(elem.attrib.get('href'))}, {'entity' : e, 'ctype' : 'CITE', 'text' : elem.text})
         if attr.tag == 'ExternalLinks':
             for elem in attr:
-                insert_elem({'href' : elem.attrib.get('href')}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
+                insert_elem({'href' : urlstrip(elem.attrib.get('href'))}, {'entity' : e, 'ctype' : 'LINK', 'text' : elem.text})
         if attr.tag == 'Images':
             for elem in attr:
                 if str(elem.attrib.get('embed')).split('.')[-1].upper() in ('JPG', 'JPEG', 'PNG', 'GIF'):
