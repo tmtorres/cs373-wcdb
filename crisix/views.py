@@ -273,6 +273,7 @@ def organizations(request, id):
 
 def crises(request, id):
     c = get_object_or_404(Crisis, id='CRI_' + str(id).upper())
+    print c.help
     attr = {
         'c': c,
         'related_people' : [{'id': str(p.id).lower()[4:], 'name': p.name} for p in c.people.all()],

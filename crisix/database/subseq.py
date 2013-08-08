@@ -30,6 +30,7 @@ def lcs(a, b):
             y -= 1
     return result
 
+from crisix.views import convert_li
 def li_match(new, old):
     '''
     new is an ElementTree of new content to be added
@@ -38,18 +39,15 @@ def li_match(new, old):
     if not len(list(old)):
         return ''.join([tostring(li).strip() for li in new])
 
-    for new_li in new:
-        subseq = [(lcs(new_li.text.strip().lower(), old_li.text.strip().lower()), old_li) for old_li in old]
-        match = max(subseq, key=lambda x: len(x[0]))
-        while(float(len(match[0])) / len(match[1].text)) > 0.4:
-            old.remove(match[1])
-            subseq = [(lcs(new_li.text.strip().lower(), old_li.text.strip().lower()), old_li) for old_li in old]
-            try:
-                match = max(subseq, key=lambda x: len(x[0]))
-            except ValueError:
-                break
-        ET.SubElement(old, 'li').text = new_li.text
-    return ''.join([tostring(li).strip() for li in old])
+    new_href = dict([(li.attrib.get('href'), li) for li in new if li.attrib.get('href') is not None])
+    new_text = convert_li(''.join([tostring(li).strip() for li in new if li not in new_href.values()]))
+    old_href = dict([(li.attrib.get('href'), li) for li in old if li.attrib.get('href') is not None])
+    old_text = convert_li(''.join([tostring(li).strip() for li in old if li not in old_href.values()]))
+    merged_text = seq_match(old_text, new_text)
+    merged_href = dict(old_href.items() + new_href.items())
+    print merged_text
+    print merged_href
+    return '<li>' + merged_text + '</li>' + ''.join([tostring(li).strip() for li in merged_href.values()])
 
 def seq_match(new, old):
     '''
