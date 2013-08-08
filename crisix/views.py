@@ -312,7 +312,7 @@ def crises(request, id):
         'eimpact': format_text(c.eimpact),
         'resources': format_text(c.resources),
         'help' : [{'href': li.attrib.get('href'), 
-                   'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>') if li.text.lower().strip() not in exclude],
+                   'text': li.text} for li in fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>') if (c.help is not None) and (li.text.lower().strip() not in exclude)],
     }
     attr.update(common(c))
     return render(request, 'crisis.html', attr)

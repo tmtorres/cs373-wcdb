@@ -12,12 +12,21 @@ from urlparse import urlparse, parse_qs
 from django.core.exceptions import ValidationError
 
 def validate(file):
+    '''
+    file is an XML file
+    uses miniXsv to parse and validate the XML file
+    returns the root of an ElementTree object
+    '''
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
                          xmlIfClass=pyxsval.XMLIF_ELEMENTTREE)
     elemTree = elementTreeWrapper.getTree()
     return elemTree.getroot()
 
 def insert(root):
+    '''
+    root is an ElementTree Element object
+    inserts the children of root into the database
+    '''
     assert root is not None
     for elem in root:
         if elem.tag == 'Crisis':
@@ -28,6 +37,10 @@ def insert(root):
             per_handler(elem)
 
 def clear(thumbs = True):
+    '''
+    thumbs is a boolean
+    clears the database and all associated thumbnails if thumbs is true
+    '''
     if thumbs:
         for t in glob.glob(os.path.join(settings.THUMB_ROOT, '*.thumbnail')):
             os.remove(t)
@@ -35,6 +48,9 @@ def clear(thumbs = True):
         e.delete()
 
 def get_entity(etype, eid):
+    '''
+    returns an Entity of etype with eid
+    '''
     assert etype in (Crisis, Organization, Person)
     assert eid[:3] in ('CRI', 'ORG', 'PER')
     e = None
@@ -47,9 +63,16 @@ def get_entity(etype, eid):
     return e
 
 def subelements(attr):
+    '''
+    returns the subelements of an ElementTree element in string format
+    '''
     return ''.join([tostring(li).strip() for li in attr])
 
 def cri_handler(node):
+    '''
+    node is an ElementTree Element object
+    handles an Element with tag 'Crisis'
+    '''
     assert node is not None
     c = get_entity(Crisis, node.attrib.get('ID'))
     c.name = node.attrib.get('Name')
@@ -90,6 +113,10 @@ def cri_handler(node):
         c.save()
 
 def org_handler(node):
+    '''
+    node is an ElementTree Element object
+    handles an Element with tag 'Organization'
+    '''
     assert node is not None
     o = get_entity(Organization, node.attrib.get('ID'))
     o.name = node.attrib.get('Name')
@@ -114,6 +141,10 @@ def org_handler(node):
     o.save()
 
 def per_handler(node):
+    '''
+    node is an ElementTree Element object
+    handles an Element with tag 'Person'
+    '''
     assert node is not None
     p = get_entity(Person, node.attrib.get('ID'))
     p.name = node.attrib.get('Name')
@@ -134,6 +165,11 @@ def per_handler(node):
     p.save()
 
 def insert_elem(query, attr):
+    '''
+    query is a dict of items to be searched
+    attr is a dict of the attributes to be inserted if the query fails
+    creates a WebElement object
+    '''
     assert type(query) is dict
     assert type(attr) is dict
     if query.values()[0] is not None:
@@ -145,10 +181,18 @@ def insert_elem(query, attr):
             w.save()
 
 def extract_ytid(link):
+    '''
+    link is a URL of the form www.youtube.com
+    extracts and returns the video ID
+    '''
     if link is not None:
         return parse_qs(urlparse(link).query)["v"][0]
 
 def valid_link(link):
+    '''
+    link is a URL to a video
+    validates the link for embedding on a page
+    '''
     if link is not None:
         if 'youtube' in link:
             return link if '/embed/' in link else ('//www.youtube.com/embed/' + extract_ytid(link) if 'v=' in link else None)
@@ -158,6 +202,10 @@ def valid_link(link):
             return link
 
 def valid_map(embed):
+    '''
+    embed is a URL to a map
+    validates the link for embedding on a page
+    '''
     if embed is not None:
         if 'maps.google' in embed:
             return embed + ('&output=embed' if '&output=embed' not in embed else '')
@@ -165,11 +213,21 @@ def valid_map(embed):
             return embed
 
 def urlstrip(url):
+    '''
+    url is a URL
+    normalizes the scheme
+    '''
     if url is not None:
         return 'http://' + ''.join(urlparse(url)[1:])
     
 
 def com_handler(node, e):
+    '''
+    a handler for common elements
+    node is an ElementTree element object
+    e is the corresponding entity
+    inserts WebElements of the appropriate type
+    '''
     assert node is not None
     assert e is not None
     for attr in node:
