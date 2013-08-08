@@ -163,6 +163,33 @@ class SimpleTest(TestCase, RequestFactory):
 	text = "<li>This is a sentence. Remove all li tags.</li>"
 	res = convert_li(text)
 	self.assertEqual(res, 'This is a sentence. Remove all li tags.')
+
+    def test_search_1(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestBROBMA.xml')).read())
+	insert(root)
+	request_factory = RequestFactory()
+	request = request_factory.get('/search')
+	response = search(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('Barack Obama'), -1)
+
+    def test_search_2(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSHESSG.xml')).read())
+	insert(root)
+	request_factory = RequestFactory()
+	request = request_factory.get('/search')
+	response = search(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('Sandy Hook'), -1)
+
+    def test_search_3(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestNLTLCL.xml')).read())
+	insert(root)
+	request_factory = RequestFactory()
+	request = request_factory.get('/search')
+	response = search(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('National Transitional Council'), -1)
 	
    
     # -----------
