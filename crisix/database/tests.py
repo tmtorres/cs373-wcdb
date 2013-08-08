@@ -14,7 +14,7 @@ from upload import *
 from download import *
 from views import *
 from datetime import datetime
-from crisix.views import people, organizations, crises, display, display_more, get_datetime, get_contact, convert_li
+from crisix.views import people, organizations, crises, display, display_more, get_datetime, get_contact, convert_li, is_stub
 
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import tostring, fromstring
@@ -164,7 +164,29 @@ class SimpleTest(TestCase, RequestFactory):
 	res = convert_li(text)
 	self.assertEqual(res, 'This is a sentence. Remove all li tags.')
 
+    def test_stub_1(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestBROBMA.xml')).read())
+        insert(root)
+	a = Person.objects.get(id='PER_BROBMA')
+	res = is_stub(a)
+	self.assertFalse(res)
+
+    def test_stub_2(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSHESSG.xml')).read())
+        insert(root)
+	a = Crisis.objects.get(id='CRI_SHESSG')
+	res = is_stub(a)
+	self.assertFalse(res)
+
+    def test_stub_3(self):
+	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestNLTLCL.xml')).read())
+        insert(root)
+	a = Organization.objects.get(id='ORG_NLTLCL')
+	res = is_stub(a)
+	self.assertFalse(res)
+
     def test_search_1(self):
+	# Test functionality of search function in returning correct information
 	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestBROBMA.xml')).read())
 	insert(root)
 	request_factory = RequestFactory()
@@ -174,6 +196,7 @@ class SimpleTest(TestCase, RequestFactory):
 	self.assertNotEqual(htmlstring.find('Barack Obama'), -1)
 
     def test_search_2(self):
+	# Test functionality of search function in returning correct information
 	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestSHESSG.xml')).read())
 	insert(root)
 	request_factory = RequestFactory()
@@ -183,6 +206,7 @@ class SimpleTest(TestCase, RequestFactory):
 	self.assertNotEqual(htmlstring.find('Sandy Hook'), -1)
 
     def test_search_3(self):
+	# Test functionality of search function in returning correct information
 	root = fromstring(open(os.path.join(settings.BASE_DIR, 'crisix/database/TestXML/TestNLTLCL.xml')).read())
 	insert(root)
 	request_factory = RequestFactory()
@@ -191,6 +215,29 @@ class SimpleTest(TestCase, RequestFactory):
 	htmlstring = response.content
 	self.assertNotEqual(htmlstring.find('National Transitional Council'), -1)
 	
+    def test_query_1(self):
+	# Test if the given string exists inside the query 
+	request_factory = RequestFactory()
+	request = request_factory.get('/query/?q=1')
+	response = query(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('Magic Johnson'), -1)
+
+    def test_query_2(self):
+	# Test if the given string exists inside the query 
+	request_factory = RequestFactory()
+	request = request_factory.get('/query/?q=4')
+	response = query(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('Naoto Kan'), -1)
+
+    def test_query_3(self):
+	# Test if the given string exists inside the query 
+	request_factory = RequestFactory()
+	request = request_factory.get('/query/?q=7')
+	response = query(request)
+	htmlstring = response.content
+	self.assertNotEqual(htmlstring.find('Sandy Hook Elementary School Shooting'), -1)
    
     # -----------
     # People View
