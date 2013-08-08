@@ -93,15 +93,6 @@ def queryrunner(request):
             rawresult += ' '.join(elem) + '<br>'
     return HttpResponse(rawresult + '</pre>')
 
-
-def dictfetchall(cursor):
-    "Returns all rows from a cursor as a dict"
-    desc = cursor.description
-    return [
-        dict(zip([col[0] for col in desc], row))
-        for row in cursor.fetchall()
-    ]
-
 def query(request):
     if 'q' in request.GET:
         queryno = int(request.GET['q'])
@@ -135,6 +126,70 @@ def query(request):
             return render(request, 'utility.html', {'view': 'query', 
                                                     'querystring': querystring, 
                                                     'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 4:
+            querystring = 'People involved in crises that happened in China/Japan'
+            sql = 'SELECT person_id, name FROM database_crisis_people AS p, database_entity AS e WHERE p.person_id=e.id AND crisis_id IN (SELECT id FROM database_entity WHERE (location LIKE "%%China%%" OR location LIKE "%%Japan%%") AND id LIKE "CRI_%%")'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 5:
+            querystring = 'Crises that are tied to a president'
+            sql = 'SELECT crisis_id, name FROM database_crisis_people AS p, database_entity AS e WHERE p.crisis_id=e.id AND person_id IN (SELECT id FROM database_entity WHERE kind LIKE "%%President%%")'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 6:
+            querystring = 'All crises in alphabetical order by name of crisis (no duplicates)'
+            sql = 'SELECT DISTINCT id, name FROM database_entity WHERE id LIKE "CRI_%%" ORDER BY name'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 7:
+            querystring = 'Crises whose kind value contains the word "shooting"'
+            sql = 'SELECT id, kind, name FROM database_entity WHERE kind LIKE "%%Shooting%%" AND id LIKE "CRI_%%"'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 8:
+            querystring = 'All people with first names that start with letters A through P (no duplicates)'
+            sql = 'SELECT id, name FROM database_entity WHERE name REGEXP "^[A-P]" AND id LIKE "PER_%%" ORDER BY name'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 9:
+            querystring = 'Show the name and economic impact of natural disasters occuring after 2001'
+            sql = 'SELECT e.name, c.eimpact FROM database_crisis c, database_entity e WHERE date >= "2002-01-01" AND kind REGEXP ".*(Earthquake|Fire|Tsunami|Natural Disaster|Epidemic|Hurricane|Tornado|Flood|Storm|Blizzard).*" AND c.entity_ptr_id = e.id ORDER BY c.date'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+        elif queryno == 10:
+            querystring = 'Crises that took place in Texas (Location data should contain "Texas" or "TX")'
+            sql = 'SELECT id, name, location FROM database_entity WHERE (location LIKE "%%Texas%%" OR location LIKE "%%TX%%") and id LIKE "CRI_%%"'
+            cursor = connection.cursor()
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            return render(request, 'utility.html', {'view': 'query', 
+                                                    'querystring': querystring, 
+                                                    'rows': '\n'.join([', '.join(r).strip(', ') for r in rows])})
+
     return render(request, 'utility.html', {'view': 'query'})
 
 def download(request):
