@@ -92,7 +92,7 @@ def display_more(request, etype = '', id = '', ctype = '') :
 
 
     if(ctype == 'videos'):
-        vids = e.elements.filter(ctype='VID').filter(hash=None)
+        vids = e.elements.filter(ctype='VID')
         return render(request, 'media.html', {
             'etype' : etype,
             'e' : e,
@@ -171,6 +171,7 @@ def generate_thumbs(e, n = 3):
                     i.hash = str(imagehash.average_hash(t))
                 except IOError:
                     os.remove(path)
+                    i.delete()
                     continue
                 if i.hash in hash:
                     os.remove(path)
