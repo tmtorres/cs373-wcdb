@@ -32,6 +32,10 @@ from crisix.views import get_icon
 
 DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
 def search(request):
+    '''
+    Takes in a request in the form ?q=  and searches the database for a match.
+    AND entries for multiword search are displayed before OR entries
+    '''
     query_string = ''
     found_entries = []
     if 'q' in request.GET:

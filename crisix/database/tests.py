@@ -563,6 +563,15 @@ class TestUpload(TestCase):
 
     def test_valid_map_3(self):
         """
+        testing a valid Google map with a co.uk extension
+        """
+
+        s = 'https://maps.google.co.uk/maps/ms?ie=UTF8&amp;oe=UTF8&amp;msa=0&amp;msid=200809166078445189642.00049f7a79747b94b2b24&amp;t=m&amp;ll=37.300275,12.65625&amp;spn=41.526391,52.734375&amp;z=3&amp;output=embed'
+
+        assert (valid_map(s) is not None)
+
+    def test_valid_map_4(self):
+        """
         testing a valid Bing Map
         """
         s = 'http://www.bing.com/maps/embed/?v=2&amp;cp=38.897610~-77.036720&amp;lvl=18&amp;dir=0&amp;sty=r&amp;q=white%20house&amp;form=LMLTEW&amp;emid=85759cd1-e41e-4e69-9d3b-dacd3d688a9c'
