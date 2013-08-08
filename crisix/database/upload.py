@@ -7,9 +7,8 @@ from xml.etree.ElementTree import tostring, fromstring
 from minixsv import pyxsval
 from crisix.views import convert_li
 from substr import str_match
-from subseq import seq_match
-import urlparse
-from urlparse import urlparse
+from subseq import seq_match, li_match
+from urlparse import urlparse, parse_qs
 
 def validate(file):
     elementTreeWrapper = pyxsval.parseAndValidateXmlInput(file, xsdFile=os.path.join(settings.BASE_DIR, 'WCDB2.xsd.xml'),
@@ -76,7 +75,7 @@ def cri_handler(node):
         if attr.tag == 'ResourcesNeeded':
             c.resources = '<li>' + seq_match(convert_li(c.resources), convert_li(subelements(attr))).strip() + '</li>'
         if attr.tag == 'WaysToHelp':
-            c.help += ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
+            c.help = li_match(attr, fromstring('<WaysToHelp>' + c.help + '</WaysToHelp>'))
         if attr.tag == 'Common':
             com_handler(attr, c)
     assert c is not None
@@ -138,7 +137,7 @@ def insert_elem(query, attr):
 
 #unidecode
 def extract_ytid(link):
-    return urlparse.parse_qs(urlparse.urlparse(link).query)["v"][0]
+    return parse_qs(urlparse(link).query)["v"][0]
 
 def valid_link(link):
     if 'youtube' in link:

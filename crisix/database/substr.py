@@ -32,9 +32,7 @@ def str_match(new, old):
     for new_li in new:
         substr = [(long_substr([new_li.text.strip().lower(), old_li.text.strip().lower()]), old_li) for old_li in old]
         match = max(substr, key=lambda x: len(x[0]))
-        print match
         diff_str = [new_li.text.lower().replace(match[0], '', 1).strip(), match[1].text.lower().replace(match[0], '', 1).strip()]
-        print diff_str
         if not (len(diff_str[0]) and len(diff_str[1])) or (float(len(long_substr(diff_str))) / len(diff_str[1])) > 0.4:
             match[1].text = new_li.text
         else:

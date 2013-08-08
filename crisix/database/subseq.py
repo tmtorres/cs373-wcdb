@@ -36,16 +36,20 @@ def li_match(new, old):
     old is an ElementTree of info in the database
     '''
     if not len(list(old)):
-        return new
+        return ''.join([tostring(li).strip() for li in new])
 
     for new_li in new:
         subseq = [(lcs(new_li.text.strip().lower(), old_li.text.strip().lower()), old_li) for old_li in old]
         match = max(subseq, key=lambda x: len(x[0]))
-        if (float(len(match[0])) / len(match[1].text)) > 0.4:
-            match[1].text = new_li.text
-        else:
-            ET.SubElement(old, 'li').text = new_li.text
-    return ''.join([v for v in [tostring(li).strip() for li in attr] if v not in c.help])
+        while(float(len(match[0])) / len(match[1].text)) > 0.4:
+            old.remove(match[1])
+            subseq = [(lcs(new_li.text.strip().lower(), old_li.text.strip().lower()), old_li) for old_li in old]
+            try:
+                match = max(subseq, key=lambda x: len(x[0]))
+            except ValueError:
+                break
+        ET.SubElement(old, 'li').text = new_li.text
+    return ''.join([tostring(li).strip() for li in old])
 
 def seq_match(new, old):
     '''
