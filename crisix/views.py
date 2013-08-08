@@ -25,6 +25,10 @@ def index(request):
     return render(request, 'index.html', {'crises' : crises, 'organizations' : organizations, 'people' : people})
 
 def get_datetime(e):
+    '''
+    e is an Entity
+    converts date & time to the formate (date, time) if applicable
+    '''
     out = []
     if hasattr(e, 'date') and e.date is not None:
         out += [str(e.date)]
@@ -33,17 +37,30 @@ def get_datetime(e):
     return ', '.join(out).strip(', ')
 
 def get_contact(e):
+    '''
+    e is an Entity
+    returns contact info if a link exists
+    '''
     if hasattr(e, 'contact') and len(e.contact) > 0:
         return ''.join([c for c in [v.attrib.get('href') for v in fromstring('<Contact>' + e.contact + '</Contact>')] if c is not None][:1])
     return ''
 
 def get_icon(e):
+    '''
+    e is an Entity
+    returns an icon for list view
+    if no icon exists, returns a stock image
+    '''
     t = generate_thumbs(e, 1)
     if not len(t):
-        return 'noimage.jpg'
+        return '../noimage.jpg'
     return t[0].thumb
 
 def display(request, etype = ''):
+    '''
+    etype is the type of an Entity
+    renders the list page with appropriate entities
+    '''
     e = None
     order = 'name'
     if 'q' in request.GET:
@@ -82,7 +99,12 @@ def display(request, etype = ''):
         })
 
 def display_more(request, etype = '', id = '', ctype = '') :
-
+    '''
+    etype is the type of an Entity
+    id is the unique id of an entity
+    ctype is the type of media to be displays
+    renders a page for supplemental media
+    '''
     if etype == 'organizations' :
         e = Organization.objects.get(id='ORG_' + str(id).upper())
     if etype == 'people' :
@@ -193,10 +215,9 @@ def generate_thumbs(e, n = 3):
     return hash.values()[:n]
 
 exclude = ('na', 'n/a', 'notapplicable', 'none', 'none.')
-
 def filter_field(text):
     '''
-    Filters bad fields/entries
+    Text is the entry to be dispalyed. Filters bad fields/entries
     '''
     if len(text) and not len(text[0]):
         return ''
@@ -206,6 +227,7 @@ def filter_field(text):
 
 def convert_li(li_field, delim = ' '):
     '''
+    li_field is a string with <li> tags
     Removes '<li>' tags from a string.
     '''
     return ''.join(li_field.split('<li>')).replace('</li>', delim).strip()
