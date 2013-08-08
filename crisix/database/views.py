@@ -103,6 +103,10 @@ def dictfetchall(cursor):
     ]
 
 def query(request):
+    if 'q' in request.GET:
+        queryno = int(request.GET['q'])
+        if queryno == 1:
+            return render(request, 'utility.html', {'view': 'query', 'sql': 'A query in plain English.', 'output': 'ename, dname'})
     return render(request, 'utility.html', {'view': 'query'})
 
 def download(request):
