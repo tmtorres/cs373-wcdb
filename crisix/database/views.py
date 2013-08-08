@@ -79,24 +79,6 @@ def runner(request):
 def test(request):
     return render(request, 'utility.html', {'view': 'test'})
 
-def queryrunner(request):
-    path = os.path.join(settings.BASE_DIR, 'crisix/wcdb-sql.sql')
-    queries = [line for line in open(path) if line.find("SELECT") is not -1 and line.find("--") is -1]
-    cursor = connection.cursor()
-    rawresult = '<pre style="background-color:#fff;">'
-    for item in queries:
-        rawresult += item + '</br>'
-        cursor.execute(item)
-        row = cursor.fetchall()
-        for elem in row:
-            if str(type(elem[0])).find('date') is not -1:
-                elemlist = list(elem)
-                elemlist[0] = str(elemlist[0])
-                rawresult += ' '.join(elemlist) + '<br>'
-                continue
-            rawresult += ' '.join(elem) + '<br>'
-    return HttpResponse(rawresult + '</pre>')
-
 def query(request):
     if 'q' in request.GET:
         queryno = int(request.GET['q'])
