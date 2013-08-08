@@ -45,8 +45,6 @@ def li_match(new, old):
     old_text = convert_li(''.join([tostring(li).strip() for li in old if li not in old_href.values()]))
     merged_text = seq_match(old_text, new_text)
     merged_href = dict(old_href.items() + new_href.items())
-    print merged_text
-    print merged_href
     return '<li>' + merged_text + '</li>' + ''.join([tostring(li).strip() for li in merged_href.values()])
 
 def seq_match(new, old):

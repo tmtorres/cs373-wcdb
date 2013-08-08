@@ -159,7 +159,7 @@ def valid_link(link):
 
 def valid_map(embed):
     if embed is not None:
-        if 'maps.google.com' in embed:
+        if 'maps.google' in embed:
             return embed + ('&output=embed' if '&output=embed' not in embed else '')
         elif 'bing.com/maps/embed/' in embed:
             return embed
