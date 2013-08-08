@@ -8,6 +8,8 @@ from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse
 from django.core import management
 from django.db.models import Q
+from django.db import connection, transaction
+
 
 from xml.etree.ElementTree import ParseError
 import xml.etree.ElementTree as ET
@@ -21,12 +23,13 @@ from lockdown.forms import AuthForm
 from forms import UploadFileForm
 from minixsv import pyxsval
 
-from models import Entity
+from models import *
 from upload import clear, validate, insert
 from download import get_crises, get_people, get_organizations
 from search import normalize_query, get_query, contextualize, relevance_sort
 import subprocess, re, operator
 from crisix.views import get_icon
+from unidecode import unidecode
 
 DISPLAY_TYPE = {'per': 'people', 'cri': 'crises', 'org': 'organizations'}
 def search(request):
@@ -72,6 +75,36 @@ def runner(request):
 
 def test(request):
     return render(request, 'utility.html', {'view': 'test'})
+
+def queryrunner(request):
+    path = os.path.join(settings.BASE_DIR, 'crisix/wcdb-sql.sql')
+    queries = [line for line in open(path) if line.find("SELECT") is not -1 and line.find("--") is -1]
+    cursor = connection.cursor()
+    rawresult = '<pre style="background-color:#fff;">'
+    for item in queries:
+        rawresult += '<br>' + item + '</br>'
+        cursor.execute(item)
+        row = cursor.fetchall()
+        for elem in row:
+            if str(type(elem[0])).find('date') is not -1:
+                elemlist = list(elem)
+                elemlist[0] = str(elemlist[0])
+                rawresult += ' '.join(elemlist) + '<br>'
+                continue
+            rawresult += ' '.join(elem) + '<br>'
+    return HttpResponse(rawresult + '</pre>')
+
+
+def dictfetchall(cursor):
+    "Returns all rows from a cursor as a dict"
+    desc = cursor.description
+    return [
+        dict(zip([col[0] for col in desc], row))
+        for row in cursor.fetchall()
+    ]
+
+def query(request):
+    return render(request, 'utility.html', {'view': 'query'})
 
 def download(request):
     root = ET.Element('WorldCrises')
