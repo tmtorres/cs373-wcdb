@@ -36,7 +36,6 @@
     <style type="text/css">
         img
         {
-            max-height:125px;
             padding-bottom:5px;
         }
         .bubble {
@@ -66,7 +65,9 @@
                     <div style="padding-left:0px;">
                         <div class="photo-content">
                             {% for w in images %}
-                            <a href="{{ w.embed }}"><img src="/media/thumbs/{{ w.thumb }}"></a>
+                            <a  class="lightview"
+                            data-lightview-group="a_lightview_pic"
+                            href="{{ w.embed }}"><img style="max-height:125px" src="/media/thumbs/{{ w.thumb }}"></a>
                             {% endfor %}
                         </div>
                     </div>

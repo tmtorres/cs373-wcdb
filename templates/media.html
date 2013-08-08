@@ -54,7 +54,9 @@
         <div class="outer">
 			<div class="inner">	
 		{% for i in images %}		
-				<a href="{{ i.embed }}"><img src="/media/thumbs/{{ i.thumb }}"></a>
+				<a class="lightview"
+                data-lightview-group="a_lightview_pic" 
+                href="{{ i.embed }}"><img style="width:176px"src="/media/thumbs/{{ i.thumb }}"></a>
 		{% endfor %}
                 <div class="clear"></div>
 			</div>
