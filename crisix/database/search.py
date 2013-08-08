@@ -38,6 +38,10 @@ def get_query(query_string, search_fields, op = operator.and_):
     return query
 
 def relevance_sort(query_string, search_fields, query_set):
+    '''
+    Tests what the user queries for against arguments required by search
+    Returns the resulting query set in sorted order
+    '''
     result_set = []
     for entry in query_set:
         substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
@@ -46,6 +50,10 @@ def relevance_sort(query_string, search_fields, query_set):
     return zip(*sorted(result_set, key=lambda x: x[0], reverse=True))[1] if len(result_set) else result_set
 
 def contextualize(summary, query_string):
+    '''
+    Formats summary section when a search query is made
+    Removes unnecessary characters, shortens length and tightens up anything extraneous to formatting conditions
+    '''
     context = re.search('(^| )(' + query_string + ')($|[ ?.,!])', summary, re.IGNORECASE)
     if context is None:
         context = ' '.join(summary.split()[:50])
