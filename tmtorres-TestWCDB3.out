@@ -1,0 +1,11 @@
+...........................................................................
+----------------------------------------------------------------------
+Ran 75 tests in 32.425s
+
+OK
+Creating test database for alias 'default'...
+
+
+
+
+Destroying test database for alias 'default'...
