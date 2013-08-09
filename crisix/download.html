@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>download</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/download.py">/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/download.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/mgt91/CS373/cs373-wcdb/crisix/database/download.py">/v/filer4b/v38q001/mgt91/CS373/cs373-wcdb/crisix/database/download.py</a></font></td></tr></table>
     <p><tt>#from&nbsp;models&nbsp;import&nbsp;*</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -18,16 +18,28 @@
     
 <tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="xml.etree.ElementTree.html">xml.etree.ElementTree</a><br>
-</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+</td><td width="25%" valign=top><a href="xml.dom.minidom.html">xml.dom.minidom</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#eeaa77">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
     
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><dl><dt><a name="-get_common"><strong>get_common</strong></a>(node, entity)</dt></dl>
- <dl><dt><a name="-get_crises"><strong>get_crises</strong></a>(root)</dt></dl>
- <dl><dt><a name="-get_organizations"><strong>get_organizations</strong></a>(root)</dt></dl>
- <dl><dt><a name="-get_people"><strong>get_people</strong></a>(root)</dt></dl>
+<td width="100%"><dl><dt><a name="-getCommon"><strong>getCommon</strong></a>(node, entity)</dt><dd><tt>node&nbsp;is&nbsp;the&nbsp;root&nbsp;of&nbsp;the&nbsp;entity&nbsp;we&nbsp;are&nbsp;parsing&nbsp;a&nbsp;common&nbsp;element&nbsp;to<br>
+entity&nbsp;defines&nbsp;which&nbsp;etype&nbsp;we&nbsp;are&nbsp;parsing&nbsp;for<br>
+getCommon&nbsp;parses&nbsp;the&nbsp;common&nbsp;elements&nbsp;from&nbsp;the&nbsp;ET&nbsp;to&nbsp;xml</tt></dd></dl>
+ <dl><dt><a name="-getCrises"><strong>getCrises</strong></a>(root)</dt><dd><tt>root&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;object<br>
+attributes&nbsp;are&nbsp;assigned&nbsp;to&nbsp;crisis&nbsp;element<br>
+ElementTree&nbsp;is&nbsp;creating&nbsp;subelements&nbsp;to&nbsp;store&nbsp;data&nbsp;from&nbsp;the&nbsp;database&nbsp;module<br>
+getCrises&nbsp;parses&nbsp;crises&nbsp;from&nbsp;the&nbsp;ElementTree&nbsp;to&nbsp;xml</tt></dd></dl>
+ <dl><dt><a name="-getOrganizations"><strong>getOrganizations</strong></a>(root)</dt><dd><tt>root&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;object<br>
+for&nbsp;each&nbsp;object&nbsp;in&nbsp;the&nbsp;module,&nbsp;attributes&nbsp;are&nbsp;assigned&nbsp;to&nbsp;specified&nbsp;organization&nbsp;element&nbsp;and<br>
+ElementTree&nbsp;is&nbsp;creating&nbsp;subelements&nbsp;to&nbsp;store&nbsp;data&nbsp;from&nbsp;the&nbsp;database&nbsp;module<br>
+getOrganizations&nbsp;parses&nbsp;orgs&nbsp;from&nbsp;the&nbsp;ElementTree&nbsp;to&nbsp;xml</tt></dd></dl>
+ <dl><dt><a name="-getPeople"><strong>getPeople</strong></a>(root)</dt><dd><tt>root&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;object<br>
+for&nbsp;each&nbsp;object&nbsp;in&nbsp;the&nbsp;module,&nbsp;attributes&nbsp;are&nbsp;assigned&nbsp;to&nbsp;specified&nbsp;person&nbsp;element&nbsp;and<br>
+ElementTree&nbsp;is&nbsp;creating&nbsp;subelements&nbsp;to&nbsp;store&nbsp;data&nbsp;from&nbsp;the&nbsp;database&nbsp;module<br>
+getPeople&nbsp;parses&nbsp;people&nbsp;from&nbsp;the&nbsp;ElementTree&nbsp;to&nbsp;xml</tt></dd></dl>
 </td></tr></table>
 </body></html>

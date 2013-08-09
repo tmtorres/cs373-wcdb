@@ -6,6 +6,12 @@ from xml.etree.ElementTree import tostring, fromstring
 from xml.etree.ElementTree import ElementTree
 
 def get_crises(root):
+    """
+    root is an ElementTree object
+    attributes are assigned to crisis element
+    ElementTree is creating subelements to store data from the database module
+    getCrises parses crises from the ElementTree to xml
+    """
     assert root is not None
     for c in Crisis.objects.all():
         node = ET.SubElement(root, 'Crisis')
@@ -41,6 +47,12 @@ def get_crises(root):
         get_common(node, c)
 
 def get_organizations(root):
+    """
+    root is an ElementTree object
+    for each object in the module, attributes are assigned to specified organization element and
+    ElementTree is creating subelements to store data from the database module
+    getOrganizations parses orgs from the ElementTree to xml
+    """
     assert root is not None
     for o in Organization.objects.all():
         node = ET.SubElement(root, 'Organization')
@@ -68,6 +80,12 @@ def get_organizations(root):
         get_common(node, o)
 
 def get_people(root):
+    """
+    root is an ElementTree object
+    for each object in the module, attributes are assigned to specified person element and
+    ElementTree is creating subelements to store data from the database module
+    getPeople parses people from the ElementTree to xml
+    """
     assert root is not None
     for p in Person.objects.all():
         node = ET.SubElement(root, 'Person')
@@ -91,6 +109,11 @@ def get_people(root):
         get_common(node, p)
 
 def get_common(node, entity):
+    """
+    node is the root of the entity we are parsing a common element to
+    entity defines which etype we are parsing for
+    getCommon parses the common elements from the ET to xml
+    """
     assert node is not None
     assert entity is not None
     attr = ET.SubElement(node, 'Common')
