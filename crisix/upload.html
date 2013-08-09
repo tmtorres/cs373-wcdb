@@ -1,0 +1,69 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module upload</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>upload</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/upload.py">/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/upload.py</a></font></td></tr></table>
+    <p><tt>#from&nbsp;models&nbsp;import&nbsp;*</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="datetime.html">datetime</a><br>
+</td><td width="25%" valign=top><a href="glob.html">glob</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="minixsv.pyxsval.html">minixsv.pyxsval</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-clear"><strong>clear</strong></a>(thumbs<font color="#909090">=True</font>)</dt><dd><tt>thumbs&nbsp;is&nbsp;a&nbsp;boolean<br>
+clears&nbsp;the&nbsp;database&nbsp;and&nbsp;all&nbsp;associated&nbsp;thumbnails&nbsp;if&nbsp;thumbs&nbsp;is&nbsp;true</tt></dd></dl>
+ <dl><dt><a name="-com_handler"><strong>com_handler</strong></a>(node, e)</dt><dd><tt>a&nbsp;handler&nbsp;for&nbsp;common&nbsp;elements<br>
+node&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;element&nbsp;object<br>
+e&nbsp;is&nbsp;the&nbsp;corresponding&nbsp;entity<br>
+inserts&nbsp;WebElements&nbsp;of&nbsp;the&nbsp;appropriate&nbsp;type</tt></dd></dl>
+ <dl><dt><a name="-cri_handler"><strong>cri_handler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;Element&nbsp;object<br>
+handles&nbsp;an&nbsp;Element&nbsp;with&nbsp;tag&nbsp;'Crisis'</tt></dd></dl>
+ <dl><dt><a name="-extract_ytid"><strong>extract_ytid</strong></a>(link)</dt><dd><tt>link&nbsp;is&nbsp;a&nbsp;URL&nbsp;of&nbsp;the&nbsp;form&nbsp;www.youtube.com<br>
+extracts&nbsp;and&nbsp;returns&nbsp;the&nbsp;video&nbsp;ID</tt></dd></dl>
+ <dl><dt><a name="-get_entity"><strong>get_entity</strong></a>(etype, eid)</dt><dd><tt>returns&nbsp;an&nbsp;Entity&nbsp;of&nbsp;etype&nbsp;with&nbsp;eid</tt></dd></dl>
+ <dl><dt><a name="-insert"><strong>insert</strong></a>(root)</dt><dd><tt>root&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;Element&nbsp;object<br>
+inserts&nbsp;the&nbsp;children&nbsp;of&nbsp;root&nbsp;into&nbsp;the&nbsp;database</tt></dd></dl>
+ <dl><dt><a name="-insert_elem"><strong>insert_elem</strong></a>(query, attr)</dt><dd><tt>query&nbsp;is&nbsp;a&nbsp;dict&nbsp;of&nbsp;items&nbsp;to&nbsp;be&nbsp;searched<br>
+attr&nbsp;is&nbsp;a&nbsp;dict&nbsp;of&nbsp;the&nbsp;attributes&nbsp;to&nbsp;be&nbsp;inserted&nbsp;if&nbsp;the&nbsp;query&nbsp;fails<br>
+creates&nbsp;a&nbsp;WebElement&nbsp;object</tt></dd></dl>
+ <dl><dt><a name="-org_handler"><strong>org_handler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;Element&nbsp;object<br>
+handles&nbsp;an&nbsp;Element&nbsp;with&nbsp;tag&nbsp;'Organization'</tt></dd></dl>
+ <dl><dt><a name="-per_handler"><strong>per_handler</strong></a>(node)</dt><dd><tt>node&nbsp;is&nbsp;an&nbsp;ElementTree&nbsp;Element&nbsp;object<br>
+handles&nbsp;an&nbsp;Element&nbsp;with&nbsp;tag&nbsp;'Person'</tt></dd></dl>
+ <dl><dt><a name="-subelements"><strong>subelements</strong></a>(attr)</dt><dd><tt>returns&nbsp;the&nbsp;subelements&nbsp;of&nbsp;an&nbsp;ElementTree&nbsp;element&nbsp;in&nbsp;string&nbsp;format</tt></dd></dl>
+ <dl><dt><a name="-urlstrip"><strong>urlstrip</strong></a>(url)</dt><dd><tt>url&nbsp;is&nbsp;a&nbsp;URL<br>
+normalizes&nbsp;the&nbsp;scheme</tt></dd></dl>
+ <dl><dt><a name="-valid_link"><strong>valid_link</strong></a>(link)</dt><dd><tt>link&nbsp;is&nbsp;a&nbsp;URL&nbsp;to&nbsp;a&nbsp;video<br>
+validates&nbsp;the&nbsp;link&nbsp;for&nbsp;embedding&nbsp;on&nbsp;a&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-valid_map"><strong>valid_map</strong></a>(embed)</dt><dd><tt>embed&nbsp;is&nbsp;a&nbsp;URL&nbsp;to&nbsp;a&nbsp;map<br>
+validates&nbsp;the&nbsp;link&nbsp;for&nbsp;embedding&nbsp;on&nbsp;a&nbsp;page</tt></dd></dl>
+ <dl><dt><a name="-validate"><strong>validate</strong></a>(file)</dt><dd><tt>file&nbsp;is&nbsp;an&nbsp;XML&nbsp;file<br>
+uses&nbsp;miniXsv&nbsp;to&nbsp;parse&nbsp;and&nbsp;validate&nbsp;the&nbsp;XML&nbsp;file<br>
+returns&nbsp;the&nbsp;root&nbsp;of&nbsp;an&nbsp;ElementTree&nbsp;object</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>settings</strong> = &lt;django.conf.LazySettings object&gt;</td></tr></table>
+</body></html>

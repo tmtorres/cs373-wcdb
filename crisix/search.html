@@ -1,0 +1,42 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module search</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>search</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/search.py">/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/search.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="operator.html">operator</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-contextualize"><strong>contextualize</strong></a>(summary, query_string)</dt><dd><tt>Formats&nbsp;summary&nbsp;section&nbsp;when&nbsp;a&nbsp;search&nbsp;query&nbsp;is&nbsp;made<br>
+Removes&nbsp;unnecessary&nbsp;characters,&nbsp;shortens&nbsp;length&nbsp;and&nbsp;tightens&nbsp;up&nbsp;anything&nbsp;extraneous&nbsp;to&nbsp;formatting&nbsp;conditions</tt></dd></dl>
+ <dl><dt><a name="-get_query"><strong>get_query</strong></a>(query_string, search_fields, op<font color="#909090">=&lt;built-in function and_&gt;</font>)</dt><dd><tt>Returns&nbsp;a&nbsp;query,&nbsp;that&nbsp;is&nbsp;a&nbsp;combination&nbsp;of&nbsp;Q&nbsp;objects.&nbsp;That&nbsp;combination<br>
+aims&nbsp;to&nbsp;search&nbsp;keywords&nbsp;within&nbsp;a&nbsp;model&nbsp;by&nbsp;testing&nbsp;the&nbsp;given&nbsp;search&nbsp;fields.</tt></dd></dl>
+ <dl><dt><a name="-normalize_query"><strong>normalize_query</strong></a>(query_string, findterms<font color="#909090">=&lt;built-in method findall of _sre.SRE_Pattern object&gt;</font>, normspace<font color="#909090">=&lt;built-in method sub of _sre.SRE_Pattern object&gt;</font>)</dt><dd><tt>Splits&nbsp;the&nbsp;query&nbsp;string&nbsp;in&nbsp;invidual&nbsp;keywords,&nbsp;getting&nbsp;rid&nbsp;of&nbsp;unecessary&nbsp;spaces<br>
+and&nbsp;grouping&nbsp;quoted&nbsp;words&nbsp;together.<br>
+Example:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;<a href="#-normalize_query">normalize_query</a>('&nbsp;&nbsp;some&nbsp;random&nbsp;&nbsp;words&nbsp;"with&nbsp;&nbsp;&nbsp;quotes&nbsp;&nbsp;"&nbsp;and&nbsp;&nbsp;&nbsp;spaces')<br>
+['some',&nbsp;'random',&nbsp;'words',&nbsp;'with&nbsp;quotes',&nbsp;'and',&nbsp;'spaces']</tt></dd></dl>
+ <dl><dt><a name="-relevance_sort"><strong>relevance_sort</strong></a>(query_string, search_fields, query_set)</dt><dd><tt>Tests&nbsp;what&nbsp;the&nbsp;user&nbsp;queries&nbsp;for&nbsp;against&nbsp;arguments&nbsp;required&nbsp;by&nbsp;search<br>
+Returns&nbsp;the&nbsp;resulting&nbsp;query&nbsp;set&nbsp;in&nbsp;sorted&nbsp;order</tt></dd></dl>
+</td></tr></table>
+</body></html>

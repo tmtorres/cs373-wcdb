@@ -11,16 +11,6 @@ def long_substr(data):
                     substr = data[0][i:i+j]
     return substr
 
-'''
-def relevance_sort(query_string, search_fields, query_set):
-    result_set = []
-    for entry in query_set:
-        substr = [long_substr([getattr(entry, field).lower(), query_string.lower()]) for field in search_fields]
-        match = float(max([len(s) for s in substr])) / len(query_string)
-        result_set += [(match, entry)]
-    return zip(*sorted(result_set, key=lambda x: x[0], reverse=True))[1] if len(result_set) else result_set
-'''
-
 def str_match(new, old):
     '''
     new is an ElementTree of new content to be added

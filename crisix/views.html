@@ -1,0 +1,68 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module views</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>views</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/views.py">/v/filer4b/v38q001/ejenioc/cs373-wcdb/crisix/database/views.py</a></font></td></tr></table>
+    <p><tt>import&nbsp;sys,&nbsp;glob,&nbsp;os<br>
+&nbsp;<br>
+from&nbsp;django.core.files.storage&nbsp;import&nbsp;default_storage<br>
+from&nbsp;django.core.files.base&nbsp;import&nbsp;ContentFile<br>
+from&nbsp;django.conf&nbsp;import&nbsp;settings<br>
+from&nbsp;django.http&nbsp;import&nbsp;HttpResponse,&nbsp;HttpResponseRedirect<br>
+from&nbsp;django.shortcuts&nbsp;import&nbsp;render,&nbsp;redirect<br>
+from&nbsp;django.template.response&nbsp;import&nbsp;TemplateResponse<br>
+from&nbsp;django.core&nbsp;import&nbsp;management<br>
+from&nbsp;django.db.models&nbsp;import&nbsp;Q<br>
+from&nbsp;django.db&nbsp;import&nbsp;connection,&nbsp;transaction<br>
+&nbsp;<br>
+&nbsp;<br>
+from&nbsp;xml.etree.ElementTree&nbsp;import&nbsp;ParseError<br>
+import&nbsp;xml.etree.ElementTree&nbsp;as&nbsp;ET<br>
+from&nbsp;xml.etree.ElementTree&nbsp;import&nbsp;tostring,&nbsp;fromstring<br>
+from&nbsp;xml.etree.ElementTree&nbsp;import&nbsp;ElementTree<br>
+from&nbsp;xml.dom&nbsp;import&nbsp;minidom<br>
+&nbsp;<br>
+from&nbsp;lockdown.decorators&nbsp;import&nbsp;lockdown<br>
+from&nbsp;lockdown.forms&nbsp;import&nbsp;AuthForm<br>
+&nbsp;<br>
+from&nbsp;forms&nbsp;import&nbsp;UploadFileForm<br>
+from&nbsp;minixsv&nbsp;import&nbsp;pyxsval<br>
+&nbsp;<br>
+from&nbsp;models&nbsp;import&nbsp;*<br>
+from&nbsp;upload&nbsp;import&nbsp;clear,&nbsp;validate,&nbsp;insert<br>
+from&nbsp;download&nbsp;import&nbsp;get_crises,&nbsp;get_people,&nbsp;get_organizations<br>
+from&nbsp;search&nbsp;import&nbsp;normalize_query,&nbsp;get_query,&nbsp;contextualize,&nbsp;relevance_sort<br>
+import&nbsp;subprocess,&nbsp;re,&nbsp;operator<br>
+from&nbsp;crisix.views&nbsp;import&nbsp;get_icon</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-capture"><strong>capture</strong></a>(request, process)</dt></dl>
+ <dl><dt><a name="-download"><strong>download</strong></a>(request)</dt><dd><tt>download&nbsp;renders&nbsp;a&nbsp;page&nbsp;for&nbsp;the&nbsp;export&nbsp;page&nbsp;within&nbsp;utilities</tt></dd></dl>
+ <dl><dt><a name="-query"><strong>query</strong></a>(request)</dt></dl>
+ <dl><dt><a name="-runner"><strong>runner</strong></a>(request)</dt></dl>
+ <dl><dt><a name="-search"><strong>search</strong></a>(request)</dt><dd><tt>Takes&nbsp;in&nbsp;a&nbsp;request&nbsp;in&nbsp;the&nbsp;form&nbsp;?q=&nbsp;&nbsp;and&nbsp;searches&nbsp;the&nbsp;database&nbsp;for&nbsp;a&nbsp;match.<br>
+AND&nbsp;entries&nbsp;for&nbsp;multiword&nbsp;search&nbsp;are&nbsp;displayed&nbsp;before&nbsp;OR&nbsp;entries</tt></dd></dl>
+ <dl><dt><a name="-test"><strong>test</strong></a>(request)</dt><dd><tt>test&nbsp;renders&nbsp;a&nbsp;page&nbsp;when&nbsp;the&nbsp;unit&nbsp;tests&nbsp;are&nbsp;ran</tt></dd></dl>
+ <dl><dt><a name="-upload"><strong>upload</strong></a>(request)</dt><dd><tt>upload&nbsp;renders&nbsp;a&nbsp;page&nbsp;for&nbsp;the&nbsp;import&nbsp;page&nbsp;within&nbsp;utilities</tt></dd></dl>
+ <dl><dt><a name="-utility"><strong>utility</strong></a>(request)</dt><dd><tt>utility&nbsp;returns&nbsp;a&nbsp;rendered&nbsp;display&nbsp;of&nbsp;our&nbsp;utility&nbsp;page</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DISPLAY_TYPE</strong> = {'cri': 'crises', 'org': 'organizations', 'per': 'people'}<br>
+<strong>newlines</strong> = ['<font color="#c040c0">\n</font>', '<font color="#c040c0">\r\n</font>', '<font color="#c040c0">\r</font>']</td></tr></table>
+</body></html>

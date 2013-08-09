@@ -1,0 +1,273 @@
+Database
+information_schema
+cs373_ejenioc
+sql_cs373_ejenioc
+Tables_in_cs373_ejenioc
+auth_group
+auth_group_permissions
+auth_message
+auth_permission
+auth_user
+auth_user_groups
+auth_user_user_permissions
+database_crisis
+database_crisis_organizations
+database_crisis_people
+database_entity
+database_organization
+database_organization_people
+database_person
+database_webelement
+django_admin_log
+django_content_type
+django_session
+django_site
+manage_crisis
+manage_crisis_organizations
+manage_crisis_people
+manage_entity
+manage_organization
+manage_organization_people
+manage_person
+manage_webelement
+
+
+database_entity_columns
+id
+name
+kind
+location
+summary
+created
+
+
+database_crisis_columns
+entity_ptr_id
+date
+time
+himpact
+eimpact
+resources
+help
+
+
+database_crisis_organizations_columns
+id
+crisis_id
+organization_id
+
+
+database_crisis_people_columns
+id
+crisis_id
+person_id
+
+
+Get Celebrities (Actors, Musicians, Athletes) related to Crises/Orginizations
+Get Celebrities (Actors, Musicians, Athletes) related to Crises/Orginizations
+id	kind	name
+PER_LALOCA	Celebrity	Ricky Martin
+PER_MAGICJ	Basketball Player	Magic Johnson
+PER_MRBONO	Singer In Group U2	Bono
+
+
+Get all Crises/Organizations/People who have feeds
+Get all Crises/Organizations/People who have feeds
+entity_id	name
+CRI_AIDSHI	AIDS
+PER_ERDOGA	Recep Tayyip Erdogan
+PER_MAGICJ	Magic Johnson
+PER_NAOKAN	Naoto Kan
+PER_BROBMA	Barack Obama
+ORG_UNDWAY	United Way
+ORG_SNQKRF	Sichuan Quake Relief
+ORG_NLTLCL	National Transitional Council
+ORG_AFIUNI	African Union
+ORG_TWITER	Twitter
+ORG_CDCPRE	Centers for Disease Control and Prevention
+ORG_USGEOS	United States Geological Survey
+ORG_WHORGN	World Health Organization
+ORG_UNNSCL	United Nations Security Council
+ORG_EXXSHI	Exxon Shipping Company
+CRI_NRINFL	2013 Northern India Floods
+CRI_EHAITI	2010 Haiti Earthquake
+CRI_CYCNAR	Cyclone Nargis
+CRI_IOTSUN	Indian Ocean Tsunami and Earthquake (2004)
+CRI_USDAIP	US Drone Attacks in Pakistan
+CRI_UEGYPT	Political Unrest in Egypt
+CRI_NORWAY	2011 Norway attacks
+PER_MNSNGH	Manmohan Singh
+PER_BGATES	Bill Gates
+PER_JANEGE	Jan Egeland
+PER_GEDAPE	General David Petraeus
+PER_HOSMUB	Hosni Mubarak
+PER_JENSTO	Jens Stoltenberg
+PER_MRBONO	Bono
+PER_MICHEL	Michel Joseph Martelly
+ORG_GFFATM	The Global Fund
+ORG_PMRLFD	Prime Minister's Relief Fund
+ORG_UNOCHA	United Nations Office for the Coordination of Humanitarian Affairs
+ORG_UNITED	United Nations
+ORG_BAMGFN	Bill and Melinda Gates Foundation
+ORG_NBNETS	Nothing But Nets
+ORG_CEINAG	Central Intelligence Agency
+ORG_SCOTAF	Supreme Council of the Armed Forces
+ORG_LABPAR	Labour Party (Norway)
+ORG_DIEMCO	Disasters Emergency Committee
+
+
+Get the name and location of all crises related to natural disasters
+Get the name and location of all crises related to natural disasters
+kind	name	location
+Earthquake	2008 Sichuan Earthquake	<li>Wenchuan County, Sichuan</li><li>Sichuan Province</li>
+Epidemic	AIDS	<li>Worldwide</li>
+Natural Disaster	2011 Tohoku Earthquake and Tsunami	<li>Japan</li>
+Natural Disaster	2010 Haiti Earthquake	<li>Southern Haiti</li><li>Dominican Republic</li>
+Natural Disaster	Hurricane Sandy	<li>New York Metropolitan Area</li>
+Natural Disaster	2010 Copiago mining accident	<li>Copiapo In Northern Chile, South America</li>
+Natural Disaster	Arizona Wildfires	<li>Yarnell, Arizona</li>
+Natural Disaster	2013 Northern India Floods	<li>Uttarakhand, India</li><li>Himachal Pradesh, India</li><li>Nepal</li>
+Natural Disaster	2010 Haiti Earthquake	<li>Port-Au-Prince, Haiti</li><li>Leogane, Haiti</li><li>Tabarre, Haiti</li><li>Petionville, Haiti</li><li>Jacmel, Haiti</li><li>Petit Goave, Haiti</li><li>Grand Goave, Haiti</li><li>Gressier, Haiti</li>
+Natural Disaster	Cyclone Nargis	<li>Bangladesh</li><li>Burma</li><li>India</li><li>Sri Lanka</li>
+Epidemic	Malaria	<li>Worldwide, Tropical Climates.</li>
+Natural Disaster	Indian Ocean Tsunami and Earthquake (2004)	<li>Sumatra, Indonesia</li><li>Tamil Nadu, India</li><li>Andhra Pradesh, India</li><li>Andaman And Nicobar Islands, India</li><li>Sri Lanka</li><li>Maldives</li>
+
+
+People involved in crises that happened in China/Japan
+People involved in crises that happened in China/Japan
+person_id	name
+PER_CYLUNG	CY Leung
+PER_CEOTEP	Masataka Shimizu
+PER_NAOKAN	Naoto Kan
+
+
+Crises that are tied to a president
+Crises that are tied to a president
+crisis_id	name
+CRI_AIDSHI	AIDS
+CRI_BMBOMB	Boston Marathon Bombings
+CRI_CHINAD	Democracy in China
+CRI_EHAITI	2010 Haiti Earthquake
+CRI_HAIEAR	2010 Haiti Earthquake
+CRI_HAIEAR	2010 Haiti Earthquake
+CRI_HUMTRA	Human trafficking
+CRI_HURSAN	Hurricane Sandy
+CRI_NRMACF	Northern Mali Conflict
+CRI_SCHERQ	2008 Sichuan Earthquake
+CRI_SYCLWR	Syrian Civil War
+CRI_UEGYPT	Political Unrest in Egypt
+CRI_USDAIP	US Drone Attacks in Pakistan
+
+
+All crises in alphabetical order by name of crisis (no duplicates)
+All crises in alphabetical order by name of crisis (no duplicates)
+id	name
+CRI_MUMBAI	2008 Mumbai attacks
+CRI_RRCOMP	2008 Raid on Religious Compound
+CRI_SCHERQ	2008 Sichuan Earthquake
+CRI_COPMAC	2010 Copiago mining accident
+CRI_HAIEAR	2010 Haiti Earthquake
+CRI_EHAITI	2010 Haiti Earthquake
+CRI_NORWAY	2011 Norway attacks
+CRI_TOHOQU	2011 Tohoku Earthquake and Tsunami
+CRI_AURORA	2012 Aurora Shooting
+CRI_ALABUN	2013 Alabama bunker hostage crisis
+CRI_NRINFL	2013 Northern India Floods
+CRI_TUKPRO	2013 Protests in Turkey
+CRI_AIDSHI	AIDS
+CRI_AZWILD	Arizona Wildfires
+CRI_BMBOMB	Boston Marathon Bombings
+CRI_CYCNAR	Cyclone Nargis
+CRI_CHINAD	Democracy in China
+CRI_EXXVAL	Exxon Valdez Oil Spill
+CRI_FUKUSH	Fukushima Daiichi Nuclear Disaster
+CRI_FINCRI	Global financial crisis
+CRI_HUMTRA	Human trafficking
+CRI_HURSAN	Hurricane Sandy
+CRI_IOTSUN	Indian Ocean Tsunami and Earthquake (2004)
+CRI_LYCLWR	Libyan Civil War
+CRI_LRACON	LRA Conflict
+CRI_MALARI	Malaria
+CRI_NKCONF	North Korean Conflict
+CRI_NRMACF	Northern Mali Conflict
+CRI_OSLOSH	Oslo Shootings
+CRI_PIRATE	Piracy in Somalia
+CRI_EGYPTR	Political Unrest in Egypt
+CRI_UEGYPT	Political Unrest in Egypt
+CRI_SHESSG	Sandy Hook Elementary School Shooting
+CRI_BFACTO	Savar Building Collapse
+CRI_SPTMEL	September 11th
+CRI_SCMARI	South China Maritime Conflicts
+CRI_SSCHAD	Space Shuttle Challenger Disaster
+CRI_SYCLWR	Syrian Civil War
+CRI_USDAIP	US Drone Attacks in Pakistan
+CRI_ZMBDMD	Zimbabwe Conflict Diamonds
+
+
+Crises whose kind value contains the word 'shooting'
+Crises whose kind value contains the word 'shooting'
+id	kind	name
+CRI_SHESSG	Spree Shooting	Sandy Hook Elementary School Shooting
+CRI_AURORA	Mass Shooting	2012 Aurora Shooting
+CRI_ALABUN	Mass Shooting	2013 Alabama bunker hostage crisis
+
+
+All people with first names that start with letters A through P (no duplicates)
+All people with first names that start with letters A through P (no duplicates)
+id	name
+PER_ADMLNZ	Adam Lanza
+PER_ABDALA	Ahmedou Ould-Abdallah
+PER_AJKASA	Ajmal Kasab
+PER_AMTOTO	Amadou Toumani Touré
+PER_ANDVIK	Anders Behring Breivik
+PER_BROBMA	Barack Obama
+PER_BGATES	Bill Gates
+PER_MRBONO	Bono
+PER_CAPRIC	Captain Richard Phillips
+PER_CYLUNG	CY Leung
+PER_BOMBER	Dzhokhar and Tamerlan Tsarnaev
+PER_COPETE	Enrique Pena Nieto
+PER_GEDAPE	General David Petraeus
+PER_HOSMUB	Hosni Mubarak
+PER_HUJNTO	Hu Jintao
+PER_JAMHOL	James Eagan Holmes
+PER_JANEGE	Jan Egeland
+PER_JEABEL	Jean-Max Bellerive
+PER_JENSTO	Jens Stoltenberg
+PER_JDYKES	Jimmy Lee Dykes
+PER_JKERRY	John Kerry
+PER_JOSHAZ	Joseph Hazelwood
+PER_JONGUN	Kim Jong-un
+PER_LUISUR	Luis Urzúa
+PER_MAGICJ	Magic Johnson
+PER_MNSNGH	Manmohan Singh
+PER_CEOTEP	Masataka Shimizu
+PER_MICHEL	Michel Joseph Martelly
+PER_MMORSI	Mohamed Morsi
+PER_MURGDI	Muammar Gaddafi
+PER_NAOKAN	Naoto Kan
+PER_OSAMAB	Osama Bin Laden
+PER_POPEFR	Pope Francis
+
+
+Show the name and economic impact of natural disasters occuring after 2001
+Show the name and economic impact of natural disasters occuring after 2001
+date	kind	name	eimpact
+2004-12-26	Natural Disaster	Indian Ocean Tsunami and Earthquake (2004)	<li>Damages worth 5.59 Billion USD Loss of property worth 4.33 Billion USD Total economic impact worth 9.93 billion USD</li>
+2008-04-27	Natural Disaster	Cyclone Nargis	<li>Damage was estimated at over US$10 billion, which made it the most damaging cyclone ever recorded in this basin.</li>
+2008-05-12	Earthquake	2008 Sichuan Earthquake	<li>On November 6, 2008, the central government announced that it would spend 1 trillion yuan (about $146.5 billion) over the next three years to rebuild areas ravaged by the earthquake, as part of the Chinese economic stimulus program.</li>
+2010-01-12	Natural Disaster	2010 Haiti Earthquake	<li>Hundreds of thousands of buildings plummeted to the ground including homes, the presidential palace, and even the United Nations Peacekeeping Mission. The earthquake resulted in 105,000 homes being destroyed, causing $2.3 billion in damage and the nation being covered in rubble (Haiti). The government of Haiti estimated that 250,000 residences and 30,000 commercial buildings had collapsed or were severely damaged.</li>
+2010-01-12	Natural Disaster	2010 Haiti Earthquake	<li>Over 188,383 houses were badly damaged and 105,000 were destroyed. 1,500,000 people became homeless. 4,000 schools were damaged or destroyed. 60% of Government and administrative buildings, 80% of schools in Port-au-Prince and 60% of schools in the South and West Departments were destroyed or damaged After the quake there were 19 million cubic metres of rubble and debris in Port-au-Prince,  enough to fill a line of shipping containers stretching end to end from London to Beirut.</li>
+2010-08-05	Natural Disaster	2010 Copiago mining accident	<li>$20 Million dollars were spent on the several rescue plans implemented in an attempt to save the miners, with a third of that coming from private donations and the rest coming from the government and mine owners.</li>
+2011-03-11	Natural Disaster	2011 Tohoku Earthquake and Tsunami	<li>Early estimates placed insured losses from the earthquake alone at US$14.5 to $34.6 billion. By April 12th, 2011 the Japanese government estimated that the cost of just the direct material damage could exceed &#165;25 trillion ($300 billion). The World Bank's estimated economic cost was US$235 billion, making it the costliest natural disaster in world history.</li>
+2012-10-29	Natural Disaster	Hurricane Sandy	<li>Estimates as of June 2013 assess damage to have been over $68 billion (2013 USD), a total surpassed only by Hurricane Katrina. The severe and widespread damage the storm caused in the United States, as well as its unusual merge with a frontal system, resulted in the nicknaming of the hurricane by the media and several organizations of the U.S. government "Superstorm Sandy". The storm caused about $100 million (2012 USD) in damage in Jamaica, and around $2 billion (2012 USD) in damage in Cuba.</li>
+2013-06-14	Natural Disaster	2013 Northern India Floods	<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013. Estimates over 500 Billion INR (10 Billion USD)</li>
+2013-06-28	Natural Disaster	Arizona Wildfires	<li>Mostly negligible.</li>
+
+
+Crises that took place in Texas (Location data should contain 'Texas' or 'TX')
+Crises that took place in Texas (Location data should contain 'Texas' or 'TX')
+id	name	location
+CRI_RRCOMP	2008 Raid on Religious Compound	<li>Eldorado, Texas United States</li>
+
+
