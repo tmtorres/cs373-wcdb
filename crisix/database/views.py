@@ -57,6 +57,9 @@ def search(request):
     } for e in found_entries]})
 
 def utility(request):
+    """
+    utility returns a rendered display of our utility page
+    """
     return render(request, 'utility.html', {'view': 'index'})
 
 newlines = ['\n', '\r\n', '\r']
@@ -77,6 +80,9 @@ def runner(request):
     return HttpResponse((str(c) for c in capture(request, process)))
 
 def test(request):
+    """
+    test renders a page when the unit tests are ran
+    """
     return render(request, 'utility.html', {'view': 'test'})
 
 def query(request):
@@ -179,6 +185,9 @@ def query(request):
     return render(request, 'utility.html', {'view': 'query'})
 
 def download(request):
+    """
+    download renders a page for the export page within utilities
+    """
     root = ET.Element('WorldCrises')
     get_crises(root)
     get_people(root)
@@ -190,6 +199,9 @@ def download(request):
 
 @lockdown()
 def upload(request):
+    """
+    upload renders a page for the import page within utilities
+    """
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
