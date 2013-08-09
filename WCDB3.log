@@ -1,0 +1,1368 @@
+commit e0a2b8e25297c7a7ce635c5beb49360eb5bd63d8
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 20:59:26 2013 -0500
+
+    added dump file
+
+commit 293991d5998f4a26a252da272407d716a5b596d7
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 20:20:48 2013 -0500
+
+    Pydoc HTMLs added
+
+commit 99035c8f9687f2f1d45129a70545c39cc15decd4
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 19:48:27 2013 -0500
+
+    added documentation to database.views
+
+commit 8e6598fedde7e61e4f03b4df200a1266a21afb34
+Merge: 02cc805 314997c
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 19:12:24 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 02cc805c161ec2835c7c8d2f074395b743da733c
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 19:12:01 2013 -0500
+
+    Adding unit tests results
+
+commit 314997ca11ed21694ace5acd2e6298e62c924e69
+Merge: db3dc42 049e19c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 18:23:34 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit db3dc4291d390ec5c6122a1a9cf881303a89d07b
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 18:23:11 2013 -0500
+
+    added logo
+
+commit 049e19c1dec65d51497bc10f4ca58527510a08a1
+Merge: d49909e 04bf643
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 18:20:22 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit d49909e81a29aad818b6f32b198c01e034292cb5
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 18:19:59 2013 -0500
+
+    home pictures
+
+commit 04bf643861cf96fb8144de9cae648c7598c644b4
+Merge: fdcfc2d bf8bf65
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 18:09:56 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit fdcfc2d74918e937bcbe59f971196bcd5783f249
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 18:09:36 2013 -0500
+
+    Changed index page.
+
+commit bf8bf65996cf90716dbcb99840a1add34ade8623
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Aug 8 17:34:42 2013 -0500
+
+    further documentation
+
+commit 22dfa9860d460582dd2f46e91ddfc2186caf887e
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Aug 8 17:14:12 2013 -0500
+
+    search, query and other unittests updated
+
+commit 574315044cb59958ad9b006fc9f13441cc49b179
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 17:03:06 2013 -0500
+
+    Final XML updates ready to deploy
+
+commit 3fd2c0dcd2f121fd9a65459a4b052912dcb325ad
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Thu Aug 8 16:31:59 2013 -0500
+
+    search working in unittests
+
+commit bfa0af6634ea9d99291d0a2e857ffaa50bbee9a4
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 16:05:46 2013 -0500
+
+    SQL URL fixed
+
+commit 0f25b8286de9e48255a4cb1e8b1fa98a57697268
+Merge: 556f112 360ab94
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 16:03:27 2013 -0500
+
+    Merge branch 'heroku' of github.com:tmtorres/cs373-wcdb into heroku
+
+commit 556f112fa8280ebdc44c5f95e6741d490126ea66
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 16:01:55 2013 -0500
+
+    SQL views complete
+
+commit 360ab94187082a6c599590831aa8a9e53291910a
+Merge: 34c3f3a aa4a1ff
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 15:45:55 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 34c3f3a9e02864897a17e738a500e9dba1eab96a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 15:45:25 2013 -0500
+
+    Fixed line break issue.
+
+commit aa4a1ff2204d6d82db37d567c702356b65fd26ee
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Thu Aug 8 15:39:46 2013 -0500
+
+    fixed tests
+
+commit 05c9c43c39fe53851b1ba9d524432953adc7c6bd
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 15:32:53 2013 -0500
+
+    Fixed map bug.
+
+commit 73cd0807cc332487ce4a1295be4dc5205af18b0c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 15:27:25 2013 -0500
+
+    Started query page.
+
+commit ad1a9bb7058a956c8e037c79649266b348ef07e7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 14:50:37 2013 -0500
+
+    Wrapping up a few last minute changes.
+
+commit b15fbd945e90cde04b02a405ce17f8e66bf3ef6a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 14:25:09 2013 -0500
+
+    Adding extra comments for clarity.
+
+commit 18db98b49d52c5e75d80c9ee555a4781aaf26f26
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 14:12:18 2013 -0500
+
+    Minor bug fixes before submission.
+
+commit 20c857679df8f82b90227d6af6bf5f84ce4e3bb6
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 13:58:53 2013 -0500
+
+    Minor bug fixes.
+
+commit c5ebd97ac7ba39702d7328f8d64e6f6fafa27b33
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 06:15:02 2013 -0500
+
+    Small fixes.
+
+commit 5d79638f1044a93bea15abfb22138c5e15ace768
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 06:06:30 2013 -0500
+
+    Started query page
+
+commit 22e2c77127ff2612baa85629cb5db7c9c672f717
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 04:19:54 2013 -0500
+
+    Fixed all imports.
+
+commit 89469aa130fe393a5bb0634016dbf4a27566bab0
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 03:16:25 2013 -0500
+
+    Squashed several bugs.
+
+commit 8a768b506b54d04a22be71b4787eb59bd0ec4e74
+Merge: 431eee9 d13c33b
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 02:40:39 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 431eee91697a5681fbbca8f70022fd5fd870a535
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 02:40:17 2013 -0500
+
+    Finished ways to help
+
+commit d13c33b7e3cf286dd9caa1c9492554b108a238b5
+Merge: 91412af d24b023
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 00:55:26 2013 -0500
+
+    Merge branch 'heroku' of github.com:tmtorres/cs373-wcdb into heroku
+
+commit 91412afdb9c91e0a7f25647d98319d29e1405e55
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Thu Aug 8 00:55:04 2013 -0500
+
+    SQL view and template complete
+
+commit da1fbb8d012aa632955e0c3ce82d0636cd7b4169
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 8 00:31:50 2013 -0500
+
+    Merged ways to help.
+
+commit d24b023a43f121d562ee885cdc214790e097e46d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 23:33:12 2013 -0500
+
+    Minor improvements.
+
+commit f262aae8fb3bcdd599fcdb65b27abd73fd61f77f
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Aug 7 22:07:16 2013 -0500
+
+    updated teams xml's
+
+commit c6586457fbdac9a1702965a463b64a68639c3c89
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 21:44:02 2013 -0500
+
+    added lightview animation to files
+
+commit 74aff83947604e187ca198373e907425229a9b20
+Merge: 7c381ea 3cc67dc
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Aug 7 21:12:35 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 7c381ead30231230f159afb0615dcef0b2f56dfb
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Aug 7 21:11:54 2013 -0500
+
+    updated team xml's
+
+commit 3cc67dc015444717e413733f19fa25b2ca810b37
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 20:59:42 2013 -0500
+
+    move fancybox script link to end of body
+
+commit 0dc8340f6a395bb8434bf975f2d9c52a19190553
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 20:54:15 2013 -0500
+
+    Add fancybox links to layout file
+
+commit 06db2e95fd0ed1345b9595fbd3f644e48e4e4d5e
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 20:49:17 2013 -0500
+
+    Add fancybox files
+
+commit 9bcb8daf51ba999db5bd14212484b2b96a20b9c8
+Merge: 6f07442 e99eaf7
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Aug 7 20:24:11 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 6f07442b29e05f4b6c57460e0ff946c538497438
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Aug 7 20:23:43 2013 -0500
+
+    More unit tests added
+
+commit e99eaf7ef19a75936991248fa97503d9e24906cf
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 20:08:35 2013 -0500
+
+    Add lightview links to base files
+
+commit 3ab11268c6cd88276cd629ba7eed2dae27a9a69e
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Wed Aug 7 19:49:46 2013 -0500
+
+    Add lightview files
+
+commit 6373622346cc25230073d493af7f9d44a7a228e8
+Merge: 7362088 f1eb767
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Aug 7 18:28:28 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 7362088ef3c037efc77ce25984b597bef1b14a89
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Wed Aug 7 18:27:56 2013 -0500
+
+    Unit tests all working
+
+commit f1eb7676154a77f758a4529e25b808a6f22f2ede
+Merge: eab7c7a c652182
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 18:22:19 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit eab7c7ad26f1903b5b43f06144e70f327f22d134
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 18:22:02 2013 -0500
+
+    Fixed view page.
+
+commit a7262994a9ed9c1c2bc83f4adc971019c9877d2c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 18:18:58 2013 -0500
+
+    Centered photos
+
+commit c65218253b72ad60a3254f29e814e261850b12a4
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Wed Aug 7 17:56:27 2013 -0500
+
+    SQL statements modified
+
+commit fb193c265d50214dbd15d3a06e2bc7b9b1749c2a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 17:47:34 2013 -0500
+
+    Fixed stuff.
+
+commit fb42129af72a8f3182a3fb74f1c4828a513b9e77
+Merge: d535451 298fee9
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Wed Aug 7 16:35:43 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit d535451325870107511ec4e0376329b1716b98a2
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Wed Aug 7 16:35:22 2013 -0500
+
+    uploaded media.html
+
+commit 298fee9e77398053581e803a6195a8970023f4e9
+Merge: 2e1d4f3 6924589
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 16:32:42 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 2e1d4f3c1a443c8bce014e4dd2e57ee257938e9f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Aug 7 16:32:20 2013 -0500
+
+    Fixed some bugs.
+
+commit 6924589a645619bca1aea2583efae7b5e061112b
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Wed Aug 7 16:29:05 2013 -0500
+
+    Fixed media pages
+
+commit 37e30e8523b890687cb4acca3cb4c849a5d35127
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Wed Aug 7 00:21:26 2013 -0500
+
+    adding new XML for eddies team that may validate
+
+commit 0e63224e41473eac100d68f2bd5943eec82bc9fb
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 23:58:11 2013 -0500
+
+    Finished multi-word search with OR
+
+commit 565f5a58c07cb4f5e8db2cbed8c4378fdbe22bb9
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 21:39:38 2013 -0500
+
+    Import now creates a backup before operating
+
+commit d6fb8fe2015596c73ed2f78865dfac02ce34793c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 21:00:42 2013 -0500
+
+    Template bug fixes for displaying other data.
+
+commit 97cee53f6329e0d180435fb3519ac943d7a18d0c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 19:43:48 2013 -0500
+
+    UI improvments
+
+commit d1997ab27bfeb621d38cffc592e682250664075f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 19:34:38 2013 -0500
+
+    Made UI more friendly (utils)
+
+commit 2fd2f9bad2fb30745494faa93ff1a7933d9f20d2
+Merge: a4a4255 42f2070
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 18:30:24 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit a4a425579aba30f67df508326e599b42d785a377
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 18:29:52 2013 -0500
+
+    Reasonable merge improvements.
+
+commit 42f2070ed0976b3dbb71ed4debeabad2386b33c8
+Author: Ejenio Capetillo Jr <ejenioc@cs.utexas.edu>
+Date:   Tue Aug 6 18:26:20 2013 -0500
+
+    SQL queries added
+
+commit 0bb68daebd728a80829c2b3ed70c3279d43216e0
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 15:56:40 2013 -0500
+
+    Significant merge improvements.
+
+commit 5f90aa891eadf706218a4c186206d70900430bf1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 04:14:49 2013 -0500
+
+    Fixes.
+
+commit f7b321b7d41ad1c82f4ad29ac3067b64616e1512
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 04:01:47 2013 -0500
+
+    Added more features.
+
+commit 2efd9f426d9ca31ea31b364f8f0657b739ad38b3
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Aug 6 03:19:31 2013 -0500
+
+    Layout improvements.
+
+commit c2e6ab33fd5cebdb536f4aee32a89de2a1115ce7
+Merge: 95a608e b7682bc
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 20:32:03 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 95a608e0ce2de49da6b58695a3a72335a4dffa86
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 20:31:03 2013 -0500
+
+    More accommodating.
+
+commit b7682bcfcbd8ac832f6570cecde3f0316dd1c2bf
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Mon Aug 5 19:40:03 2013 -0500
+
+    display unittests complete
+
+commit 8f23490e8d98dc5eafab33ba2e41ba7ec6698c35
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Mon Aug 5 19:08:00 2013 -0500
+
+    unittest syntax fixed
+
+commit fa8a5c9bdd4bb9161cc7dd60741e7abc2381a60c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 17:57:36 2013 -0500
+
+    Fixed import.
+
+commit a9403de1ab726c662c22d256387cf158a5882628
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 17:52:45 2013 -0500
+
+    No image.
+
+commit c938852405cbb3c9f0a72ce108bbb3f6a82e237a
+Merge: da0ab0a 63c0677
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 17:47:54 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+    
+    Conflicts:
+    	crisix/database/upload.py
+
+commit da0ab0abe1500f26523e4123b048eeb47ca717ca
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 17:45:27 2013 -0500
+
+    Fixed thumbnail issue.
+
+commit 63c067783cde61c1ae71981256db91ae64d744ab
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 17:32:56 2013 -0500
+
+    updated XML
+
+commit a29e390ff7cb0c6a89175f39cd36bd6ce0edd137
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 16:56:01 2013 -0500
+
+    maps accepts valid google and bing maps only
+
+commit fffdf4623e717a620d46da2d491c919a6d62d2a3
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 14:52:21 2013 -0500
+
+    fixed broken unit tests
+
+commit 6a17b283b359d4eb0b316b06c13d1dd68aa61d7e
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 13:26:55 2013 -0500
+
+    updated XML; validates and imports successfully
+
+commit 5e3b88cfae0eb51262975615a1676b2ef4170c4a
+Merge: b653441 559e309
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 12:29:40 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 559e309e02760f099c95084ad7fdf1d38d724df9
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 12:29:14 2013 -0500
+
+    Changes to dates and times.
+
+commit b6534414c05e0460cc3c94364da3fa8cae021184
+Merge: 92c84b0 a5404b0
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 11:11:07 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit a5404b08c0efcd713d9c8b5da8712f0e4bf49a32
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 11:10:44 2013 -0500
+
+    Added list_bubble.html
+
+commit 0b785770df3915264a26217eb5ade93871839485
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 11:10:29 2013 -0500
+
+    Added layout.
+
+commit 92c84b05fe13ba381ddf2cfd0c5e71e1f7c2122f
+Merge: c4cdcba 3521140
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 11:04:10 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit c4cdcba7949f9a6dcbb8cbb2244c1d7432abae88
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Mon Aug 5 11:04:03 2013 -0500
+
+    merge
+
+commit 352114009340f01e539778abf99d25567562e65f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 09:11:16 2013 -0500
+
+    Order by
+
+commit 2c886e2614c1774fe628824be6dd79b159498a71
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 00:53:10 2013 -0500
+
+    Small tweaks.
+
+commit c3d0b4b761bcba405eb08ddc86edf663884fd744
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Mon Aug 5 00:18:17 2013 -0500
+
+    Spring cleaning.
+
+commit 701209a8949f20414b1325d6fd65f5b93978de9a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 23:48:19 2013 -0500
+
+    Quickly fixed list pages.
+
+commit ca145076fd32adca152f72ab3cf2867b5b4de023
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 22:00:32 2013 -0500
+
+    Modified substr a bit.
+
+commit 2033ac73f5f14a930a5dbc932c3fbb41f1f03b84
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 21:42:00 2013 -0500
+
+    Added test cases.
+
+commit 99798f033a50c51fa242740ec377d8043e03f1d1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 21:29:03 2013 -0500
+
+    Improved str_match.
+
+commit b8bceb2d648da971c0dbba6f6adb308fddd3414a
+Merge: 743fea6 7d36a04
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 20:25:19 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 743fea640c3eaf54745fa89d4fe41510b1ec1eee
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 20:25:01 2013 -0500
+
+    Match function.
+
+commit 7d36a040a36fe4e1cbc1532e0eddf1ab755a2570
+Merge: 68c0f62 7468d57
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 20:18:41 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+    
+    Conflicts:
+    	templates/display.html
+    	templates/more_photos_videos.html
+
+commit 7468d573bcca223f55e63c67bbfe7bd87d6fe030
+Merge: a1420cd e041bdf
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Aug 4 20:09:17 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit a1420cdb28f65faa532d96a7b943b178ef3b9453
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sun Aug 4 20:09:13 2013 -0500
+
+    carousel complete
+
+commit 68c0f62d01bb51f79cec1e7b12a81ccb47db6048
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 20:08:36 2013 -0500
+
+    Formatting pictures/videos, changed display page
+
+commit e041bdfed893ef8415b91d9fb52211c312eeb7c3
+Merge: 95c6644 a212f7c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 19:36:34 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit a212f7c1457f1998191d5863ecdfaaa41bac91e6
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 19:36:04 2013 -0500
+
+    maps are handled
+
+commit 95c6644af84492ad9de6ce9df2400288f75d3de2
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 19:35:49 2013 -0500
+
+    Fixed bug with import.
+
+commit c39c1aa361b9fe8adff461601453d84c37bc763f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 19:11:34 2013 -0500
+
+    Fixed search bug.
+
+commit dd17a265f2bd116c60f089a8a1dc0184e789b7d7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 18:52:47 2013 -0500
+
+    Cog changes.
+
+commit d1d7762ed7aab9b37f00b28a72508996297e168e
+Merge: 95f4681 e103c4e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 18:41:52 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 95f46813a6741db0d62383e3774cbd21d3537c93
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 18:41:34 2013 -0500
+
+    Tweaks to layout.
+
+commit e103c4eec88af367231e938226918c3b9ef2bab0
+Merge: 2d3e0f8 f6dd5e2
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 18:21:45 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 2d3e0f8f5632c684704ec5c8af0ac7a32cfc23b2
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 18:21:33 2013 -0500
+
+    Handles Videos well
+
+commit f6dd5e25c3f8a27c0057ce3cb47fa1c7cbbcd8c1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 18:13:16 2013 -0500
+
+    Finished search page.
+
+commit 2168b660fec23a7c36b200fb65346f370baf8418
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 17:57:34 2013 -0500
+
+    Changed pages so that they use the new layout.
+
+commit 5c799665a725a6abe0171c2e995b3c405699b292
+Merge: 71595c6 7c6b382
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 17:11:08 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 71595c6f5d65d39551cf2b9860bc6cab50d30e0a
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 17:10:43 2013 -0500
+
+    added zero auto
+
+commit 7c6b3822f37f52713f4b0ab2b35f5638ebc7e76d
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 17:07:23 2013 -0500
+
+    Changed base.
+
+commit ee77354842cd54f4830bb9e0475002877c4fc5d6
+Merge: 4586acd 8b403e0
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 16:59:18 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 4586acde6fd0b8fe4ef875e27320f5e498c55aed
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 16:58:40 2013 -0500
+
+    jonathan
+
+commit 4bdd01895cd70b0bc0ed3681489e32f493bdd6b1
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 16:57:27 2013 -0500
+
+    jonathan push
+
+commit 8b403e02bb82225c38bdcf577682103f6300d8f6
+Merge: fc34616 aac5979
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 16:48:06 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit fc34616343d47d8d9a293f757f0c840bbfecb847
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 16:47:52 2013 -0500
+
+    Few fixes.
+
+commit aac597989627fd37d5900655918ea4a5406f602c
+Merge: be60783 1c489ae
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 16:41:57 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit be60783d394bb50c1c93ba76af3322a0778a6b32
+Author: Matt Thurner <mgt91@cs.utexas.edu>
+Date:   Sun Aug 4 16:39:35 2013 -0500
+
+    breadcrumbs added and format updated
+
+commit 1c489aebf736f22c28fd7e45db22b65e7112ce8e
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sun Aug 4 16:32:39 2013 -0500
+
+    adding all group XML's for further testing
+
+commit 5a9b519c16b37f67f25ccdfb0282bffe36debb01
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 16:25:40 2013 -0500
+
+    Unified template for entities.
+
+commit f410bb683a0996098fe7a604a771b7fd100de351
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 15:16:06 2013 -0500
+
+    Improved search.
+
+commit 3cf38f6871a99ebaa3ab13cee810cdd1e5ba9752
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 02:56:11 2013 -0500
+
+    Slight color change.
+
+commit 5748d3c586041b7d15725078e38275c73b8cd0d5
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 02:36:51 2013 -0500
+
+    Removed border.
+
+commit 7876d76e74cfc069702456a9bf9d90e7ef1b3095
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 00:58:32 2013 -0500
+
+    Final tweaks.
+
+commit 0e417ced764910797bea7a6e7dd518e513a75fd2
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sun Aug 4 00:08:29 2013 -0500
+
+    Small tweaks.
+
+commit a78c6c417146816cf85810b219da36152de3aebe
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 22:51:00 2013 -0500
+
+    Modified layou. Darker feel.
+
+commit 340a81b4952f2e2c980af66cf0e0e3c0f46832f1
+Merge: 0fe66d4 40d9b51
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 20:46:02 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 0fe66d446a6495c7b820e74039ef2109a077b0ee
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 20:45:40 2013 -0500
+
+    Migrated organizations to new template
+
+commit 40d9b51dd073a8aa0b567e48a6fe546d9841c743
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Aug 3 20:28:56 2013 -0500
+
+    update base and index to provide rough linking to other pages
+
+commit 97ca6d85ac0ad1fe0789bfa2ac944a51610ed923
+Merge: 8fd85b9 9b8640e
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Aug 3 20:09:14 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 8fd85b92a62be43d9c1863e3a63894d71273e12d
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Aug 3 20:09:06 2013 -0500
+
+    working carousel skeleton template
+
+commit 9b8640e78b69d95047b20edf3c44af2e4037d364
+Merge: 636f68f cd73652
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 20:08:53 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 636f68f491146ebe9328035a5684d736743d176f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 20:08:27 2013 -0500
+
+    980px
+
+commit cd7365244c6c35675d9f9f993c5df06d8787764e
+Merge: 73eb979 502a724
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Aug 3 19:55:29 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 73eb97931aac3ef1aa4b5d22d959bf533ca25a2d
+Author: eayivi <enam.ayivi@utexas.edu>
+Date:   Sat Aug 3 19:55:22 2013 -0500
+
+    implement skeleton carousel
+
+commit 502a724e416aae6ea5d134a01ca655f89d2e653e
+Merge: e6bbf3e cba7634
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Sat Aug 3 19:34:10 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit e6bbf3ec873c33998a323b4e3d57741e2d948f83
+Author: Dalton <dschmidt1302@sbcglobal.net>
+Date:   Sat Aug 3 19:33:50 2013 -0500
+
+    Intermediary pages and more photos.vids
+
+commit cba76349f4103299362dac059b48cdfeed976a5b
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 19:32:33 2013 -0500
+
+    Modified base.html
+
+commit 5ddc89e922173e51c6e0bbae80c7958c06b36bb3
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 19:28:24 2013 -0500
+
+    Changed padding for top.
+
+commit a62149a9e2bc8b1d0fa6133a4ba4b4265f00c5cf
+Merge: 02e099f 83da6a7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 19:19:05 2013 -0500
+
+    Merge branch 'heroku' of https://github.com/tmtorres/cs373-wcdb into heroku
+
+commit 02e099faee2d4d071c451b92f4ab70c37a9d420b
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 19:11:05 2013 -0500
+
+    Modified layout.
+
+commit 83da6a7890ed5e9859d9846d83be69d0ee80d25a
+Author: Jonathan Velasquez <jonathan@cs.utexas.edu>
+Date:   Sat Aug 3 18:59:08 2013 -0500
+
+    imports all valid xml's successfully
+
+commit 56c24b5d1114eefad3469e4804c00f9287d8fd91
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 17:22:35 2013 -0500
+
+    Fixed IOError.
+
+commit 4efb7794d7238804860658e616eda11629b38f94
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 01:08:18 2013 -0500
+
+    Separated 'view all' for vids and photos
+
+commit 5bc2232d5fcb3860799bb44163810481edd7fabe
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 00:06:45 2013 -0500
+
+    Removed other languages.
+
+commit 1fbc8157efdf2dac795666382f400801fc958f1c
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 00:01:25 2013 -0500
+
+    Changed permissions.
+
+commit 99aa56da57b10a5c091d8d1c339692077bade522
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Sat Aug 3 00:00:46 2013 -0500
+
+    Including tokenizer for formatted data.
+
+commit 18be19b172fbbf566a28be340062cf506e1070fa
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 22:38:39 2013 -0500
+
+    Last minute tweaks to UI (crises).
+
+commit 550e8b31ea9abd50654f68945888b0f44f53a0ea
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 22:25:03 2013 -0500
+
+    Split blocks of texts into paragraphs.
+
+commit 45c2dffd0febe768a3afe2a57c2e1d1fffc6fc68
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 22:17:00 2013 -0500
+
+    Dramatically altered UI.
+
+commit 229cd0dc3502396393ee115d38b5bd9ea75a9f3e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 15:39:22 2013 -0500
+
+    Fixed search.
+
+commit 8d8295cb5c7a0c85b1f55d05fda5e865bfe84d5e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 12:23:53 2013 -0500
+
+    Fixed sort by relevance.
+
+commit 9318f5572625b4ff2e60f3ae18b246c16f2ae253
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 11:55:22 2013 -0500
+
+    Refactored code, made it more pythonic.
+
+commit c2a3078822956c9e45b520fec6f5cd6da1726d5e
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 11:19:12 2013 -0500
+
+    Modified search.
+
+commit 36bd1dbff3bc40902bb1f8fc5b057782fb805b59
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 01:25:37 2013 -0500
+
+    Sort search results by relevance.
+
+commit 37827276cf903f2cc8463783d6dca5b0f20b0dec
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Fri Aug 2 00:06:07 2013 -0500
+
+    Few tweaks.
+
+commit a69a7e33a7c7595a51e9c7d8ef3975bf218b8302
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 1 23:55:44 2013 -0500
+
+    Using regexes for search.
+
+commit cf5daac7f85a5ed32716a51f5c6c8d5db3653f77
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 1 19:17:50 2013 -0500
+
+    Refactored code for contextualize()
+
+commit 3231e4de786ee8310f46e161ac09cd4607328f80
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 1 18:15:51 2013 -0500
+
+    Made search more sophisticated.
+
+commit 39381995eb4891bce7382d3709e526186d47ea6a
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 1 16:37:10 2013 -0500
+
+    Implemented simple search.
+
+commit 9f3dff184dd2f6e75b886f0ee97d086760840fa1
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Thu Aug 1 00:28:55 2013 -0500
+
+    Refactored thumbnail code.
+
+commit 82e1c0d550b1de5a9ec099d1c4f95206fb6a70cd
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 31 23:22:52 2013 -0500
+
+    Images are now hashed and cleared on import.
+
+commit 488575345390d7f2f3387003fbd5c385c1c50f12
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 23:11:23 2013 -0500
+
+    Finalized template.
+
+commit 42ee9f1c39e736c00b5be4191a97e3fa48874dfe
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 23:02:43 2013 -0500
+
+    Changed unit test style.
+
+commit eac53ab8c8522877672625ce736220764b8248f7
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 19:07:01 2013 -0500
+
+    Script now runs on any part of div block.
+
+commit 093dc62e060bc19eead6db047f8f4344b0eee23f
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 18:57:05 2013 -0500
+
+    Finished upload form.
+
+commit d8801d03de7abe3c01f2653524da7899b631dac0
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 17:46:33 2013 -0500
+
+    Changed import to use a pretty form.
+
+commit b3cb03a65f342e1adda9611122dd299530059911
+Author: Thomas Torres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 11:51:17 2013 -0500
+
+    Resynced heroku repo with github repo.
+
+commit f98b71344b9f5bbc37fbcce75d93dba0a4b251e8
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Tue Jul 30 10:45:26 2013 -0500
+
+    Modified requirements.
+
+commit bd4f01b3e99ee857d78043ab921c1a95fee0d96c
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 18:08:48 2013 -0500
+
+    Modified tests.
+
+commit 7e3b705ebe06291c4fed2ca68b82807cd578480f
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 01:33:04 2013 -0500
+
+    addindent
+
+commit 2a8490646773274409e89714612eb7bd1fa78874
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 01:30:04 2013 -0500
+
+    maybe
+
+commit 12358159ff1c65757669f2a525eb18c19a2b0c05
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:59:17 2013 -0500
+
+    ok
+
+commit 21bfe0014320661784e9ae4796a973c3c3f0efb5
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:56:54 2013 -0500
+
+    Testing minidom.
+
+commit 89006d12b57902602095ce118015349ad16fd64b
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:17:14 2013 -0500
+
+    Nah.
+
+commit 9188e5c964389e61e44ad875dcb39245632eeb57
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:08:17 2013 -0500
+
+    maybe
+
+commit 62d7efa19b8f7afb1366468739eef3b5525fc807
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:06:34 2013 -0500
+
+    nope
+
+commit 694fd26f0fc25560b7e5d23861776f31d854fb88
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Thu Jul 25 00:04:43 2013 -0500
+
+    issue test
+
+commit a30c0bce2801f83009c7e572a42c1a8a5308b698
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:59:51 2013 -0500
+
+    Minidom issue.
+
+commit 5c50c90e56f784867ac6dec2a744c4b4031cc767
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:52:03 2013 -0500
+
+    ok
+
+commit 7429b1cf1647a399a6ab04910a20490e1214f607
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:47:11 2013 -0500
+
+    Export fix
+
+commit 0665b452c6953602324e46c5a0e2d84b52301a99
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:37:27 2013 -0500
+
+    ok
+
+commit c51d6916ef57dc087ee76c413bc4962d8755e689
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:34:15 2013 -0500
+
+    ok
+
+commit 0eb585d4489a55b2305d09ed022f3894dd386730
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:31:29 2013 -0500
+
+    ok
+
+commit c579a7736933076e6357b58e248415978573bad3
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:27:44 2013 -0500
+
+    test again
+
+commit 258f096cc23e4aa9a0060ad0b321d8fcbb676d1b
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:20:09 2013 -0500
+
+    test
+
+commit dcb7f069894c3a336f60391124010a2a3b08e97b
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:14:56 2013 -0500
+
+    ok
+
+commit b835cdca2e65fe8b9ff728398171c9e074a9c601
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:09:36 2013 -0500
+
+    idk I broke it
+
+commit 955912319dec4bdc58fd1c55dcd39569c00568a1
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:06:10 2013 -0500
+
+    Test
+
+commit 73425a7f995edf6b2491e363cd8a17e26df45d32
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 23:01:53 2013 -0500
+
+    path join
+
+commit 474a2bb2f7a802edaf3098283d0622729b23d73b
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 22:55:52 2013 -0500
+
+    Fix
+
+commit 7c2c00204bc6afe8b986f0ffcdf67bf4b754b3d2
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 22:20:51 2013 -0500
+
+    Tester.
+
+commit c1a0f00f43cb69c573e5e7a68883fd0d2cc86d8f
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 22:10:44 2013 -0500
+
+    Deprecation warning.
+
+commit 35a48de40113f9caa5cdd779d33f645414686da1
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 22:07:37 2013 -0500
+
+    Updated compatibility.
+
+commit 3050a7bb086f0813dee463599c8e51fbdf08e355
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 19:32:16 2013 -0500
+
+    I don't know.
+
+commit c2c12d791068fb373994c620c4f020b14952c7e4
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 19:01:10 2013 -0500
+
+    idk
+
+commit 025414fbcb23e943c5067f538bc97b6c65b2514e
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 18:35:36 2013 -0500
+
+    Actually added test_suite_runner.
+
+commit 2b6df2ce6505bb18c150ae53fca1e948d5c8b730
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 18:04:56 2013 -0500
+
+    Added test_suite_runner.
+
+commit 0868006e2f7454e6154b0dc02c4828eefae22077
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 17:40:10 2013 -0500
+
+    Fixed lockdown form.
+
+commit 22e434f8175477ae2e640c20a589fda777b88f58
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 16:38:43 2013 -0500
+
+    Added subdirectories.
+
+commit 86a26452b7d8dbf81fedb6340598aa341bcd2dd1
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 16:32:34 2013 -0500
+
+    Fixed stuff.
+
+commit 56f76e56c9f9faf438697fc6755ce2a3e86de4c7
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 16:12:01 2013 -0500
+
+    ok
+
+commit c2f39afad8136577999ff24f71cbe5a923d9dd81
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 16:02:27 2013 -0500
+
+    ok again
+
+commit 36d6b2ac0ed804db3f8979d9da9df4b500206e1b
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:57:51 2013 -0500
+
+    ok
+
+commit 5b87f5834414bc1743d02457384c06ee51dccff6
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:45:11 2013 -0500
+
+    db again
+
+commit d0a00ba720f3803ce1119870f5ce94a04815d83e
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:36:53 2013 -0500
+
+    edited stuff
+
+commit ce376c4a0c4315f0db521c544f5115959836964e
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:31:15 2013 -0500
+
+    database def
+
+commit d964007760136fac7a829824014d997c635c6302
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:24:50 2013 -0500
+
+    added name
+
+commit eceda88246efbe4ed282f466c1ec2e5aac175922
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:22:45 2013 -0500
+
+    psyco
+
+commit fff507c592626ba1f3bdb09d4bfdb92a004f23e7
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:19:28 2013 -0500
+
+    Added engine.
+
+commit 09c1aab0946650fdc515938859fb83434f5b51b4
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:14:20 2013 -0500
+
+    ok
+
+commit 48d4edd369dd0976abcb8bb5c3188fb244138605
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:09:51 2013 -0500
+
+    Removed dependencies.
+
+commit 4b913fb70511ef48492b36b1c828dc7a23b05f73
+Author: tmtorres <thomas.matt.torres@gmail.com>
+Date:   Wed Jul 24 15:00:52 2013 -0500
+
+    heroku
